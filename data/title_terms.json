@@ -1,0 +1,618 @@
+{
+ "rising": [
+  {
+   "term": "rlvr",
+   "n2026": 18,
+   "n2025": 0,
+   "ratio": 11.6
+  },
+  {
+   "term": "on-policy distillation",
+   "n2026": 18,
+   "n2025": 0,
+   "ratio": 11.6
+  },
+  {
+   "term": "anchoring",
+   "n2026": 18,
+   "n2025": 0,
+   "ratio": 11.6
+  },
+  {
+   "term": "agent memory",
+   "n2026": 18,
+   "n2025": 0,
+   "ratio": 11.6
+  },
+  {
+   "term": "coding agents",
+   "n2026": 15,
+   "n2025": 0,
+   "ratio": 9.67
+  },
+  {
+   "term": "audit",
+   "n2026": 15,
+   "n2025": 0,
+   "ratio": 9.67
+  },
+  {
+   "term": "evidence",
+   "n2026": 69,
+   "n2025": 4,
+   "ratio": 8.89
+  },
+  {
+   "term": "skill",
+   "n2026": 35,
+   "n2025": 2,
+   "ratio": 7.52
+  },
+  {
+   "term": "auditing",
+   "n2026": 32,
+   "n2025": 2,
+   "ratio": 6.87
+  },
+  {
+   "term": "long-horizon",
+   "n2026": 76,
+   "n2025": 7,
+   "ratio": 6.12
+  },
+  {
+   "term": "diagnosing",
+   "n2026": 27,
+   "n2025": 2,
+   "ratio": 5.8
+  },
+  {
+   "term": "asynchronous",
+   "n2026": 18,
+   "n2025": 1,
+   "ratio": 5.8
+  },
+  {
+   "term": "muon",
+   "n2026": 17,
+   "n2025": 1,
+   "ratio": 5.48
+  },
+  {
+   "term": "longitudinal",
+   "n2026": 16,
+   "n2025": 1,
+   "ratio": 5.16
+  },
+  {
+   "term": "evaluation framework",
+   "n2026": 16,
+   "n2025": 1,
+   "ratio": 5.16
+  },
+  {
+   "term": "decoupled",
+   "n2026": 31,
+   "n2025": 3,
+   "ratio": 4.99
+  },
+  {
+   "term": "they",
+   "n2026": 15,
+   "n2025": 1,
+   "ratio": 4.83
+  },
+  {
+   "term": "scoring",
+   "n2026": 22,
+   "n2025": 2,
+   "ratio": 4.73
+  },
+  {
+   "term": "ai agents",
+   "n2026": 29,
+   "n2025": 3,
+   "ratio": 4.67
+  },
+  {
+   "term": "on-policy",
+   "n2026": 36,
+   "n2025": 4,
+   "ratio": 4.64
+  },
+  {
+   "term": "behavioral",
+   "n2026": 31,
+   "n2025": 4,
+   "ratio": 4.0
+  },
+  {
+   "term": "workflows",
+   "n2026": 18,
+   "n2025": 2,
+   "ratio": 3.87
+  },
+  {
+   "term": "traces",
+   "n2026": 18,
+   "n2025": 2,
+   "ratio": 3.87
+  },
+  {
+   "term": "sensitivity",
+   "n2026": 18,
+   "n2025": 2,
+   "ratio": 3.87
+  },
+  {
+   "term": "prism",
+   "n2026": 18,
+   "n2025": 2,
+   "ratio": 3.87
+  },
+  {
+   "term": "mechanistic",
+   "n2026": 34,
+   "n2025": 5,
+   "ratio": 3.65
+  },
+  {
+   "term": "abstraction",
+   "n2026": 17,
+   "n2025": 2,
+   "ratio": 3.65
+  },
+  {
+   "term": "support",
+   "n2026": 22,
+   "n2025": 3,
+   "ratio": 3.54
+  },
+  {
+   "term": "self-evolving",
+   "n2026": 27,
+   "n2025": 4,
+   "ratio": 3.48
+  },
+  {
+   "term": "spherical",
+   "n2026": 16,
+   "n2025": 2,
+   "ratio": 3.44
+  },
+  {
+   "term": "directional",
+   "n2026": 16,
+   "n2025": 2,
+   "ratio": 3.44
+  },
+  {
+   "term": "closing",
+   "n2026": 16,
+   "n2025": 2,
+   "ratio": 3.44
+  },
+  {
+   "term": "boundary",
+   "n2026": 16,
+   "n2025": 2,
+   "ratio": 3.44
+  },
+  {
+   "term": "activation steering",
+   "n2026": 16,
+   "n2025": 2,
+   "ratio": 3.44
+  },
+  {
+   "term": "systematic",
+   "n2026": 21,
+   "n2025": 3,
+   "ratio": 3.38
+  },
+  {
+   "term": "vla",
+   "n2026": 25,
+   "n2025": 4,
+   "ratio": 3.22
+  },
+  {
+   "term": "diagnostic",
+   "n2026": 25,
+   "n2025": 4,
+   "ratio": 3.22
+  },
+  {
+   "term": "coverage",
+   "n2026": 25,
+   "n2025": 4,
+   "ratio": 3.22
+  },
+  {
+   "term": "shaping",
+   "n2026": 20,
+   "n2025": 3,
+   "ratio": 3.22
+  },
+  {
+   "term": "latents",
+   "n2026": 15,
+   "n2025": 2,
+   "ratio": 3.22
+  },
+  {
+   "term": "coding",
+   "n2026": 34,
+   "n2025": 6,
+   "ratio": 3.13
+  },
+  {
+   "term": "agentic",
+   "n2026": 131,
+   "n2025": 26,
+   "ratio": 3.13
+  },
+  {
+   "term": "amortized",
+   "n2026": 19,
+   "n2025": 3,
+   "ratio": 3.06
+  },
+  {
+   "term": "verifiable",
+   "n2026": 41,
+   "n2025": 8,
+   "ratio": 2.94
+  },
+  {
+   "term": "geometry",
+   "n2026": 133,
+   "n2025": 29,
+   "ratio": 2.86
+  },
+  {
+   "term": "should",
+   "n2026": 53,
+   "n2025": 11,
+   "ratio": 2.85
+  },
+  {
+   "term": "intrinsic",
+   "n2026": 26,
+   "n2025": 5,
+   "ratio": 2.79
+  },
+  {
+   "term": "verifiable rewards",
+   "n2026": 17,
+   "n2025": 3,
+   "ratio": 2.74
+  },
+  {
+   "term": "loop",
+   "n2026": 17,
+   "n2025": 3,
+   "ratio": 2.74
+  },
+  {
+   "term": "self-distillation",
+   "n2026": 25,
+   "n2025": 5,
+   "ratio": 2.68
+  },
+  {
+   "term": "before",
+   "n2026": 25,
+   "n2025": 5,
+   "ratio": 2.68
+  },
+  {
+   "term": "policy optimization",
+   "n2026": 82,
+   "n2025": 19,
+   "ratio": 2.64
+  },
+  {
+   "term": "agents",
+   "n2026": 319,
+   "n2025": 78,
+   "ratio": 2.6
+  },
+  {
+   "term": "geometry-aware",
+   "n2026": 28,
+   "n2025": 6,
+   "ratio": 2.58
+  },
+  {
+   "term": "vision-language-action models",
+   "n2026": 32,
+   "n2025": 7,
+   "ratio": 2.58
+  },
+  {
+   "term": "robot",
+   "n2026": 32,
+   "n2025": 7,
+   "ratio": 2.58
+  },
+  {
+   "term": "errors",
+   "n2026": 16,
+   "n2025": 3,
+   "ratio": 2.58
+  },
+  {
+   "term": "multi-agent systems",
+   "n2026": 27,
+   "n2025": 6,
+   "ratio": 2.49
+  },
+  {
+   "term": "maps",
+   "n2026": 27,
+   "n2025": 6,
+   "ratio": 2.49
+  },
+  {
+   "term": "evolving",
+   "n2026": 27,
+   "n2025": 6,
+   "ratio": 2.49
+  },
+  {
+   "term": "states",
+   "n2026": 23,
+   "n2025": 5,
+   "ratio": 2.47
+  },
+  {
+   "term": "masked diffusion",
+   "n2026": 23,
+   "n2025": 5,
+   "ratio": 2.47
+  },
+  {
+   "term": "science",
+   "n2026": 15,
+   "n2025": 3,
+   "ratio": 2.42
+  },
+  {
+   "term": "forward",
+   "n2026": 15,
+   "n2025": 3,
+   "ratio": 2.42
+  },
+  {
+   "term": "coupling",
+   "n2026": 15,
+   "n2025": 3,
+   "ratio": 2.42
+  },
+  {
+   "term": "closed-loop",
+   "n2026": 15,
+   "n2025": 3,
+   "ratio": 2.42
+  },
+  {
+   "term": "forgetting",
+   "n2026": 26,
+   "n2025": 6,
+   "ratio": 2.39
+  },
+  {
+   "term": "credit",
+   "n2026": 26,
+   "n2025": 6,
+   "ratio": 2.39
+  },
+  {
+   "term": "llm agents",
+   "n2026": 74,
+   "n2025": 19,
+   "ratio": 2.38
+  },
+  {
+   "term": "predictive",
+   "n2026": 44,
+   "n2025": 11,
+   "ratio": 2.36
+  },
+  {
+   "term": "post-training",
+   "n2026": 55,
+   "n2025": 14,
+   "ratio": 2.36
+  },
+  {
+   "term": "credit assignment",
+   "n2026": 22,
+   "n2025": 5,
+   "ratio": 2.36
+  },
+  {
+   "term": "flow matching",
+   "n2026": 124,
+   "n2025": 33,
+   "ratio": 2.35
+  },
+  {
+   "term": "world modeling",
+   "n2026": 18,
+   "n2025": 4,
+   "ratio": 2.32
+  },
+  {
+   "term": "where",
+   "n2026": 36,
+   "n2025": 9,
+   "ratio": 2.32
+  },
+  {
+   "term": "trajectories",
+   "n2026": 36,
+   "n2025": 9,
+   "ratio": 2.32
+  },
+  {
+   "term": "diffusion language models",
+   "n2026": 36,
+   "n2025": 9,
+   "ratio": 2.32
+  },
+  {
+   "term": "propagation",
+   "n2026": 25,
+   "n2025": 6,
+   "ratio": 2.3
+  },
+  {
+   "term": "memory",
+   "n2026": 150,
+   "n2025": 41,
+   "ratio": 2.3
+  },
+  {
+   "term": "agent",
+   "n2026": 128,
+   "n2025": 35,
+   "ratio": 2.29
+  }
+ ],
+ "top": [
+  {
+   "term": "language models",
+   "n2026": 333
+  },
+  {
+   "term": "reinforcement learning",
+   "n2026": 308
+  },
+  {
+   "term": "large language",
+   "n2026": 198
+  },
+  {
+   "term": "large language models",
+   "n2026": 170
+  },
+  {
+   "term": "flow matching",
+   "n2026": 124
+  },
+  {
+   "term": "diffusion models",
+   "n2026": 108
+  },
+  {
+   "term": "time series",
+   "n2026": 99
+  },
+  {
+   "term": "foundation models",
+   "n2026": 95
+  },
+  {
+   "term": "neural networks",
+   "n2026": 87
+  },
+  {
+   "term": "language model",
+   "n2026": 84
+  },
+  {
+   "term": "policy optimization",
+   "n2026": 82
+  },
+  {
+   "term": "llm agents",
+   "n2026": 74
+  },
+  {
+   "term": "video generation",
+   "n2026": 67
+  },
+  {
+   "term": "world models",
+   "n2026": 63
+  },
+  {
+   "term": "representation learning",
+   "n2026": 61
+  },
+  {
+   "term": "vision-language models",
+   "n2026": 60
+  },
+  {
+   "term": "anomaly detection",
+   "n2026": 49
+  },
+  {
+   "term": "gaussian splatting",
+   "n2026": 48
+  },
+  {
+   "term": "diffusion language",
+   "n2026": 43
+  },
+  {
+   "term": "foundation model",
+   "n2026": 43
+  },
+  {
+   "term": "image generation",
+   "n2026": 43
+  },
+  {
+   "term": "optimal transport",
+   "n2026": 41
+  },
+  {
+   "term": "neural network",
+   "n2026": 38
+  },
+  {
+   "term": "autonomous driving",
+   "n2026": 37
+  },
+  {
+   "term": "series forecasting",
+   "n2026": 37
+  },
+  {
+   "term": "time series forecasting",
+   "n2026": 37
+  },
+  {
+   "term": "diffusion language models",
+   "n2026": 36
+  },
+  {
+   "term": "federated learning",
+   "n2026": 36
+  },
+  {
+   "term": "continual learning",
+   "n2026": 36
+  },
+  {
+   "term": "vision-language-action models",
+   "n2026": 32
+  },
+  {
+   "term": "kv cache",
+   "n2026": 31
+  },
+  {
+   "term": "test-time scaling",
+   "n2026": 30
+  },
+  {
+   "term": "video diffusion",
+   "n2026": 30
+  }
+ ]
+}

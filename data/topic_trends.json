@@ -1,0 +1,532 @@
+{
+ "N2026": 9094,
+ "N2025": 5860,
+ "rows": [
+  {
+   "topic": "MCP (Model Context Protocol)",
+   "n2026": 19,
+   "n2025": 1,
+   "share2026": 0.21,
+   "share2025": 0.02,
+   "growth": 12.24
+  },
+  {
+   "topic": "Tool use / function calling",
+   "n2026": 141,
+   "n2025": 24,
+   "share2026": 1.55,
+   "share2025": 0.41,
+   "growth": 3.79
+  },
+  {
+   "topic": "Deep research / search agents",
+   "n2026": 55,
+   "n2025": 10,
+   "share2026": 0.6,
+   "share2025": 0.17,
+   "growth": 3.54
+  },
+  {
+   "topic": "Software engineering agents",
+   "n2026": 76,
+   "n2025": 16,
+   "share2026": 0.84,
+   "share2025": 0.27,
+   "growth": 3.06
+  },
+  {
+   "topic": "Diffusion language models",
+   "n2026": 108,
+   "n2025": 23,
+   "share2026": 1.19,
+   "share2025": 0.39,
+   "growth": 3.03
+  },
+  {
+   "topic": "Reinforcement learning w/ verifiable rewards (RLVR)",
+   "n2026": 141,
+   "n2025": 31,
+   "share2026": 1.55,
+   "share2025": 0.53,
+   "growth": 2.93
+  },
+  {
+   "topic": "Medical QA",
+   "n2026": 26,
+   "n2025": 6,
+   "share2026": 0.29,
+   "share2025": 0.1,
+   "growth": 2.79
+  },
+  {
+   "topic": "Uncertainty / calibration (LLM)",
+   "n2026": 694,
+   "n2025": 210,
+   "share2026": 7.63,
+   "share2025": 3.58,
+   "growth": 2.13
+  },
+  {
+   "topic": "Reward hacking / deception",
+   "n2026": 101,
+   "n2025": 31,
+   "share2026": 1.11,
+   "share2025": 0.53,
+   "growth": 2.1
+  },
+  {
+   "topic": "Steering / activation editing",
+   "n2026": 249,
+   "n2025": 79,
+   "share2026": 2.74,
+   "share2025": 1.35,
+   "growth": 2.03
+  },
+  {
+   "topic": "Flow matching",
+   "n2026": 231,
+   "n2025": 79,
+   "share2026": 2.54,
+   "share2025": 1.35,
+   "growth": 1.88
+  },
+  {
+   "topic": "World models",
+   "n2026": 174,
+   "n2025": 65,
+   "share2026": 1.91,
+   "share2025": 1.11,
+   "growth": 1.72
+  },
+  {
+   "topic": "GRPO",
+   "n2026": 237,
+   "n2025": 90,
+   "share2026": 2.61,
+   "share2025": 1.54,
+   "growth": 1.7
+  },
+  {
+   "topic": "Agent memory",
+   "n2026": 52,
+   "n2025": 20,
+   "share2026": 0.57,
+   "share2025": 0.34,
+   "growth": 1.68
+  },
+  {
+   "topic": "LLM agents / agentic",
+   "n2026": 1311,
+   "n2025": 542,
+   "share2026": 14.42,
+   "share2025": 9.25,
+   "growth": 1.56
+  },
+  {
+   "topic": "Agent safety / guardrails",
+   "n2026": 46,
+   "n2025": 20,
+   "share2026": 0.51,
+   "share2025": 0.34,
+   "growth": 1.48
+  },
+  {
+   "topic": "Interpretability / SAE",
+   "n2026": 202,
+   "n2025": 91,
+   "share2026": 2.22,
+   "share2025": 1.55,
+   "growth": 1.43
+  },
+  {
+   "topic": "Knowledge distillation",
+   "n2026": 510,
+   "n2025": 235,
+   "share2026": 5.61,
+   "share2025": 4.01,
+   "growth": 1.4
+  },
+  {
+   "topic": "Self-evolving / self-improving",
+   "n2026": 82,
+   "n2025": 38,
+   "share2026": 0.9,
+   "share2025": 0.65,
+   "growth": 1.39
+  },
+  {
+   "topic": "KV cache / long-context efficiency",
+   "n2026": 248,
+   "n2025": 115,
+   "share2026": 2.73,
+   "share2025": 1.96,
+   "growth": 1.39
+  },
+  {
+   "topic": "Formal math / theorem proving",
+   "n2026": 54,
+   "n2025": 25,
+   "share2026": 0.59,
+   "share2025": 0.43,
+   "growth": 1.39
+  },
+  {
+   "topic": "Quantization",
+   "n2026": 198,
+   "n2025": 94,
+   "share2026": 2.18,
+   "share2025": 1.6,
+   "growth": 1.36
+  },
+  {
+   "topic": "Scientific discovery / AI scientist",
+   "n2026": 48,
+   "n2025": 23,
+   "share2026": 0.53,
+   "share2025": 0.39,
+   "growth": 1.34
+  },
+  {
+   "topic": "Vision-language-action (VLA) / embodied",
+   "n2026": 263,
+   "n2025": 127,
+   "share2026": 2.89,
+   "share2025": 2.17,
+   "growth": 1.33
+  },
+  {
+   "topic": "Overthinking / efficient reasoning",
+   "n2026": 92,
+   "n2025": 45,
+   "share2026": 1.01,
+   "share2025": 0.77,
+   "growth": 1.32
+  },
+  {
+   "topic": "Medical / clinical",
+   "n2026": 438,
+   "n2025": 214,
+   "share2026": 4.82,
+   "share2025": 3.65,
+   "growth": 1.32
+  },
+  {
+   "topic": "Causal inference",
+   "n2026": 461,
+   "n2025": 228,
+   "share2026": 5.07,
+   "share2025": 3.89,
+   "growth": 1.3
+  },
+  {
+   "topic": "Multi-agent systems",
+   "n2026": 261,
+   "n2025": 134,
+   "share2026": 2.87,
+   "share2025": 2.29,
+   "growth": 1.26
+  },
+  {
+   "topic": "Video generation",
+   "n2026": 214,
+   "n2025": 110,
+   "share2026": 2.35,
+   "share2025": 1.88,
+   "growth": 1.25
+  },
+  {
+   "topic": "Time series foundation models",
+   "n2026": 220,
+   "n2025": 120,
+   "share2026": 2.42,
+   "share2025": 2.05,
+   "growth": 1.18
+  },
+  {
+   "topic": "Model merging",
+   "n2026": 33,
+   "n2025": 18,
+   "share2026": 0.36,
+   "share2025": 0.31,
+   "growth": 1.18
+  },
+  {
+   "topic": "Computer-use / GUI / web agents",
+   "n2026": 54,
+   "n2025": 31,
+   "share2026": 0.59,
+   "share2025": 0.53,
+   "growth": 1.12
+  },
+  {
+   "topic": "Unified multimodal understanding+generation",
+   "n2026": 61,
+   "n2025": 35,
+   "share2026": 0.67,
+   "share2025": 0.6,
+   "growth": 1.12
+  },
+  {
+   "topic": "Process reward models (PRM)",
+   "n2026": 32,
+   "n2025": 19,
+   "share2026": 0.35,
+   "share2025": 0.32,
+   "growth": 1.09
+  },
+  {
+   "topic": "Jailbreak / red teaming",
+   "n2026": 81,
+   "n2025": 48,
+   "share2026": 0.89,
+   "share2025": 0.82,
+   "growth": 1.09
+  },
+  {
+   "topic": "Benchmark / evaluation papers",
+   "n2026": 1541,
+   "n2025": 917,
+   "share2026": 16.95,
+   "share2025": 15.65,
+   "growth": 1.08
+  },
+  {
+   "topic": "Hallucination",
+   "n2026": 191,
+   "n2025": 116,
+   "share2026": 2.1,
+   "share2025": 1.98,
+   "growth": 1.06
+  },
+  {
+   "topic": "Mixture of Experts",
+   "n2026": 134,
+   "n2025": 82,
+   "share2026": 1.47,
+   "share2025": 1.4,
+   "growth": 1.05
+  },
+  {
+   "topic": "Speculative decoding",
+   "n2026": 41,
+   "n2025": 27,
+   "share2026": 0.45,
+   "share2025": 0.46,
+   "growth": 0.98
+  },
+  {
+   "topic": "RAG",
+   "n2026": 115,
+   "n2025": 77,
+   "share2026": 1.26,
+   "share2025": 1.31,
+   "growth": 0.96
+  },
+  {
+   "topic": "Multimodal LLM (MLLM/VLM)",
+   "n2026": 763,
+   "n2025": 517,
+   "share2026": 8.39,
+   "share2025": 8.82,
+   "growth": 0.95
+  },
+  {
+   "topic": "Reward models / LLM-as-a-judge",
+   "n2026": 167,
+   "n2025": 116,
+   "share2026": 1.84,
+   "share2025": 1.98,
+   "growth": 0.93
+  },
+  {
+   "topic": "Continual learning",
+   "n2026": 154,
+   "n2025": 108,
+   "share2026": 1.69,
+   "share2025": 1.84,
+   "growth": 0.92
+  },
+  {
+   "topic": "Test-time scaling / compute",
+   "n2026": 110,
+   "n2025": 83,
+   "share2026": 1.21,
+   "share2025": 1.42,
+   "growth": 0.85
+  },
+  {
+   "topic": "State space / linear attention",
+   "n2026": 118,
+   "n2025": 89,
+   "share2026": 1.3,
+   "share2025": 1.52,
+   "growth": 0.85
+  },
+  {
+   "topic": "Protein / molecule",
+   "n2026": 244,
+   "n2025": 185,
+   "share2026": 2.68,
+   "share2025": 3.16,
+   "growth": 0.85
+  },
+  {
+   "topic": "Watermarking",
+   "n2026": 40,
+   "n2025": 32,
+   "share2026": 0.44,
+   "share2025": 0.55,
+   "growth": 0.81
+  },
+  {
+   "topic": "Unlearning",
+   "n2026": 64,
+   "n2025": 52,
+   "share2026": 0.7,
+   "share2025": 0.89,
+   "growth": 0.79
+  },
+  {
+   "topic": "Data selection / curation",
+   "n2026": 72,
+   "n2025": 60,
+   "share2026": 0.79,
+   "share2025": 1.02,
+   "growth": 0.77
+  },
+  {
+   "topic": "Pluralistic / cultural alignment",
+   "n2026": 40,
+   "n2025": 34,
+   "share2026": 0.44,
+   "share2025": 0.58,
+   "growth": 0.76
+  },
+  {
+   "topic": "Personalization",
+   "n2026": 100,
+   "n2025": 87,
+   "share2026": 1.1,
+   "share2025": 1.48,
+   "growth": 0.74
+  },
+  {
+   "topic": "Federated learning",
+   "n2026": 108,
+   "n2025": 95,
+   "share2026": 1.19,
+   "share2025": 1.62,
+   "growth": 0.73
+  },
+  {
+   "topic": "Graph neural networks",
+   "n2026": 158,
+   "n2025": 142,
+   "share2026": 1.74,
+   "share2025": 2.42,
+   "growth": 0.72
+  },
+  {
+   "topic": "Differential privacy",
+   "n2026": 70,
+   "n2025": 65,
+   "share2026": 0.77,
+   "share2025": 1.11,
+   "growth": 0.69
+  },
+  {
+   "topic": "3D Gaussian splatting",
+   "n2026": 87,
+   "n2025": 83,
+   "share2026": 0.96,
+   "share2025": 1.42,
+   "growth": 0.68
+  },
+  {
+   "topic": "Reasoning models / long CoT",
+   "n2026": 271,
+   "n2025": 265,
+   "share2026": 2.98,
+   "share2025": 4.52,
+   "growth": 0.66
+  },
+  {
+   "topic": "Synthetic data",
+   "n2026": 167,
+   "n2025": 168,
+   "share2026": 1.84,
+   "share2025": 2.87,
+   "growth": 0.64
+  },
+  {
+   "topic": "In-context learning",
+   "n2026": 74,
+   "n2025": 81,
+   "share2026": 0.81,
+   "share2025": 1.38,
+   "growth": 0.59
+  }
+ ],
+ "title_terms": [
+  {
+   "term": "evidence",
+   "n2025": 5,
+   "n2026": 90
+  },
+  {
+   "term": "audit / auditing",
+   "n2025": 4,
+   "n2026": 55
+  },
+  {
+   "term": "diagnosing / diagnostic",
+   "n2025": 6,
+   "n2026": 52
+  },
+  {
+   "term": "long-horizon",
+   "n2025": 7,
+   "n2026": 77
+  },
+  {
+   "term": "longitudinal",
+   "n2025": 1,
+   "n2026": 17
+  },
+  {
+   "term": "credit assignment",
+   "n2025": 5,
+   "n2026": 22
+  },
+  {
+   "term": "agent memory",
+   "n2025": 0,
+   "n2026": 18
+  },
+  {
+   "term": "skill(s)",
+   "n2025": 9,
+   "n2026": 56
+  },
+  {
+   "term": "self-evolving",
+   "n2025": 4,
+   "n2026": 27
+  },
+  {
+   "term": "on-policy distillation",
+   "n2025": 0,
+   "n2026": 18
+  },
+  {
+   "term": "self-distillation",
+   "n2025": 6,
+   "n2026": 26
+  },
+  {
+   "term": "RLVR",
+   "n2025": 1,
+   "n2026": 20
+  }
+ ]
+}

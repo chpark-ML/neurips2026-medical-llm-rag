@@ -1,0 +1,1103 @@
+{"id": "139361", "title": "$\\chi$-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?", "hint": "MED "}
+{"id": "139822", "title": "\\$OneMillion-Bench: How Far are Language Agents from Human Experts?", "hint": "MED RET"}
+{"id": "150442", "title": "2-Step Agent: How a Bayesian Decision Maker Learns from AI-Decision Support", "hint": "MED "}
+{"id": "155977", "title": "3R-Adapter: Retrieval, Rewiring, and Refinement for Efficient Adaptation of 3D Reconstruction Model", "hint": "RET"}
+{"id": "139047", "title": "A Benchmark for Omni-Modal Reasoning in Long Videos", "hint": "MED RET"}
+{"id": "139678", "title": "AccelEval: A Whole-Program Benchmark for LLM-Generated CPU-to-GPU Code Acceleration", "hint": "MED "}
+{"id": "139542", "title": "AcousticBench: Measuring Acoustic Perception in Large Audio Language Models", "hint": "MED "}
+{"id": "153257", "title": "Active Corpus Selection for Training Subgraph Retrievers Using OOD Queries", "hint": "RET"}
+{"id": "156770", "title": "Active Learning via Classifier Impact and Greedy Selection for Interactive Image Retrieval", "hint": "RET"}
+{"id": "148250", "title": "Active Memory Feedback Loop for Fast–Slow Dynamics in Liquid Neural Networks", "hint": "RET"}
+{"id": "155735", "title": "AdaAlloc: Adaptive Visual Token Allocation for Long-Video Question Answering", "hint": "RET"}
+{"id": "155964", "title": "AdaCal: Adaptive Calibration for Robust Sparse Attention in Long-Context LLMs", "hint": "RET"}
+{"id": "153261", "title": "AdaKVQ: Adaptive Mixed-Precision KV Cache Quantization For Efficient Reasoning Models", "hint": "RET"}
+{"id": "150249", "title": "AdaPCLA: Curriculum Prior Internalization For Long-Tailed Longitudinal EHR Generation", "hint": "MED "}
+{"id": "150605", "title": "Adapting Vision Transformers to Organoid Imaging", "hint": "MED "}
+{"id": "152859", "title": "Adaptive LLM Routing for Multi-Turn Conversations with Continuously Evolving User Queries", "hint": "RET"}
+{"id": "153325", "title": "Adaptive Mass-Segmented KV Compression for Long-Context Reasoning", "hint": "RET"}
+{"id": "152426", "title": "Addressable Memory for Video World Models", "hint": "RET"}
+{"id": "139592", "title": "A Diagnostic Benchmark for Layered Layout and Template-Variant Reasoning", "hint": "MED "}
+{"id": "155533", "title": "ADMIT: Support-Gated Memory-Write Admission for Document QA Agents", "hint": "MED RET"}
+{"id": "152023", "title": "Advancing Narrative Long Video Generation via Training-Free Identity-Aware Memory", "hint": "RET"}
+{"id": "148248", "title": "Adversarial Corpus Selection to Attack Subgraph Matching based Graph Retrieval", "hint": "RET"}
+{"id": "149370", "title": "A Foundational Model System for Datacenter Machine Repairs", "hint": "MED "}
+{"id": "139513", "title": "Agent$^2$ RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?", "hint": "MED "}
+{"id": "155447", "title": "Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback", "hint": "RET"}
+{"id": "139450", "title": "AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators", "hint": "MED "}
+{"id": "151150", "title": "Agent Explorative Policy Optimization for Agentic Multimodal Reasoning", "hint": "MED "}
+{"id": "139240", "title": "AgentHop: A Diagnostic Benchmark for Agentic Multi-Hop Scientific Question Answering", "hint": "MED RET"}
+{"id": "153107", "title": "AgenticOCR: Parsing Only What You Need for Efficient Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "155404", "title": "AgentKVShift: Efficient KV Cache Reuse for Agentic Memory Systems", "hint": "RET"}
+{"id": "148896", "title": "AgentOdyssey: Open-Ended Long-Horizon Text Game Generation for Test-Time Continual Learning Agents", "hint": "MED "}
+{"id": "153890", "title": "AgenTracer-v2: Agentic Failure Tracer for LLM Agentic Systems", "hint": "MED "}
+{"id": "153256", "title": "Agents as Neuro-Symbolic Reasoners: Path Feasibility Reasoning for Precise Static Bug Detection", "hint": "RET"}
+{"id": "154386", "title": "AgentTailor: Dual-Gate LLM-Assisted Re-ranking for Personalized Long-Tail Recommendation", "hint": "RET"}
+{"id": "153463", "title": "AgentVista: Evaluating Multimodal Agent in Ultra-Challenging Realistic Visual Scenarios", "hint": "RET"}
+{"id": "152893", "title": "Agreement without Coverage: Conditional Agreement is Non-Identifying in Variable-Support Structured Extraction", "hint": "MED "}
+{"id": "139411", "title": "AgroOmni: A Large-Scale Multi-view Agricultural Dataset for Cross-Scale Multimodal Reasoning", "hint": "MED "}
+{"id": "152980", "title": "AIRA 2: Overcoming Bottlenecks in AI Research Agents", "hint": "RET"}
+{"id": "152477", "title": "AIRA-Compose: Agentic Discovery of Neural Architectures", "hint": "RET"}
+{"id": "153593", "title": "AirIAD: Agentic Iterative Reasoning for Industrial Anomaly Detection", "hint": "MED RET"}
+{"id": "139194", "title": "A Large-Scale Multi-Source Dataset Linking Hacker Community Discourse to the CVE Vulnerability Lifecycle", "hint": "RET"}
+{"id": "154404", "title": "A Latent-Load Framework for Reliability Analysis and Intervention Design in LLM Pipelines", "hint": "RET"}
+{"id": "155656", "title": "Aligning Forest and Trees in Images & Long Captions for Visually Grounded Understanding", "hint": "RET"}
+{"id": "149582", "title": "Aligning LLMs with Biomedical Knowledge using Balanced Fine-Tuning", "hint": "MED "}
+{"id": "150322", "title": "Alignment Collapse Under KV Cache Quantization: Diagnosis and Mitigation", "hint": "MED "}
+{"id": "140065", "title": "Alignment Is Not Enough for Safe Medical LLM Evaluation", "hint": "MED "}
+{"id": "140117", "title": "Alignment Needs 'Cognitive Control': On The Role of Regularization in LLM Alignment", "hint": "MED "}
+{"id": "152416", "title": "Align-RAG: Alignment Is All You Need for TSFM In-Context Learning", "hint": "RET"}
+{"id": "150234", "title": "AlphaPROBE: Alpha Mining via principled retriveval and on-graph biased evolution", "hint": "RET"}
+{"id": "151690", "title": "A Mahalanobis Margin \\texorpdfstring{$\\gamma_{\\min}$}{gamma\\_min} Bound on Task Confusion in Pretrained Class-Incremental Learning: From Infeasibility to Exponential Attenuation", "hint": "MED "}
+{"id": "139345", "title": "AmaraSpatial-10K: A Spatially and Semantically Aligned 3D Dataset for Spatial Computing and Embodied AI", "hint": "RET"}
+{"id": "148276", "title": "A Mechanistic Investigation of Theory of Mind in a Large Language Model", "hint": "RET"}
+{"id": "149128", "title": "AMPS: Adaptive Modality Preference Steering via Functional Entropy", "hint": "MED "}
+{"id": "139715", "title": "A Multimodal Benchmark for Evaluating Cause-of-Death Inference Using Child Health and Mortality Data", "hint": "MED "}
+{"id": "151182", "title": "Anatomy-Activated Mixture-of-Experts for 3D Medical Vision-Language Pre-training", "hint": "MED "}
+{"id": "154881", "title": "Anatomy-Preserving Unpaired Medical Image Translation via Shared Latent Anchoring", "hint": "MED RET"}
+{"id": "148935", "title": "Anchoring LLM-based Chest X-ray Report Generation via Diffusion Language Planning", "hint": "MED "}
+{"id": "139297", "title": "An Embarrassingly Simple Graph Heuristic Reveals Shortcut-Solvable Benchmarks for Sequential Recommendation", "hint": "MED RET"}
+{"id": "154592", "title": "An Equivariance Principle for Optimizer Design: Symmetry-Compatible Updates for Embeddings, LM Heads, and MoE Routers", "hint": "MED "}
+{"id": "150213", "title": "Answering At Any Cost: Frontier LLMs Are Consequence-Insensitive", "hint": "MED "}
+{"id": "154127", "title": "AnyMo: Geometry-Aware Setup-Agnostic Modeling of Human Motion in the Wild", "hint": "RET"}
+{"id": "139154", "title": "APM: Evaluating Style Personalization in LLMs with Arbitrary Preference Mappings", "hint": "RET"}
+{"id": "139053", "title": "Apple-$\\pi$: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence", "hint": "MED "}
+{"id": "154229", "title": "Approximation in Contrastive Representation Learning", "hint": "RET"}
+{"id": "156755", "title": "ARC-Encoder: learning compressed text representations for large language models", "hint": "RET"}
+{"id": "139215", "title": "Are LLM Safety Judges Policy-Invariant? A Three-Principle Stress-Test", "hint": "MED "}
+{"id": "152084", "title": "Ares: Adaptive Reasoning Effort Selection for Efficient LLM Agents", "hint": "RET"}
+{"id": "155756", "title": "ARK: A Dual-Axis Multimodal Retrieval Benchmark along Reasoning and Knowledge", "hint": "RET"}
+{"id": "151536", "title": "ArtCrafter: Feed-Forward Generation of Articulated 3D Object with Analytic Joint Derivation", "hint": "RET"}
+{"id": "154376", "title": "Articulation in Prime: Primitive-Based Articulated Object Understanding from a Single Casual Video", "hint": "RET"}
+{"id": "151805", "title": "Artificial Aphasias in Lesioned Language Models", "hint": "MED "}
+{"id": "139330", "title": "A Scientific Claim Stability Framework for Evaluating MRI Morphometry Pipelines", "hint": "MED "}
+{"id": "149737", "title": "AsdaKV: Attention-Overlap Driven Semantic KV Retrieval for Long-Context LLMs", "hint": "RET"}
+{"id": "149036", "title": "A Semantic-Sampling Framework for Evaluating Calibration in Open-Ended Question Answering", "hint": "MED "}
+{"id": "152698", "title": "ASH: Agents that Self-Hone via Embodied Learning", "hint": "RET"}
+{"id": "150558", "title": "Ask, Answer, and Detect: Role-Playing LLMs for Personality Detection with Question-Conditioned Mixture-of-Experts", "hint": "MED "}
+{"id": "155386", "title": "Ask KG Agent: A Multi-Agent Framework for Code Localization Using Code and Knowledge Graphs", "hint": "RET"}
+{"id": "154064", "title": "A Solver-Efficient Neural Adversarial Attack on Subgraph Matching Models", "hint": "RET"}
+{"id": "153026", "title": "ASSET: Acquisition-Sensitive Subspace Estimation for Test-Time Adaptation of Medical VLMs", "hint": "MED "}
+{"id": "139188", "title": "A Stratified Multi-Rater Evaluation of LLM-Based Virtual Standardized Patients with a Deployed Data-Generation Platform", "hint": "MED "}
+{"id": "153307", "title": "Asynchronous Agentic Poisoning", "hint": "RET"}
+{"id": "149727", "title": "A Theoretical Analysis of Why Masked Diffusion Models Mitigate the Reversal Curse", "hint": "RET"}
+{"id": "152217", "title": "AtmoZero: Self-Play Post-Training for Caption-Free Weather Time-Series Captioning", "hint": "RET"}
+{"id": "149512", "title": "A Training-Free Video Moment Retrieval Framework via Selection from Multiple Visual Prompts", "hint": "RET"}
+{"id": "150300", "title": "Attention Itself Could Retrieve. RetrieveVGGT: Training-Free Long Context Streaming 3D Reconstruction via Query-Key Similarity Retrieval", "hint": "RET"}
+{"id": "156756", "title": "Attention Trajectories as a Diagnostic Axis for Deep Reinforcement Learning", "hint": "MED "}
+{"id": "150554", "title": "Attribution-Guided Shared-Private Decoupling for Noise-Reduced Audio-Visual Representation Learning", "hint": "RET"}
+{"id": "139120", "title": "AudioAgentBench: Evaluating Multi-Turn Voice Agents on Real-World Tasks", "hint": "MED "}
+{"id": "152885", "title": "Auditing AI peer reviewers: a dose-response and false-positive benchmark on real scientific papers", "hint": "RET"}
+{"id": "149397", "title": "Auditing Privacy Leakage in Tabular Foundation Model Embeddings", "hint": "RET"}
+{"id": "155760", "title": "A Unified Spectral Theory of Multimodal Losses", "hint": "RET"}
+{"id": "152534", "title": "Auto-Dreamer: Learning Offline Memory Consolidation for Language Agents", "hint": "RET"}
+{"id": "156757", "title": "Autofocus Retrieval: An Effective Pipeline for Multi-Hop Question Answering With Semi-Structured Knowledge", "hint": "RET"}
+{"id": "150660", "title": "AUTOMEM: Automated Learning of Memory as a Cognitive Skill", "hint": "RET"}
+{"id": "151256", "title": "AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces", "hint": "MED "}
+{"id": "151734", "title": "AutoScientists: Self-Organizing Agent Teams for Long-Running Scientific Experimentation", "hint": "MED "}
+{"id": "154191", "title": "AVOC: Enhancing Hour-Level Audio-Video Understanding in Omni-Modal LLMs via Retrieval-Inspired Token Compression", "hint": "RET"}
+{"id": "154383", "title": "Bayesian Backprop as Belief Propagation: Single-Pass Predictive Uncertainty", "hint": "RET"}
+{"id": "155148", "title": "Bayesian Low-Rank Posteriors for Scalable Membership Inference", "hint": "MED "}
+{"id": "152715", "title": "Bayesian Test-Time Inference of Task-Aligned Similarity from Weak Interactive Feedback", "hint": "RET"}
+{"id": "154974", "title": "BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "139293", "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories", "hint": "MED "}
+{"id": "153819", "title": "Behaving Better, Thinking Worse: Sycophancy Across Post-Training Stages", "hint": "MED "}
+{"id": "138919", "title": "BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces", "hint": "RET"}
+{"id": "151258", "title": "Belief Engine: Configurable Stance Dynamics for Multi-Agent LLM Deliberation", "hint": "RET"}
+{"id": "156773", "title": "Below the Reliability Floor: Recovering True Success from Judge-Gated Loops", "hint": "MED "}
+{"id": "149901", "title": "Benchmarking and Optimizing Multimodal Structured Generation: The OracleGraph Dataset and PRISM Framework", "hint": "MED "}
+{"id": "139608", "title": "Benchmarking Risk Attitudes of LLMs", "hint": "MED "}
+{"id": "155241", "title": "Benchmark Recovery Does Not Certify a Frozen Tool-Trigger Contract After Quantization", "hint": "RET"}
+{"id": "139840", "title": "Benchmarks Design under Data Scarcity: From Coarse Labels to Diagnostic Evaluation of Biosynthetic Gene Cluster Models", "hint": "MED RET"}
+{"id": "139344", "title": "Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents", "hint": "MED "}
+{"id": "149177", "title": "Beyond Confidence: Rethinking Self-Assessments for Performance Prediction in LLMs", "hint": "RET"}
+{"id": "152827", "title": "Beyond Domains: Reusing Web Skills via Transferable Interaction Patterns", "hint": "RET"}
+{"id": "152948", "title": "Beyond Flat Frames: Hierarchical Graph Reasoning for Long Video Understanding", "hint": "RET"}
+{"id": "150916", "title": "Beyond Hard Negatives: Grounded Positive Supervision for Compositional CLIP", "hint": "RET"}
+{"id": "154880", "title": "Beyond LoRA vs. Full Fine-Tuning: Gradient-Guided Optimizer Routing for LLM Adaptation", "hint": "MED "}
+{"id": "151995", "title": "Beyond MMSE: Enhancing PnP Restoration with ProxiMAP", "hint": "RET"}
+{"id": "140053", "title": "Beyond One-Size-Fits-All: Diagnosis-Driven Online Reinforcement Learning with Offline Priors", "hint": "MED "}
+{"id": "148305", "title": "Beyond Outcome Rewards: Process-Aware Optimization for Search Agents", "hint": "RET"}
+{"id": "154780", "title": "Beyond Outcome Rewards: Step-Level Self-Distilled Policy Optimization for Deep Search Agents", "hint": "RET"}
+{"id": "153322", "title": "Beyond Pairwise Supervision: Spectral Characteristic Matching for Data-Efficient Multimodal Alignment", "hint": "RET"}
+{"id": "150607", "title": "Beyond RAG for Agent Memory: Retrieval by Decoupling and Aggregation", "hint": "RET"}
+{"id": "150023", "title": "Beyond Raw Context Transfer: Representation-based Federated Retrieval-Augmented Generation", "hint": "MED RET"}
+{"id": "152198", "title": "Beyond Raw Observations: Distilling and Storing Invariant Driving Memories for Generalizable Autonomous Driving", "hint": "RET"}
+{"id": "153671", "title": "Beyond Scalar Distances: Semantic Attribute Gradients from Frozen MLLMs for Visual Embeddings", "hint": "RET"}
+{"id": "155649", "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction", "hint": "RET"}
+{"id": "149751", "title": "Beyond Sparse Captions: Aligning Slide-Level Text and Patch-Level Vision in Pathology", "hint": "MED "}
+{"id": "156758", "title": "Beyond the Linear Separability Ceiling: Aligning Representations in VLMs", "hint": "MED "}
+{"id": "140090", "title": "Beyond Training Time, Test-Time Coordination is Essential for Cooperative MARL", "hint": "RET"}
+{"id": "155755", "title": "Beyond Uniform Detection: Adaptive Hallucination Detection for RAG Across Response Regimes", "hint": "RET"}
+{"id": "139396", "title": "Beyond Visual Boundaries: Rethinking Scene Segmentation for Movie RAG", "hint": "RET"}
+{"id": "148943", "title": "Beyond ViT Tokens: Masked-Diffusion Pretrained Convolutional Pathology Foundation Model for Cell-Level Dense Prediction", "hint": "MED "}
+{"id": "148190", "title": "B[FM]$^2$: Brain Foundation Model via Flow Matching with SplitUNet", "hint": "MED "}
+{"id": "148501", "title": "Bian Que: An Agentic Framework with Flexible Skill Arrangement for Online System Operations", "hint": "RET"}
+{"id": "152972", "title": "BigCell: Generating Gigapixel Whole-Slide Images", "hint": "MED "}
+{"id": "149098", "title": "Binding Multiple Modalities via Multimodal Wasserstein Barycenter", "hint": "RET"}
+{"id": "150999", "title": "Biological Graph Priors Enable Representation Learning for Cellular Microscopy", "hint": "RET"}
+{"id": "152391", "title": "Biomedical Acquisition-induced Style Shifts as Mixture Shifts: Style-aware Mixture-of-Experts Multimodal Prompt Learning", "hint": "MED "}
+{"id": "155868", "title": "BioMicroAgents: A Co-evolutionary Multi-Agent Framework for High-Fidelity Biomicroscopy Imaging", "hint": "RET"}
+{"id": "138924", "title": "BioSafetyBench: Agentic Cascade Evaluation for the Bio-AI Ecosystem", "hint": "MED "}
+{"id": "138952", "title": "BioXArena: Benchmarking LLM Agents on Multi-Modal Biomedical Machine Learning Tasks", "hint": "MED "}
+{"id": "150556", "title": "Bits Beat Tokens: A Regret Rate Distortion Theory for Large Language Model Agents", "hint": "RET"}
+{"id": "152355", "title": "Block-OBS-GS: Exact Per-Block Joint Brain Surgery with Gauss–Seidel Refinement for LLM Pruning", "hint": "MED "}
+{"id": "155122", "title": "Block Sparse Flash Attention", "hint": "RET"}
+{"id": "152314", "title": "Block Sphere Vector Quantization", "hint": "RET"}
+{"id": "139541", "title": "BoardGameArena: A Multi-Dimensional Benchmark for Strategic Reasoning of LLMs in Board Games", "hint": "MED "}
+{"id": "154738", "title": "Boosting Brain-to-Image Decoding with TRIBE v2 Data Augmentation", "hint": "RET"}
+{"id": "151994", "title": "BootstrapAgent: Turning Repository Setup into Reusable Agent Knowledge", "hint": "MED "}
+{"id": "155598", "title": "Boundary-Induced Forgetting in Large Language Model Tool Chains: Measuring Field-Routing Failures", "hint": "RET"}
+{"id": "150021", "title": "BRACE: Bipolar Reference-Aware Calibration and Estimation for Incomplete Multimodal Learning", "hint": "RET"}
+{"id": "139162", "title": "BrainTRACE: Tracing Longitudinal, Multimodal, and Volumetric Evidence in Brain MRI Clinical Reasoning", "hint": "MED "}
+{"id": "150737", "title": "Breadcrumbing Search Agents: Per-Turn Scheming Over Long-Horizon Trajectories", "hint": "RET"}
+{"id": "154778", "title": "Breaking the Exactness Barrier: Interleaved DeepSeek Sparse Attention for Efficient Long Context Reasoning", "hint": "RET"}
+{"id": "155233", "title": "BRIDGE: Brain-Vision Representation Integration through Depth and Granularity Encoding", "hint": "RET"}
+{"id": "156072", "title": "Bridging Modalities, Spanning Time: Structured Memory for Ultra-Long Agentic Video Reasoning", "hint": "RET"}
+{"id": "152825", "title": "Bridging Textual Profiles and Latent User Embeddings for Personalization", "hint": "RET"}
+{"id": "150709", "title": "Bridging the Modality Bottleneck in Pathology MIL through Virtual Molecular Staining", "hint": "MED "}
+{"id": "155643", "title": "Budgeted Multi-Source Counterfactual Annotation for Off-Policy Evaluation", "hint": "MED "}
+{"id": "153217", "title": "Budgeting Discretion: Theory and Evidence on Street-Level Decision-Making", "hint": "MED "}
+{"id": "149709", "title": "Bug or Feature$^2$: Weight Drift, Activation Sparsity, and Spikes", "hint": "MED "}
+{"id": "151123", "title": "BusterX: MLLM-Powered AI-Generated Video Forgery Detection and Explanation", "hint": "MED "}
+{"id": "156046", "title": "C3P: Contrastive promoter-protein pretraining yields representations capturing bacterial gene regulation", "hint": "RET"}
+{"id": "149149", "title": "Calibrating Agentic LLMs for Clinical Prediction", "hint": "MED "}
+{"id": "154784", "title": "Calibrating LLMs with Semantic-level Reward", "hint": "MED "}
+{"id": "150537", "title": "CAM: Question Answering on Entity-Centric Videos with Continuous Extraction and Adaptive Querying", "hint": "RET"}
+{"id": "139478", "title": "Can Agents Price a Reaction? Evaluating LLMs on Chemical Cost Reasoning", "hint": "MED RET"}
+{"id": "139077", "title": "Can AI Agents Synthesize Scientific Conclusions?", "hint": "RET"}
+{"id": "153028", "title": "Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale", "hint": "RET"}
+{"id": "149163", "title": "Can Large Language Models Develop Gambling Addiction?", "hint": "MED "}
+{"id": "148640", "title": "Can LLMs Take Retrieved Information with a Grain of Salt?", "hint": "MED RET"}
+{"id": "149781", "title": "Can the Parts Fool the Test? Counterfactual Pairing Cycles for Relational OOD", "hint": "MED "}
+{"id": "152838", "title": "CARD: Internalizing Expert Critique into Reinforcement Learning for Deep Search", "hint": "RET"}
+{"id": "139679", "title": "CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi-Sequence Cardiac MRI Evaluations", "hint": "MED "}
+{"id": "153097", "title": "CasePlay: Self-Play Reinforcement Learning from Case Reports for Medical Reasoning", "hint": "MED "}
+{"id": "155150", "title": "CAST: Causal Anchored Simplex Transport for Distribution-Valued Time Series", "hint": "RET"}
+{"id": "154338", "title": "CausalCine: Real-Time Autoregressive Generation for Multi-Shot Video Narratives", "hint": "RET"}
+{"id": "139553", "title": "CausalConflictBench: Can Multimodal Models Follow Local Mechanisms That Conflict with Commonsense?", "hint": "MED "}
+{"id": "138913", "title": "CausalSpatial: A Benchmark for Object-Centric Causal Spatial Reasoning", "hint": "MED "}
+{"id": "151414", "title": "CellMSA: Context Modeling for Single-Cell Representation Learning", "hint": "RET"}
+{"id": "138931", "title": "CellularS2-Bench: A Staged, Evidence-Grounded Benchmark for Cellular Network Security Reasoning", "hint": "RET"}
+{"id": "139123", "title": "Cephalonauts One: A deep fMRI dataset for decoding naturalistic speech in the human brain", "hint": "RET"}
+{"id": "148991", "title": "Certified Robust Interpretability via Concept-Space Stability under Interventional Proxies", "hint": "RET"}
+{"id": "140085", "title": "Chain-of-Thought Is Not Explainability", "hint": "MED "}
+{"id": "149306", "title": "Change-Robust Online Topological Memory for Long-Term Relocalization and Semantic Navigation", "hint": "RET"}
+{"id": "139332", "title": "CineMME: Benchmarking Fine-Grained Perception and Plot Reasoning in Multimodal Large Language Models", "hint": "MED "}
+{"id": "153952", "title": "Cite What You Explore: Budget-Aware LLM Reasoning over Medical KGs with Verifiable Evidence", "hint": "MED RET"}
+{"id": "154638", "title": "City-RAG: Stepping Into a City via Spatially-Grounded Video Generation", "hint": "RET"}
+{"id": "139660", "title": "CivBench: A Long-Horizon Benchmark for Tool-Mediated Agents in Civilization VI", "hint": "RET"}
+{"id": "139365", "title": "ClawBenchPro: Benchmarking How Well Agent Harnesses Work", "hint": "MED "}
+{"id": "148625", "title": "CLEF: EEG Foundation Models for Learning Clinical Semantics", "hint": "MED "}
+{"id": "139102", "title": "ClinMAS: A Knowledge-Grounded Multi-Agent Simulation Framework for Evaluating Clinical Reasoning in LLMs", "hint": "MED "}
+{"id": "152543", "title": "CLIOPATRA: Extracting Private Information from LLM Insights", "hint": "MED "}
+{"id": "154248", "title": "Closed-Loop Alignment: Socially Coupled In-Context Learning and Relational Posterior Collapse", "hint": "MED "}
+{"id": "149779", "title": "Closed Loop Dynamic Driving Data Mixture for Real-Synthetic Co-Training", "hint": "RET"}
+{"id": "148375", "title": "CLoSeR: Closing the Loop for Long-Context Streaming Reconstruction", "hint": "RET"}
+{"id": "150601", "title": "Closing the Indexing-Decoding Gap in Multimodal Generative Retrieval via Prefix Retention Optimization", "hint": "RET"}
+{"id": "150688", "title": "CLR-voyance : Reinforcing Open-Ended Reasoning for Inpatient Clinical Decision Support with Outcome-Aware Rubrics", "hint": "MED RET"}
+{"id": "149608", "title": "CODA: Cohort- and Drift-aware Foundation Model for Multimodal Clinical Reasoning", "hint": "MED "}
+{"id": "155085", "title": "CoE-Agent: Co-Evolving Patient-Doctor Agents via Interactive Policy Graph Optimization for Clinical Decision Making", "hint": "MED "}
+{"id": "139659", "title": "COHE: Auditing Non-Transitivity in Sample Difficulty Proxies for Vision Models", "hint": "RET"}
+{"id": "138874", "title": "ColdDDI: Evaluating Knowledge Utilization in Cold-Start Drug-Drug Interaction Prediction", "hint": "MED "}
+{"id": "153350", "title": "CoMMa: Contribution-Aware Medical Multi-Agents for Decentralized Oncology Decision Support", "hint": "MED "}
+{"id": "154739", "title": "CommunityKV: Efficient Long-Context Decoding via Graph Partitioning", "hint": "RET"}
+{"id": "150292", "title": "COMPASS: Composable Policy-Amortized Structured Search for LLM-Based Optimization Modeling", "hint": "RET"}
+{"id": "148734", "title": "CompJudge: Fine-Grained Comparative Evaluation using Multimodal LLM for Subject-Driven Generation", "hint": "MED "}
+{"id": "151019", "title": "Complexity-Aware LoRA Aggregation for Modality-Heterogeneous Federated Person Re-identification", "hint": "RET"}
+{"id": "151315", "title": "COMPOSE: Composing Future Theorems from Citations and Formal Structure", "hint": "RET"}
+{"id": "150194", "title": "Computational Depth Predicts Quantization Sensitivity in Multimodal Models", "hint": "MED "}
+{"id": "149192", "title": "Concept-Aware Wasserstein Routing with Vision-Language Guidance for Few-Shot WSI Classification", "hint": "MED "}
+{"id": "150148", "title": "Concorde: Geometry-Aware Link Prediction via Decoupled Energy Minimization", "hint": "RET"}
+{"id": "139151", "title": "Conditional Multi-Event Temporal Grounding in Long-Form Video", "hint": "RET"}
+{"id": "148415", "title": "Conflict-Suppressed RAG: A Simple Decoding-Time Framework for Faithful Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "150795", "title": "Conformal Language Modeling via Posterior Sampling", "hint": "MED "}
+{"id": "155880", "title": "Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent Reliability", "hint": "MED "}
+{"id": "155108", "title": "Constraint Retrieval Is Not Constraint Enforcement in Large Language Models", "hint": "RET"}
+{"id": "149317", "title": "ContinuLoc: Continuous Pose Inference over Neural Fields for UAV Geo-Localization", "hint": "RET"}
+{"id": "148964", "title": "Contrastive Nonmyopic Objective Cost-Tradeoff Acquisition for Longitudinal Data", "hint": "RET"}
+{"id": "150870", "title": "Contrastive Retrieval Heads for Improved Attention-Based Reranking", "hint": "RET"}
+{"id": "151630", "title": "Control Reinforcement Learning: Token-Level Mechanistic Analysis via Learned SAE Feature Steering", "hint": "MED "}
+{"id": "154512", "title": "Coordination Connectivity: Shared Initialization Shapes the Joint-Policy Landscape in MARL", "hint": "MED "}
+{"id": "153844", "title": "CoRDS: Coreset-Based Representative and Diverse Selection for Streaming Video Understanding", "hint": "RET"}
+{"id": "151276", "title": "CoRE-RL: Co-evolving Reasoning Trajectories and Evidence Subgraphs with Learned Evidence Projection", "hint": "RET"}
+{"id": "154557", "title": "CORTEG: Foundation Models Enable Cross-Modality Representation Transfer from Scalp to Intracranial Brain Recordings", "hint": "MED "}
+{"id": "139606", "title": "CounterStrike-1K: A Multi-Perspective Dataset of Professional Gameplay for World Modeling", "hint": "RET"}
+{"id": "149960", "title": "CRAFT: Causal Responsibility and Failure Tracing in Medical Vision Language Models", "hint": "MED "}
+{"id": "139433", "title": "CREF: Forecasting Benchmarks for the Age of Agents", "hint": "RET"}
+{"id": "139787", "title": "CRISP: Compositional Reasoning over Images via Stackable Programs for VLMs", "hint": "MED "}
+{"id": "149084", "title": "Cross-Attentive Bayesian Low-Rank Adaptation for Multimodal Uncertainty Estimation", "hint": "MED "}
+{"id": "152755", "title": "CrossWeave: Emergent Cross-Modal Scene and Instance Retrieval from Sparse 2D-3D Alignment", "hint": "RET"}
+{"id": "148277", "title": "CRUMB: Efficient Prior Fitted Network Inference via Distributionally Matched Context Batching", "hint": "RET"}
+{"id": "156100", "title": "Curriculum proof repair with learned counterexamples", "hint": "MED RET"}
+{"id": "148257", "title": "CutAttn: Discovering Cognitive Transition Layers for Efficient Long-Context Prefilling", "hint": "RET"}
+{"id": "149212", "title": "CWAGraph: Retrieving What Was Never Explicitly Identified in Graph-Based RAG", "hint": "RET"}
+{"id": "154329", "title": "DACE: Diversity-Driven Adversarial Co-Evolution for Robust LLM Safety Alignment", "hint": "MED "}
+{"id": "156146", "title": "DaCe-DT: Data-Centric Offline Multi-Task Reinforcement Learning via Adaptive Prompts and Trajectory Correction for Heterogeneous Tasks", "hint": "RET"}
+{"id": "151411", "title": "DACE RL for Compute Efficient Reinforcement Learning in Small Model Reasoning", "hint": "MED "}
+{"id": "155436", "title": "DAG-Biased Graph Learning for Multimodal Survival on EHR", "hint": "MED "}
+{"id": "150664", "title": "DAGent: Evaluate-then-Grow Planning for Deep Research Agents", "hint": "RET"}
+{"id": "148819", "title": "DAPS: Dependency-Aware Premise Selection for LLM Theorem Proving", "hint": "RET"}
+{"id": "154713", "title": "Darwin-7B: A Multi-Omic Foundation Model for the Human Gut Microbiome via Sparsified Quality-Aware Tokenization", "hint": "MED "}
+{"id": "154287", "title": "Data Auctions for Retrieval Augmented Generation", "hint": "RET"}
+{"id": "139550", "title": "DDx-TRACE: A Benchmark for Medical Diagnostic Trajectories in VLMs", "hint": "MED "}
+{"id": "150419", "title": "DECEIVE-AFC: Adversarial Claim Attacks against Search-Enabled LLM-based Fact-Checking Systems", "hint": "RET"}
+{"id": "152927", "title": "Deceptive Grounding: Entity Attribution Failure in Clinical Retrieval-Augmented Generation", "hint": "MED RET"}
+{"id": "149003", "title": "Decomposed Representations Mitigate the Alignment–Specificity Trade-off in Multi-Omics", "hint": "RET"}
+{"id": "151599", "title": "Decoupled Prototype Contrastive Alignment Hashing for Cross-Modal Retrieval", "hint": "RET"}
+{"id": "139410", "title": "DeepfakeGenome: Toward Next-Generation Deepfake Attribution", "hint": "RET"}
+{"id": "153616", "title": "Deep Reasoning in General Purpose Agents via Structured Meta-Cognition", "hint": "RET"}
+{"id": "153645", "title": "Deep Research as Rubric", "hint": "RET"}
+{"id": "148950", "title": "DeltaFugue: Orchestrating Spatial and Associative Memory for Algorithmic Length Generalization", "hint": "RET"}
+{"id": "155629", "title": "Demystifying Numerical Errors in LLM Inference: Achieving Reproducible Inference for Mission-Critical Tasks with HEAL", "hint": "MED "}
+{"id": "153427", "title": "Dense Cross-Tokenizer Distillation via Semantic Optimal Local Alignment", "hint": "RET"}
+{"id": "140012", "title": "Deployment-Memory LLM Test-Time Training Should Require Behavioral Evidence Beyond Perplexity", "hint": "MED RET"}
+{"id": "152636", "title": "DepthGraft: Structural Regularization through Hierarchical Cross-Layer KV Reconstruction", "hint": "RET"}
+{"id": "153178", "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL", "hint": "MED "}
+{"id": "151898", "title": "DiagEval: Trajectory-Conditioned Diagnosis for Reliable Software Evaluation with GUI Agents", "hint": "MED "}
+{"id": "153428", "title": "Diagnosing and Repairing Citation Failures in Generative Engine Optimization", "hint": "MED "}
+{"id": "149438", "title": "Diagnosing and Repairing Visual Collapse in Compact Medical Multimodal LLMs", "hint": "MED "}
+{"id": "155455", "title": "DiagSQL: A Diagnostic Validator for Text-to-SQL with Reward Allocation and Co-occurrence Shaping", "hint": "MED "}
+{"id": "152229", "title": "Differentiable Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation", "hint": "RET"}
+{"id": "139203", "title": "Differential Item Functioning as an Item-Level Diagnostic for LLM Benchmarks", "hint": "MED "}
+{"id": "149202", "title": "DiffScore: Text Evaluation Beyond Autoregressive Likelihood", "hint": "MED "}
+{"id": "154312", "title": "Diffusion Meta-Prompting and Steering for Generalizable Foundation Model Adaptation", "hint": "RET"}
+{"id": "155419", "title": "DIGS: Distribution-Informed Gaussian Splatting for Training-Free Open-Vocabulary 3D Segmentation", "hint": "RET"}
+{"id": "138947", "title": "DIS-Bench: Evaluating LLMs on System Testing via Directed Input Synthesis", "hint": "RET"}
+{"id": "151383", "title": "Discrete Neural Interlingua for Ontology-Agnostic EHR Modeling", "hint": "MED "}
+{"id": "148543", "title": "Disen-Forcing: Disentangling Semantic Anchoring from Motion for Autoregressive Video Diffusion", "hint": "MED "}
+{"id": "152826", "title": "DoAtlas-1: A Causal Compilation Paradigm for Clinical AI", "hint": "MED "}
+{"id": "148605", "title": "DocAtlas: Long-Document Understanding as Mutable-State Interaction", "hint": "RET"}
+{"id": "139137", "title": "Do Composed Image Retrieval Benchmarks Require Multimodal Composition?", "hint": "RET"}
+{"id": "152263", "title": "DoG: Sniffing Out Overconfidence in LLM Agents via Post-hoc Trajectory Restructuring", "hint": "MED "}
+{"id": "150394", "title": "Do LLMs Bind Episodes? Probing Cross-Episode Parametric Retrieval Through Shared Cues", "hint": "RET"}
+{"id": "150011", "title": "Don't Always Pick the Highest-Performing Model: An Information Theoretic View of LLM Ensemble Selection", "hint": "MED "}
+{"id": "140050", "title": "Don't Deploy Fine-Tuned Genomic Foundation Models Without Privacy Evaluation: Reconstruction Vulnerability Is Unpredictable Without Empirical Measurement", "hint": "MED "}
+{"id": "154186", "title": "Don't Lose Focus: Activation Steering via Key-Orthogonal Projections", "hint": "RET"}
+{"id": "151068", "title": "Do Pathology Foundation Models Encode Disease Progression? A Pseudotime Analysis of Visual Representations", "hint": "MED "}
+{"id": "149897", "title": "Do Reasoning LLMs Refuse What They Infer in Long Contexts?", "hint": "RET"}
+{"id": "155908", "title": "Do You CARE to Generalize? Extracting Robust Concept Directions from LLMs", "hint": "MED "}
+{"id": "150275", "title": "DPIAgent: Divide, Protocol, Isolate for Agentic Reproduction Test Generation", "hint": "MED "}
+{"id": "149674", "title": "Drag as Evidence: Motion-Grounded Latent Recomposition for Drag-Based Editing", "hint": "RET"}
+{"id": "139730", "title": "DriveHierarchy: A Benchmark for Diagnosing VLM Driving Capabilities from Open-Loop Understanding to Closed-Loop Execution", "hint": "MED "}
+{"id": "139692", "title": "Driving on Memory", "hint": "RET"}
+{"id": "152910", "title": "Driving Video Retrieval for Complex Queries with Structured Grounding", "hint": "RET"}
+{"id": "139759", "title": "DualWorldBench: Can Agents Plan Deliveries across Symbolic and Grounded Worlds?", "hint": "MED "}
+{"id": "151116", "title": "Dynamical Adapter Fusion: Constructing A Global Adapter for Pre-Trained Model-based Class-Incremental Learning", "hint": "RET"}
+{"id": "150677", "title": "Dynamic Regulatory Graph Learning for Histology-to-Spatial Transcriptomics", "hint": "MED RET"}
+{"id": "148952", "title": "Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model", "hint": "MED "}
+{"id": "151719", "title": "Early Failure Detection and Intervention in Video Diffusion Models", "hint": "MED "}
+{"id": "151511", "title": "EasyLens: A Training-Free Plug-and-Play Subtle-Lesion Representation Amplifier for Medical Vision-Language Models", "hint": "MED "}
+{"id": "139595", "title": "ECG-Reasoning-Benchmark: A Benchmark for Evaluating Clinical Reasoning Capabilities in ECG Interpretation", "hint": "MED RET"}
+{"id": "149577", "title": "ECHO: Continuous Hierarchical Memory for Vision-Language-Action Models", "hint": "RET"}
+{"id": "152656", "title": "Echo-SAM: Zero-Shot Learning of Unseen Structures via Medical Knowledge Graph Grounding", "hint": "MED "}
+{"id": "153813", "title": "EcoGEO: Trajectory-Aware Evidence Ecosystems for Web-Enabled LLM Search Agents", "hint": "RET"}
+{"id": "139200", "title": "EditJudge-Bench: Auditing VLM Image-Edit Judges with Synthetic Ground Truth", "hint": "MED "}
+{"id": "154496", "title": "EDITORS Know Your Style! Editing LoRA Subspaces for Stylistic Attribution and Imitation", "hint": "MED "}
+{"id": "151304", "title": "Efficient and Transferable Agentic Knowledge Graph RAG via Reinforcement Learning", "hint": "RET"}
+{"id": "139483", "title": "E-GEO: A Testbed for Generative Engine Optimization in E-Commerce", "hint": "RET"}
+{"id": "139373", "title": "EgoStream: A Diagnostic Benchmark for Streaming Episodic Memory in Egocentric Vision", "hint": "MED "}
+{"id": "139551", "title": "EHRNote-ChatQA: A Benchmark for Evidence-Grounded Multi-Turn Clinical Question Answering over Longitudinal Discharge Summaries", "hint": "MED "}
+{"id": "149789", "title": "Embedded-Arena: Building Hardware-in-the-Loop Coding Agents to Run AI on Microcontrollers", "hint": "MED "}
+{"id": "152590", "title": "EmoTrack: Robust Depression Tracking from Counseling Transcripts across Session Regimes", "hint": "MED "}
+{"id": "138889", "title": "EndoSCOP-V: A Multi-Turn Video Understanding Evaluation Framework for Multimodal Models in Endoscopy Reporting and Clinical Reasoning", "hint": "MED "}
+{"id": "150845", "title": "EngramState: Loadable Tool Priors for Efficient Function Calling", "hint": "RET"}
+{"id": "152178", "title": "Enhancing Agentic Code Localization with Traceability Recovered from Repository Evolution", "hint": "RET"}
+{"id": "153267", "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation", "hint": "RET"}
+{"id": "139835", "title": "EnvFaultBench: Benchmarking LLM Agents on Software Environment-Fault Troubleshooting", "hint": "MED "}
+{"id": "154409", "title": "EnvTrap: Revealing the Environment-Only Attack Surface in Embodied AI via Consequence-Blind Action Execution", "hint": "MED "}
+{"id": "156094", "title": "Epitope-Conditioned Nanobody CDR Design via Retrieval-Augmented Protein Language Models", "hint": "MED RET"}
+{"id": "138971", "title": "ER-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room", "hint": "MED "}
+{"id": "139127", "title": "EV-AUDIT: A Co-Evolutionary Auditing Framework for Task Hijacking in Multi-Agent Systems", "hint": "MED "}
+{"id": "154066", "title": "Evidence Guided Dual Expert Memory with Joint Routing for VLLMs Online Correction", "hint": "RET"}
+{"id": "154437", "title": "EvoDiagram: Agentic Editable Diagram Creation via Design Expertise Evolution", "hint": "MED "}
+{"id": "149312", "title": "Evolutionary System Prompt Learning for Reinforcement Learning in LLMs", "hint": "RET"}
+{"id": "153181", "title": "Evolving Agent Teams", "hint": "MED "}
+{"id": "139805", "title": "EvoMemBench: Benchmarking Agent Memory from a Self-Evolving Perspective", "hint": "RET"}
+{"id": "148706", "title": "EvoMM: Reinforced Self-Evolving Multimodal Agentic Memory", "hint": "RET"}
+{"id": "150444", "title": "Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self-Evolving Skill Memory", "hint": "MED RET"}
+{"id": "149912", "title": "ExperiGen: Agentic Hypothesis Discovery from Observational Data", "hint": "MED "}
+{"id": "151711", "title": "Explanations over Graphs: An Agent Architecture for IT Enterprise Diagnostic Tasks", "hint": "MED RET"}
+{"id": "155833", "title": "Explicit Geometric Chain-of-Thought for Vision-Language-Action in Autonomous Driving", "hint": "RET"}
+{"id": "139262", "title": "ExploitGym: Can AI Agents Turn Security Vulnerabilities into Real Attacks?", "hint": "MED "}
+{"id": "139255", "title": "Exploring the Limits of Compositional Generalization in Vision-Language-Action Manipulation", "hint": "MED "}
+{"id": "154898", "title": "Exposing Private Corpus Leakage in  Multimodal RAG", "hint": "MED RET"}
+{"id": "150095", "title": "Extending Pretrained 10-Second ECG Foundation Models to Longer Horizons", "hint": "MED "}
+{"id": "150343", "title": "Extraneous Cognitive Load in Large Language Models", "hint": "MED "}
+{"id": "139472", "title": "FACBench: A Benchmark for Formal-Anchor Collisions in Multilingual Mathematical Grounding", "hint": "RET"}
+{"id": "152471", "title": "Face Deepfake-aware Recovery via Semantic-driven Facial Representation-based Watermarking", "hint": "RET"}
+{"id": "152324", "title": "Factual recall in linear associative memories: sharp asymptotics and mechanistic insights", "hint": "RET"}
+{"id": "149903", "title": "FADE: Fractional Anomalous Dynamics Extrapolation for Training-Free Diffusion Transformers Acceleration", "hint": "RET"}
+{"id": "153631", "title": "Failure-Band Authorization for Filtered Retrieval", "hint": "RET"}
+{"id": "154171", "title": "Fair Division of Work in Collaborative Mean Estimation via Bargaining", "hint": "MED "}
+{"id": "156099", "title": "Fast Diverse Nearest Neighbor Search", "hint": "RET"}
+{"id": "151094", "title": "Feature Recovery for Object Understanding Under Physical Transformation", "hint": "RET"}
+{"id": "152765", "title": "Federated Graph Learning with Local Message Compensation", "hint": "RET"}
+{"id": "150142", "title": "Feeling of Knowing in Large Language Models", "hint": "RET"}
+{"id": "151723", "title": "FEP-Agent: Grounding LLM Agent Self-Evolution in Active Inference with Semantic Memory", "hint": "RET"}
+{"id": "149180", "title": "Fill the GAP: A Granular Alignment Paradigm for Visual Reasoning in Multimodal Large Language Models", "hint": "MED "}
+{"id": "152146", "title": "FinAl: Fine-grained Alignment for Detail-Preserving Medical Vision-Language Pretraining", "hint": "MED RET"}
+{"id": "139702", "title": "FindStatBench: Evaluating Large Language Models on Combinatorial Code Synthesis", "hint": "RET"}
+{"id": "155698", "title": "Firefly: Illuminating Verified Real-world Tool Call Data Generation", "hint": "RET"}
+{"id": "152494", "title": "Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing", "hint": "MED "}
+{"id": "139338", "title": "FLARE: Full-Modality Long-Video Audiovisual Retrieval Benchmark with User-Simulated Queries", "hint": "RET"}
+{"id": "151562", "title": "FlexCover: Flexible Cover Song Generation via Symbolic Lead Sheet Control", "hint": "MED "}
+{"id": "148446", "title": "Flow-Corrected Shape Optimization: Taming Manifold Drift in High-Dimensional 3D Models", "hint": "RET"}
+{"id": "154703", "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference", "hint": "RET"}
+{"id": "139748", "title": "FlyAOC: Evaluating Agentic Ontology Curation of Drosophila Scientific Knowledge Bases", "hint": "RET"}
+{"id": "139220", "title": "FML-bench: A Controlled Study of AI Research Agent Strategies from the Perspective of Search Dynamics", "hint": "RET"}
+{"id": "139808", "title": "FOCUS: Benchmarking Retinal Model Generalization from Foundation Vision Encoders to Multimodal LLMs", "hint": "MED "}
+{"id": "153936", "title": "ForecastCompass: Guiding Agentic Forecasting with Adaptive Factor Memory", "hint": "RET"}
+{"id": "139668", "title": "Forecasting Microbial Dynamics: Evaluation Protocol and Prior-Spectrum Benchmark", "hint": "MED "}
+{"id": "150820", "title": "Foresight-over-Graph: Reasoning Beyond Local Horizons for Knowledge Base Question Answering", "hint": "RET"}
+{"id": "153986", "title": "Forgery Evidence Peaks Mid-Stack: Forensic Evidence Relay for Multimodal Forgery Detection", "hint": "MED "}
+{"id": "155114", "title": "Forgetting is Not Always Bad: A Neuro-Inspired Memory Repair Mechanism for Poisoned LLM Agents", "hint": "MED "}
+{"id": "149516", "title": "Forward Shapley Scoring for Non-Myopic Active Feature Acquisition", "hint": "MED "}
+{"id": "153442", "title": "Fourier Contour Learning for Efficient and Traceable Cardiac MRI Quantification", "hint": "MED "}
+{"id": "153357", "title": "FrED: External Data Influence Estimation via Domain Knowledge Graph Grounding", "hint": "RET"}
+{"id": "140015", "title": "From Claims to Context: Holistic Information Verification Requires Contextual Signals", "hint": "RET"}
+{"id": "150406", "title": "From Failure Taxonomy to Intervention: A Diagnostic Methodology for Industry-Scale AVLM in Video and Live-Streaming Platform Moderation", "hint": "MED "}
+{"id": "148946", "title": "From Finding to Linking: Benchmarking and Advancing Cross-Long-Video Reasoning for Multimodal LLMs", "hint": "MED RET"}
+{"id": "151117", "title": "From Heartbeat to Cardiochoreography: A Mechanics Foundation Model for Individualized 4D Cardiac Motion Generation Conditioned on Electrophysiology", "hint": "MED "}
+{"id": "153875", "title": "From Intent to Evidence: A Categorical Approach for Structural Evaluation of Deep Research Agents", "hint": "MED RET"}
+{"id": "152846", "title": "From Label Priors to Task Evidence: Long-Video Frame Selection via Bayesian GRPO", "hint": "RET"}
+{"id": "155180", "title": "From Matching to Reasoning: Query-Aware Long Video Summarization", "hint": "RET"}
+{"id": "139321", "title": "From Pixels to Concepts: Do Segmentation Models Understand What They Segment?", "hint": "RET"}
+{"id": "155655", "title": "From Retrieval to Reasoning: Agentic Mechanism Prediction from Cell Painting Profiles", "hint": "RET"}
+{"id": "148303", "title": "From Retrieval to Recognition: Knowledge-Enhanced Foundation Models for Time Series Classification", "hint": "RET"}
+{"id": "154681", "title": "From Talking Words to Sharing Thoughts: Scalable Multi-LLM Aggregation via Structured Message Passing", "hint": "MED "}
+{"id": "155821", "title": "From Topology to Retrieval: Decoding Embedding Spaces with Unified Signatures", "hint": "RET"}
+{"id": "153154", "title": "From “Weak” Signals to Strong Models: Preference Delta Aggregation with LoRA Merging", "hint": "RET"}
+{"id": "150144", "title": "Frontier Language Models Struggle to Copy: Text Can Be Better Viewed in 2D", "hint": "RET"}
+{"id": "150946", "title": "Frozen Memory Is Not Enough: Rethinking External Memory as Extraction", "hint": "RET"}
+{"id": "151309", "title": "Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps", "hint": "RET"}
+{"id": "155007", "title": "FusionAudit: Pathway-Conditioned Robustness Auditing for Native Multimodal Models", "hint": "MED "}
+{"id": "156761", "title": "FusionProt: Fusing Sequence and Structural Information for Unified Protein Representation Learning", "hint": "MED "}
+{"id": "148191", "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention", "hint": "RET"}
+{"id": "151913", "title": "GDSD: Reinforcement Learning as Guided Denoiser Self-Distillation for Diffusion Language Models", "hint": "MED "}
+{"id": "153068", "title": "GEAR-Align: Grounding-Evidence-Aware Gradient Routing for Multimodal Alignment", "hint": "MED "}
+{"id": "139415", "title": "General Agent Evaluation", "hint": "RET"}
+{"id": "152117", "title": "Generalized Priority-Aware Shapley Value", "hint": "MED "}
+{"id": "149448", "title": "Generating the Unheard: Phylogeny-Guided Latent Generation for Ancestral Sound Reconstruction", "hint": "RET"}
+{"id": "153355", "title": "Gen-Searcher: Reinforcing Agentic Search for Image Generation", "hint": "RET"}
+{"id": "139512", "title": "GeoFidelity-Bench: Evaluating Block-Conditioned Geographic Fidelity of Street-View Generation", "hint": "RET"}
+{"id": "155498", "title": "GeoMemory: Geometry-Indexed Memory for Long-Horizon Interactive Video Generation", "hint": "RET"}
+{"id": "151572", "title": "Geometric Gain Graph: Zero-Token Graph Construction for Multi-Hop RAG", "hint": "RET"}
+{"id": "155408", "title": "Geometry-Aware Directional Alignment for Coherent Model Merging", "hint": "MED "}
+{"id": "149549", "title": "Geometry-Centered 3D Latent World Models for Growing Surfaces", "hint": "RET"}
+{"id": "155697", "title": "GeoRouter: Dynamic Paradigm Routing for Worldwide Image Geolocalization", "hint": "RET"}
+{"id": "152562", "title": "GeoTransolver: Learning Physics on Irregular Domains using Multi-scale Geometry Aware Physics Attention Transformer", "hint": "RET"}
+{"id": "139591", "title": "GISA: A Benchmark for General Information-Seeking Assistant", "hint": "RET"}
+{"id": "152398", "title": "Git Context Controller: Manage the Context of Agents by Agentic Git", "hint": "RET"}
+{"id": "152133", "title": "GLACIER: Rethinking Mass Spectrum Prediction as an Object Detection Problem", "hint": "MED RET"}
+{"id": "149584", "title": "Glance Before You Tell: Anomaly-Guided 3D Radiology Report Generation with Heat-Conduction Slice Encoders", "hint": "MED "}
+{"id": "154081", "title": "GLINT: Sparsely Gated Vision-Language Alignment for Fine-Grained Radiology Representations", "hint": "MED "}
+{"id": "153209", "title": "Global Importance Estimation for KV Cache Eviction", "hint": "RET"}
+{"id": "154884", "title": "GLOVE: Global Verifier for LLM Memory-Environment Realignment", "hint": "RET"}
+{"id": "152461", "title": "GlucoFM: A Dual-Stream Foundation Model for Continuous Glucose Monitoring", "hint": "MED "}
+{"id": "148735", "title": "Going Down Memory Lane: Scaling Tokens for Video Stream Understanding with Dynamic KV-Cache Memory", "hint": "RET"}
+{"id": "155209", "title": "GOLD PANNING: Strategic Context Shuffling for Needle-in-Haystack Reasoning", "hint": "MED RET"}
+{"id": "139632", "title": "GPT-Image-Edit-1M: An Auditable Million-Scale Dataset for Instruction-Guided Image Editing", "hint": "MED "}
+{"id": "153272", "title": "Gradient Boosted Trees for Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "156635", "title": "Gradient descent inference in empirical risk minimization", "hint": "RET"}
+{"id": "153351", "title": "Graph-Enhanced Attribute-Aware Modeling for Cloth-Changing Person Re-Identification", "hint": "RET"}
+{"id": "139037", "title": "GraphInstruct: A Progressive Benchmark for Diagnosing Capability Gaps in LLM Graph Generation", "hint": "MED RET"}
+{"id": "153064", "title": "GraphMemRL: Action-Native Reinforcement Learning for Persistent Graph Memory Construction", "hint": "RET"}
+{"id": "153241", "title": "Grassmannian Geodesic Steering: Rank-Preserving Subspace Control for Inference-Time Alignment of Language Models", "hint": "MED "}
+{"id": "149734", "title": "GRNAgent: A Multimodal Graph Reasoning Agent for Gene Regulatory Network Inference", "hint": "RET"}
+{"id": "148826", "title": "Grounded or Fabricated? Unsupervised Detection of LLM Hallucinations via Contextualized Influence on Response Embeddings", "hint": "MED "}
+{"id": "139134", "title": "GroupMemBench: Benchmarking LLM Agent Memory in Multi-Party Conversations", "hint": "RET"}
+{"id": "153234", "title": "Group of Skills: Group-Structured Skill Retrieval for Agent Skill Libraries", "hint": "RET"}
+{"id": "149359", "title": "GT-HarmBench: Benchmarking AI Safety Risks Through the Lens of Game Theory", "hint": "MED "}
+{"id": "139804", "title": "GUITAR: Structured Failure Diagnosis of GUI Agents via State Transitions", "hint": "MED "}
+{"id": "150621", "title": "Gym-Anything: Turn Any Software into an Agent Environment", "hint": "MED "}
+{"id": "154568", "title": "Half-Truths Break Similarity-Based Retrieval", "hint": "RET"}
+{"id": "152918", "title": "Hallucination-Guided Unlearning: Using Hallucination Traces to Reveal Overfitted Memories", "hint": "MED "}
+{"id": "139204", "title": "HalluWorld: A Controlled Benchmark for Hallucination via Reference World Models", "hint": "RET"}
+{"id": "150797", "title": "HandXFM: Semantic-Structural Distillation for Hand Radiograph Foundation Models", "hint": "MED "}
+{"id": "139113", "title": "HAPACT: A Benchmark For Human-Centric Physical Impact Localization in Movies", "hint": "RET"}
+{"id": "155727", "title": "HARMONY: Hierarchical Anchor Retrieval on Manifold for Oblivious-source Acoustic Anomaly Detection", "hint": "RET"}
+{"id": "138958", "title": "Harness the Memory: A Holistic Evaluation of Memory Substrates in Memory Agents", "hint": "RET"}
+{"id": "150693", "title": "HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation", "hint": "RET"}
+{"id": "139340", "title": "HDL-RepoBench: Multi-Paradigm Repository-Level Code Completion for Hardware Design Languages", "hint": "RET"}
+{"id": "148545", "title": "Heads That Write, Not Just Point: Image Retrieval Heads in Vision-Language Models", "hint": "RET"}
+{"id": "150667", "title": "HEED: Density-Weighted Residual Alignment for Hybrid Vision-Language Model Distillation", "hint": "MED "}
+{"id": "155111", "title": "Heuresis: Evaluating Search Strategies for Autonomous Machine Learning Research Agents", "hint": "RET"}
+{"id": "139751", "title": "HiddenPathQA: A Benchmark for Knowledge Graph Question Answering When Questions Hide Their Paths", "hint": "MED RET"}
+{"id": "139499", "title": "Hidden Positives: Why Code Retrieval Benchmarks Underestimate Model Quality", "hint": "RET"}
+{"id": "154951", "title": "Hide to Guide: Learning via Semantic Masking", "hint": "RET"}
+{"id": "154222", "title": "HIDRA: Hierarchical Dual-Routing Attention for Replay-Free Lifelong Imitation Learning", "hint": "RET"}
+{"id": "154207", "title": "Hierarchical Graph Alignment for Cross-Modal 3D Scene Grounding", "hint": "RET"}
+{"id": "149193", "title": "Hierarchical Semantic Tree Anchoring for CLIP-Based Class-Incremental Learning", "hint": "RET"}
+{"id": "149761", "title": "HIFC-IQA: Train-Free Cross-Domain Image Quality Assessment via Dual-Process Cognition", "hint": "RET"}
+{"id": "155067", "title": "Hi-Q: Hierarchical Evidence-guided Query Refinement for Multi-Hop Question Answering", "hint": "RET"}
+{"id": "152551", "title": "HoloCode: A Code-Centric Multi-Agent Framework for Image-to-3D Scene Generation", "hint": "RET"}
+{"id": "148203", "title": "How does RL Post-training Induce Skill Composition? A Case Study on Countdown", "hint": "MED "}
+{"id": "151382", "title": "How Far Are VLMs from Privacy Awareness in the Physical World? An Empirical Study", "hint": "MED "}
+{"id": "154841", "title": "How Language Models Compress and Compare: Understanding  Selection with Token Covariance Maps", "hint": "MED "}
+{"id": "149872", "title": "How Much Evidence Should Retrieval-Augmented In-Context Learning Use Under Distribution Shift?", "hint": "MED RET"}
+{"id": "148738", "title": "How Much is Left? LLMs Linearly Encode Their Remaining Output Length", "hint": "RET"}
+{"id": "150418", "title": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models", "hint": "MED "}
+{"id": "156113", "title": "How Much of a Model Do We Need? Redundancy and Slimmability in Remote Sensing Foundation Models", "hint": "MED "}
+{"id": "155300", "title": "How to Scale Mixture-of-Experts: From muP to the Maximally Scale-Stable Parameterization", "hint": "MED "}
+{"id": "139078", "title": "How to Train a Surgeon? Benchmarking Generalist Agents in Surgical Scene Understanding", "hint": "MED "}
+{"id": "148694", "title": "HyperSkill: Training-Free Omnimodal GRPO via Hypergraph-Indexed Skill-Library Evolution", "hint": "RET"}
+{"id": "152054", "title": "HYVE: Hybrid Views for LLM Context Engineering over Machine Data", "hint": "MED "}
+{"id": "150398", "title": "ICAT: Incident-Case–Grounded Adaptive Testing for Physical-Risk Prediction in Embodied World Models", "hint": "RET"}
+{"id": "148764", "title": "IFDECORATOR: Wrapping Instruction Following Reinforcement Learning with Verifiable Rewards", "hint": "MED "}
+{"id": "150565", "title": "Improving Consistency in Retrieval Augmented Systems  With Group Similarity Rewards", "hint": "RET"}
+{"id": "148162", "title": "Improving Continual Video Instance Segmentation via Spatial-Temporal Balanced Mixture-of-Experts Adapters", "hint": "RET"}
+{"id": "149120", "title": "Incentivizing Agentic Retrieval for Disease-Centric Clinical Case Search via Trajectory Memory", "hint": "MED RET"}
+{"id": "156128", "title": "Incentivizing Medical Vision Capabilities from Large-Scale Multimodal Pre-training", "hint": "MED "}
+{"id": "154755", "title": "In-Context Benign Overfitting: A Feature-Selection Model in Linear Regression ICL", "hint": "RET"}
+{"id": "150330", "title": "In-Context Optimization for Retrieval-Augmented Generation: A Gradient-Descent Perspective", "hint": "RET"}
+{"id": "150555", "title": "Incremental Learning in Transformers for In-Context Associative Recall", "hint": "RET"}
+{"id": "153680", "title": "InduceKV: Fixed-Footprint Continual Adaptation of Multimodal LLMs via Inducing KV Memories", "hint": "RET"}
+{"id": "139992", "title": "Inferential Theory of Learning as a Framework for Test-Time Computation in Foundation Models", "hint": "RET"}
+{"id": "149028", "title": "InfiniteVL: A Systematic Approach to Highly-Efficient, Ultra-Long Multimodal Understanding", "hint": "RET"}
+{"id": "148677", "title": "InfoFlow: A Framework for Multi-Layer Transformer Analysis", "hint": "RET"}
+{"id": "155365", "title": "IntentLens: Grounding Underspecified Multimodal Queries for Recommendation via Tool-Augmented Reasoning", "hint": "RET"}
+{"id": "155091", "title": "Interactive Combinatorial Reinforcement Learning for Knowledge Graph Reasoning", "hint": "RET"}
+{"id": "154807", "title": "Interleaved Head Attention", "hint": "RET"}
+{"id": "139197", "title": "InterLV-Search: Benchmarking Interleaved Multimodal Agentic Search", "hint": "RET"}
+{"id": "152947", "title": "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists", "hint": "RET"}
+{"id": "139428", "title": "InvestigationWorlds: An Agentic Environment for Legal Investigation", "hint": "RET"}
+{"id": "152321", "title": "Invisible Ink, Visible Lies: How Production Watermarking Causes LLMs to Hallucinate", "hint": "RET"}
+{"id": "139277", "title": "Is Agentic AI Ready for Real-World Hardware Engineering? A Deep Dive with Phoenix-bench", "hint": "MED "}
+{"id": "148654", "title": "Is Dimensionality a Barrier for Retrieval Models?", "hint": "RET"}
+{"id": "139736", "title": "Is Your LLM-as-a-Recommender Agent Trustable? LLMs' Recommendation is Easily Hacked by Biases (Preferences)", "hint": "RET"}
+{"id": "152157", "title": "ITO: Multi-View Alignment and Training-Time Fusion for Image-Text Pretraining", "hint": "RET"}
+{"id": "138895", "title": "JARVIS-Bench: Benchmarking Personal Intelligence Agents on Long-Horizon Real-User Daily Traces", "hint": "RET"}
+{"id": "155612", "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE", "hint": "RET"}
+{"id": "139030", "title": "JMed48k: A Multi-Profession Japanese Medical Licensing Benchmark for Vision-Language Model Evaluation", "hint": "MED "}
+{"id": "150903", "title": "Joint Treatment Effect Estimation from Incomplete Healthcare Data: Temporal Causal Normalizing Flows with LLM-driven Evolutionary MNAR Imputation", "hint": "MED "}
+{"id": "155981", "title": "Jump Start Your Policy Learning with Lessons from 145,000 Training Runs", "hint": "RET"}
+{"id": "152526", "title": "KG-Guard: Graph-Based Hallucination Detection for Knowledge Base Question Answering", "hint": "MED "}
+{"id": "149691", "title": "Knowing What is Missing: Efficient Conversational Memory via Explicit Evidence-Gap Tracking", "hint": "RET"}
+{"id": "148610", "title": "Knowing You before You Speak: User State Modeling for LLM-Based Personalized Dialogue", "hint": "MED RET"}
+{"id": "156148", "title": "Knowledge-Graph Paths as Intermediate Supervision for Self-Evolving Search Agents", "hint": "RET"}
+{"id": "152984", "title": "Knowledge-Level Consistency Reinforcement Learning: Dual-Fact Alignment for Long-Form Factuality", "hint": "RET"}
+{"id": "149904", "title": "Knowledge Transfer Scaling Laws for 3D Medical Imaging", "hint": "MED "}
+{"id": "154450", "title": "Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces", "hint": "RET"}
+{"id": "139323", "title": "KnowVis: A Dual-View Benchmark for Diagnosing World-Knowledge Grounding in Text-to-Image Models", "hint": "MED "}
+{"id": "150463", "title": "Know Where You Stand: Memory-Source Choice in Long-Context Dialogue Agents", "hint": "RET"}
+{"id": "139710", "title": "KuaiRecV2: Benchmarking Large-Scale Continual Learning for Diversified and Multi-task Recommendation", "hint": "RET"}
+{"id": "153808", "title": "KV Cache Compression via Attention Output Distortion Minimization", "hint": "RET"}
+{"id": "149014", "title": "KVFocus: A Perturbation-Theoretic Token-Risk Score for Selective KV Cache Reuse in RAG", "hint": "RET"}
+{"id": "152812", "title": "LaCache: Robust Semantic Caching for LLM Serving", "hint": "RET"}
+{"id": "153001", "title": "LACE: Latent Alignment via Counterfactual Embeddings", "hint": "RET"}
+{"id": "139546", "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training", "hint": "RET"}
+{"id": "154950", "title": "Language Models Need Sleep", "hint": "RET"}
+{"id": "151766", "title": "LAPrune: Logits-Aligned Scoring Proxy for KV Pruning via Vector Quantization", "hint": "RET"}
+{"id": "140030", "title": "Large Language Model Failures from Hallucination to Homogenization Are Different Facets of Miscalibration", "hint": "MED "}
+{"id": "140035", "title": "Large language models can not and should not be banned from peer review", "hint": "RET"}
+{"id": "151107", "title": "Large Language Models Enhanced Covariate-adjusted Response-adaptive Randomization Design", "hint": "MED "}
+{"id": "149169", "title": "Large-Scale Pretraining unlocks Few-Shot Prediction for Relational Data", "hint": "RET"}
+{"id": "155353", "title": "Latent Abstraction for Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "153688", "title": "LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG", "hint": "RET"}
+{"id": "154809", "title": "LEAF: Language-EEG Aligned Foundation Model for Brain-Computer Interfaces", "hint": "MED "}
+{"id": "139384", "title": "Leak-CURBER: A Leakage-Controlled Multimodal Evaluation Benchmark for Enzymatic Reaction Tasks", "hint": "RET"}
+{"id": "149326", "title": "Lean Refactor: Multi-Objective Controllable Proof Optimization via Agentic Strategy Search", "hint": "RET"}
+{"id": "155461", "title": "LeanSearch v2: Global Premise Retrieval for Lean 4 Theorem Proving", "hint": "RET"}
+{"id": "151254", "title": "Learning Active Perception and Manipulation via Spatio-temporal Visual Memory", "hint": "RET"}
+{"id": "148164", "title": "Learning Evidence Highlighting for Frozen LLMs", "hint": "RET"}
+{"id": "149319", "title": "Learning Fine-Grained Vision-Language Alignment from Discriminative Part Descriptions", "hint": "RET"}
+{"id": "151148", "title": "Learning from Disagreement: Multi-Teacher Distillation for Chinese Spelling Correction", "hint": "MED "}
+{"id": "154904", "title": "Learning From Failures: Efficient Reinforcement Learning Control with Episodic Memory", "hint": "RET"}
+{"id": "154710", "title": "Learning Minimal Sufficient Evidence Graphs for GraphRAG via Nash-Guided Optimization", "hint": "RET"}
+{"id": "154511", "title": "Learning Preference Representations for Preference-Conditioned Image Generation", "hint": "MED "}
+{"id": "149821", "title": "Learning Rate Transfer for Hybrid Transformer-SSM Architectures", "hint": "MED "}
+{"id": "150225", "title": "Learning to Align Generative Appearance Priors for Fine-grained Image Retrieval", "hint": "RET"}
+{"id": "149494", "title": "Learning to Continually Learn via Meta-learning Agentic Memory Designs", "hint": "RET"}
+{"id": "150990", "title": "Learning to Evolve Scenes: Reasoning about Human Activities with Scene Graphs", "hint": "RET"}
+{"id": "154896", "title": "Learning What Evaluators Value: A Reliable Approach to Modeling Evaluator Preferences", "hint": "MED "}
+{"id": "148185", "title": "Learning When to Collaborate: Selective Multi-Agent Medical Reasoning via Uncertainty-Aware Routing", "hint": "MED "}
+{"id": "152681", "title": "LensDesigner: A Self-Improving Agent for Optical Lens Design", "hint": "RET"}
+{"id": "151754", "title": "LensVLM: Selective Context Expansion for Compressed Visual Representation of Text", "hint": "RET"}
+{"id": "152857", "title": "Less Evidence, Better Answering: Gain-Aware Minimal Evidence Subset Selection for Medical QA", "hint": "MED RET"}
+{"id": "139764", "title": "LG-Bench: A Graph-Structured Evaluation Benchmark for Life Science", "hint": "MED "}
+{"id": "150799", "title": "LifeStream: Token Life-Cycle Modeling for Training-Free Online Video Understanding", "hint": "RET"}
+{"id": "152183", "title": "Linguistic Trajectory Encoding for Efficient Long-Horizon Spatial Memory in Embodied Agents", "hint": "RET"}
+{"id": "148774", "title": "Listening to the Retriever: Perturbation-Sensitive Question Selection for Interactive Person Retrieval", "hint": "RET"}
+{"id": "139142", "title": "ListQA: A Benchmark for Evaluating List-Formatted Factual Knowledge Retrieval in Large Language Models", "hint": "RET"}
+{"id": "139208", "title": "LL-Bench: Rethinking Low-Level Vision Evaluation in the Era of Large-Scale Generative Models", "hint": "MED "}
+{"id": "149530", "title": "LLM Active Alignment: A Nash Equilibrium Perspective", "hint": "MED "}
+{"id": "151426", "title": "LLM-Based Multi-Agent Blackboard System for Information Discovery in Data Science", "hint": "RET"}
+{"id": "153045", "title": "LLMs can construct powerful representations and streamline sample-efficient supervised learning", "hint": "MED "}
+{"id": "148364", "title": "LLMs Show No Signs Of Individuated Metacognition", "hint": "RET"}
+{"id": "148596", "title": "Localizing and Repairing Sparse-Prompt Failure in SAM Decoders via Box-to-Point Counterfactual", "hint": "MED "}
+{"id": "152631", "title": "Localizing Input Uncertainty Quantification for Large Language Models via Shapley Values", "hint": "MED "}
+{"id": "153327", "title": "LogicTree-RAG: Logic Tree-guided Retrieval-Augmented Generation for Long-form Patent Drafting", "hint": "RET"}
+{"id": "149157", "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads", "hint": "RET"}
+{"id": "155257", "title": "Logit-Gap Steering: A Forward-Pass Diagnostic for Alignment Robustness", "hint": "MED "}
+{"id": "148606", "title": "Log-Likelihood, Simpson’s Paradox, and the Detection of Machine-Generated Text", "hint": "MED "}
+{"id": "156145", "title": "LogSTOP: Temporal Scores over Prediction Sequences for Matching and Retrieval", "hint": "RET"}
+{"id": "139714", "title": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis", "hint": "RET"}
+{"id": "139582", "title": "Long-Context Generation Is a Sampling Problem", "hint": "MED "}
+{"id": "140121", "title": "Long-Context Language Models Require Extreme Sparsity in Context Dimension", "hint": "RET"}
+{"id": "148330", "title": "Long-Lived AI Agents Age Too: They Quietly Decay After Deployment", "hint": "RET"}
+{"id": "149299", "title": "LongMINT: Evaluating Memory under Multi-Target Interference in Long-Horizon Agent Systems", "hint": "RET"}
+{"id": "154029", "title": "Look Before You Leap: Self-Evolving Clinical Reasoning with Psychometric Preference Optimization for Radiology Report Generation", "hint": "MED "}
+{"id": "150890", "title": "LoRASpace: A Pool-Wide Shared Substrate for Static and Dynamic Multi-LoRA Composition", "hint": "RET"}
+{"id": "139093", "title": "Lost on Campus: Evaluating Embodied Spatial Reasoning of Vision-Language Models in the Wild", "hint": "MED "}
+{"id": "149466", "title": "LP-RAG: Learning to Retrieve with Link Predictors", "hint": "RET"}
+{"id": "139740", "title": "LUMOS: Tracing Parametric Knowledge from Training Data to Behavioral Outputs in LLMs", "hint": "MED RET"}
+{"id": "155414", "title": "M$^\\star$: Every Task Deserves Its Own Memory Harness", "hint": "RET"}
+{"id": "139625", "title": "M4Bench: Evaluating Procedural Specification for Clinical EHR Derivation Agents", "hint": "MED "}
+{"id": "155514", "title": "Machine Learning-Driven RAG System Design", "hint": "RET"}
+{"id": "152798", "title": "MACRO: Training-free Multi-plane Attention for Closeup Render Optimization", "hint": "RET"}
+{"id": "150998", "title": "MAGE: Multi-Agent Self-Evolution with Co-Evolutionary Knowledge Graphs", "hint": "MED RET"}
+{"id": "138998", "title": "MammoGPS: A Benchmark for Visual Grounding, Perception, and Spatial Reasoning in Mammography", "hint": "MED "}
+{"id": "151554", "title": "ManipulationRAG: Retrieval-Augmented Fine-Grained Manipulation of Object Functional Parts", "hint": "RET"}
+{"id": "139847", "title": "Many Benign Errors are Better than A Few Severe Ones: Evaluating Hallucination Severity", "hint": "MED "}
+{"id": "139852", "title": "MapShift: Controlled Post-Intervention Evaluation for Embodied World Models", "hint": "MED "}
+{"id": "139520", "title": "MARBLE: an Agent Benchmark for Spatial Reasoning and Visual Abstraction", "hint": "MED "}
+{"id": "150904", "title": "Matchability-Aware Conformal Prediction for Open-Ended Language Model Generation", "hint": "MED RET"}
+{"id": "155349", "title": "MaterialsPilot: An Execution-Feedback Framework for Generative Design of Complex Atomistic Architectures", "hint": "RET"}
+{"id": "139318", "title": "MathCD: A Benchmark Dataset for Cognitive Diagnosis with Semantic Information", "hint": "MED "}
+{"id": "139650", "title": "MCP-Atlas: A Large-Scale Benchmark for Tool-Use Competency with Real MCP Servers", "hint": "MED "}
+{"id": "155873", "title": "Measuring Black-Box Confidence via Reasoning Trajectories: Geometry, Coverage, and Verbalization", "hint": "MED "}
+{"id": "150806", "title": "Mechanism Design for AI Overviews: Creator Incentives and Long-Term Profit", "hint": "RET"}
+{"id": "150909", "title": "Mechanistic Interpretability of EEG Foundation Models via Sparse Autoencoders", "hint": "MED "}
+{"id": "153012", "title": "Med-Agentic: Distilling Agentic Medical Reasoning with Internalized Meta-Capabilities", "hint": "MED "}
+{"id": "139548", "title": "MedEvoEval: Evaluating Continual Evolution of Doctor Agents through Simulated Clinical Episodes", "hint": "MED RET"}
+{"id": "149616", "title": "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments", "hint": "MED "}
+{"id": "139506", "title": "MedFlowBench: Auditing Medical Agents in Full-Study Workflows", "hint": "MED "}
+{"id": "139097", "title": "MedHEB: Benchmarking Medical Embeddings Across Heterogeneous Clinical Evidence", "hint": "MED RET"}
+{"id": "139391", "title": "MedHorizon: Towards Long-context Medical Video Understanding in the Wild", "hint": "MED RET"}
+{"id": "148462", "title": "Medical LLMs as Medical World Models:  Unified Policy-Dynamics Learning with Test-Time Search", "hint": "MED "}
+{"id": "138975", "title": "MedKIT: Evaluating Knowledge Integration and Generalization in Large Language Models", "hint": "MED "}
+{"id": "139434", "title": "Medmarks: A Comprehensive Open-Source LLM Benchmark Suite for Medical Tasks", "hint": "MED "}
+{"id": "139145", "title": "MedMemoryBench: Benchmarking Agent Memory in Personalized Healthcare", "hint": "MED RET"}
+{"id": "139561", "title": "MedMisBench: Measuring Epistemic Resilience of LLMs Under Misleading Medical Context", "hint": "MED "}
+{"id": "150557", "title": "MedPsy: State‑of‑the‑Art Small Medical Language Models for Efficient Edge Deployment", "hint": "MED "}
+{"id": "139346", "title": "MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence", "hint": "MED "}
+{"id": "150235", "title": "MedVIGOR: Visual Evidence Internalization for Observation-Driven Reasoning in Medical VLMs", "hint": "MED "}
+{"id": "152136", "title": "MedVTok: A General-Purpose Medical Visual Tokenizer", "hint": "MED RET"}
+{"id": "155563", "title": "MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation", "hint": "MED "}
+{"id": "139685", "title": "MemArena: An Ego-Centric Benchmark for On-Device Agentic Personal Memory Assistants at Scale", "hint": "RET"}
+{"id": "139235", "title": "MEMAUDIT: An Exact Package-Oracle Evaluation Protocol for Budgeted Long-Term LLM Memory Writing", "hint": "RET"}
+{"id": "152904", "title": "MemCode: Discrete Semantic Representations for Long-Term Agent Memory", "hint": "RET"}
+{"id": "154728", "title": "MemContract: Contract-Sensitive Evaluation for Mutable Agent Memory", "hint": "MED RET"}
+{"id": "155641", "title": "MemCoRe: Recovering Evidence from Progressively Compressed Factual Knowledge for Agent Memory", "hint": "RET"}
+{"id": "153503", "title": "MemDLM: Memory-Enhanced DLM Training", "hint": "RET"}
+{"id": "151576", "title": "MemeEconomy : Do LLM Agents Trade Ethics for Survival?", "hint": "MED "}
+{"id": "138915", "title": "MEME: Multi-Entity & Evolving Memory Evaluation", "hint": "RET"}
+{"id": "156781", "title": "Memento No More: Coaching AI Agents to Master Multiple Tasks via Hints Internalization", "hint": "RET"}
+{"id": "156021", "title": "MEMEVO: A Memory-Evolved Video Agent for Long Video Understanding", "hint": "RET"}
+{"id": "148407", "title": "MemForest: Efficient Agent Memory Management via EventTree Partitioning and Progressive Merging", "hint": "RET"}
+{"id": "150585", "title": "Memory flows: geometry and dynamics of sequential retrieval in input-driven Hopfield networks", "hint": "RET"}
+{"id": "149792", "title": "Memory Grafting: Scaling Language Model Pre-training via Offline Conditional Memory", "hint": "RET"}
+{"id": "152449", "title": "Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents", "hint": "RET"}
+{"id": "155002", "title": "Memory Retrieval for Changing Preferences", "hint": "RET"}
+{"id": "153182", "title": "Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies", "hint": "RET"}
+{"id": "154729", "title": "MemPilot: Learning Transferable Latent Memory Mechanisms for LLM Reasoning", "hint": "RET"}
+{"id": "139557", "title": "MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents", "hint": "RET"}
+{"id": "154245", "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory", "hint": "RET"}
+{"id": "153342", "title": "MemTailor: Hierarchical Memory-Augmented Multi-Expert Learning for Long-Tailed Recognition", "hint": "RET"}
+{"id": "149502", "title": "MENDR: Manifold-Embedded Neural Data Representations for Channel-Agnostic EEG Foundation Modeling", "hint": "MED "}
+{"id": "149637", "title": "MentalHospital: A Virtual Environment for Evaluating Psychiatric Clinical Encounters", "hint": "MED "}
+{"id": "154565", "title": "Mental Imagery That Matters: Curing Latent Collapse in Multimodal Reasoning", "hint": "MED "}
+{"id": "151616", "title": "Meow-Omni 1: A Multimodal Large Language Model for Feline Ethology", "hint": "MED "}
+{"id": "151929", "title": "MESSENGER: Memory-Enhanced Sequential Scene Flow Estimation via Autoregressive Next-Frame Forecasting", "hint": "RET"}
+{"id": "151012", "title": "Meta$^n$: Recursive Self-Improvement through Emergent Depth", "hint": "MED "}
+{"id": "150978", "title": "Meta-memorization and memorization scaling laws in transformers", "hint": "RET"}
+{"id": "151505", "title": "MGMem: An Efficient, Deterministic, and Provenance-Preserving Framework for Long-Horizon Agent Memory", "hint": "RET"}
+{"id": "151480", "title": "MicroWorld: Empowering Multimodal Large Language Models to Bridge the Microscopic Domain Gap with Multimodal Attribute Graph", "hint": "MED RET"}
+{"id": "155027", "title": "MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning", "hint": "RET"}
+{"id": "138950", "title": "MindGuard: Guardrail Classifiers for Multi-Turn Mental Health Support", "hint": "MED "}
+{"id": "155952", "title": "MindLoom: Composing Thought Modes for Frontier-Level Reasoning Data Synthesis", "hint": "RET"}
+{"id": "155208", "title": "MineEvolve: Self-Evolution with Accumulated Knowledge for Long-Horizon Embodied Minecraft Agents", "hint": "RET"}
+{"id": "151329", "title": "MiniPIC: Flexible Position-Independent Caching in <100LOC", "hint": "RET"}
+{"id": "152253", "title": "MinSteer: Minimal-Pair Steering via Two-Stage Cached Continuation", "hint": "MED "}
+{"id": "139149", "title": "MiroEval: Benchmarking Multimodal Deep Research Agents in Process and Outcome", "hint": "MED RET"}
+{"id": "139456", "title": "Mirror, Mirror on the Wall: Can VLM Agents Tell Who They Are at All?", "hint": "MED "}
+{"id": "148202", "title": "Mitigating Knowledge Conflicts in Retrieval-Augmented Generation via Inference-Time Representation Editing", "hint": "RET"}
+{"id": "155555", "title": "Mitigating Saliency Collapse: Robust Saliency-Aware Long-Text Image-Text Alignment", "hint": "RET"}
+{"id": "148704", "title": "Mixture of Attribute-Aware Attention Experts for Fine-grained E-Commerce Composed Image Retrieval", "hint": "RET"}
+{"id": "139143", "title": "MLAIRE: Multilingual Language-Aware Information Retrieval Evaluation Protocol", "hint": "RET"}
+{"id": "150160", "title": "MMCompass: Diagnosing Position Bias in Generative Multimodal Reward Models", "hint": "MED "}
+{"id": "156108", "title": "MMGraph-Agent: Agentic Multimodal RAG via Cache-Inspired Multimodal Knowledge HyperGraphs", "hint": "RET"}
+{"id": "139107", "title": "MM-IssueLoc: A Controlled Benchmark for Evaluating Visual Evidence in Multimodal Repository-Level Issue Localization", "hint": "RET"}
+{"id": "148320", "title": "mmLIP: mmWave Radar-Language Interactive Pretraining via Point Confidence", "hint": "RET"}
+{"id": "139823", "title": "MMTA: Benchmarking Multimodal Temporal Analysis with Time Series, Text, and Vision", "hint": "MED "}
+{"id": "152953", "title": "MoBayes: A Modular Bayesian Framework for Separating Reasoning from Language in Conversational Clinical Decision Support", "hint": "MED "}
+{"id": "148787", "title": "Model Distribution-Aware Multimodal Dataset Distillation", "hint": "RET"}
+{"id": "149764", "title": "Modeling Whole-Slide Images as Dynamic Tumor Microenvironment Fields", "hint": "MED "}
+{"id": "149866", "title": "MolSpecFlow: Modality-Incomplete Molecular--Spectral Learning for MS/MS", "hint": "RET"}
+{"id": "154940", "title": "MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup", "hint": "RET"}
+{"id": "152051", "title": "MoRe-DVC: Motion Retrieval-Augmented Generation for Detailed Video Captioning", "hint": "RET"}
+{"id": "155441", "title": "More Than Meets the Eye? Uncovering the Reasoning-Planning Disconnect in Training Vision-Language Driving Models", "hint": "MED "}
+{"id": "151875", "title": "MOSAIC: Concept Bottlenecks via Text-Anchored Optimal Transport", "hint": "RET"}
+{"id": "139005", "title": "MOSAIC-CONUS: A Multimodal, Multi-Temporally Paired dataset for Earth Sciences", "hint": "RET"}
+{"id": "155366", "title": "MSAlign: Aligning Molecular and Mass Spectra Foundation Models for Metabolite Identification", "hint": "MED RET"}
+{"id": "139206", "title": "MSConsensus: A Hundred-Million-Scale, Batch-Effect–Suppressed Dataset and Benchmark for Proteomics Machine Learning", "hint": "RET"}
+{"id": "138893", "title": "MulTaBench: Benchmarking Multimodal Tabular Learning with Text and Image", "hint": "MED "}
+{"id": "154453", "title": "Multi-Head Recurrent Memory Agents", "hint": "MED "}
+{"id": "152201", "title": "Multimodal LLMs Outperform Pathology Foundation Models in Cross-Domain Histological Similarity", "hint": "MED RET"}
+{"id": "154469", "title": "Multi-Stage Planning from Single-Stage Data: Reinforcement Learning Helps Composition but Requires Anchoring", "hint": "MED "}
+{"id": "139212", "title": "MutQA: A Cross-Validated Q&A Dataset for Genetic Mutations", "hint": "MED "}
+{"id": "153539", "title": "Necessary but Not Sufficient: Spectral Tests for Value-Linear Attention Surrogates", "hint": "MED RET"}
+{"id": "155381", "title": "Neural Signals Generate Clinical Notes in the Wild", "hint": "MED "}
+{"id": "154463", "title": "Neural‑Visual Decoding via Cognitive‑guided Adaptive Blurring and Information‑Constrained Alignment", "hint": "RET"}
+{"id": "139374", "title": "NeuroAtlas: Benchmarking Foundation Models for Clinical EEG and Brain-Computer Interfaces", "hint": "MED "}
+{"id": "149129", "title": "NeuroNTP - A Generalizable Multimodal Foundation Model for Epilepsy", "hint": "MED "}
+{"id": "149519", "title": "Next-Token Prediction Enables Scalable Learning of Sleep Physiology", "hint": "MED "}
+{"id": "156783", "title": "No Detail Left Behind: Revisiting Self-Retrieval for Fine-Grained Image Captioning", "hint": "RET"}
+{"id": "153751", "title": "No Free Alignment: Observability-Aware Alignment for Multimodal Heterogeneous Learning", "hint": "MED "}
+{"id": "153389", "title": "Not All Gap Correction Helps: A Geometric View of External Information in LLM Inference", "hint": "RET"}
+{"id": "139439", "title": "Not Another Text Benchmark: Putting the “Visual\" Back in Visual Question Answering for Large Video Models", "hint": "RET"}
+{"id": "139689", "title": "NPCBench: A Clinical Apprenticeship Benchmark for Guideline-Constrained Care-Pathway Reasoning in Nasopharyngeal Carcinoma", "hint": "MED "}
+{"id": "148732", "title": "OASES: Outcome-Aligned Search-Evaluation Co-Training for Agentic Search", "hint": "RET"}
+{"id": "139628", "title": "OBLIQ-Bench: Exposing Overlooked Bottlenecks in Modern Retrievers with Latent and Implicit Queries", "hint": "RET"}
+{"id": "148515", "title": "OLA-Place: Cross-Modal Place Recognition without Global Descriptors", "hint": "RET"}
+{"id": "139331", "title": "OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning", "hint": "MED "}
+{"id": "155508", "title": "Omni-Interactive Universal Embedder", "hint": "RET"}
+{"id": "138886", "title": "OmniMemBench: Towards Scalable Evaluation of Long-Term Omni-Modal Agent Memory", "hint": "MED RET"}
+{"id": "150029", "title": "OmniMem: Scalable and Adaptive Memory Retrieval for Long Video Generation", "hint": "RET"}
+{"id": "154421", "title": "On Computing Diverse Solutions in the Earth Movers Distance", "hint": "RET"}
+{"id": "149035", "title": "One Language-Free Foundation Model Is Enough for Universal Vision Anomaly Detection", "hint": "MED "}
+{"id": "150016", "title": "One Loss to Rule Them All: Marked Time-to-Event for Structured EHR Foundation Models", "hint": "MED "}
+{"id": "152224", "title": "OneSearch-V2: The Latent Reasoning Enhanced Self-distillation Generative Search Framework", "hint": "RET"}
+{"id": "149964", "title": "On Length Bias in EEG-to-Text Decoding", "hint": "MED RET"}
+{"id": "148933", "title": "On Neural Scaling Laws for Weather Emulation through Continual Training", "hint": "MED "}
+{"id": "151639", "title": "On objective mismatch in molecular retrieval from tandem mass spectrometry", "hint": "RET"}
+{"id": "153484", "title": "On-Policy Hindsight Distillation for Early Risk Prediction", "hint": "MED "}
+{"id": "155527", "title": "On the Design Space of Discrete Diffusion Online Adaptation for Molecular Optimization", "hint": "RET"}
+{"id": "151807", "title": "On the Importance of Gating: Memorization vs. In-Context Learning in State Space Models", "hint": "RET"}
+{"id": "152053", "title": "On the Invariance and Generality of Neural Scaling Laws", "hint": "MED "}
+{"id": "155580", "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing", "hint": "RET"}
+{"id": "154750", "title": "On the Runway Cascade of Transformers for Language Modeling", "hint": "RET"}
+{"id": "150461", "title": "On the Token Value Inequality in Efficient Reasoning", "hint": "MED "}
+{"id": "155199", "title": "OntoPlan: An Ontology-Grounded Scene Representation and Agentic Framework for Scalable Robot Task Planning", "hint": "RET"}
+{"id": "139693", "title": "OpenMedReason: Scientific Reasoning Supervision for Medical Vision–Language Models", "hint": "MED "}
+{"id": "152128", "title": "OpenSearcher: Democratizing Deep Search through a Fully Offline Pipeline with Programmatic Verification", "hint": "RET"}
+{"id": "152165", "title": "OpenSearch-VL: An Open Recipe for Frontier Multimodal Search Agents", "hint": "RET"}
+{"id": "150532", "title": "Open Vocabulary Domain Unlearning", "hint": "MED "}
+{"id": "150153", "title": "Operads for compositional reasoning in LLMs", "hint": "MED "}
+{"id": "152209", "title": "OpticalRAG: Pixel-Space Compression for Token-Efficient Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "150875", "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms", "hint": "RET"}
+{"id": "139129", "title": "OTel: Open Telco AI Datasets, Benchmarks, and Models", "hint": "RET"}
+{"id": "152208", "title": "Overcoming State Inertia in Full-Duplex Spoken Language Models via Activation Steering", "hint": "MED "}
+{"id": "150716", "title": "Overthinking as a Symptom of Knowledge Conflict: Understanding and Detecting LLM's Hallucinations in Retrieval-Augmented Question Answering", "hint": "RET"}
+{"id": "139810", "title": "OWCE: Revealing Language Model Complementarity via Online Weakness-Conditioned Evaluation", "hint": "MED "}
+{"id": "155485", "title": "PACEvolve++: Improving Test-time Learning for Evolutionary Search Agents", "hint": "RET"}
+{"id": "148290", "title": "Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation", "hint": "RET"}
+{"id": "154817", "title": "Pan-FM: A Pan-Organ Foundation Model with Saliency-Guided Masking for Missing Robustness", "hint": "MED "}
+{"id": "150495", "title": "PanoWorld: Towards Spatial Supersensing in 360◦ Panorama World", "hint": "MED "}
+{"id": "139381", "title": "Partition-Aware Unlearning for Removing Spurious Correlations in Large Vision-Language Models", "hint": "MED "}
+{"id": "155418", "title": "PatchScout: Thematic Web Data Collection via Information Foraging", "hint": "RET"}
+{"id": "149871", "title": "Path-Guided Flow Matching for Dataset Distillation", "hint": "RET"}
+{"id": "154224", "title": "PathNavigate: A Training-Free Pathology Agent with Surprise-Guided Scan and Shared Slide Memory for Whole-Slide VQA", "hint": "MED "}
+{"id": "139172", "title": "PathView-Bench: Can Multimodal Large Language Models Achieve Fine-grained Multiscale Understanding of Pathology Images?", "hint": "MED "}
+{"id": "154953", "title": "Pathway-Aligned Regulator Tokens for Interpretable Spatial Gene Expression Prediction from Histologyatial Transcriptomics Prediction from Histology", "hint": "MED "}
+{"id": "152560", "title": "PatternBloom: Empowering Agentic RAG with Externalized RL-Distilled Graph Patterns", "hint": "RET"}
+{"id": "138922", "title": "Perception, Not Reasoning, Limits Visual Theory of Mind", "hint": "MED "}
+{"id": "148373", "title": "Periodic Complex Stochastic Processes for Retrieving Atomic Structures of Unknown Matters", "hint": "RET"}
+{"id": "154286", "title": "PermaVid: Consistent Video Generation Across Edits via Disentangled Context Memory", "hint": "RET"}
+{"id": "150368", "title": "Permute-then-Adapt: Weak-to-Strong Contrastive Image--Text Adaptation", "hint": "RET"}
+{"id": "152966", "title": "Personalized Safety in Federated Fine-Tuning of Large Language Models", "hint": "MED "}
+{"id": "153612", "title": "Persona-Model Collapse in Emergent Misalignment", "hint": "MED "}
+{"id": "139067", "title": "PerturbReason: A Knowledge-Grounded Benchmark and Framework for Cell-State–Conditioned Mechanistic Reasoning of Perturbation Effects", "hint": "MED "}
+{"id": "150371", "title": "Phase Kernel Lifts Capacity of Dense Associative Memory", "hint": "RET"}
+{"id": "139250", "title": "PHMForge: Evaluating LLM Agents on Industrial Prognostics through MCP-Native, Algorithm-Grounded Tools", "hint": "RET"}
+{"id": "139124", "title": "PhyMetric: Diagnosing Physical Plausibility in Text-to-Video Generation via Scene-Level QA", "hint": "MED "}
+{"id": "139788", "title": "PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments", "hint": "MED RET"}
+{"id": "155622", "title": "PiCA: Pivot-Based Credit Assignment For Search Agentic Reinforcement Learning", "hint": "RET"}
+{"id": "152393", "title": "Pinpoint: Grounded Worldwide Image Geolocation via Cross-Source Retrieval and Reranking", "hint": "RET"}
+{"id": "152042", "title": "PIVOT: A Unified Agentic Framework for Streaming Long-Video Understanding", "hint": "RET"}
+{"id": "148860", "title": "Platonic Representations in the Human Brain: Unsupervised Recovery of Universal Geometry", "hint": "RET"}
+{"id": "152410", "title": "Plausibility Is Not Prediction: Contrastive Evidence for LLM-Based Cellular Perturbation Reasoning", "hint": "MED RET"}
+{"id": "153008", "title": "PM1: A Multimodal Foundation Model for Genomes, Phenotypes, and Images at Biobank Scale", "hint": "MED "}
+{"id": "139312", "title": "POLAR-Bench: A Diagnostic Benchmark for Privacy-Utility Trade-offs in LLM Agents", "hint": "MED "}
+{"id": "154425", "title": "Policy-DRIFT: Dynamic Reward-Informed Flow Trajectory Steering", "hint": "RET"}
+{"id": "140097", "title": "Position: A Safe LLM and a Safe Harness Do Not Make a Safe Agent", "hint": "RET"}
+{"id": "140082", "title": "Position: Reconciling Open Access with Owner Control in AI Model Distribution Deserves More Research Effort", "hint": "RET"}
+{"id": "140068", "title": "Position: Telic Errors Make VLMs Unreliable Annotators in Sensitive Contexts", "hint": "MED "}
+{"id": "154826", "title": "Positive-Unlabeled Preference Optimization For Chest X-ray Report Generation", "hint": "MED "}
+{"id": "149371", "title": "Precision-Aware Hopfield Retrieval: Unifying Population Codes and Memory Retrieval with Information Optimization", "hint": "RET"}
+{"id": "149030", "title": "PreCoMem: Predictive Cognitive Memory for Self-Evolving Long-Term Dialogue Agents", "hint": "RET"}
+{"id": "150880", "title": "Predicting Human-Gain Curves under Local Proxy Optimization from Repeated Ratings", "hint": "MED "}
+{"id": "150685", "title": "Predicting Only from Selected Evidence: A Tempered Product-of-Experts Bottleneck for Auditable EEG Diagnosis", "hint": "MED "}
+{"id": "150526", "title": "Predicting the Needle in a Petabyte Scale Haystack: Open-Vocabulary Event Anticipation in Satellite Imagery", "hint": "RET"}
+{"id": "149722", "title": "Preference Conditioned Multi-Objective Reinforcement Learning: Decomposed, Diversity-Driven Policy Optimization", "hint": "MED "}
+{"id": "149654", "title": "Preventing Error Cascades in Long-Horizon Multimodal Agents with Edge-Reliability Graph Memory", "hint": "RET"}
+{"id": "153837", "title": "PriFT: Prior-Support Guided Token Reweighting for Supervised Fine-Tuning", "hint": "MED "}
+{"id": "139319", "title": "PRISM: A Benchmark for Programmatic Spatial-Temporal Reasoning", "hint": "MED "}
+{"id": "139756", "title": "PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection", "hint": "MED "}
+{"id": "154344", "title": "PRISMIC: Reconstructing User Preference via Intent Decomposition and Consolidation", "hint": "RET"}
+{"id": "155384", "title": "PriSM: Prior-guided Shared-basis Mixture Personalization for LLMs under Sparse User Histories", "hint": "RET"}
+{"id": "150803", "title": "Privacy-Preserving Retrieval-Augmented Generation with Plausible Deniability", "hint": "RET"}
+{"id": "139476", "title": "PrivacySIM: Evaluating LLM Simulation of User Privacy Behavior", "hint": "MED "}
+{"id": "148216", "title": "Probe Before You Edit: Probing-Guided Molecular Optimization for LLM Agents in Structure-Based Drug Design", "hint": "MED "}
+{"id": "154360", "title": "ProbMedTOD: A Bayesian Network Guided Task-Oriented Dialogue System for Patient History Taking", "hint": "MED RET"}
+{"id": "149562", "title": "ProCARE: Real-World Study Automation via Profile-Grounded Evidence Contracts", "hint": "MED "}
+{"id": "148573", "title": "Process-conditioned Pretraining with Topographic Spatial Retrieval for Large EEG Models", "hint": "RET"}
+{"id": "151998", "title": "ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder", "hint": "RET"}
+{"id": "149404", "title": "ProCTI: Prototype-Refined Global Conditioning for Diffusion-Based Time Series Imputation", "hint": "RET"}
+{"id": "139403", "title": "ProSearch: Benchmarking Multi-Constraint Protocol Retrieval in Experimental Science", "hint": "RET"}
+{"id": "155560", "title": "Prototype Topology Consistency for Visible-Infrared Lifelong Person Re-Identification", "hint": "RET"}
+{"id": "150843", "title": "PULSE: Identifying Demonstration-Utility Features with Sparse Autoencoders", "hint": "RET"}
+{"id": "139115", "title": "pyCD: A Unified Benchmark for Reliable Evaluation of Cognitive Diagnosis Models", "hint": "MED "}
+{"id": "154472", "title": "QB-Highlights: Quality-Guided Budgeted Highlight Detection in Videos with Dense Query-Relevant Moments", "hint": "RET"}
+{"id": "150926", "title": "Quest: Training Frontier Deep Research Agents with Fully Synthetic Tasks", "hint": "RET"}
+{"id": "154283", "title": "RADAR: Routing Agents via Difficulty-Aware Recovery", "hint": "RET"}
+{"id": "149480", "title": "RadOmni: Advancing Foundation Model for Non-contrast CT with Omni Radiology Knowledge", "hint": "MED "}
+{"id": "150352", "title": "RAGBoost: Robust Tabular Learning via Retrieval-Augmented and Ancillary-Guided Gradient Boosting", "hint": "RET"}
+{"id": "151457", "title": "RAG in a Trenchcoat: When Minimal Memory Is Enough for Agentic Systems, and When It Isn’t", "hint": "RET"}
+{"id": "139729", "title": "RamanBench: A Large-Scale Benchmark for Machine Learning on Raman Spectroscopy", "hint": "MED "}
+{"id": "152777", "title": "RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State", "hint": "RET"}
+{"id": "149742", "title": "RankAlign: Unsupervised Vision-Language Representation Alignment via Rank Transformation", "hint": "MED "}
+{"id": "151487", "title": "RAO-Nav: Probing Omni-Language Models for Zero-shot Semantic Audio-Visual Navigation", "hint": "RET"}
+{"id": "152822", "title": "Rare Disease Diagnosis Agent with Decoupled Workflows and Knowledge-Driven Self-Evaluation", "hint": "MED "}
+{"id": "150127", "title": "RAVEL: Rare Concept Generation and Editing via Graph-driven Relational Guidance", "hint": "RET"}
+{"id": "156092", "title": "Reading Attribution from Attention: Evidence Heads as Latent Attribution Mechanisms in LLMs", "hint": "MED "}
+{"id": "153275", "title": "Reading Between the Dots: Decoding Hidden Computation across Filler Tokens", "hint": "RET"}
+{"id": "155483", "title": "Reading, Not Thinking: Bridging the Modality Gap When Text Becomes Pixels", "hint": "RET"}
+{"id": "150742", "title": "Reading the Unreadable: Text-Aware Image Super-Resolution Needs Reasoning", "hint": "MED "}
+{"id": "139440", "title": "RealDev-QA: Trajectory-Level Diagnosis for Developer RAG Under Real-World Noises", "hint": "MED RET"}
+{"id": "138984", "title": "RealICU: Do LLM Agents Understand Long-Context ICU Data? A Benchmark Beyond Behavior Imitation", "hint": "MED "}
+{"id": "139773", "title": "REAL-MED: Benchmarking LLM Agents on Real-World Medical Tasks", "hint": "MED "}
+{"id": "154933", "title": "Reasoning Pathologies in Large Language Models: A Diagnostic Perspective", "hint": "MED "}
+{"id": "151543", "title": "Reasoning Poisoning: Utilizing Social-Engineering to Steer Chain-of-Thought", "hint": "RET"}
+{"id": "149027", "title": "RECIPE: Learning to Rank Complete Precursor Sets for Inorganic Retrosynthesis", "hint": "RET"}
+{"id": "138878", "title": "Re:Cognize - A Framework for Open-Set Sequential Character Re-Identification", "hint": "RET"}
+{"id": "149776", "title": "ReCoG: Relational Concept Graph for Training-Free Personalization", "hint": "RET"}
+{"id": "153621", "title": "Reconfiguring Procedural Knowledge for Compositional Robot Skill Adaptation", "hint": "RET"}
+{"id": "149688", "title": "ReCon: Toward Balanced Learning under Inter-Context and Context-Memory Conflicts", "hint": "RET"}
+{"id": "138962", "title": "Recreating Video Arenas via Automated Preference Scoring", "hint": "RET"}
+{"id": "153292", "title": "Recursive Multi-Agent Systems", "hint": "MED "}
+{"id": "151529", "title": "REFLEX: Reflective Evolution from LLM Experience", "hint": "MED "}
+{"id": "139603", "title": "REFORM-3D: A Representation-Centric Evaluation Framework for 3D Medical Vision Foundation Models", "hint": "MED RET"}
+{"id": "150490", "title": "REGATE: Confidence-Calibrated Integration of Temporally-Aligned Exogenous Texts for Dynamic Graphs", "hint": "RET"}
+{"id": "151586", "title": "Reinforced Evidence-Aware Long Video Understanding", "hint": "RET"}
+{"id": "154908", "title": "Reinforced Fast Weights via Next-Sequence Prediction", "hint": "RET"}
+{"id": "151495", "title": "RelaVPR: Relation-Based Knowledge Distillation for Efficient Visual Place Recognition", "hint": "RET"}
+{"id": "155343", "title": "RelGS: Relation-Aware Gaussian Splatting for Open-Vocabulary 3D Scene Understanding", "hint": "RET"}
+{"id": "153600", "title": "Reliable Clustering and Quantization via Distortion-Constrained Optimal Transport", "hint": "RET"}
+{"id": "153462", "title": "ReLoop: Structured Modeling and Behavioral Verification for Reliable LLM-Based Optimization", "hint": "MED "}
+{"id": "153954", "title": "Remembering What Matters: From Markovian to Subtask-Causal Memory in VLA Policies", "hint": "RET"}
+{"id": "152348", "title": "Remember with Confidence: Uncertainty Quantification for Spatio-temporal Memory with Probabilistic Guarantees", "hint": "RET"}
+{"id": "154827", "title": "Remember Your Trace: Memory-Guided Long-Horizon Agentic Framework for Consistent and Hierarchical Repository-Level Code Documentation", "hint": "RET"}
+{"id": "153066", "title": "Rep2Text: Decoding Full Text from a Single LLM Token Representation", "hint": "MED "}
+{"id": "139568", "title": "RepoMirage: Probing Repository Context Reasoning in Code Agents with Perturbations", "hint": "MED "}
+{"id": "151431", "title": "Representation Rigidity in Face Embeddings: Orthogonal Identifiability and Backfill-Free Compatibility", "hint": "RET"}
+{"id": "153512", "title": "Reranking with Intra-modal Visual Association for Text-to-Image Person Re-Identification", "hint": "RET"}
+{"id": "139237", "title": "RescueBench: Can Embodied Agents Save Lives in the Wild?", "hint": "MED RET"}
+{"id": "148940", "title": "Resilience Matters for Embodied Agents System: New Metrics, Systematic Evaluation, and Optimization", "hint": "MED "}
+{"id": "148979", "title": "Rethinking Contrastive Loss in CLIP Post-training: A Complementary Framework with Frozen Text Encoder", "hint": "RET"}
+{"id": "154206", "title": "Rethinking Credit Assignment in Cooperative MARL via Interventional Reward Response", "hint": "MED "}
+{"id": "155079", "title": "Rethinking CT Synthesis through Semantics-Structure Alignment", "hint": "MED "}
+{"id": "149206", "title": "Rethinking Expressivity and Efficiency in Test-Time Training", "hint": "RET"}
+{"id": "150576", "title": "Rethinking How to Remember: Beyond Atomic Facts in Lifelong LLM Agent Memory", "hint": "RET"}
+{"id": "151683", "title": "Rethinking Visual Attribution for Chest X-ray Reasoning in Large Vision Language Models", "hint": "MED "}
+{"id": "155661", "title": "ReToken: One Token to Improve Vision–Language Models for Visual Retrieval", "hint": "RET"}
+{"id": "154413", "title": "Retrieval-Augmented Diffusion Modeling for Stochastic Discount Factor Portfolios", "hint": "RET"}
+{"id": "150000", "title": "Retrieval-Centric Deep Learning in Growing Nonparametric Neural Networks", "hint": "RET"}
+{"id": "154257", "title": "Retrieval from Within: An Intrinsic Capability of Attention-Based Models", "hint": "RET"}
+{"id": "155146", "title": "Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information", "hint": "RET"}
+{"id": "151927", "title": "Retrieval Over Training: Similarity search-based Model Selection for Time Series Anomaly Detection", "hint": "RET"}
+{"id": "148700", "title": "Retriever-Free Retrieval-Augmented Reasoning via Corpus-Traversing MCTS", "hint": "RET"}
+{"id": "154122", "title": "Retrieve-then-Rerank Inference for Vocabulary-Based End-to-End Driving", "hint": "RET"}
+{"id": "154552", "title": "Retrieve-then-Steer: Online Success Memory for Test-Time Adaptation of Generative VLAs", "hint": "RET"}
+{"id": "148557", "title": "Retrieve What’s Missing: Coverage-Maximizing Retrieval for Consistent Long Video Generation", "hint": "RET"}
+{"id": "154894", "title": "REVERSE: Reinforcing Evidence Verification and Search for Agentic Image Geolocation", "hint": "RET"}
+{"id": "153559", "title": "Revitalizing Medical Time Series with Vision-Informed Retrieval: A Vision-Language Perspective", "hint": "MED RET"}
+{"id": "150900", "title": "Reward Shaping to Improve Language Model Query Generation", "hint": "RET"}
+{"id": "155818", "title": "RICE-PO: Turning Retrieval Interactions into Credit Signals for Reasoning Agents", "hint": "RET"}
+{"id": "154212", "title": "Risk-Calibrated Context Selection for Healthcare Multi-Agent Handoff", "hint": "MED RET"}
+{"id": "154732", "title": "Risk-Controlled Post-Processing of Decision Policies", "hint": "MED "}
+{"id": "154851", "title": "Risk Horizons: Structured Hypothesis Spaces for Longitudinal Clinical Prediction", "hint": "MED RET"}
+{"id": "152523", "title": "RIVET: Regex-to-Indexable Keys via Neural Translation for Interactive LIMIT-k Retrieval", "hint": "RET"}
+{"id": "149997", "title": "RIZZ: Routing Interactions to Near Zero-Interference Zones for Continual Adaptation of Black-Box Agents", "hint": "RET"}
+{"id": "152090", "title": "RL-Guided Temporal Localization for Dual-Channel Retrieval in Long-Horizon Agent Memory", "hint": "RET"}
+{"id": "139684", "title": "RoboProcessBench: Benchmarking Process-Aware Understanding in Visual-Language Robotic Manipulation", "hint": "MED "}
+{"id": "150072", "title": "Robust Approximate Nearest Neighbor Search for Any Dataset", "hint": "RET"}
+{"id": "154903", "title": "Robust-by-Design Distributional Learning from Contaminated Samples", "hint": "RET"}
+{"id": "156070", "title": "Robust Reversible Recovery for Adversarially Protected JPEG Images", "hint": "RET"}
+{"id": "153369", "title": "Routing Subspaces: Auditing Evaluation-to-Deployment Mismatch in Fine-Tuned Language Models", "hint": "MED "}
+{"id": "139454", "title": "RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-𝑁 Ranking", "hint": "RET"}
+{"id": "139584", "title": "RTCBench: Evaluating Tool Use of Large Language Models Beyond Oracle Access", "hint": "RET"}
+{"id": "139103", "title": "RTEB: An Overfitting-Resistant Benchmark for Embedding Model Evaluation", "hint": "RET"}
+{"id": "154753", "title": "Rubric-Align: Safety Alignment through Dynamically Co-Evolving Rubrics", "hint": "MED "}
+{"id": "139334", "title": "RUBRIC-MME: Real-User Behavior-grounded Rubric for Multimodal Interaction Capability Evaluation", "hint": "MED "}
+{"id": "154429", "title": "RVR: Retrieve-Verify-Retrieve for Comprehensive Question Answering", "hint": "RET"}
+{"id": "139651", "title": "s2n-bignum-bench: A practical benchmark for evaluating low-level code reasoning of LLMs", "hint": "RET"}
+{"id": "151214", "title": "SAFE-DRIFT: Data Selection for Supervised Fine-tuning with Controllable Off-Target Drifts", "hint": "MED "}
+{"id": "139719", "title": "SafeDrug: A Benchmark Dataset for Safety-Critical Pharmacological Reasoning in LLMs", "hint": "MED "}
+{"id": "155210", "title": "SAGE: Evidence-First Biomarker Discovery through Multi-Agent Reasoning", "hint": "MED "}
+{"id": "150303", "title": "SAGE: Semantic Ambiguity Guided Capacity Expansion for Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "155120", "title": "SAIR: Cost-Efficient Multi-Stage ML Pipeline Autoscaling via In-Context Reinforcement Learning", "hint": "RET"}
+{"id": "139139", "title": "SALART-VQA: Diagnosing Whether VLMs Understand Salient Artifacts in Generated Images", "hint": "MED "}
+{"id": "156793", "title": "SAMAT: A Stereotype-Aware Multimodal Transformer for Interpretable Misogynistic Meme Detection", "hint": "RET"}
+{"id": "153223", "title": "Same Concept, Different Directions: Cross-Modal Feature Heterogeneity in Sparse Autoencoders", "hint": "RET"}
+{"id": "140072", "title": "Sampling Is Not Curiosity: Why LLM Agents Should Investigate", "hint": "RET"}
+{"id": "148209", "title": "Sandboxed Coding Agents are Competitive Omni-modal Task Solvers", "hint": "RET"}
+{"id": "139185", "title": "SANEval: Open-Vocabulary Compositional Benchmarks with Failure-mode Diagnosis", "hint": "MED "}
+{"id": "149959", "title": "SAPO: Step-Level Skill-Augmented Policy Optimization for Multi-Turn LLM Agents", "hint": "RET"}
+{"id": "139082", "title": "SarcBench: A Bilingual Benchmark for Contextual Sarcasm Understanding, Response, and Generation", "hint": "MED "}
+{"id": "154104", "title": "Scaling Generative Foundation Models for Chest Radiography with Rectified Flow Transformers", "hint": "MED "}
+{"id": "148948", "title": "Scaling Multi-Teacher Distillation for Digital Pathology", "hint": "MED "}
+{"id": "153396", "title": "SceneBind: Binding What and Where Across Vision, Audio, and Language", "hint": "RET"}
+{"id": "154773", "title": "SceneScaffold: Active Scene-State Construction for Unified 3D Scene Understanding", "hint": "MED "}
+{"id": "140091", "title": "Scheming Is a Symptom: Alignment Research Should Probe Reflexive Fragility", "hint": "MED "}
+{"id": "152167", "title": "SCHOLARPEER: A Multi-Agent Framework for Automated Peer Review", "hint": "RET"}
+{"id": "138873", "title": "SciHazard: A Benchmark for Measuring Scientific Safety Risks with Decomposed Harm Scoring", "hint": "RET"}
+{"id": "139663", "title": "SciResearchBench: Benchmarking AI Agents on Complex Scientific Literature Discovery", "hint": "RET"}
+{"id": "148234", "title": "SCOPE: Self-Play via Co-Evolving Policies for Open-Ended Tasks", "hint": "RET"}
+{"id": "152925", "title": "ScreenSearch: Uncertainty-Aware OS Exploration", "hint": "RET"}
+{"id": "150824", "title": "ScreenShot: A Foundation Model for Few-Shot Combination Drug Screening", "hint": "MED "}
+{"id": "155518", "title": "SD-Search: Hindsight Self-Distillation for Search-Augmented Reasoning", "hint": "RET"}
+{"id": "153907", "title": "Search-Augmented Masked Diffusion Models for Constrained Generation", "hint": "RET"}
+{"id": "153611", "title": "Search More, Think Less: Rethinking Long-Horizon Agentic Search for Efficiency and Generalization", "hint": "RET"}
+{"id": "150488", "title": "SearchV: Evolutionary Fine-Grained Visual-Token Skipping for Efficient Vision-Language Models", "hint": "MED "}
+{"id": "148378", "title": "Seeing Speech: Learning Visible Articulatory Dynamics for Speech-Driven 3D Facial Animation", "hint": "RET"}
+{"id": "148448", "title": "Seeing Together, Acting Apart: Shared Environmental Understanding for Multi-Robot Navigation", "hint": "RET"}
+{"id": "148412", "title": "Seeking the Unfamiliar but Memorable: Conceptual Creativity as Meta-Learning", "hint": "RET"}
+{"id": "152176", "title": "SEEK-VAU: Towards Evidence-Faithful Video Anomaly Understanding via Agentic Search", "hint": "RET"}
+{"id": "153238", "title": "SEISMOS: A Statistical Signal Detection Framework for Semantic Chunking", "hint": "RET"}
+{"id": "150272", "title": "Selective Answering for Medical VQA via Parallel Independent Claim Verification", "hint": "MED "}
+{"id": "155897", "title": "Self-Compacting Language Model Agents", "hint": "RET"}
+{"id": "139739", "title": "Self Driving Datasets: From 20 Million Papers to Nuanced Biomedical Knowledge at Scale", "hint": "MED RET"}
+{"id": "153076", "title": "Self-EvolveRec: Self-Evolving Recommender Systems with LLM-based Directional Feedback", "hint": "MED "}
+{"id": "151252", "title": "Self-Organized Conformal Prediction: Reducing Regional Coverage Gaps with Unsupervised Group Discovery", "hint": "RET"}
+{"id": "154665", "title": "Semantic Motion Anchors: Bridging Motion and Meaning in Co-Speech Gestures", "hint": "RET"}
+{"id": "139590", "title": "Semantic Search over 9 Million Mathematical Theorems", "hint": "RET"}
+{"id": "148708", "title": "Semantic-Statistical Prior Banks for Federated Low-Shot Learning under Non-IID Clients", "hint": "RET"}
+{"id": "139610", "title": "SenseBench: A Benchmark for Remote Sensing Low-Level Visual Perception and Description in Large Vision-Language Models", "hint": "MED "}
+{"id": "150351", "title": "Senses Wide Shut: A Representation-Action Gap in Omnimodal LLMs", "hint": "MED "}
+{"id": "151642", "title": "SF-DST: Adapting Vision-Language Models for Anomaly Detection via Asymmetric Modulation and A-LoRA", "hint": "RET"}
+{"id": "152000", "title": "SFPR: Structural Fingerprinting for LiDAR-to-OpenStreetMap Place Recognition", "hint": "RET"}
+{"id": "139563", "title": "ShadowBench: Exposing Lexical Anchoring and the Illusion of Forgetting in Large Language Models", "hint": "RET"}
+{"id": "155872", "title": "SheafStain: Sheaf-Theoretic Schr\\\"odinger Bridge for Spatially and Biologically Coherent Virtual Staining", "hint": "MED "}
+{"id": "150524", "title": "ShiftRAG: Bypassing the Textual Bottleneck via Decoupled Learning and Continuous Soft Tokens", "hint": "RET"}
+{"id": "152143", "title": "SIGA: Scientific Simulation Coding Agent Adapter- A Geophysics Case Study", "hint": "RET"}
+{"id": "139173", "title": "SiliciclasticReservoirs: A Million-Reservoir Dataset and Flow-Matching Foundation Model for 3D Siliciclastic Reservoir Generation", "hint": "RET"}
+{"id": "152413", "title": "SING-CH: Task-Scale-Agnostic Lifelong Cross-Modal Hashing on Statistical Manifolds", "hint": "RET"}
+{"id": "150748", "title": "Sinkhorn Based Associative Memory Retrieval Using Spherical Hellinger Kantorovich Dynamics", "hint": "RET"}
+{"id": "139713", "title": "SituRecBench: A Benchmark for Situated Recommendation in 3D Interactive Environments", "hint": "RET"}
+{"id": "154483", "title": "Sketching the Readout of Large Language Models for Scalable Data Attribution and Valuation", "hint": "MED RET"}
+{"id": "149869", "title": "SkillCIR: Intent-Guided Skill Composition for Training-Free Composed Image Retrieval", "hint": "RET"}
+{"id": "151446", "title": "SkillOS: Learning Skill Curation for Self-Evolving Agents", "hint": "RET"}
+{"id": "156011", "title": "SkillRL: Evolving Agents via Recursive Skill-Augmented Reinforcement Learning", "hint": "RET"}
+{"id": "139475", "title": "SlackBench: Benchmarking Agents on Collaborative Projects Grounded in Real Code Repositories", "hint": "RET"}
+{"id": "150217", "title": "SliceWorld: A Predictive and Controllable World-State Model for CT Report Generation", "hint": "MED "}
+{"id": "154857", "title": "SMI: Semantic Medical ID for Hierarchy-Aware Concept Representation", "hint": "MED "}
+{"id": "139761", "title": "SMMBench: A Benchmark for Source-Distributed Multimodal Agent Memory", "hint": "RET"}
+{"id": "153914", "title": "sMMC-22M: A Context-Aware Dataset and Benchmark for Single-Cell Spatial Transcriptomics", "hint": "MED "}
+{"id": "148421", "title": "SOAR: Semantic Organ-Aware Pretraining for 3D CT Image Understanding", "hint": "MED "}
+{"id": "138926", "title": "SoDeArena: A Socially-Situated Reasoning Benchmark for Large Language Models", "hint": "MED "}
+{"id": "151016", "title": "Soft Forward-Backward Representations for Zero-shot Reinforcement Learning with General Utilities", "hint": "RET"}
+{"id": "153057", "title": "Sophon: A Procedural Diagnostic for Spatial Reasoning in Vision-Language Models", "hint": "MED "}
+{"id": "139217", "title": "SourceBench: Can AI Answers Reference Quality Web Sources?", "hint": "RET"}
+{"id": "151035", "title": "Spark: Path-Aware Experiential Self-Evolution for VLMs Spatiotemporal Reasoning", "hint": "RET"}
+{"id": "150458", "title": "Sparse Attention as a Range Searching Problem: Towards an Inference-Efficient Index for KV Cache", "hint": "RET"}
+{"id": "155048", "title": "Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity", "hint": "RET"}
+{"id": "139304", "title": "Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests", "hint": "MED "}
+{"id": "150381", "title": "SpecHop: Continuous Speculation for Accelerating Multi-Hop Retrieval Agents", "hint": "RET"}
+{"id": "148508", "title": "Specialist Mediators: Causal Localization of Dense Fine-Tuning", "hint": "MED "}
+{"id": "151780", "title": "Spectral-Aligned Pruning for Universal Error-Correcting Code Transformers", "hint": "RET"}
+{"id": "154946", "title": "Spectral Stratification of Semantic Abstraction in Vision-Language Models", "hint": "RET"}
+{"id": "155259", "title": "SPERA: Spherical Prior EEG Foundation Model with Geometry- and Frequency-Aware Latent Prediction", "hint": "MED "}
+{"id": "153724", "title": "SPEXT: A Decoupled Multi-Spectral Foundation Model for Earth Observation and Vision-Language Grounding", "hint": "RET"}
+{"id": "148342", "title": "SPHERE-JEPA: Spherical Prediction with Homogeneous Embeddings", "hint": "RET"}
+{"id": "148719", "title": "Spherical Interpolation for Backward-Compatible Multimodal Representations", "hint": "RET"}
+{"id": "139800", "title": "spora: A Unified Multimodal Dataset for Spatial Proteomics", "hint": "MED "}
+{"id": "153943", "title": "SRA: Spatial Reasoning Adapter via Evolving Social Interaction Graphs for Trajectory Prediction", "hint": "RET"}
+{"id": "153504", "title": "Stable and Granular Policy Optimization for Generative Recommendation", "hint": "RET"}
+{"id": "155130", "title": "StainNFT: Curriculum-Gated Multi-Reward Post-Training for Pathology-Faithful Virtual Staining", "hint": "MED "}
+{"id": "139611", "title": "StakeBench: Evaluating Language Understanding Grounded in Market Commitment", "hint": "MED "}
+{"id": "151469", "title": "StateLedger: Path-Addressed External Memory for Persistent Multi-Agent Systems", "hint": "RET"}
+{"id": "148318", "title": "State-Resolving Attention for Length-Extrapolating Transformers", "hint": "RET"}
+{"id": "151920", "title": "StateTree: Enhancing Long-term Dialogue Reasoning via Reinforcement Learning", "hint": "RET"}
+{"id": "153362", "title": "ST-Bridge: Bridging Sketch and Text with Large Language Models for Coarse-to-Fine Image Retrieval", "hint": "RET"}
+{"id": "150659", "title": "Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems", "hint": "MED "}
+{"id": "153124", "title": "Steer2Edit: From Activation Steering to Component-Level Editing", "hint": "MED "}
+{"id": "154457", "title": "SteerCast: Retrieval-Based Latent Steering for Decoder-Only Time Series Forecasting", "hint": "RET"}
+{"id": "139814", "title": "StemBind: When MLLMs Get Lost Between Rules and Instances in Abstract Visual Reasoning", "hint": "MED "}
+{"id": "154649", "title": "STEMFly: Enhancing UAV Vision-Language Navigation via Sensor Grounding, Temporal Diversity and Episodic Memory", "hint": "RET"}
+{"id": "149605", "title": "Stop or Restart? Principled Inference Control for Large Reasoning Models via the Pandora's Box", "hint": "MED "}
+{"id": "139618", "title": "Stranger Things: When Objects Appear Without Their Typical Neighbours", "hint": "MED "}
+{"id": "149538", "title": "STREAM: Stochastic Riemannian Flow Matching with Anisotropic Decoder for Digital Histopathology Image Generation", "hint": "MED "}
+{"id": "152271", "title": "Structural Rationale Distillation via Reasoning Space Compression", "hint": "RET"}
+{"id": "155003", "title": "Structural Support Certificates for Mechanistic Hypothesis Selection", "hint": "MED RET"}
+{"id": "153376", "title": "Structure-Semantic Guided Closed-Loop Medical Anomaly Detection via Multi-Agent Collaboration", "hint": "MED "}
+{"id": "152606", "title": "Substrata: Know What You Don't Know", "hint": "RET"}
+{"id": "151336", "title": "SurvivalPFN: Amortizing Survival Prediction via In-Context Bayesian Inference", "hint": "MED "}
+{"id": "153934", "title": "Swarm Shepherd: Securing Multi-Agent Ecosystems Against Persistent Latent Compromise", "hint": "RET"}
+{"id": "152446", "title": "SynTeX-FL: Cross-Modal Text Transfer in Federated Learning for Medical Visual Question Answering", "hint": "MED "}
+{"id": "155345", "title": "Synthetic Web: Benchmarking Language Agents under Adversarial Search Ranking", "hint": "RET"}
+{"id": "152009", "title": "T2V-AttnDisrupt: Inducing Hallucinations in LVLMs via Misrouting Visual Evidence Retrieval", "hint": "RET"}
+{"id": "139791", "title": "TabBioMed: A Large-Scale Benchmark for Biomedical Tabular Learning", "hint": "MED "}
+{"id": "155779", "title": "TabDLM: Free-Form Tabular Data Generation via Joint Numerical–Language Diffusion", "hint": "MED "}
+{"id": "150304", "title": "TabWorld: A World-Modeling Foundation Model for Tabular Generation", "hint": "MED "}
+{"id": "153041", "title": "TACT-KV: Tri-Axis Cosine Transform for Compressing Volumetric KV Caches in Medical VLMs", "hint": "MED "}
+{"id": "150715", "title": "Tail Competition Explains Scaling in Best-of-N Sampling for Verifiable Problems", "hint": "MED "}
+{"id": "155753", "title": "TailCon: Mitigating Tail Signal Erosion through Memory Consolidation for Long-Tailed Recognition", "hint": "RET"}
+{"id": "149857", "title": "TailGuard: Subgroup Tail Coverage Theory for Safe LLM Alignment", "hint": "MED "}
+{"id": "153778", "title": "Take It or Leave It: Intent-Controlled Partial Optimal Transport", "hint": "RET"}
+{"id": "149760", "title": "Taming CoT Obfuscation in VLMs: From Mechanistic Evidence to Activation-Level Enforcement", "hint": "MED "}
+{"id": "151590", "title": "TanGCE: Manifold-Aware Concept Erasure", "hint": "MED "}
+{"id": "152996", "title": "Tango3D: Towards Alignment for Global and Local 2D-3D Correspondence", "hint": "RET"}
+{"id": "152330", "title": "TargetSage: Identifying Therapeutic Target Genes with Interpretable and Robust LLM Reasoning", "hint": "MED "}
+{"id": "152712", "title": "Task Vector Geometry Underlies Dual Modes of Task Inference in Transformers", "hint": "RET"}
+{"id": "154539", "title": "Teaching LLMs to Recommend and Defer in Underrepresented Epilepsy Care", "hint": "MED "}
+{"id": "150012", "title": "Teaching Video Generators to Remember: Eliciting Dynamic Memory for Out-of-Sight State Evolution", "hint": "RET"}
+{"id": "150121", "title": "Teach-to-Reason: Competition-Guided Reasoning with a Self-Improving Teacher", "hint": "MED "}
+{"id": "155335", "title": "Tell Me What To Learn: Generalizing Neural Memory to be Controllable in Natural Language", "hint": "MED "}
+{"id": "153006", "title": "TENET: Time-point Encoding Network for Multivariate Time Series Anomaly Detection", "hint": "RET"}
+{"id": "139599", "title": "TerraVis: Towards Evaluation of World-Grounded Visual Consistency in Text-to-Image Generation via MLLM Workflows", "hint": "MED "}
+{"id": "155782", "title": "Test-Time Graph Recalibration: Enhancing Robust Zero-Shot Inference for Graph Foundation Models", "hint": "MED "}
+{"id": "153672", "title": "Test-Time Personalization: A Diagnostic Framework and Probabilistic Fix for Scaling Failures", "hint": "MED "}
+{"id": "153345", "title": "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck", "hint": "MED "}
+{"id": "148465", "title": "Text as Partial Constraint: Core–Residual Alignment for Robust Vision–Language Learning", "hint": "RET"}
+{"id": "139343", "title": "Text-side fragility in contrastive vision-language retrieval", "hint": "RET"}
+{"id": "148391", "title": "Text-Vision Co-Instructed Image Editing", "hint": "RET"}
+{"id": "150270", "title": "TF-PRVR: Training-Free Partially Relevant Video Retrieval for Real-World Generalization", "hint": "RET"}
+{"id": "156077", "title": "The Alignment Illusion in Multimodal Large Language Models", "hint": "MED "}
+{"id": "155556", "title": "The Commit-Abstain Circuit: Why Language Models Hallucinate Instead of Abstaining", "hint": "MED "}
+{"id": "151832", "title": "The Compliance Trap: Diagnosing How AI Agents Consume Conflicting Memory", "hint": "RET"}
+{"id": "151175", "title": "The Cost of Absolute Position: A Spread-Expressivity Tradeoff for Additive Positional Encodings", "hint": "RET"}
+{"id": "154497", "title": "The Curse of Multiple Mediators: Hidden Interaction Effects in Activation Patching", "hint": "MED "}
+{"id": "149138", "title": "The Geometry of Forgetting: Temporal Knowledge Drift as an Independent Axis in LLM Representations", "hint": "RET"}
+{"id": "139826", "title": "The Illusion of Multi-Agent Advantage", "hint": "MED "}
+{"id": "151267", "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization", "hint": "RET"}
+{"id": "152788", "title": "The Many Senses of Visual Similarity: A Text-Prompted Image Perceptual Metric", "hint": "RET"}
+{"id": "139327", "title": "The Missing Corpus: Infinite Ground Truth for File-Grounded LLM Evaluation", "hint": "RET"}
+{"id": "153926", "title": "The Missing Positional Story in LLMs: A Case Study of Shift-Invariant Attention", "hint": "RET"}
+{"id": "149824", "title": "The Override Gap: A Magnitude Account of Knowledge Conflict Failure in Hypernetwork-Based Instant LLM Adaptation", "hint": "RET"}
+{"id": "150856", "title": "The PFAD Not Taken: Measuring Polysemanticity via Feature Affine Decomposition", "hint": "RET"}
+{"id": "140043", "title": "The Post-Training Dilemma: Why We Should Rethink the Sequential SFT-RL Paradigm", "hint": "MED "}
+{"id": "153995", "title": "The Price of Choosing Examples: Context Overfitting in Adaptive In-Context Learning", "hint": "RET"}
+{"id": "139071", "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots", "hint": "MED "}
+{"id": "139825", "title": "The Text Uncanny Valley: Non-Monotonic Performance Degradation in LLM Information Retrieval", "hint": "RET"}
+{"id": "149493", "title": "The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents", "hint": "RET"}
+{"id": "155515", "title": "The World is Not Mono: Enabling Spatial Understanding in Large Audio-Language Models", "hint": "MED "}
+{"id": "148479", "title": "Thinking with Imitation: Adaptive Reinforcement-Imitation Learning for Tool-Augmented Scientific Reasoning", "hint": "RET"}
+{"id": "154023", "title": "TIGER-FG: Text-Guided Implicit Fine-Grained Grounding for E-commerce Retrieval", "hint": "RET"}
+{"id": "150957", "title": "TIMA: Test-Time Internalization for Agentic Memory", "hint": "RET"}
+{"id": "150483", "title": "Time to Pay Attention! Understanding High Complexity Corpus Reasoning Tasks", "hint": "RET"}
+{"id": "153921", "title": "TKCAM: Text and Keyframe to Camera Trajectory Generation", "hint": "RET"}
+{"id": "149496", "title": "To Align or Not To Align: Check Your COMPASS Before You Train", "hint": "MED "}
+{"id": "151823", "title": "Token-Conditional Expert Dropout: Implicit Regularization for Stable MoE Pretraining", "hint": "MED "}
+{"id": "150179", "title": "Too Aligned to be Real: Detecting AI-Generated Images via Cross-modal Alignment Shift", "hint": "RET"}
+{"id": "139025", "title": "TopoGraphRAG-Bench: Evaluating Multimodal GraphRAG on Layout-Grounded Evidence Reasoning", "hint": "RET"}
+{"id": "153660", "title": "Topology-Aware Representation Alignment for Semi-Supervised Vision-Language Learning", "hint": "RET"}
+{"id": "153248", "title": "Towards a Universal Causal Reasoner", "hint": "MED "}
+{"id": "139379", "title": "Towards Characterizing Scientific Image Utility and Upgradability", "hint": "MED "}
+{"id": "153005", "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows", "hint": "MED RET"}
+{"id": "139021", "title": "Towards Error-Free EHRs: Reasoning-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records", "hint": "MED RET"}
+{"id": "151471", "title": "Towards Explainable Industrial Anomaly Detection via Knowledge-Guided Latent Reasoning", "hint": "RET"}
+{"id": "151222", "title": "Towards Generalizable Partially Relevant Video Retrieval", "hint": "RET"}
+{"id": "148687", "title": "Towards On-Policy Data Evolution for Visual-Native Multimodal Deep Search Agents", "hint": "RET"}
+{"id": "139432", "title": "Towards Reliable VLM Judges: State-Conditional Invariance and Presentation-Aware Diagnostics", "hint": "MED "}
+{"id": "151537", "title": "Towards Scalable Context-Aware Single-Cell Spatial Transcriptomics Prediction from Histology Images", "hint": "MED "}
+{"id": "138990", "title": "Towards Understanding and Measuring Cognitive Atrophy in LLM Behaviour", "hint": "MED "}
+{"id": "155155", "title": "Towards Unified Memory Adaptation for LLM Agents: Textual, Latent, and Parametric Pathways", "hint": "RET"}
+{"id": "149401", "title": "TraceDx: Criticality-Weighted Atomic Facts as a Training Signal for Sequential Clinical Diagnosis", "hint": "MED "}
+{"id": "139211", "title": "TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development", "hint": "MED "}
+{"id": "153884", "title": "TRACER: Verifiable Generative Provenance for Multimodal Tool-Using Agents", "hint": "RET"}
+{"id": "139280", "title": "TRACE: Tourism Recommendation with Accountable Citation Evidence", "hint": "RET"}
+{"id": "139645", "title": "Tracing the Cascade: A Topology-Aware Evaluation Framework for Scientific Agent Hallucinations", "hint": "MED "}
+{"id": "153591", "title": "Train-free Data Poisoning Attack against Retrieval-augmented Diffusion Models", "hint": "RET"}
+{"id": "148393", "title": "Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context", "hint": "RET"}
+{"id": "150358", "title": "Training Transformers for KV-Cache Compressibility", "hint": "RET"}
+{"id": "154461", "title": "TrajLift: Encoding Verbal Memory Dynamics via Heat Diffusion on Semantic Hierarchies", "hint": "MED RET"}
+{"id": "155885", "title": "TrajWiki: Source-Grounded Memory Trajectories for Long-Horizon Dialogue Agents", "hint": "MED RET"}
+{"id": "149447", "title": "TransMem: Transition-Aware Retrieval for Evolving Personal Memory", "hint": "RET"}
+{"id": "139448", "title": "TRIAD: Benchmarking Omni-Modal Ambiguity in Multimodal Large Language Models", "hint": "MED "}
+{"id": "139604", "title": "TrialAgentBench: Evaluating AI Agents for Clinical-Trial Analysis and Long-Horizon Drug-Development Decisions", "hint": "MED "}
+{"id": "155841", "title": "TRIDENT: Post-Selection Evidence Accountability for Token-Efficient RAG", "hint": "RET"}
+{"id": "154624", "title": "TRIM: A Theory of Retrieval with Incremental Memory -- Defect, Benefit, and Critical Horizon", "hint": "RET"}
+{"id": "149979", "title": "Tunable Latent Generative Priors for Compressed Sensing and Inverse Problems", "hint": "RET"}
+{"id": "151130", "title": "TwinPrune: Density-Aware Two-Phase Token Pruning for Vision-Language Models", "hint": "MED "}
+{"id": "138963", "title": "TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing", "hint": "RET"}
+{"id": "138939", "title": "U-Bench: A Comprehensive Understanding of U-Net through 100-Variant Benchmarking", "hint": "MED "}
+{"id": "154876", "title": "UGGRH: Unsupervised Generative Completion and Graph-attention Refinement for Incomplete Cross-modal Hashing", "hint": "RET"}
+{"id": "152617", "title": "Uncovering Semantic Hierarchies in Text-Attributed Graphs via Variational EM-based LLM–GNN Synergy", "hint": "MED "}
+{"id": "148494", "title": "Understanding and Mitigating Structural Forgetting in Fine-Tuned Time Series Foundation Models", "hint": "MED "}
+{"id": "150354", "title": "Understanding the Surprising Generalization Properties of Tabular Foundation Models", "hint": "RET"}
+{"id": "150807", "title": "Unified Forensic Preference Learning for Generalizable Synthetic Image Detection", "hint": "MED "}
+{"id": "152735", "title": "Unlocking LLM Creativity in Science through Analogical Reasoning", "hint": "MED "}
+{"id": "148534", "title": "Unveiling Memorization–Generalization Coexistence: A Case Study on Arithmetic Tasks with Label Noise", "hint": "RET"}
+{"id": "150077", "title": "URDF-Anything+: End-to-End Generation for Simulation-Ready Articulated Assets", "hint": "RET"}
+{"id": "149641", "title": "Urgency-Aware Autoregressive VLMs for Unanticipated Healthcare Occurrences", "hint": "MED "}
+{"id": "155845", "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes", "hint": "RET"}
+{"id": "155997", "title": "V1-Inspired Dynamic Vision System: A Bio-Plausible Video Embedding Framework with Decoupled Shape–Color Pathways and Long-Range Spatiotemporal Perception", "hint": "RET"}
+{"id": "154357", "title": "ValuSpec: Plug-and-Play Candidate Valuation before Target Verification for Tree-Based Speculative Decoding", "hint": "RET"}
+{"id": "149566", "title": "Variational Cover Modification Steganography", "hint": "RET"}
+{"id": "139354", "title": "VecDBLens: A Modular Framework for Diagnosing Vector Databases  Retrieval Pipelines", "hint": "MED RET"}
+{"id": "139316", "title": "VEHBench: A Stage-Local Diagnostic Benchmark for LLM-Assisted Vibration Energy Harvester Design", "hint": "MED "}
+{"id": "148308", "title": "Velocity-Space 3D Asset Editing", "hint": "RET"}
+{"id": "151369", "title": "Veri-Sure: Multi-Agent RTL Code Generation with Temporal Tracing, Slicing and Formal Verification", "hint": "MED "}
+{"id": "139167", "title": "VeriTrip: A Verifiable Benchmark for Travel Planning Agents over Unstructured Web Corpora", "hint": "RET"}
+{"id": "139095", "title": "VeriWorld: A Verifiable Visual SWE-Bench for Spatial Reasoning in 3D Environments", "hint": "MED "}
+{"id": "151435", "title": "VESTA: Visual Exploration with Statistical Tool Agents", "hint": "MED "}
+{"id": "154655", "title": "Vibe-Spike: An Energy-Preserving EEG Foundation Model Through the Landscape of Neural Coherence", "hint": "MED "}
+{"id": "154516", "title": "ViCoR: Estimating Visual Necessity via Counterfactual Residuals for Multimodal Medical Data Selection", "hint": "MED "}
+{"id": "139576", "title": "VideoOdyssey: A Benchmark for Ultra-Long-Context and Omni-Modal Video Understanding", "hint": "MED RET"}
+{"id": "148818", "title": "VideoSailor: Navigating Video Deep Research via Trajectory-to-Policy Flywheel", "hint": "RET"}
+{"id": "149002", "title": "VideoSleuth: A Narrative-Centric Agentic System with Video-Audio Native MLLM for Long-Form Video Understanding", "hint": "RET"}
+{"id": "153091", "title": "VidVec: Unlocking Video MLLM Embeddings for Video-Text Retrieval", "hint": "RET"}
+{"id": "153176", "title": "View-Spectral Reconciliation Learning for Text-based Multispectral Aerial–Ground Person Re-Identification", "hint": "RET"}
+{"id": "139742", "title": "VIPER: An Expert-Curated Benchmark for Vision-Language Models in Veterinary Pathology", "hint": "MED "}
+{"id": "154323", "title": "Virtual Task Prompting for Multi-Task Scene Understanding", "hint": "RET"}
+{"id": "139809", "title": "VisGym: Diverse, Customizable, Scalable Environments for Multimodal Agents", "hint": "MED "}
+{"id": "140095", "title": "Vision-Language Models Should Commit to a Cézannian Specification", "hint": "MED "}
+{"id": "151190", "title": "Visual Anchoring for Scenario-Guided Forecasting", "hint": "MED "}
+{"id": "152643", "title": "Visual Latents Know More Than They Say: Unsilencing Latent Reasoning in MLLMs", "hint": "MED "}
+{"id": "150417", "title": "Visual Reinforcement Fine-Tuning via Bootstrapped Medical Reasoning", "hint": "MED "}
+{"id": "139562", "title": "VisualWorldBench: A Fine-Grained Multi-Task Benchmark for Evaluating Visual World Knowledge in MLLMs", "hint": "MED "}
+{"id": "155119", "title": "VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models", "hint": "RET"}
+{"id": "139402", "title": "VL-DocIR: A Benchmark for Vision-Based Long Document Retrieval", "hint": "MED RET"}
+{"id": "154969", "title": "V-LUMEN: Visual Lookup Memory for Embedding Scaling in Vision-Language Models", "hint": "RET"}
+{"id": "139246", "title": "VocalCoachBench: Benchmarking Audio-Language Models on Expert Feedback for Singing", "hint": "MED "}
+{"id": "148747", "title": "Voxel as Token: A New Perspective for Zero-shot Cross-subject Vision Decoding", "hint": "RET"}
+{"id": "149459", "title": "VSearcher: Long-Horizon Multimodal Search Agent via Reinforcement Learning", "hint": "RET"}
+{"id": "151594", "title": "WASP: Weakly Aligned Spatiotemporal Pairs for Fetal Brain MRI-Ultrasound Learning", "hint": "MED "}
+{"id": "148786", "title": "Wayfinder: Adaptive Resource Routing from Agent Citations", "hint": "RET"}
+{"id": "148562", "title": "Weather-Robust Cross-View Geo-Localization via Prototype-Based Semantic Part Discovery", "hint": "RET"}
+{"id": "154891", "title": "WebNavigator: Global Web Navigation via Interaction Graph Retrieval", "hint": "RET"}
+{"id": "139816", "title": "What DNA Foundation Models Learn Beyond Sequence Composition", "hint": "MED "}
+{"id": "150770", "title": "What do EEG Foundation Models Capture from Human Brain Signals?", "hint": "MED "}
+{"id": "155923", "title": "What Does the AI Doctor Value? Auditing Pluralism in the Clinical Ethics of Language Models", "hint": "MED "}
+{"id": "149540", "title": "What Fits (Into Few Tokens) Doesn't Overfit:  Compression and Generalization in ML Research Agents", "hint": "RET"}
+{"id": "154094", "title": "What if Agents Could Imagine? Reinforcing Open-Vocabulary HOI Comprehension through Generation", "hint": "RET"}
+{"id": "148503", "title": "What’s Holding Back Latent Visual Reasoning?", "hint": "MED "}
+{"id": "149000", "title": "What Should a Streaming Video Model Remember?", "hint": "RET"}
+{"id": "152640", "title": "What Sketches Tell Us about LVLMs: Conventions, Grounding, and Localisation", "hint": "MED "}
+{"id": "150201", "title": "What to Perturb, How to Propagate: A Graph-Guided Transferable Attack on VLP Models", "hint": "RET"}
+{"id": "149905", "title": "What to Remember, What to Reveal: Privacy-Aware Memory for Conversational Agents", "hint": "RET"}
+{"id": "153020", "title": "What Transformer FFNs Never See: Theory, Diagnosis, and Lightweight Remediation", "hint": "MED RET"}
+{"id": "139798", "title": "When Are Multimodal Predictions Biologically Supported? A Diagnostic Evaluation Framework", "hint": "MED "}
+{"id": "154919", "title": "When Attribution Patching Lies: Diagnosis and a Second-Order Correction", "hint": "MED "}
+{"id": "154553", "title": "When Can Digital Personas Reliably Approximate Human Survey Findings?", "hint": "RET"}
+{"id": "139414", "title": "When Does Graph Retrieval Become Answer-Supporting Evidence? A Diagnostic Audit of GraphRAG", "hint": "MED RET"}
+{"id": "152959", "title": "When Does Knowing the State Help? Diagnosing Process vs. Outcome Reward Design", "hint": "MED "}
+{"id": "150923", "title": "When evolution cheats: Frozen-weights Baselines reveal static-solvers interference in evolved plastic spiking neural networks", "hint": "MED "}
+{"id": "151259", "title": "When Expert Disagreement Hurts: Auditing Prestige-Sensitive Revision in LLM Decision Pipelines", "hint": "MED "}
+{"id": "151872", "title": "When Further Realization Is Unnecessary: Amortized Reasoning for Long-Horizon LLM Agents", "hint": "RET"}
+{"id": "149375", "title": "When Language Overrules: Revealing Text Dominance in Multimodal Large Language Models", "hint": "MED "}
+{"id": "148797", "title": "When LLM Routers Overpay: Strong-Model Over-Selection under Loose Budgets", "hint": "MED "}
+{"id": "139493", "title": "When Medical VLMs Stop Understanding: MedTEC-Bench for Probing Semantic Specificity", "hint": "MED RET"}
+{"id": "152350", "title": "When Poison Meets Structure: Topology-based Defense against Poisoning Attack on Graph-based Retrieval-Augmented Generation", "hint": "RET"}
+{"id": "139510", "title": "When Stored Evidence Stops Being Usable: Scale-Conditioned Evaluation of Agent Memory", "hint": "RET"}
+{"id": "151106", "title": "When to Trust Memory: Retrieval-Guided Probabilistic Spatiotemporal Forecasting under Distribution Shift", "hint": "RET"}
+{"id": "149652", "title": "When Transcriptomic Foundation Models Scale: Domain-Focused Pretraining for Drug Development in Immunology and Inflammation", "hint": "MED "}
+{"id": "148425", "title": "Where Are MLLMs Looking When They Hallucinate? Mitigating Visual Hallucination via Gaze Steering", "hint": "MED "}
+{"id": "139698", "title": "Where Root Cause Analysis Fails: A Retrieval-Reranking Decomposition", "hint": "RET"}
+{"id": "139799", "title": "Where Tabular Foundation Models Falter on Genetic Data: Datasets That Expose and Provide a Path to Address the Gap", "hint": "MED "}
+{"id": "153460", "title": "Where, What, Why, and Importance: Structured Defect Grounding for Text-to-Image Feedback", "hint": "MED "}
+{"id": "153430", "title": "Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video LLMs", "hint": "MED "}
+{"id": "150794", "title": "Who Needs Labels? Adapting Vision Foundation Models With the Metadata You Already Have", "hint": "MED "}
+{"id": "151857", "title": "Who Should Evolve? Uncertainty-Aware Role Bottleneck Inference for Multi-Agent LLM Training", "hint": "RET"}
+{"id": "148438", "title": "Why Deterministic PRM Guidance Underperforms in Discrete Diffusion Reasoning", "hint": "MED "}
+{"id": "150548", "title": "Why Invariance is Not Enough for Biomedical Domain Generalization and How to Fix It", "hint": "MED "}
+{"id": "139133", "title": "Workspace-Bench 1.0: Benchmarking AI Agents on Workspace Tasks with Large-Scale File Dependencies", "hint": "RET"}
+{"id": "139051", "title": "WorldMemArena: Evaluating Multimodal Agent Memory Through Action–World Interaction", "hint": "MED RET"}
+{"id": "155980", "title": "WorldSR: Harnessing World Knowledge Search for Grounded Image Super-Resolution", "hint": "RET"}
+{"id": "155912", "title": "WovenAnchor Matcher: Specialized Intra- and Inter-Image Context Modeling for Feature Matching", "hint": "RET"}
+{"id": "155852", "title": "XDecomposer: Learning Prior-Free Set Decomposition for Multiphase X-ray Diffraction", "hint": "RET"}
+{"id": "139062", "title": "XL-DocBench: Benchmarking Evidence-Grounded Extra-Long Document Understanding", "hint": "MED RET"}
+{"id": "149203", "title": "You CAN Teach an Old Model New Tricks: Domain Adaptation via Complementary Subspace Expansion", "hint": "MED RET"}
+{"id": "152683", "title": "Your Embedding Model Is SMARTer Than You Think", "hint": "RET"}
+{"id": "150216", "title": "Z-AXIS: From Deterministic Ground to Agentic Depth for Enterprise Evaluation", "hint": "RET"}
