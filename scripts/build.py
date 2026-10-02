@@ -147,12 +147,23 @@ for key in ['rag', 'agent', 'llm', 'medical_qa', 'medical_llm', 'medical_agent']
     w('')
 MB_PATH = 'data/medqa_benchmark_papers.json'
 MB = json.load(open(MB_PATH)) if os.path.exists(MB_PATH) else None
+# Papers whose main target is medical QA: extractor role 'main', plus EHRNote-ChatQA (a clinical QA benchmark paper the
+# extractor marked 'analysis' only because it uses EHRNoteQA as a single-turn reference).
+MAIN_EXTRA = {'139551'}
+mb_main = [p for p in MB['papers'] if p['used_in_experiments'] and (p['role'] == 'main' or p['id'] in MAIN_EXTRA)] if MB else []
+fmt_res = lambda r: f"{r['benchmark']}: {r['value']}" + (f" (vs {r['compared_to']} {r['compared_value']})" if r.get('compared_value') else '')
 if MB:
     cov = MB['coverage']; used = [p for p in MB['papers'] if p['used_in_experiments']]; cited = [p for p in MB['papers'] if not p['used_in_experiments']]
     esc_md = lambda t: (t or '').replace('|', '/')
     w(f"## Medical QA 벤치마크로 실험한 논문 ({len(used)}편)\n")
     w(f"MedQA·MedMCQA·MedXpertQA·PubMedQA·VQA-RAD·SLAKE 같은 **기존 공개 의료 QA 벤치마크로 직접 실험한** NeurIPS 2026 논문이다. 논문이 새로 만든 벤치마크만 쓴 경우는 넣지 않았다(아래 표의 '자체 벤치마크'에 따로 적었다).\n")
     w(f"**찾은 방법과 범위**: LLM·VLM을 다루는 논문 등 후보 {cov['pool']:,}편의 arXiv 판을 찾아 본문에서 벤치마크 이름 {len(MB['benchmarks_searched'])}종을 검색했다. 본문을 읽은 것은 {cov['fulltext']:,}편이고, **{cov['not_found']:,}편은 arXiv 판을 찾지 못해 확인하지 못했다**(OpenReview는 자동 다운로드를 막는다). 본문에 이름이 나온 {cov['fulltext_with_mention']}편을 LLM이 읽어 실험에 썼는지 판정했고, 성능 수치는 본문에 그대로 있는 값만 남겼다(검증된 수치 {cov['results_verified']}개). 그래서 이 목록은 '전부'가 아니라 **본문을 확인할 수 있었던 논문 중 전부**다. 파이프라인은 `scripts/medqa_bench/`에 있다.\n")
+    w(f'### Medical QA가 주 타깃인 논문 ({len(mb_main)}편)\n')
+    w(f'위 {len(used)}편 중 대부분은 여러 도메인을 평가하는 일반 LLM 논문이고, 의료 QA 자체를 풀려는 논문은 아래 {len(mb_main)}편이다. 대표 성능은 논문이 보고한 값이며, 괄호는 그 논문 안의 비교 대상이다(논문끼리는 비교할 수 없다).\n')
+    w('| 논문 | 벤치마크 | 모델 | 학습 | 문제 정의 | 제안 방법 | 대표 성능 |\n|---|---|---|---|---|---|---|')
+    for p in mb_main:
+        w(f"| [{esc_md(p['title'])}]({p['url']}) | {', '.join(p['benchmarks_norm'])} | {esc_md(', '.join(p['models'][:3]))} | {p['training']} | {esc_md(p['problem_ko'])} | {esc_md(p['method_ko'])} | {esc_md('<br>'.join(fmt_res(r) for r in p['results'][:3]))} |")
+    w('')
     w('### 전체 목록\n')
     w('| # | 논문 | 벤치마크 | 모델 | 학습 | 문제 정의 | 제안 방법 |\n|---:|---|---|---|---|---|---|')
     for k, p in enumerate(used, 1):
@@ -451,6 +462,9 @@ if MB:
         f"MedQA·MedMCQA·MedXpertQA·VQA-RAD 같은 기존 공개 의료 QA 벤치마크로 직접 실험한 논문이다. 논문이 새로 만든 벤치마크만 쓴 경우는 뺐다. 후보 {cov['pool']:,}편 중 arXiv 판으로 본문을 읽은 {cov['fulltext']:,}편에서 찾았고, {cov['not_found']:,}편은 arXiv 판이 없어 확인하지 못했다. 그래서 이 목록은 본문을 확인할 수 있었던 논문 중 전부다.",
         f'<div class="big"><div><b>{len(mb_used)}편</b><span>기존 의료 QA 벤치마크로 실험</span></div><div><b>{cov["fulltext_with_mention"]}편</b><span>본문에 벤치마크 이름이 나옴 (LLM이 실험 여부 판정)</span></div>'
         f'<div><b>{cov["fulltext"]:,} / {cov["pool"]:,}</b><span>본문을 읽은 후보 / 전체 후보</span></div><div><b>{cov["results_verified"]}개</b><span>본문에서 그대로 확인된 성능 수치</span></div></div>'
+        f'<div class="sub"><h3>Medical QA가 주 타깃인 논문 ({len(mb_main)}편)</h3><p class="muted">{len(mb_used)}편 중 대부분은 여러 도메인을 평가하는 일반 LLM 논문이다. 의료 QA 자체를 풀려는 논문은 아래 {len(mb_main)}편이다. 성능 괄호는 그 논문 안의 비교 대상이다.</p><div class="plist">'
+        + ''.join(f'<article class="paper"><a class="ttl" href="{p["url"]}" target="_blank" rel="noopener">{html.escape(p["title"])}</a><div class="sum"><b>문제</b> {html.escape(p["problem_ko"])}<br><b>방법</b> {html.escape(p["method_ko"])}<br><b>모델</b> {html.escape(", ".join(p["models"][:4]))}</div><div class="meta">' + ''.join(f'<span class="tag m">{html.escape(b)}</span>' for b in p['benchmarks_norm']) + f'<span class="tag dec">{html.escape(p["training"])}</span></div>' + (f'<ul class="notes" style="margin-top:6px;font-size:13px">' + ''.join(f'<li>{html.escape(fmt_res(r))}</li>' for r in p['results']) + '</ul>' if p['results'] else '') + '</article>' for p in mb_main)
+        + '</div></div><h3 class="subh" style="margin:8px 0 0">전체 ' + str(len(mb_used)) + '편</h3>'
         f'<div class="controls"><input id="bq" type="search" placeholder="검색: 제목·모델·방법" aria-label="벤치마크 논문 검색"><select id="btr" aria-label="학습 여부"><option value="">학습 여부 전체</option>{tr_opts}</select></div>'
         f'<div class="chips">{mb_chips}</div><div class="count" id="bcount"></div><div class="plist" id="blist"></div>'
         f'<div class="sub"><h3>성능 비교</h3><p class="muted">각 논문이 보고한 대표 수치다. 논문마다 모델·프롬프트·평가 분할·지표가 달라 논문끼리 직접 비교하면 안 되고, 같은 행의 비교 대상과의 차이만 그 논문 안에서 의미가 있다. 위에서 벤치마크를 고르면 이 표도 걸러진다.</p>'
