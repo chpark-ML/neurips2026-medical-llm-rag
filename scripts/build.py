@@ -341,6 +341,29 @@ lift_table = ''.join(f'<tr><td>{html.escape(r["topic"])}</td><td>{r["n"]}</td><t
 cat_chips = ''.join(f'<button class="chip" data-cat="{k}" aria-pressed="false">{n} <span>{counts[k]}</span></button>' for k, n, _ in CATS)
 
 # ---------------------------------------------------------------- interests.html
+CLIP_JS = r'''<script>
+(() => {
+document.querySelectorAll('.clip').forEach(clip => {
+  const btn = clip.nextElementSibling;
+  if (!btn || !btn.classList.contains('cliptog')) return;
+  const items = () => clip.querySelectorAll('.paper, tbody tr').length;
+  const update = () => {
+    clip.classList.toggle('over', clip.scrollHeight > 470);
+    btn.hidden = !(clip.scrollHeight > 470);
+    const unit = clip.querySelector('tbody') ? '개' : '편';
+    btn.textContent = clip.classList.contains('open') ? '목록 접기' : `목록 펼치기 (${items()}${unit})`;
+  };
+  btn.addEventListener('click', () => {
+    const opening = !clip.classList.contains('open');
+    clip.classList.toggle('open');
+    update();
+    if (!opening) clip.scrollIntoView({block: 'start', behavior: 'smooth'});
+  });
+  new MutationObserver(update).observe(clip, {childList: true, subtree: true});
+  update();
+});
+})();
+</script>'''
 # The top-down report (scripts/atlas.py data + scripts/interests_template.html) with the 216-paper list,
 # keyword-trend detail, the full highlight list and the idea sections slotted into it.
 from atlas import atlas_data
@@ -395,6 +418,12 @@ IDX_CSS = """
 .refs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .ref { font-size: 12px; border: 1px solid var(--line); border-radius: 4px; padding: 1px 7px; color: var(--ink-2); text-decoration: none; }
 .method { color: var(--ink-2); font-size: 14px; margin: 0; padding-left: 20px; } .method li { margin: 4px 0; max-width: 90ch; }
+/* long lists open folded so the sections below stay reachable */
+.clip { max-height: 460px; overflow: hidden; position: relative; }
+.clip.open { max-height: none; }
+.clip.over:not(.open)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; }
+.cliptog { align-self: center; margin-top: 4px; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--accent); background: var(--surface); color: var(--accent); font: 500 13.5px var(--f-body); cursor: pointer; }
+.cliptog:hover { background: var(--accent-soft); }
 @media (max-width: 720px) {
   .twocol { grid-template-columns: 1fr; }
   .brow { grid-template-columns: 1fr 48px; } .bname { grid-column: 1 / -1; white-space: normal; }
@@ -414,7 +443,7 @@ sec_papers = lvl('216', 'papers', '관심 분야 논문 216편',
     f'<div class="controls"><input id="q" type="search" placeholder="검색: 예) GraphRAG, chest X-ray, benchmark, 진단" aria-label="논문 검색">'
     f'<select id="sub" aria-label="RAG 세부 유형"><option value="">RAG 유형 전체</option>{sub_opts}</select>'
     f'<select id="dec" aria-label="발표 형식"><option value="">발표 형식 전체</option><option>Oral</option><option>Spotlight</option><option>Poster</option></select></div>'
-    f'<div class="chips">{cat_chips}</div><div class="count" id="count"></div><div class="plist" id="plist"></div>')
+    f'<div class="chips">{cat_chips}</div><div class="count" id="count"></div><div class="clip"><div class="plist" id="plist"></div></div><button class="cliptog" type="button" hidden></button>')
 OP = json.load(open('data/opd_papers.json'))
 op_types = {'on-policy': 'On-policy distillation (외부 교사)', 'both': 'On-policy self-distillation', 'self': 'Self-distillation (자기 롤아웃 외)'}
 op_flows = ''.join(f"<li>{html.escape(f['line_ko'])} <span class=\"muted\">(약 {f['n_approx']}편)</span> — " + ', '.join(f'<a href="{r["url"]}" target="_blank" rel="noopener">{html.escape(r["short"])}</a>' for r in f['refs']) + '</li>' for f in OP['flows'])
@@ -429,7 +458,7 @@ sec_opd = lvl('OPD', 'opd', f"On-policy · Self-distillation ({ost['n']}편)",
     f'<p>{html.escape(OP["summary_ko"])}</p><ul class="notes">{op_flows}</ul>'
     f'<div class="controls"><input id="oq" type="search" placeholder="검색: 제목·요약·저자" aria-label="on-policy·self-distillation 논문 검색">'
     f'<select id="otype" aria-label="유형"><option value="">유형 전체</option>{op_type_opts}</select></div>'
-    f'<div class="chips">{op_set_chips}</div><div class="count" id="ocount"></div><div class="plist" id="olist"></div>')
+    f'<div class="chips">{op_set_chips}</div><div class="count" id="ocount"></div><div class="clip"><div class="plist" id="olist"></div></div><button class="cliptog" type="button" hidden></button>')
 OP_JS = """<script>
 (() => {
 const O = __O__, TY = __TY__;
@@ -466,9 +495,9 @@ if MB:
         + ''.join(f'<article class="paper"><a class="ttl" href="{p["url"]}" target="_blank" rel="noopener">{html.escape(p["title"])}</a><div class="sum"><b>문제</b> {html.escape(p["problem_ko"])}<br><b>방법</b> {html.escape(p["method_ko"])}<br><b>모델</b> {html.escape(", ".join(p["models"][:4]))}</div><div class="meta">' + ''.join(f'<span class="tag m">{html.escape(b)}</span>' for b in p['benchmarks_norm']) + f'<span class="tag dec">{html.escape(p["training"])}</span></div>' + (f'<ul class="notes" style="margin-top:6px;font-size:13px">' + ''.join(f'<li>{html.escape(fmt_res(r))}</li>' for r in p['results']) + '</ul>' if p['results'] else '') + '</article>' for p in mb_main)
         + '</div></div><h3 class="subh" style="margin:8px 0 0">전체 ' + str(len(mb_used)) + '편</h3>'
         f'<div class="controls"><input id="bq" type="search" placeholder="검색: 제목·모델·방법" aria-label="벤치마크 논문 검색"><select id="btr" aria-label="학습 여부"><option value="">학습 여부 전체</option>{tr_opts}</select></div>'
-        f'<div class="chips">{mb_chips}</div><div class="count" id="bcount"></div><div class="plist" id="blist"></div>'
+        f'<div class="chips">{mb_chips}</div><div class="count" id="bcount"></div><div class="clip"><div class="plist" id="blist"></div></div><button class="cliptog" type="button" hidden></button>'
         f'<div class="sub"><h3>성능 비교</h3><p class="muted">각 논문이 보고한 대표 수치다. 논문마다 모델·프롬프트·평가 분할·지표가 달라 논문끼리 직접 비교하면 안 되고, 같은 행의 비교 대상과의 차이만 그 논문 안에서 의미가 있다. 위에서 벤치마크를 고르면 이 표도 걸러진다.</p>'
-        f'<div class="tablebox"><table><thead><tr><th>벤치마크</th><th>논문</th><th>모델</th><th>설정</th><th>값</th><th>비교 대상</th><th>비교 값</th></tr></thead><tbody id="bres"></tbody></table></div></div>')
+        f'<div class="clip"><div class="tablebox"><table><thead><tr><th>벤치마크</th><th>논문</th><th>모델</th><th>설정</th><th>값</th><th>비교 대상</th><th>비교 값</th></tr></thead><tbody id="bres"></tbody></table></div></div><button class="cliptog" type="button" hidden></button></div>')
     MB_JS = """<script>
 (() => {
 const B = __B__;
@@ -501,7 +530,7 @@ hl_more = (f'<div class="sub"><h3>NeurIPS 2026 전체 하이라이트 {HT["n_hig
     f'<table><thead><tr><th>주제</th><th>논문</th><th>하이라이트</th><th>비율</th><th>기준선 대비</th></tr></thead><tbody>{lift_table}</tbody></table></details>'
     f'<div class="controls"><input id="hq" type="search" placeholder="하이라이트 검색: 제목·요약·저자" aria-label="하이라이트 검색">'
     f'<select id="hdec" aria-label="형식"><option value="">Oral + Spotlight</option><option>Oral</option><option>Spotlight</option></select></div>'
-    f'<div class="chips">{area_chips}</div><div class="count" id="hcount"></div><div class="plist" id="hlist"></div></div>')
+    f'<div class="chips">{area_chips}</div><div class="count" id="hcount"></div><div class="clip"><div class="plist" id="hlist"></div></div><button class="cliptog" type="button" hidden></button></div>')
 sec_ideas = (lvl('제안', 'next', '다음 연구 주제 제안', '근거의 수치는 측정값이고, 아이디어는 그 수치와 논문 목록을 근거로 한 판단이다. 링크는 출발점이 되는 NeurIPS 2026 논문이다.', f'<div class="ideas">{topics}</div>')
     + lvl('제안', 'medqa', 'Medical QA 쪽에서 해볼 만한 연구', f"'공백'은 이 목록의 의료 논문 {n_med}편과 RAG {counts['rag']}편을 비교해 찾은 것이다. 다른 학회나 arXiv는 보지 않았으므로 이 목록 안에서의 공백이다.", f'<div class="ideas">{medqa}</div>'))
 sec_method = lvl('방법', 'method', '어떻게 모았나', '이 페이지의 수치와 분류는 모두 아래 방식으로 만들었다.', f"""<ol class="method">
@@ -567,7 +596,7 @@ for k, v in {'__P__': papers_js, '__H__': hl_js, '__AREA__': AREA_KO, '__CAT__':
     IDX_JS = IDX_JS.replace(k, json.dumps(v, ensure_ascii=False))
 page = open('scripts/interests_template.html').read()
 for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers + sec_opd + sec_mb, '<!--HL_MORE-->': hl_more,
-             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS + MB_JS}.items():
+             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS + MB_JS + CLIP_JS}.items():
     assert page.count(k) == 1, k
     page = page.replace(k, v)
 page = page.replace('/*DATA*/null', json.dumps(atlas_data(), ensure_ascii=False))
