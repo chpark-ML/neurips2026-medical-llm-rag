@@ -87,7 +87,7 @@ w = md.append
 w('# NeurIPS 2026 — Medical QA · Medical RAG · Medical Agent · Medical LLM · RAG 논문 정리\n')
 w(f'NeurIPS 2026 채택 논문 **{T["N2026"]:,}편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **{len(P)}편**을 모았다. '
   '키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.\n')
-w('> NeurIPS 2026 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식 태그로 걸러 보는 페이지는 [`explorer.html`](explorer.html), 학회 전체에서 의료 QA까지 위에서 아래로 내려가는 분석과 관심 분야 216편 목록·연구 제안을 한 페이지에 모은 것은 [`interests.html`](interests.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
+w('> **웹 페이지 (휴대폰에서도 열림)** — 두 페이지는 서로 독립적이다.\n>\n> - [관심 분야 리포트](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html): 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 관심 분야 216편, on-policy·self-distillation 74편, 의료 QA 벤치마크 실험 논문, 하이라이트, 연구 제안\n> - [NeurIPS 2026 논문 탐색기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html): 학회 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식·트랙으로 걸러 보기 (관심 분야와 무관한 전체 보기)\n>\n> NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 분야별로 정리했다.\n')
 w('## 한눈에 보기\n')
 w('| 분류 | 편수 | 기준 |\n|---|---:|---|')
 for k, n, desc in CATS:
@@ -123,7 +123,7 @@ KO_AREA = {'A': 'LLM 추론·학습·RL 후처리', 'B': 'LLM 에이전트·도�
            'F': '생성 모델', 'G': '컴퓨터 비전·3D', 'H': '강화학습·로보틱스', 'I': '학습 이론·최적화', 'J': '확률·인과·통계',
            'K': '의료·헬스케어', 'L': '과학·생물', 'M': '데이터셋·벤치마크', 'N': '기타 ML (그래프·시계열 등)'}
 w('## 학회 전체는 어떻게 나뉘나 (14개 분야)\n')
-w(f"모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 {AS['known']:,}편 기준이고, 기준선은 {AS['base_rate']}%다. 더 자세한 그림은 [`interests.html`](interests.html).\n")
+w(f"모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 {AS['known']:,}편 기준이고, 기준선은 {AS['base_rate']}%다. 더 자세한 그림은 [관심 분야 리포트](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html#l1).\n")
 w('| 분야 | 2025 비중 | 2026 비중 (편수) | 변화 | 하이라이트 비율 (95% 구간) |\n|---|---:|---:|---:|---:|')
 for a in AS['areas']:
     ch = f"{a['diff_pp']:+.1f}%p" if a['clear_change'] else '비슷'
@@ -274,9 +274,9 @@ w('| `data/opd_papers.json` | on-policy·self-distillation 논문(유형, 설정
 w('| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |')
 w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |')
 w('| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |')
-w('| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙, 관심 분류로 필터 |')
+w('| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙으로 필터 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html)) |')
 w('| `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |')
-w('| `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, 하이라이트 405편, 연구 제안 |')
+w('| `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, on-policy·self-distillation, 의료 QA 벤치마크 실험 논문, 하이라이트 405편, 연구 제안 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html)) |')
 open('README.md', 'w').write('\n'.join(md) + '\n')
 
 # ---------------------------------------------------------------- HIGHLIGHTS.md
@@ -504,7 +504,7 @@ hl_more = (f'<div class="sub"><h3>NeurIPS 2026 전체 하이라이트 {HT["n_hig
     f'<div class="chips">{area_chips}</div><div class="count" id="hcount"></div><div class="plist" id="hlist"></div></div>')
 sec_ideas = (lvl('제안', 'next', '다음 연구 주제 제안', '근거의 수치는 측정값이고, 아이디어는 그 수치와 논문 목록을 근거로 한 판단이다. 링크는 출발점이 되는 NeurIPS 2026 논문이다.', f'<div class="ideas">{topics}</div>')
     + lvl('제안', 'medqa', 'Medical QA 쪽에서 해볼 만한 연구', f"'공백'은 이 목록의 의료 논문 {n_med}편과 RAG {counts['rag']}편을 비교해 찾은 것이다. 다른 학회나 arXiv는 보지 않았으므로 이 목록 안에서의 공백이다.", f'<div class="ideas">{medqa}</div>'))
-sec_method = lvl('방법', 'method', '어떻게 모았나', '자세한 설명과 한계는 README에 있다.', f"""<ol class="method">
+sec_method = lvl('방법', 'method', '어떻게 모았나', '이 페이지의 수치와 분류는 모두 아래 방식으로 만들었다.', f"""<ol class="method">
 <li>neurips.cc 공식 다운로드의 2026 포스터 목록 {T["N2026"]:,}편(제목·저자·초록)과 비교용 2025년 {T["N2025"]:,}편을 원천으로 썼다.</li>
 <li>분야: 모든 논문에 LLM이 제목만 보고 14개 분야 중 하나를 배정했다. 묶음 사이 편차로 오차를 어림해, 오차의 두 배보다 큰 변화만 증가·감소로 표시했다.</li>
 <li>트렌드 주제: 정규식 {len(rising)}개(<code>scripts/topic_trends.py</code>). MCP·LLM 불확실성·LLM 에이전트·activation steering은 다른 뜻까지 잡지 않도록 좁혔다.</li>

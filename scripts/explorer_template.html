@@ -89,7 +89,6 @@ select { padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; b
 <header class="top">
   <h1>NeurIPS 2026 논문 탐색기</h1>
   <p class="sub" id="lead"></p>
-  <div class="nav"><a href="interests.html">관심 분야 리포트</a><a href="HIGHLIGHTS.md">하이라이트 목록</a><a href="README.md">README</a></div>
 </header>
 <div class="layout">
   <aside id="facets" aria-label="태그 필터"></aside>
@@ -171,8 +170,7 @@ function renderFacets(cnt) {
     + group('kw', '키워드 주제', kws, `<input class="fsearch" id="kwq" type="search" placeholder="키워드 찾기" value="${esc(kwFilter)}" aria-label="키워드 주제 찾기">`)
     + group('fmt', '발표 형식', D.fmts.map((t, i) => chip('fmt', i, t, cnt.fmt[i])).join(''))
     + group('trk', '트랙', D.trks.map((t, i) => chip('trk', i, t, cnt.trk[i])).join(''))
-    + group('cat', '관심 분류 (의료·RAG 216편, on-policy·self-distillation)', D.cats.map((t, i) => chip('cat', i, t, cnt.cat[i])).join(''));
-  if (D.benches.length) h += group('bench', '의료 QA 벤치마크 (실험에 사용)', D.benches.map((t, i) => [t, i]).sort((x, y) => (cnt.bench[y[1]] || 0) - (cnt.bench[x[1]] || 0)).map(([t, i]) => chip('bench', i, t, cnt.bench[i])).join(''));
+;
   const fs = $('#facets'), st = fs.scrollTop; fs.innerHTML = h; fs.scrollTop = st;
   const kq = $('#kwq'); if (kq && document.activeElement?.id !== 'kwq') {}
 }
@@ -186,8 +184,6 @@ function card(p) {
   const tags = [`<span class="tg area" data-g="area" data-k="${p.a}">${esc(D.areas[p.a])}</span>`]
     .concat(p.s.map(x => `<span class="tg" data-g="sub" data-k="${x}">${esc(D.subs[x][1])}</span>`))
     .concat(p.f <= 1 ? [`<span class="tg ${p.f === 0 ? 'oral' : 'spot'}" data-g="fmt" data-k="${p.f}">${D.fmts[p.f]}</span>`] : [])
-    .concat(p.c.map(x => `<span class="tg" data-g="cat" data-k="${x}">${esc(D.cats[x])}</span>`))
-    .concat(p.b.map(x => `<span class="tg" data-g="bench" data-k="${x}">${esc(D.benches[x])}</span>`))
     .concat(p.k.map(x => `<span class="tg kw" data-g="kw" data-k="${x}">${esc(D.topics[x])}</span>`));
   return `<article class="card"><a class="ttl" href="https://neurips.cc/virtual/2026/poster/${p.id}" target="_blank" rel="noopener">${esc(p.t)}</a><div class="au">${esc(p.au)}</div><div class="tags">${tags.join('')}</div><details><summary>초록 앞부분</summary>${esc(p.ab)}</details></article>`;
 }

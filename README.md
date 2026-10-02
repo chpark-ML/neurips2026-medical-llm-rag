@@ -2,7 +2,12 @@
 
 NeurIPS 2026 채택 논문 **9,094편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **216편**을 모았다. 키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.
 
-> NeurIPS 2026 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식 태그로 걸러 보는 페이지는 [`explorer.html`](explorer.html), 학회 전체에서 의료 QA까지 위에서 아래로 내려가는 분석과 관심 분야 216편 목록·연구 제안을 한 페이지에 모은 것은 [`interests.html`](interests.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.
+> **웹 페이지 (휴대폰에서도 열림)** — 두 페이지는 서로 독립적이다.
+>
+> - [관심 분야 리포트](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html): 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 관심 분야 216편, on-policy·self-distillation 74편, 의료 QA 벤치마크 실험 논문, 하이라이트, 연구 제안
+> - [NeurIPS 2026 논문 탐색기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html): 학회 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식·트랙으로 걸러 보기 (관심 분야와 무관한 전체 보기)
+>
+> NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 분야별로 정리했다.
 
 ## 한눈에 보기
 
@@ -43,7 +48,7 @@ RAG 122편의 세부 유형:
 
 ## 학회 전체는 어떻게 나뉘나 (14개 분야)
 
-모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 7,688편 기준이고, 기준선은 5.27%다. 더 자세한 그림은 [`interests.html`](interests.html).
+모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 7,688편 기준이고, 기준선은 5.27%다. 더 자세한 그림은 [관심 분야 리포트](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html#l1).
 
 | 분야 | 2025 비중 | 2026 비중 (편수) | 변화 | 하이라이트 비율 (95% 구간) |
 |---|---:|---:|---:|---:|
@@ -1056,6 +1061,6 @@ LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/pa
 | `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |
 | `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |
 | `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |
-| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙, 관심 분류로 필터 |
+| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙으로 필터 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html)) |
 | `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |
-| `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, 하이라이트 405편, 연구 제안 |
+| `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, on-policy·self-distillation, 의료 QA 벤치마크 실험 논문, 하이라이트 405편, 연구 제안 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html)) |
