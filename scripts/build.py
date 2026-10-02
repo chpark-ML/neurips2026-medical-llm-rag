@@ -1,4 +1,4 @@
-"""Render README.md and index.html from data/*.json and scripts/insights.py.
+"""Render README.md, HIGHLIGHTS.md, data/papers.csv and interests.html from data/*.json and scripts/insights.py.
 Usage (from repo root): python3 scripts/build.py"""
 import json, re, sys, html, collections, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -87,7 +87,7 @@ w = md.append
 w('# NeurIPS 2026 — Medical QA · Medical RAG · Medical Agent · Medical LLM · RAG 논문 정리\n')
 w(f'NeurIPS 2026 채택 논문 **{T["N2026"]:,}편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **{len(P)}편**을 모았다. '
   '키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.\n')
-w('> NeurIPS 2026 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식 태그로 걸러 보는 페이지는 [`explorer.html`](explorer.html), 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
+w('> NeurIPS 2026 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식 태그로 걸러 보는 페이지는 [`explorer.html`](explorer.html), 학회 전체에서 의료 QA까지 위에서 아래로 내려가는 분석과 관심 분야 216편 목록·연구 제안을 한 페이지에 모은 것은 [`interests.html`](interests.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
 w('## 한눈에 보기\n')
 w('| 분류 | 편수 | 기준 |\n|---|---:|---|')
 for k, n, desc in CATS:
@@ -123,7 +123,7 @@ KO_AREA = {'A': 'LLM 추론·학습·RL 후처리', 'B': 'LLM 에이전트·도�
            'F': '생성 모델', 'G': '컴퓨터 비전·3D', 'H': '강화학습·로보틱스', 'I': '학습 이론·최적화', 'J': '확률·인과·통계',
            'K': '의료·헬스케어', 'L': '과학·생물', 'M': '데이터셋·벤치마크', 'N': '기타 ML (그래프·시계열 등)'}
 w('## 학회 전체는 어떻게 나뉘나 (14개 분야)\n')
-w(f"모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 {AS['known']:,}편 기준이고, 기준선은 {AS['base_rate']}%다. 더 자세한 그림은 [`atlas.html`](atlas.html).\n")
+w(f"모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 {AS['known']:,}편 기준이고, 기준선은 {AS['base_rate']}%다. 더 자세한 그림은 [`interests.html`](interests.html).\n")
 w('| 분야 | 2025 비중 | 2026 비중 (편수) | 변화 | 하이라이트 비율 (95% 구간) |\n|---|---:|---:|---:|---:|')
 for a in AS['areas']:
     ch = f"{a['diff_pp']:+.1f}%p" if a['clear_change'] else '비슷'
@@ -219,7 +219,7 @@ for r in lift_rows:
     w(f"| {r['topic']} | {r['n']} | {r['highlights']} | {r['rate']}% | ×{r['lift']} |")
 w('')
 w('## 재현\n')
-w('```bash\nbash scripts/fetch.sh            # neurips.cc에서 2025·2026 포스터 목록 다운로드 → data/raw/\npython3 scripts/candidates.py    # 1차 키워드 후보 (1,103편)\npython3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data/decisions.json, papers.json 갱신\npython3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json\npython3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json\npython3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json\npython3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json\npython3 scripts/atlas.py         # atlas.html 생성\npython3 scripts/explorer.py      # explorer.html 생성 (전체 9,094편 태그 탐색)\npython3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성\n```\n')
+w('```bash\nbash scripts/fetch.sh            # neurips.cc에서 2025·2026 포스터 목록 다운로드 → data/raw/\npython3 scripts/candidates.py    # 1차 키워드 후보 (1,103편)\npython3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data/decisions.json, papers.json 갱신\npython3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json\npython3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json\npython3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json\npython3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json\npython3 scripts/explorer.py      # explorer.html 생성 (전체 9,094편 태그 탐색)\npython3 scripts/build.py         # README.md, HIGHLIGHTS.md, interests.html 생성\n```\n')
 w('LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/papers.json`의 `cats`, `rag_sub`, `summary_ko` 필드, `data/highlight_labels.json`(하이라이트의 분야·요약), `data/area_labels.json`(전체 논문의 분야)이다.\n')
 w('## 파일\n')
 w('| 파일 | 내용 |\n|---|---|')
@@ -236,8 +236,7 @@ w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)�
 w('| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |')
 w('| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙, 관심 분류로 필터 |')
 w('| `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |')
-w('| `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |')
-w('| `index.html` | 검색·필터가 되는 단일 HTML 페이지 |')
+w('| `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, 하이라이트 405편, 연구 제안 |')
 open('README.md', 'w').write('\n'.join(md) + '\n')
 
 # ---------------------------------------------------------------- HIGHLIGHTS.md
@@ -266,7 +265,7 @@ with open('data/papers.csv', 'w', newline='') as f:
     for p in P:
         cw.writerow([p['id'], clean(p['title']), ';'.join(p['cats']), p['rag_sub'] or '', p['decision'] or '', p['track'] or '', p['summary_ko'], p['url'], p['openreview'] or '', p['authors']])
 
-# ---------------------------------------------------------------- index.html
+# ---------------------------------------------------------------- interests.html helpers
 def mdinline(s):
     s = html.escape(s)
     s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
@@ -301,274 +300,157 @@ area_chips = ''.join(f'<button class="chip hchip" data-area="{html.escape(a)}" a
 lift_table = ''.join(f'<tr><td>{html.escape(r["topic"])}</td><td>{r["n"]}</td><td>{r["highlights"]}</td><td>{r["rate"]}%</td><td>×{r["lift"]}</td></tr>' for r in lift_rows)
 cat_chips = ''.join(f'<button class="chip" data-cat="{k}" aria-pressed="false">{n} <span>{counts[k]}</span></button>' for k, n, _ in CATS)
 
-page = f'''<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NeurIPS 2026 Medical LLM·RAG</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {{
-  color-scheme: light;
-  --bg: #f7f6f3; --surface: #fcfcfb; --surface-2: #f0efeb; --line: #e2e0da;
-  --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #807e78;
-  --accent: #2a78d6; --accent-soft: #e6f0fb;
-  --series-1: #2a78d6; --series-2: #eb6834;
-  --med: #1baf7a; --rag: #4a3aa7;
-}}
-@media (prefers-color-scheme: dark) {{
-  :root:not([data-theme="light"]) {{
-    color-scheme: dark;
-    --bg: #121211; --surface: #1a1a19; --surface-2: #232321; --line: #33322f;
-    --ink: #ffffff; --ink-2: #c3c2b7; --ink-3: #8f8d86;
-    --accent: #3987e5; --accent-soft: #1d2a3a;
-    --series-1: #3987e5; --series-2: #d95926;
-    --med: #199e70; --rag: #9085e9;
-  }}
-}}
-:root[data-theme="dark"] {{
-  color-scheme: dark;
-  --bg: #121211; --surface: #1a1a19; --surface-2: #232321; --line: #33322f;
-  --ink: #ffffff; --ink-2: #c3c2b7; --ink-3: #8f8d86;
-  --accent: #3987e5; --accent-soft: #1d2a3a;
-  --series-1: #3987e5; --series-2: #d95926;
-  --med: #199e70; --rag: #9085e9;
-}}
-* {{ box-sizing: border-box; }}
-body {{ margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 "IBM Plex Sans KR", system-ui, sans-serif; }}
-a {{ color: var(--accent); text-decoration: none; }} a:hover {{ text-decoration: underline; }}
-code {{ font-family: "IBM Plex Mono", monospace; font-size: .88em; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }}
-.wrap {{ max-width: 1120px; margin: 0 auto; padding: 0 16px; }}
-header.top {{ position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }}
-header.top .wrap {{ display: flex; align-items: center; gap: 16px; height: 56px; }}
-.brand {{ font-weight: 700; white-space: nowrap; }}
-nav {{ display: flex; gap: 4px; overflow-x: auto; flex: 1; scrollbar-width: none; }}
-nav a {{ color: var(--ink-2); padding: 6px 10px; border-radius: 6px; white-space: nowrap; font-size: 14px; }}
-nav a:hover {{ background: var(--surface-2); text-decoration: none; color: var(--ink); }}
-#theme {{ border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 6px; padding: 4px 10px; cursor: pointer; font: inherit; font-size: 13px; }}
-.hero {{ padding: 48px 0 24px; }}
-.hero h1 {{ font-size: clamp(26px, 4vw, 38px); line-height: 1.25; margin: 0 0 12px; letter-spacing: -0.01em; }}
-.hero p {{ color: var(--ink-2); max-width: 760px; margin: 0; }}
-.stats {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 28px 0 8px; }}
-.stat {{ text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; cursor: pointer; font: inherit; color: inherit; transition: border-color .15s; }}
-.stat:hover {{ border-color: var(--accent); }}
-.stat .num {{ display: block; font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }}
-.stat .lbl {{ color: var(--ink-2); font-size: 13px; }}
-.substat {{ color: var(--ink-3); font-size: 13px; margin-top: 8px; }}
-section {{ padding: 36px 0; border-top: 1px solid var(--line); }}
-section h2 {{ font-size: 22px; margin: 0 0 6px; }}
-.lead {{ color: var(--ink-2); margin: 0 0 20px; max-width: 820px; }}
-.controls {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }}
-#q, #hq {{ flex: 1 1 260px; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }}
-select {{ padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; max-width: 100%; }}
-.chips {{ display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }}
-.chip {{ border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; font: inherit; font-size: 13px; }}
-.chip span {{ color: var(--ink-3); margin-left: 4px; font-variant-numeric: tabular-nums; }}
-.chip[aria-pressed="true"] {{ background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }}
-.count {{ color: var(--ink-3); font-size: 13px; margin-bottom: 8px; }}
-.plist {{ display: flex; flex-direction: column; gap: 8px; }}
-.paper {{ background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }}
-.paper .ttl {{ font-weight: 600; color: var(--ink); }}
-.paper .sum {{ color: var(--ink-2); font-size: 14px; margin: 2px 0 6px; }}
-.meta {{ display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; }}
-.tag {{ border-radius: 4px; padding: 1px 7px; border: 1px solid var(--line); color: var(--ink-2); }}
-.tag.m {{ border-color: var(--med); }} .tag.r {{ border-color: var(--rag); }}
-.tag.dec {{ font-weight: 600; color: var(--ink); background: var(--surface-2); }}
-.paper details {{ margin-top: 6px; font-size: 13.5px; color: var(--ink-2); }}
-.paper summary {{ cursor: pointer; color: var(--ink-3); font-size: 12.5px; }}
-.paper .auth {{ color: var(--ink-3); font-size: 12.5px; margin: 6px 0; }}
-.legend {{ display: flex; gap: 16px; font-size: 13px; color: var(--ink-2); margin-bottom: 10px; }}
-.legend i {{ display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px; }}
-.chart {{ background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; position: relative; }}
-.brow {{ display: grid; grid-template-columns: minmax(120px, 260px) 1fr 56px; gap: 10px; align-items: center; padding: 5px 4px; border-radius: 6px; outline: none; }}
-.brow:hover, .brow:focus {{ background: var(--surface-2); }}
-.bname {{ font-size: 13px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
-.bplot {{ display: flex; flex-direction: column; gap: 2px; }}
-.bar {{ height: 8px; border-radius: 0 4px 4px 0; min-width: 2px; }}
-.bar.y25 {{ background: var(--series-2); }} .bar.y26 {{ background: var(--series-1); }}
-.bval {{ font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink); }}
-#tip {{ position: fixed; pointer-events: none; background: var(--ink); color: var(--bg); font-size: 12.5px; padding: 6px 10px; border-radius: 6px; max-width: 320px; opacity: 0; transition: opacity .1s; z-index: 20; }}
-.notes {{ padding-left: 18px; color: var(--ink-2); }} .notes li {{ margin: 6px 0; }} .notes strong {{ color: var(--ink); }}
-table {{ width: 100%; border-collapse: collapse; font-size: 13.5px; }}
-th, td {{ text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }}
-th {{ color: var(--ink-3); font-weight: 500; }} td:not(:first-child), th:not(:first-child) {{ text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }}
-.twocol {{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }}
-.tablebox {{ background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; overflow-x: auto; }}
-.tablebox h3 {{ margin: 0 0 8px; font-size: 15px; }}
-.ideas {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }}
-.idea {{ background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }}
-.idea h3 {{ margin: 0 0 10px; font-size: 16px; display: flex; gap: 10px; align-items: baseline; }}
-.idea .idx {{ font-family: "IBM Plex Mono", monospace; color: var(--accent); font-size: 13px; }}
-.idea p {{ margin: 6px 0; font-size: 14px; color: var(--ink-2); }} .idea p b {{ color: var(--ink); margin-right: 4px; }}
-.refs {{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }}
-.ref {{ font-size: 12px; border: 1px solid var(--line); border-radius: 4px; padding: 1px 7px; color: var(--ink-2); }}
-.sub {{ font-size: 15px; margin: 18px 0 10px; }}
-.tablebox summary {{ cursor: pointer; font-size: 14px; color: var(--ink-2); }}
-.method {{ color: var(--ink-2); font-size: 14px; }} .method li {{ margin: 4px 0; }}
-footer {{ color: var(--ink-3); font-size: 13px; padding: 28px 0 48px; border-top: 1px solid var(--line); }}
-@media (max-width: 720px) {{
-  .twocol {{ grid-template-columns: 1fr; }}
-  .brow {{ grid-template-columns: 1fr 48px; }} .bname {{ grid-column: 1 / -1; white-space: normal; }}
-  .ideas {{ grid-template-columns: 1fr; }}
-  .brand {{ display: none; }}
-}}
-</style>
-</head>
-<body>
-<header class="top"><div class="wrap">
-  <div class="brand">NeurIPS 2026 · Med LLM/RAG</div>
-  <nav><a href="#papers">논문</a><a href="#trends">트렌드</a><a href="#next">연구 주제</a><a href="#medqa">Medical QA 아이디어</a><a href="#highlights">하이라이트</a><a href="#method">방법</a><a href="atlas.html">전체 지형도 ↗</a><a href="explorer.html">전체 논문 탐색 ↗</a></nav>
-  <button id="theme" type="button" aria-label="테마 전환">테마</button>
-</div></header>
-<main class="wrap">
-<div class="hero">
-  <h1>NeurIPS 2026에서 의료 QA·RAG·에이전트·LLM과 RAG를 다룬 논문 {len(P)}편</h1>
-  <p>채택 논문 {T["N2026"]:,}편의 제목·초록을 읽고 핵심 기여 기준으로 분류했다. 의료 관련 {n_med}편, RAG {counts["rag"]}편이며 한 논문이 여러 분류에 속할 수 있다. 카드를 누르면 해당 분류로 목록이 걸러진다. 학회 전체에서 이 주제들까지 위에서 아래로 내려가는 요약은 <a href="atlas.html">전체 지형도</a>에 있다.</p>
-  <div class="stats">{stat_cards}</div>
-  <div class="substat">RAG 세부 유형: {' · '.join(f'{n} {sub_counts[k]}' for k, n in SUBS)}</div>
-</div>
-
-<section id="papers">
-  <h2>논문 목록</h2>
-  <p class="lead">제목·저자·요약·초록에서 검색된다. 분류는 여러 개를 고르면 하나라도 해당하는 논문을 보여준다.</p>
-  <div class="controls">
-    <input id="q" type="search" placeholder="검색: 예) GraphRAG, chest X-ray, benchmark, 진단" aria-label="논문 검색">
-    <select id="sub" aria-label="RAG 세부 유형"><option value="">RAG 유형 전체</option>{sub_opts}</select>
-    <select id="dec" aria-label="발표 형식"><option value="">발표 형식 전체</option><option>Oral</option><option>Spotlight</option><option>Poster</option></select>
-  </div>
-  <div class="chips">{cat_chips}</div>
-  <div class="count" id="count"></div>
-  <div class="plist" id="plist"></div>
-</section>
-
-<section id="trends">
-  <h2>키워드 트렌드 (2025 → 2026)</h2>
-  <p class="lead">주제별 정규식이 제목+초록에 걸리는 논문의 <b>비율</b>을 2025({T["N2025"]:,}편)와 2026({T["N2026"]:,}편)에서 비교했다. 막대는 비율, 오른쪽 숫자는 비율의 배수. 키워드 매칭이라 다의어는 과대 집계될 수 있다.</p>
-  <ul class="notes">{notes}</ul>
-  <div class="chart" role="img" aria-label="성장률 상위 16개 주제의 2025년과 2026년 논문 비율 비교">
-    <div class="legend"><span><i style="background:var(--series-2)"></i>2025 비율</span><span><i style="background:var(--series-1)"></i>2026 비율</span></div>
-    {bars}
-  </div>
-  <div class="twocol">
-    <div class="tablebox"><h3>전체 주제 표 (배수 내림차순)</h3><table><thead><tr><th>주제</th><th>2025</th><th>2026</th><th>배수</th></tr></thead><tbody>{trend_table}</tbody></table></div>
-    <div class="tablebox"><h3>제목에 들어간 단어 (논문 수)</h3><table><thead><tr><th>단어</th><th>2025</th><th>2026</th></tr></thead><tbody>{term_table}</tbody></table></div>
-  </div>
-</section>
-
-<section id="next">
-  <h2>다음 연구 주제 제안</h2>
-  <p class="lead">근거의 수치는 측정값이고, 아이디어는 그 수치와 논문 목록을 근거로 한 판단이다. 아래 링크는 출발점이 되는 NeurIPS 2026 논문.</p>
-  <div class="ideas">{topics}</div>
-</section>
-
-<section id="medqa">
-  <h2>Medical QA 쪽에서 해볼 만한 연구</h2>
-  <p class="lead">'공백'은 이 목록의 의료 논문 {n_med}편과 RAG {counts["rag"]}편을 비교해 찾은 것이다. 다른 학회나 arXiv는 보지 않았으므로, 이 목록 안에서의 공백이다.</p>
-  <div class="ideas">{medqa}</div>
-</section>
-
-<section id="highlights">
-  <h2>하이라이트 (Oral · Spotlight) — NeurIPS 2026 전체 {HT["n_highlight"]}편</h2>
-  <p class="lead">발표 형식을 아는 {HT["n_known"]:,}편 중 Oral {HT["n_oral"]}편, Spotlight {HT["n_highlight"] - HT["n_oral"]}편(기준선 {HT["base_rate"]}%). {T["N2026"] - HT["n_known"]:,}편은 형식 정보가 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. 분야·요약은 초록을 읽고 LLM이 붙였다.</p>
-  <ul class="notes">{hl_notes}</ul>
-  <div class="twocol">
-    <div><h3 class="sub">이 저장소 주제 안의 하이라이트 ({len(hl_scope)}편)</h3><div class="plist">{hl_cards(hl_scope)}</div></div>
-    <div><h3 class="sub">의료가 핵심 응용인 하이라이트 ({len(hl_med)}편)</h3><div class="plist">{hl_cards(hl_med)}</div></div>
-  </div>
-  <details class="tablebox" style="margin-top:20px"><summary><b>주제별 하이라이트 비율</b> — 논문 40편 이상 주제, 기준선 {HT["base_rate"]}% (하이라이트가 한 자릿수인 주제가 많아 참고용)</summary>
-    <table><thead><tr><th>주제</th><th>논문</th><th>하이라이트</th><th>비율</th><th>기준선 대비</th></tr></thead><tbody>{lift_table}</tbody></table></details>
-  <h3 class="sub" style="margin-top:28px">전체 목록</h3>
-  <div class="controls"><input id="hq" type="search" placeholder="하이라이트 검색: 제목·요약·저자" aria-label="하이라이트 검색">
-    <select id="hdec" aria-label="형식"><option value="">Oral + Spotlight</option><option>Oral</option><option>Spotlight</option></select></div>
-  <div class="chips">{area_chips}</div>
-  <div class="count" id="hcount"></div>
-  <div class="plist" id="hlist"></div>
-</section>
-
-<section id="method">
-  <h2>어떻게 모았나</h2>
-  <ol class="method">
-    <li>neurips.cc 공식 다운로드의 2026 포스터 목록 {T["N2026"]:,}편(제목·저자·초록)을 원천으로 썼다.</li>
-    <li>의료 용어 × LLM/에이전트 용어, 또는 retrieval/RAG/search 용어로 후보 1,103편을 뽑았다.</li>
-    <li>후보 전부를 LLM이 읽고 핵심 기여 기준으로 분류했다. 제외된 논문 중 신호가 강한 167편은 초록 전문으로 재검토해 17편을 추가했고, 경계 사례 직접 확인으로 2편을 더하고 1편을 뺐다.</li>
-    <li>발표 형식은 neurips.cc의 orals-posters JSON 두 스냅샷(받을 때마다 다른 일부만 담김)을 합쳐 붙였다. 전체 {T["N2026"]:,}편 중 {HT["n_known"]:,}편의 형식을 알고, 이 목록 {len(P)}편 중 {len(P) - n_dec}편은 모른다.</li>
-    <li>한계: 사람 검수가 아닌 LLM 판독이고, 순수 검색·임베딩 논문과 LLM이 없는 의료 영상·EHR 모델은 제외했다.</li>
-  </ol>
-</section>
-</main>
-<footer><div class="wrap">데이터: neurips.cc NeurIPS 2025/2026 accepted posters. 생성: <code>scripts/build.py</code>.</div></footer>
-<div id="tip" role="tooltip"></div>
-<script>
-const P = {json.dumps(papers_js, ensure_ascii=False)};
-const H = {json.dumps(hl_js, ensure_ascii=False)};
-const AREA = {json.dumps(AREA_KO, ensure_ascii=False)};
-const CAT = {json.dumps(CAT_NAME, ensure_ascii=False)};
-const SUB = {json.dumps(SUB_NAME, ensure_ascii=False)};
+# ---------------------------------------------------------------- interests.html
+# The top-down report (scripts/atlas.py data + scripts/interests_template.html) with the 216-paper list,
+# keyword-trend detail, the full highlight list and the idea sections slotted into it.
+from atlas import atlas_data
+IDX_CSS = """
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; cursor: pointer; font: inherit; color: inherit; }
+.stat:hover { border-color: var(--accent); }
+.stat .num { display: block; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat .lbl { color: var(--ink-2); font-size: 13px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#q, #hq { flex: 1 1 260px; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+.controls select { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; max-width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; font: inherit; font-size: 13px; }
+.chip span { color: var(--ink-3); margin-left: 4px; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.count { color: var(--ink-3); font-size: 13px; }
+.plist { display: flex; flex-direction: column; gap: 8px; }
+.paper { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+.paper .ttl { font-weight: 600; color: var(--ink); text-decoration: none; }
+.paper .ttl:hover { text-decoration: underline; }
+.paper .sum { color: var(--ink-2); font-size: 14px; margin: 2px 0 6px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; }
+.tag { border-radius: 4px; padding: 1px 7px; border: 1px solid var(--line); color: var(--ink-2); }
+.tag.m { border-color: var(--med); } .tag.r { border-color: var(--rag); }
+.tag.dec { font-weight: 600; color: var(--ink); background: var(--surface-2); }
+.paper details { margin-top: 6px; font-size: 13.5px; color: var(--ink-2); }
+.paper summary { cursor: pointer; color: var(--ink-3); font-size: 12.5px; }
+.paper .auth { color: var(--ink-3); font-size: 12.5px; margin: 6px 0; }
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.brow { display: grid; grid-template-columns: minmax(120px, 260px) 1fr 56px; gap: 10px; align-items: center; padding: 5px 4px; border-radius: 6px; outline: none; }
+.brow:hover, .brow:focus { background: var(--surface-2); }
+.bname { font-size: 13px; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bplot { display: flex; flex-direction: column; gap: 2px; }
+.bplot .bar { height: 8px; border-radius: 0 4px 4px 0; min-width: 2px; }
+.bplot .bar.y25 { background: var(--series-2); } .bplot .bar.y26 { background: var(--series-1); }
+.bval { font-size: 13px; font-variant-numeric: tabular-nums; text-align: right; color: var(--ink); }
+.notes { padding-left: 18px; margin: 0; color: var(--ink-2); max-width: 82ch; } .notes li { margin: 6px 0; } .notes strong { color: var(--ink); }
+.twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.twocol > * { min-width: 0; }
+.tablebox { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; overflow-x: auto; }
+.tablebox h3 { margin: 0 0 8px; font-size: 15px; }
+.tablebox summary { cursor: pointer; font-size: 14px; color: var(--ink-2); }
+.tablebox table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.tablebox th, .tablebox td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.tablebox td:not(:first-child), .tablebox th:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ideas { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.idea { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; }
+.idea h3 { margin: 0 0 10px; font-size: 16px; display: flex; gap: 10px; align-items: baseline; }
+.idea .idx { font-family: var(--f-mono); color: var(--accent); font-size: 13px; }
+.idea p { margin: 6px 0; font-size: 14px; color: var(--ink-2); } .idea p b { color: var(--ink); margin-right: 4px; }
+.refs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.ref { font-size: 12px; border: 1px solid var(--line); border-radius: 4px; padding: 1px 7px; color: var(--ink-2); text-decoration: none; }
+.method { color: var(--ink-2); font-size: 14px; margin: 0; padding-left: 20px; } .method li { margin: 4px 0; max-width: 90ch; }
+@media (max-width: 720px) {
+  .twocol { grid-template-columns: 1fr; }
+  .brow { grid-template-columns: 1fr 48px; } .bname { grid-column: 1 / -1; white-space: normal; }
+  .ideas { grid-template-columns: 1fr; }
+}
+"""
+lvl = lambda tag, id_, title, lead, body: (f'<section class="lvl" id="{id_}"><div class="lvl-head"><span class="lvl-tag">{tag}</span><h2>{title}</h2><p>{lead}</p></div>{body}</section>')
+sec_trends = lvl('L2+', 'trends', '키워드 트렌드 상세 (2025 → 2026)',
+    f'주제별 정규식이 제목+초록에 걸리는 논문의 비율을 2025({T["N2025"]:,}편)와 2026({T["N2026"]:,}편)에서 비교했다. 막대는 비율, 오른쪽 숫자는 비율의 배수다. 키워드 매칭이라 다의어는 과대 집계될 수 있다.',
+    f'<ul class="notes">{notes}</ul><div class="chart" role="img" aria-label="성장률 상위 16개 주제의 2025년과 2026년 논문 비율 비교">'
+    f'<div class="legend"><span><i style="width:12px;height:12px;border-radius:3px;background:var(--series-2)"></i>2025 비율</span><span><i style="width:12px;height:12px;border-radius:3px;background:var(--series-1)"></i>2026 비율</span></div>{bars}</div>'
+    f'<div class="twocol"><details class="tablebox"><summary><b>전체 주제 표</b> (배수 내림차순, {len(rising)}개)</summary><table><thead><tr><th>주제</th><th>2025</th><th>2026</th><th>배수</th></tr></thead><tbody>{trend_table}</tbody></table></details>'
+    f'<div class="tablebox"><h3>제목에 들어간 단어 (논문 수)</h3><table><thead><tr><th>단어</th><th>2025</th><th>2026</th></tr></thead><tbody>{term_table}</tbody></table></div></div>')
+sec_papers = lvl('216', 'papers', '관심 분야 논문 216편',
+    f'제목·초록을 읽고 핵심 기여 기준으로 고른 논문이다(의료 관련 {n_med}편, RAG {counts["rag"]}편, 일부 겹침). 카드를 누르면 그 분류만 보이고, 검색은 제목·저자·요약·초록 전체를 본다.',
+    f'<div class="stats">{stat_cards}</div><p class="muted">RAG 세부 유형: {" · ".join(f"{n} {sub_counts[k]}" for k, n in SUBS)}</p>'
+    f'<div class="controls"><input id="q" type="search" placeholder="검색: 예) GraphRAG, chest X-ray, benchmark, 진단" aria-label="논문 검색">'
+    f'<select id="sub" aria-label="RAG 세부 유형"><option value="">RAG 유형 전체</option>{sub_opts}</select>'
+    f'<select id="dec" aria-label="발표 형식"><option value="">발표 형식 전체</option><option>Oral</option><option>Spotlight</option><option>Poster</option></select></div>'
+    f'<div class="chips">{cat_chips}</div><div class="count" id="count"></div><div class="plist" id="plist"></div>')
+hl_more = (f'<div class="sub"><h3>NeurIPS 2026 전체 하이라이트 {HT["n_highlight"]}편</h3>'
+    f'<p class="muted">발표 형식을 아는 {HT["n_known"]:,}편 중 Oral {HT["n_oral"]}편, Spotlight {HT["n_highlight"] - HT["n_oral"]}편(기준선 {HT["base_rate"]}%). {T["N2026"] - HT["n_known"]:,}편은 형식 정보가 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. 분야·요약은 초록을 읽고 LLM이 붙였다.</p>'
+    f'<ul class="notes">{hl_notes}</ul>'
+    f'<details class="tablebox"><summary><b>주제별 하이라이트 비율</b> — 논문 40편 이상 주제, 기준선 {HT["base_rate"]}% (하이라이트가 한 자릿수인 주제가 많아 참고용)</summary>'
+    f'<table><thead><tr><th>주제</th><th>논문</th><th>하이라이트</th><th>비율</th><th>기준선 대비</th></tr></thead><tbody>{lift_table}</tbody></table></details>'
+    f'<div class="controls"><input id="hq" type="search" placeholder="하이라이트 검색: 제목·요약·저자" aria-label="하이라이트 검색">'
+    f'<select id="hdec" aria-label="형식"><option value="">Oral + Spotlight</option><option>Oral</option><option>Spotlight</option></select></div>'
+    f'<div class="chips">{area_chips}</div><div class="count" id="hcount"></div><div class="plist" id="hlist"></div></div>')
+sec_ideas = (lvl('제안', 'next', '다음 연구 주제 제안', '근거의 수치는 측정값이고, 아이디어는 그 수치와 논문 목록을 근거로 한 판단이다. 링크는 출발점이 되는 NeurIPS 2026 논문이다.', f'<div class="ideas">{topics}</div>')
+    + lvl('제안', 'medqa', 'Medical QA 쪽에서 해볼 만한 연구', f"'공백'은 이 목록의 의료 논문 {n_med}편과 RAG {counts['rag']}편을 비교해 찾은 것이다. 다른 학회나 arXiv는 보지 않았으므로 이 목록 안에서의 공백이다.", f'<div class="ideas">{medqa}</div>'))
+sec_method = lvl('방법', 'method', '어떻게 모았나', '자세한 설명과 한계는 README에 있다.', f"""<ol class="method">
+<li>neurips.cc 공식 다운로드의 2026 포스터 목록 {T["N2026"]:,}편(제목·저자·초록)과 비교용 2025년 {T["N2025"]:,}편을 원천으로 썼다.</li>
+<li>분야: 모든 논문에 LLM이 제목만 보고 14개 분야 중 하나를 배정했다. 묶음 사이 편차로 오차를 어림해, 오차의 두 배보다 큰 변화만 증가·감소로 표시했다.</li>
+<li>트렌드 주제: 정규식 {len(rising)}개(<code>scripts/topic_trends.py</code>). MCP·LLM 불확실성·LLM 에이전트·activation steering은 다른 뜻까지 잡지 않도록 좁혔다.</li>
+<li>관심 분야 216편: 의료 용어 × LLM 용어, 또는 검색 용어로 후보 1,103편을 뽑고, 후보 전부를 LLM이 읽어 핵심 기여 기준으로 분류했다. 제외된 논문 중 신호가 강한 167편은 초록 전문으로 재검토해 17편을 추가했고, 경계 사례 직접 확인으로 2편을 더하고 1편을 뺐다.</li>
+<li>발표 형식: neurips.cc의 orals-posters JSON 두 스냅샷(받을 때마다 다른 일부만 담김)을 합쳤다. 전체 {T["N2026"]:,}편 중 {HT["n_known"]:,}편의 형식을 알고, 216편 중 {len(P) - n_dec}편은 모른다.</li>
+<li>한계: 사람 검수가 아닌 LLM 판독이고, 순수 검색·임베딩 논문과 LLM이 없는 의료 영상·EHR 모델은 216편에서 제외했다.</li>
+</ol>""")
+IDX_JS = """<script>
+(() => {
+const P = __P__, H = __H__, AREA = __AREA__, CAT = __CAT__, SUB = __SUB__;
 const $ = s => document.querySelector(s);
-const esc = s => (s || '').replace(/[&<>"]/g, c => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]));
+const esc = s => (s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const sel = new Set();
-function render() {{
+function render() {
   const q = $('#q').value.trim().toLowerCase(), sub = $('#sub').value, dec = $('#dec').value;
   const L = P.filter(p => (!sel.size || p.c.some(c => sel.has(c))) && (!sub || p.s === sub) && (!dec || p.d === dec)
-    && (!q || (p.t + ' ' + p.a + ' ' + p.k + ' ' + p.ab).toLowerCase().includes(q)))
-    .sort((a, b) => a.t.localeCompare(b.t));
+    && (!q || (p.t + ' ' + p.a + ' ' + p.k + ' ' + p.ab).toLowerCase().includes(q))).sort((a, b) => a.t.localeCompare(b.t));
   $('#count').textContent = L.length + '편 표시 중 (전체 ' + P.length + '편)';
-  $('#plist').innerHTML = L.map(p => `<article class="paper">
-    <a class="ttl" href="${{p.u}}" target="_blank" rel="noopener">${{esc(p.t)}}</a>
-    <div class="sum">${{esc(p.k)}}</div>
-    <div class="meta">${{p.c.map(c => `<span class="tag ${{c === 'rag' ? 'r' : 'm'}}">${{CAT[c]}}</span>`).join('')}}
-      ${{p.s ? `<span class="tag r">${{SUB[p.s]}}</span>` : ''}}
-      ${{p.d ? `<span class="tag ${{p.d !== 'Poster' ? 'dec' : ''}}">${{p.d}}</span>` : ''}}
-      ${{p.tr ? `<span class="tag">${{p.tr}}</span>` : ''}}
-      ${{p.o ? `<a href="${{p.o}}" target="_blank" rel="noopener">OpenReview</a>` : ''}}</div>
-    <details><summary>초록·저자</summary><div class="auth">${{esc(p.a)}}</div>${{esc(p.ab)}}</details>
-  </article>`).join('');
-}}
-function setCat(c, only) {{
-  if (only) {{ sel.clear(); sel.add(c); }} else sel.has(c) ? sel.delete(c) : sel.add(c);
-  document.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', sel.has(b.dataset.cat)));
+  $('#plist').innerHTML = L.map(p => `<article class="paper"><a class="ttl" href="${p.u}" target="_blank" rel="noopener">${esc(p.t)}</a>
+    <div class="sum">${esc(p.k)}</div><div class="meta">${p.c.map(c => `<span class="tag ${c === 'rag' ? 'r' : 'm'}">${CAT[c]}</span>`).join('')}
+    ${p.s ? `<span class="tag r">${SUB[p.s]}</span>` : ''}${p.d ? `<span class="tag ${p.d !== 'Poster' ? 'dec' : ''}">${p.d}</span>` : ''}
+    ${p.tr ? `<span class="tag">${p.tr}</span>` : ''}${p.o ? `<a href="${p.o}" target="_blank" rel="noopener">OpenReview</a>` : ''}</div>
+    <details><summary>초록·저자</summary><div class="auth">${esc(p.a)}</div>${esc(p.ab)}</details></article>`).join('');
+}
+function setCat(c, only) {
+  if (only) { sel.clear(); sel.add(c); } else sel.has(c) ? sel.delete(c) : sel.add(c);
+  document.querySelectorAll('.chip:not(.hchip)').forEach(b => b.setAttribute('aria-pressed', sel.has(b.dataset.cat)));
   render();
-}}
+}
 document.querySelectorAll('.chip:not(.hchip)').forEach(b => b.onclick = () => setCat(b.dataset.cat));
+document.querySelectorAll('.stat').forEach(b => b.onclick = () => { setCat(b.dataset.cat, true); $('#plist').scrollIntoView({behavior: 'smooth'}); });
+['#q', '#sub', '#dec'].forEach(s => $(s).addEventListener('input', render));
 const hsel = new Set();
-function hrender() {{
+function hrender() {
   const q = $('#hq').value.trim().toLowerCase(), dec = $('#hdec').value;
   const L = H.filter(h => (!hsel.size || hsel.has(h.a)) && (!dec || h.d === dec) && (!q || (h.t + ' ' + h.k + ' ' + h.au).toLowerCase().includes(q)))
     .sort((a, b) => (a.d !== 'Oral') - (b.d !== 'Oral') || a.t.localeCompare(b.t));
   $('#hcount').textContent = L.length + '편 표시 중 (전체 ' + H.length + '편)';
-  $('#hlist').innerHTML = L.map(h => `<article class="paper"><a class="ttl" href="${{h.u}}" target="_blank" rel="noopener">${{esc(h.t)}}</a>
-    <div class="sum">${{esc(h.k)}}</div><div class="meta"><span class="tag dec">${{h.d}}</span><span class="tag">${{AREA[h.a]}}</span>${{h.tr ? `<span class="tag">${{h.tr}}</span>` : ''}}</div>
-    <details><summary>저자</summary><div class="auth">${{esc(h.au)}}</div></details></article>`).join('');
-}}
-document.querySelectorAll('.hchip').forEach(b => b.onclick = () => {{
+  $('#hlist').innerHTML = L.map(h => `<article class="paper"><a class="ttl" href="${h.u}" target="_blank" rel="noopener">${esc(h.t)}</a>
+    <div class="sum">${esc(h.k)}</div><div class="meta"><span class="tag dec">${h.d}</span><span class="tag">${AREA[h.a]}</span>${h.tr ? `<span class="tag">${h.tr}</span>` : ''}</div>
+    <details><summary>저자</summary><div class="auth">${esc(h.au)}</div></details></article>`).join('');
+}
+document.querySelectorAll('.hchip').forEach(b => b.onclick = () => {
   hsel.has(b.dataset.area) ? hsel.delete(b.dataset.area) : hsel.add(b.dataset.area);
   b.setAttribute('aria-pressed', hsel.has(b.dataset.area)); hrender();
-}});
+});
 ['#hq', '#hdec'].forEach(s => $(s).addEventListener('input', hrender));
-hrender();
-document.querySelectorAll('.stat').forEach(b => b.onclick = () => {{ setCat(b.dataset.cat, true); $('#papers').scrollIntoView({{behavior: 'smooth'}}); }});
-['#q', '#sub', '#dec'].forEach(s => $(s).addEventListener('input', render));
 const tip = $('#tip');
-document.querySelectorAll('.brow').forEach(r => {{
-  const show = e => {{ tip.textContent = r.dataset.tip; tip.style.opacity = 1;
-    const x = e.clientX ?? r.getBoundingClientRect().left, y = e.clientY ?? r.getBoundingClientRect().top;
-    tip.style.left = Math.min(x + 12, innerWidth - 330) + 'px'; tip.style.top = (y + 14) + 'px'; }};
-  r.addEventListener('mousemove', show); r.addEventListener('focus', show);
+document.querySelectorAll('.brow').forEach(r => {
+  const show = e => { tip.textContent = r.dataset.tip; tip.style.opacity = 1;
+    const b = r.getBoundingClientRect(), x = e && e.clientX != null ? e.clientX : b.left, y = e && e.clientY != null ? e.clientY : b.top;
+    tip.style.left = Math.max(8, Math.min(x + 12, innerWidth - 330)) + 'px'; tip.style.top = (y + 14) + 'px'; };
+  r.addEventListener('mousemove', show); r.addEventListener('focus', () => show());
   r.addEventListener('mouseleave', () => tip.style.opacity = 0); r.addEventListener('blur', () => tip.style.opacity = 0);
-}});
-const root = document.documentElement;
-try {{ const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; }} catch (e) {{}}
-$('#theme').onclick = () => {{
-  const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-  root.dataset.theme = dark ? 'light' : 'dark';
-  try {{ localStorage.setItem('theme', root.dataset.theme); }} catch (e) {{}}
-}};
-render();
-</script>
-</body>
-</html>
-'''
-open('index.html', 'w').write(page)
-print('README.md', len(md), 'lines; index.html', len(page) // 1024, 'KB;', len(P), 'papers')
+});
+render(); hrender();
+})();
+</script>"""
+for k, v in {'__P__': papers_js, '__H__': hl_js, '__AREA__': AREA_KO, '__CAT__': CAT_NAME, '__SUB__': SUB_NAME}.items():
+    IDX_JS = IDX_JS.replace(k, json.dumps(v, ensure_ascii=False))
+page = open('scripts/interests_template.html').read()
+for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers, '<!--HL_MORE-->': hl_more,
+             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS}.items():
+    assert page.count(k) == 1, k
+    page = page.replace(k, v)
+page = page.replace('/*DATA*/null', json.dumps(atlas_data(), ensure_ascii=False))
+open('interests.html', 'w').write(page)
+print('README.md', len(md), 'lines; interests.html', len(page) // 1024, 'KB;', len(P), 'papers')

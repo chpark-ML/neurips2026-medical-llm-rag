@@ -1,4 +1,4 @@
-"""Hand-written analysis rendered into README.md and index.html by build.py.
+"""Hand-written analysis rendered into README.md and interests.html by build.py.
 
 `papers` entries are title substrings; build.py resolves each to exactly one paper in
 data/papers.json and fails if a substring matches zero or several papers.
