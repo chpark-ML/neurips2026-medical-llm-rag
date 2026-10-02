@@ -4,7 +4,7 @@
 
 NeurIPS 2026 채택 논문 **9,094편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **216편**을 모았다. 키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.
 
-> **웹 페이지 (휴대폰에서도 열림)** — 네 페이지는 서로 독립적이다.
+> **웹 페이지 (휴대폰에서도 열림)** — 다섯 페이지는 서로 독립적이다.
 >
 > - [관심 분야 리포트](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html): 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 관심 분야 216편, on-policy·self-distillation 74편, 의료 QA 벤치마크 실험 논문, 하이라이트, 연구 제안
 > - [NeurIPS 2026 논문 탐색기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html): 학회 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식·트랙으로 걸러 보기 (관심 분야와 무관한 전체 보기)
@@ -1068,7 +1068,8 @@ LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/pa
 | `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |
 | `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |
 | `medical_qa.html` / `opsd.html` | 주제별 연구 갈래 지도: 큰 갈래(무엇에서 무엇으로 옮겨가는지, 왜) → 세부 갈래 → 논문 ([Medical QA](https://chpark-ml.github.io/neurips2026-medical-llm-rag/medical_qa.html), [OPSD](https://chpark-ml.github.io/neurips2026-medical-llm-rag/opsd.html)) |
-| `data/branch_medical_qa.json`, `data/branch_opsd.json` | 갈래 지도 데이터: LLM이 초록을 전부 읽고 나눈 갈래·세부 갈래와 논문 배치 |
+| `data/branch_medical_qa.json`, `data/branch_opsd.json`, `data/branch_med_datasets.json` | 갈래 지도 데이터: LLM이 초록을 전부 읽고 나눈 갈래·세부 갈래와 논문 배치 |
+| `data/branch_med_datasets_papers.json` | 데이터셋 트랙 의료 논문 60편의 종류·데이터 설명·한 줄 요약 (데이터 설명의 숫자는 초록과 대조함) |
 | `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙으로 필터 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html)) |
 | `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |
 | `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, on-policy·self-distillation, 의료 QA 벤치마크 실험 논문, 하이라이트 405편, 연구 제안 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html)) |

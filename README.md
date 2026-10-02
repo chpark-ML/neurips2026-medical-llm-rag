@@ -4,7 +4,7 @@ NeurIPS 2026 채택 논문 9,094편을 분야·주제로 나누고, 의료 QA·�
 
 ## 웹 페이지
 
-휴대폰에서도 열린다. 네 페이지는 서로 독립적이다.
+휴대폰에서도 열린다. 다섯 페이지는 서로 독립적이다.
 
 | 페이지 | 내용 |
 |---|---|
@@ -12,6 +12,7 @@ NeurIPS 2026 채택 논문 9,094편을 분야·주제로 나누고, 의료 QA·�
 | [논문 탐색기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html) | 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식으로 걸러 보기 |
 | [Medical QA 연구 지도](https://chpark-ml.github.io/neurips2026-medical-llm-rag/medical_qa.html) | Medical QA 논문을 갈래로 나눈 연구 흐름 |
 | [On-policy·Self-distillation 연구 지도](https://chpark-ml.github.io/neurips2026-medical-llm-rag/opsd.html) | OPD·OPSD 논문을 갈래로 나눈 연구 흐름 |
+| [데이터셋 트랙 의료 논문](https://chpark-ml.github.io/neurips2026-medical-llm-rag/med_datasets.html) | Evaluations & Datasets 트랙의 의료 논문 60편을 데이터·평가 종류별 갈래로 정리 |
 
 ## 숫자로 보기
 
@@ -38,7 +39,7 @@ NeurIPS 2026 채택 논문 9,094편을 분야·주제로 나누고, 의료 QA·�
 |---|---|
 | [`REPORT.md`](REPORT.md) | 상세판: 분야·트렌드 표, 관심 분야별 연구 흐름, 216편·의료 QA 벤치마크 논문 목록과 성능 표, 연구 제안 |
 | [`HIGHLIGHTS.md`](HIGHLIGHTS.md) | 학회 전체 Oral·Spotlight 405편, 분야별 |
-| `interests.html`, `explorer.html`, `medical_qa.html`, `opsd.html` | 위 웹 페이지의 원본 |
+| `interests.html`, `explorer.html`, `medical_qa.html`, `opsd.html`, `med_datasets.html` | 위 웹 페이지의 원본 |
 | `data/` | 모든 집계와 분류 결과 (JSON·CSV). 파일별 설명은 REPORT.md 끝에 있다 |
 | `scripts/` | 데이터 수집·분류·집계·페이지 생성 코드 |
 

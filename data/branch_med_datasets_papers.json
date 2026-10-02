@@ -1,0 +1,362 @@
+{
+ "139361": {
+  "summary_ko": "사전승인·이용관리·케어관리 장기 워크플로를 수행하는 에이전트 벤치마크",
+  "data_ko": "20개 앱 시뮬레이터 · MCP 도구 87개 · 핸드북 문서 1,290+",
+  "kind": "벤치마크",
+  "title": "\\chi-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?"
+ },
+ "139715": {
+  "summary_ko": "CHAMPS 감시망 다중모달 자료로 LLM·지도학습 사인 추론을 평가",
+  "data_ko": "아동 사망 서술문·사후 진단 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "A Multimodal Benchmark for Evaluating Cause-of-Death Inference Using Child Health and Mortality Data"
+ },
+ "139330": {
+  "summary_ko": "MRI 형태계측 파이프라인을 결론(claim) 안정성으로 평가하는 프레임워크",
+  "data_ko": "MRI 10,370건 · claim card 2,783개",
+  "kind": "평가 프레임워크·감사",
+  "title": "A Scientific Claim Stability Framework for Evaluating MRI Morphometry Pipelines"
+ },
+ "139188": {
+  "summary_ko": "LLM 가상 표준화환자 4종을 인간 전문가 기준과 다평가자로 비교",
+  "data_ko": "한국 OSCE 3사례 · 평가자 17명 · 점수 7,480개",
+  "kind": "벤치마크",
+  "title": "A Stratified Multi-Rater Evaluation of LLM-Based Virtual Standardized Patients with a Deployed Data-Generation Platform"
+ },
+ "139763": {
+  "summary_ko": "Capsule Vision 2024 공개 분할의 학습–검증 중복 감사",
+  "data_ko": "캡슐내시경 검증 11,581행 중 1,381행 중복 일치",
+  "kind": "평가 프레임워크·감사",
+  "title": "Auditing Capsule Vision 2024: Within-Split Train-to-Validation Re-Exposure and a Kvasir-Channel Sensitivity Diagnostic"
+ },
+ "138982": {
+  "summary_ko": "의료 분할 인코더 풀의 사례별 상관 실패를 감사",
+  "data_ko": "인코더 번들 11개 · 5개 과제(Kvasir·ACDC·BraTS·RIGA)",
+  "kind": "평가 프레임워크·감사",
+  "title": "Auditing Correlated Failures in Frozen-Feature Pretrained-Encoder Pools for Medical Segmentation"
+ },
+ "139621": {
+  "summary_ko": "TCR 레퍼토리 기반 질병 진단 방법 9종을 통합 비교",
+  "data_ko": "공개 TCR 레퍼토리 데이터셋 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "BenchRep-T: A Systematic Evaluation of T-Cell Repertoire-Based Disease Diagnostics"
+ },
+ "138952": {
+  "summary_ko": "다중모달 생의학 ML 코딩 과제로 LLM 에이전트를 평가",
+  "data_ko": "end-to-end 과제 76개 · 9개 도메인",
+  "kind": "벤치마크",
+  "title": "BioXArena: Benchmarking LLM Agents on Multi-Modal Biomedical Machine Learning Tasks"
+ },
+ "139162": {
+  "summary_ko": "종단 뇌 MRI 판독의 근거 사슬을 VLM이 추적하는지 평가",
+  "data_ko": "VQA 7,273개 · 환자 1,778명 · MRI 검사 7,299건",
+  "kind": "벤치마크",
+  "title": "BrainTRACE: Tracing Longitudinal, Multimodal, and Volumetric Evidence in Brain MRI Clinical Reasoning"
+ },
+ "139182": {
+  "summary_ko": "변형 대장내시경 3D 재구성용 시간 분해 정답 포함 합성 데이터셋",
+  "data_ko": "대장내시경 영상 110개 · 대장 메시 12종 · 깊이·포즈",
+  "kind": "데이터셋",
+  "title": "C3VD-DEFCOL: A Deformable Colonoscopy Dataset with Time-Resolved 3D Ground Truth and Realistic Appearance"
+ },
+ "139679": {
+  "summary_ko": "다중 시퀀스 심장 MRI로 MLLM의 임상 판독 격차를 평가",
+  "data_ko": "CMR 슬라이스 473,896장 · 검증 QA 13,494쌍",
+  "kind": "벤치마크",
+  "title": "CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi-Sequence Cardiac MRI Evaluations"
+ },
+ "139102": {
+  "summary_ko": "지식그래프 기반 다중 에이전트 시뮬레이션으로 진단 추론을 평가",
+  "data_ko": "지식그래프 기반 동적 생성 증례 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "ClinMAS: A Knowledge-Grounded Multi-Agent Simulation Framework for Evaluating Clinical Reasoning in LLMs"
+ },
+ "139728": {
+  "summary_ko": "뇌·흉부·복부 공존 병변을 모두 주석한 다부위 CT 데이터셋",
+  "data_ko": "CT 500건 · 복셀 마스크 · 병변 라벨 28종",
+  "kind": "데이터셋",
+  "title": "CT-Lesion: A Multi-Region CT Dataset for Co-existing Lesion Segmentation and Detection"
+ },
+ "139023": {
+  "summary_ko": "3D 의료영상 데이터셋 집합의 중복·출처 분석과 MAP 메타데이터 제안",
+  "data_ko": "3D 영상 760k건 · 공개 데이터셋 1,069개 · 중복 118k",
+  "kind": "평가 프레임워크·감사",
+  "title": "Dataset Collections: Challenges of Large-Scale Data Aggregation in 3D Medical Image Datasets"
+ },
+ "139550": {
+  "summary_ko": "숨은 근거 하에서 VLM의 진단 궤적을 평가하는 신경영상 벤치마크",
+  "data_ko": "의사 판정 신경영상 증례 211개",
+  "kind": "벤치마크",
+  "title": "DDx-TRACE: A Benchmark for Medical Diagnostic Trajectories in VLMs"
+ },
+ "138906": {
+  "summary_ko": "심장내과 전문의 7명이 다중 주석·PQRST 분절한 12유도 ECG 공개",
+  "data_ko": "12유도 ECG 2,500+건 · 분절 주석 1,527건",
+  "kind": "데이터셋",
+  "title": "ECG Dataset with Multi-Expert Annotations and Delineations"
+ },
+ "139612": {
+  "summary_ko": "원시 빔공간 형상을 보존한 다중모달 심초음파 데이터셋",
+  "data_ko": "심초음파 기록 37,125개 · 검사 666건 · ECG 동기",
+  "kind": "데이터셋",
+  "title": "EchoXFlow: A Beamspace Echocardiography Dataset for Cardiac Motion, Flow, and Function"
+ },
+ "139540": {
+  "summary_ko": "수술 훈련 1인칭 3D 손 자세 데이터셋과 손 재구성 벤치마크",
+  "data_ko": "학습 41,909행 · 검증 9,476행 · Aria 안경 녹화",
+  "kind": "데이터셋",
+  "title": "EgoSurgHands: An Egocentric 3D Hand Pose Dataset & Benchmark for Open-Surgery Training"
+ },
+ "138889": {
+  "summary_ko": "장시간 내시경 영상의 다회차 보고·추론을 평가하는 프레임워크",
+  "data_ko": "내시경 영상 1,307개(63.2h) · QA 20,275턴",
+  "kind": "벤치마크",
+  "title": "EndoSCOP-V: A Multi-Turn Video Understanding Evaluation Framework for Multimodal Models in Endoscopy Reporting and Clinical Reasoning"
+ },
+ "138971": {
+  "summary_ko": "응급실 전 과정 임상 추론을 실제 노트로 평가하는 LLM 벤치마크",
+  "data_ko": "임상 노트 25,174개 · 환자 3,437명 · 의사 주석 2,555개",
+  "kind": "벤치마크",
+  "title": "ER-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room"
+ },
+ "139147": {
+  "summary_ko": "시뮬레이터 합성 ECG가 실제 ECG 사전학습을 대체하는지 평가",
+  "data_ko": "ECG 이상 과제 26개(PTB-XL 등) · 합성 100k",
+  "kind": "평가 프레임워크·감사",
+  "title": "Evaluating Synthetic ECG Pretraining: When Can Patient-Free Simulators Substitute for Real ECG Data?"
+ },
+ "139300": {
+  "summary_ko": "공개 fNIRS 데이터셋을 통합한 표준 분류 벤치마크",
+  "data_ko": "공개 fNIRS 데이터셋 23개",
+  "kind": "벤치마크",
+  "title": "fNIRSAtlas: A Large-Scale Benchmark for Functional Near-Infrared Spectroscopy Classification"
+ },
+ "139808": {
+  "summary_ko": "안저 모델의 데이터셋 간 일반화·보정·공정성 벤치마크",
+  "data_ko": "공개 안저 데이터셋 10개 · 설정 532개",
+  "kind": "벤치마크",
+  "title": "FOCUS: Benchmarking Retinal Model Generalization from Foundation Vision Encoders to Multimodal LLMs"
+ },
+ "139078": {
+  "summary_ko": "수술 장면 이해에서 MLLM과 도구 사용 에이전트를 평가",
+  "data_ko": "공개 수술 데이터셋 통합 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "How to Train a Surgeon? Benchmarking Generalist Agents in Surgical Scene Understanding"
+ },
+ "139030": {
+  "summary_ko": "일본 11개 의료 면허시험 기반 VLM 평가 벤치마크",
+  "data_ko": "시험 문항 48,862개 · 이미지 20,142장",
+  "kind": "벤치마크",
+  "title": "JMed48k: A Multi-Profession Japanese Medical Licensing Benchmark for Vision-Language Model Evaluation"
+ },
+ "139764": {
+  "summary_ko": "생명과학 문항을 그래프로 연결해 일관성을 평가하는 벤치마크",
+  "data_ko": "의학·생물·화학 객관식 10,000+문항",
+  "kind": "벤치마크",
+  "title": "LG-Bench: A Graph-Structured Evaluation Benchmark for Life Science"
+ },
+ "138998": {
+  "summary_ko": "유방촬영에서 VLM의 그라운딩·공간 추론을 평가",
+  "data_ko": "임상 QA 56,638쌍 · 통제 진단 QA 94,119쌍",
+  "kind": "벤치마크",
+  "title": "MammoGPS: A Benchmark for Visual Grounding, Perception, and Spatial Reasoning in Mammography"
+ },
+ "139548": {
+  "summary_ko": "모의 외래 에피소드로 의사 에이전트의 경험 기반 진화를 평가",
+  "data_ko": "처리된 외래 에피소드 700개",
+  "kind": "벤치마크",
+  "title": "MedEvoEval: Evaluating Continual Evolution of Doctor Agents through Simulated Clinical Episodes"
+ },
+ "139506": {
+  "summary_ko": "전체 검사·WSI를 뷰어로 조작하며 근거를 내는 에이전트 평가",
+  "data_ko": "방사선 전체 검사·병리 WSI · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "MedFlowBench: Auditing Medical Agents in Full-Study Workflows"
+ },
+ "139097": {
+  "summary_ko": "이질적 임상 근거 간 의료 임베딩 검색 벤치마크",
+  "data_ko": "검색 과제 107개 · 데이터셋 54개(2D·3D·텍스트)",
+  "kind": "벤치마크",
+  "title": "MedHEB: Benchmarking Medical Embeddings Across Heterogeneous Clinical Evidence"
+ },
+ "139391": {
+  "summary_ko": "전체 시술 장시간 의료 영상 이해 벤치마크",
+  "data_ko": "시술 영상 759시간 · 객관식 1,253문항",
+  "kind": "벤치마크",
+  "title": "MedHorizon: Towards Long-context Medical Video Understanding in the Wild"
+ },
+ "138975": {
+  "summary_ko": "임상 근거 갱신 지식의 통합·전이 능력을 평가",
+  "data_ko": "임상 근거 기반 사실 갱신 문항 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "MedKIT: Evaluating Knowledge Integration and Generalization in Large Language Models"
+ },
+ "139145": {
+  "summary_ko": "개인 맞춤 헬스케어 에이전트의 장기 메모리 벤치마크",
+  "data_ko": "합성 세션 약 2,000개 · 대화 16,000턴",
+  "kind": "벤치마크",
+  "title": "MedMemoryBench: Benchmarking Agent Memory in Personalized Healthcare"
+ },
+ "139561": {
+  "summary_ko": "오도 맥락 하에서 LLM이 올바른 의료 판단을 유지하는지 측정",
+  "data_ko": "의료 문항 10,932개 · 오도 맥락쌍 48,889개",
+  "kind": "벤치마크",
+  "title": "MedMisBench: Measuring Epistemic Resilience of LLMs Under Misleading Medical Context"
+ },
+ "139346": {
+  "summary_ko": "깨진 시각 근거에서 의료 VLM의 무음 실패를 평가",
+  "data_ko": "300증례 · MCQ 프로브 2,556개 · 영상의학 전문의 주석",
+  "kind": "벤치마크",
+  "title": "MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence"
+ },
+ "138950": {
+  "summary_ko": "정신건강 다회차 대화 위험 라벨 테스트셋과 가드레일 분류기 공개",
+  "data_ko": "턴 단위 위험 라벨 다회차 대화 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "MindGuard: Guardrail Classifiers for Multi-Turn Mental Health Support"
+ },
+ "139177": {
+  "summary_ko": "귀걸이·반지·시계·목걸이 웨어러블 실생활 PPG 데이터셋",
+  "data_ko": "원시 데이터 350+시간 · 4개 부위 PPG · ECG 기준",
+  "kind": "데이터셋",
+  "title": "Multi-site PPG: An In-the-Wild Physiological Dataset from Emerging Multi-Site Wearables"
+ },
+ "139212": {
+  "summary_ko": "유전 변이–기능 영향을 잇는 교차검증 QA 데이터셋",
+  "data_ko": "QA 330,387쌍 · PubMed 논문 27,442편",
+  "kind": "데이터셋",
+  "title": "MutQA: A Cross-Validated Q&A Dataset for Genetic Mutations"
+ },
+ "139654": {
+  "summary_ko": "요천추 이행 척추에서 TotalSegmentator 실패 감사·CT 데이터 공개",
+  "data_ko": "CT 1,153건 · 환자 802명 · LSTV 33례",
+  "kind": "평가 프레임워크·감사",
+  "title": "Not All Spines Are Created Equal: How CT Segmenters Fail on Lumbosacral Transitional Vertebrae"
+ },
+ "139689": {
+  "summary_ko": "비인두암 가이드라인 기반 진료 경로 추론 벤치마크",
+  "data_ko": "단계 문제 4,077개 · 전체 진료 에피소드 25개",
+  "kind": "벤치마크",
+  "title": "NPCBench: A Clinical Apprenticeship Benchmark for Guideline-Constrained Care-Pathway Reasoning in Nasopharyngeal Carcinoma"
+ },
+ "139232": {
+  "summary_ko": "신뢰도·출처 정보가 붙은 생성 뇌 MRI 분할 라벨 공개",
+  "data_ko": "T1w MRI 35,838건 · 소스 데이터셋 607개",
+  "kind": "데이터셋",
+  "title": "OpenBrain: An Auditable Generated-Label Release for Whole-Brain MRI Parcellation"
+ },
+ "139693": {
+  "summary_ko": "과학 논문 기반 추론 흔적을 담은 의료 VLM 학습 코퍼스",
+  "data_ko": "이미지–질문–답 약 450K건",
+  "kind": "데이터셋",
+  "title": "OpenMedReason: Scientific Reasoning Supervision for Medical Vision–Language Models"
+ },
+ "139369": {
+  "summary_ko": "My Heart Counts 기반 최대 공개 웨어러블 데이터와 벤치마크",
+  "data_ko": "웨어러블 60M+시간 · 참가자 11,894명 · 19채널",
+  "kind": "데이터셋",
+  "title": "OpenMHC: Accelerating the Science of Wearable Foundation Models"
+ },
+ "139172": {
+  "summary_ko": "병리 영상의 다중 배율 세밀 시각 이해 벤치마크",
+  "data_ko": "이미지 61,673장 · 샘플 308,070개 · 28개 장기",
+  "kind": "벤치마크",
+  "title": "PathView-Bench: Can Multimodal Large Language Models Achieve Fine-grained Multiscale Understanding of Pathology Images?"
+ },
+ "139788": {
+  "summary_ko": "실제 EHR 환경에서 의사 업무 에이전트를 평가",
+  "data_ko": "장기 과제 100개 · 체크포인트 670개 · 21개 진료과",
+  "kind": "벤치마크",
+  "title": "PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments"
+ },
+ "139004": {
+  "summary_ko": "방사선치료 계획 최적화용 공개 데이터·기준 알고리즘",
+  "data_ko": "실제 환자 기반 치료계획 데이터 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "PortPy: A Benchmark for AI and Optimization in Cancer Radiotherapy Planning"
+ },
+ "139320": {
+  "summary_ko": "류마티스 관절염 손 X선 다수준 주석 데이터셋",
+  "data_ko": "손 X선 1,200장 · 6개 센터 · 골미란 마스크",
+  "kind": "데이터셋",
+  "title": "RAM-H1200: A Unified Evaluation and Dataset on Hand Radiographs for Rheumatoid Arthritis"
+ },
+ "138984": {
+  "summary_ko": "사후 검토 라벨로 ICU 장기 맥락 LLM 판단을 평가",
+  "data_ko": "Gold 930윈도우(환자 94명) · Scale 11,862윈도우",
+  "kind": "벤치마크",
+  "title": "RealICU: Do LLM Agents Understand Long-Context ICU Data? A Benchmark Beyond Behavior Imitation"
+ },
+ "139773": {
+  "summary_ko": "실제 의료 업무 산출물 품질로 에이전트를 평가",
+  "data_ko": "전문가 설계 과제 405개 · 루브릭 평균 15.4항목",
+  "kind": "벤치마크",
+  "title": "REAL-MED: Benchmarking LLM Agents on Real-World Medical Tasks"
+ },
+ "139603": {
+  "summary_ko": "3D 의료 파운데이션 모델 표현을 획득 견고성 등 3축으로 평가",
+  "data_ko": "비라벨 3D 볼륨 62K(MR·CT·PET 등)",
+  "kind": "평가 프레임워크·감사",
+  "title": "REFORM-3D: A Representation-Centric Evaluation Framework for 3D Medical Vision Foundation Models"
+ },
+ "138929": {
+  "summary_ko": "참조 보고서 작성 관행이 흉부 X선 보고서 평가 순위를 바꿈을 정량화",
+  "data_ko": "MIMIC-CXR 참조 보고서 쌍 120개",
+  "kind": "평가 프레임워크·감사",
+  "title": "Reporting Practice Matters: The Impact of Reference Choice on Chest X-ray Report Evaluation"
+ },
+ "139739": {
+  "summary_ko": "PubMed를 자율 추출해 대규모 구조화 생의학 데이터 생성",
+  "data_ko": "PubMed 22.5M편 · 레코드 약 7.7M개",
+  "kind": "데이터셋",
+  "title": "Self Driving Datasets: From 20 Million Papers to Nuanced Biomedical Knowledge at Scale"
+ },
+ "139791": {
+  "summary_ko": "생의학 표형 데이터셋 95개를 통합한 벤치마크",
+  "data_ko": "공개 표형 데이터셋 95개 · 모델 23종",
+  "kind": "벤치마크",
+  "title": "TabBioMed: A Large-Scale Benchmark for Biomedical Tabular Learning"
+ },
+ "139071": {
+  "summary_ko": "치료 챗봇의 CBT 충실도·안전성 평가 및 정렬 프레임워크",
+  "data_ko": "검증 대화 116개 · 전문가 평가 1,270개",
+  "kind": "벤치마크",
+  "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots"
+ },
+ "139021": {
+  "summary_ko": "임상 노트–구조화 표 일관성 검증 추론 벤치마크",
+  "data_ko": "MIMIC-III 노트 유래 엔티티 8,048개",
+  "kind": "벤치마크",
+  "title": "Towards Error-Free EHRs: Reasoning-Intensive Consistency Verification Between Clinical Notes and Structured Tables in Electronic Health Records"
+ },
+ "138990": {
+  "summary_ko": "정신건강 대화에서 LLM의 인지 위축 유발 행동을 측정",
+  "data_ko": "상담 대화 1,576개 · 15,680턴 · 응답 42,230개",
+  "kind": "벤치마크",
+  "title": "Towards Understanding and Measuring Cognitive Atrophy in LLM Behaviour"
+ },
+ "139604": {
+  "summary_ko": "임상시험 분석·신약개발 의사결정 에이전트 벤치마크",
+  "data_ko": "과제·프로그램 420개 · 모의 대상자 528,660명",
+  "kind": "벤치마크",
+  "title": "TrialAgentBench: Evaluating AI Agents for Clinical-Trial Analysis and Long-Horizon Drug-Development Decisions"
+ },
+ "139742": {
+  "summary_ko": "수의 독성병리 VLM 평가 벤치마크",
+  "data_ko": "질문 1,251개 · 랫드 H&E 이미지 419장",
+  "kind": "벤치마크",
+  "title": "VIPER: An Expert-Curated Benchmark for Vision-Language Models in Veterinary Pathology"
+ },
+ "139306": {
+  "summary_ko": "생존분석 벤치마크에서 모델 선택 기준·데이터 체제의 영향 분석",
+  "data_ko": "데이터셋 49개 · 방법 10종",
+  "kind": "평가 프레임워크·감사",
+  "title": "What Survival Benchmarks Don’t Tell You: Impact of Model Selection and Dataset Regimes"
+ },
+ "139493": {
+  "summary_ko": "의료 VLM의 의미 특이성을 5단계로 진단하는 벤치마크",
+  "data_ko": "5단계 의미 구체성 수준 · 규모 미기재",
+  "kind": "벤치마크",
+  "title": "When Medical VLMs Stop Understanding: MedTEC-Bench for Probing Semantic Specificity"
+ }
+}
