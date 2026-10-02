@@ -87,7 +87,7 @@ w = md.append
 w('# NeurIPS 2026 — Medical QA · Medical RAG · Medical Agent · Medical LLM · RAG 논문 정리\n')
 w(f'NeurIPS 2026 채택 논문 **{T["N2026"]:,}편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **{len(P)}편**을 모았다. '
   '키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.\n')
-w('> 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
+w('> NeurIPS 2026 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식 태그로 걸러 보는 페이지는 [`explorer.html`](explorer.html), 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
 w('## 한눈에 보기\n')
 w('| 분류 | 편수 | 기준 |\n|---|---:|---|')
 for k, n, desc in CATS:
@@ -219,7 +219,7 @@ for r in lift_rows:
     w(f"| {r['topic']} | {r['n']} | {r['highlights']} | {r['rate']}% | ×{r['lift']} |")
 w('')
 w('## 재현\n')
-w('```bash\nbash scripts/fetch.sh            # neurips.cc에서 2025·2026 포스터 목록 다운로드 → data/raw/\npython3 scripts/candidates.py    # 1차 키워드 후보 (1,103편)\npython3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data/decisions.json, papers.json 갱신\npython3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json\npython3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json\npython3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json\npython3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json\npython3 scripts/atlas.py         # atlas.html 생성\npython3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성\n```\n')
+w('```bash\nbash scripts/fetch.sh            # neurips.cc에서 2025·2026 포스터 목록 다운로드 → data/raw/\npython3 scripts/candidates.py    # 1차 키워드 후보 (1,103편)\npython3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data/decisions.json, papers.json 갱신\npython3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json\npython3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json\npython3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json\npython3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json\npython3 scripts/atlas.py         # atlas.html 생성\npython3 scripts/explorer.py      # explorer.html 생성 (전체 9,094편 태그 탐색)\npython3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성\n```\n')
 w('LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/papers.json`의 `cats`, `rag_sub`, `summary_ko` 필드, `data/highlight_labels.json`(하이라이트의 분야·요약), `data/area_labels.json`(전체 논문의 분야)이다.\n')
 w('## 파일\n')
 w('| 파일 | 내용 |\n|---|---|')
@@ -234,6 +234,8 @@ w('| `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview U
 w('| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |')
 w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |')
 w('| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |')
+w('| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙, 관심 분류로 필터 |')
+w('| `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |')
 w('| `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |')
 w('| `index.html` | 검색·필터가 되는 단일 HTML 페이지 |')
 open('README.md', 'w').write('\n'.join(md) + '\n')
@@ -417,7 +419,7 @@ footer {{ color: var(--ink-3); font-size: 13px; padding: 28px 0 48px; border-top
 <body>
 <header class="top"><div class="wrap">
   <div class="brand">NeurIPS 2026 · Med LLM/RAG</div>
-  <nav><a href="#papers">논문</a><a href="#trends">트렌드</a><a href="#next">연구 주제</a><a href="#medqa">Medical QA 아이디어</a><a href="#highlights">하이라이트</a><a href="#method">방법</a><a href="atlas.html">전체 지형도 ↗</a></nav>
+  <nav><a href="#papers">논문</a><a href="#trends">트렌드</a><a href="#next">연구 주제</a><a href="#medqa">Medical QA 아이디어</a><a href="#highlights">하이라이트</a><a href="#method">방법</a><a href="atlas.html">전체 지형도 ↗</a><a href="explorer.html">전체 논문 탐색 ↗</a></nav>
   <button id="theme" type="button" aria-label="테마 전환">테마</button>
 </div></header>
 <main class="wrap">

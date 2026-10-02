@@ -2,7 +2,7 @@
 
 NeurIPS 2026 채택 논문 **9,094편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **216편**을 모았다. 키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.
 
-> 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.
+> NeurIPS 2026 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식 태그로 걸러 보는 페이지는 [`explorer.html`](explorer.html), 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.
 
 ## 한눈에 보기
 
@@ -774,6 +774,7 @@ python3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.jso
 python3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json
 python3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json
 python3 scripts/atlas.py         # atlas.html 생성
+python3 scripts/explorer.py      # explorer.html 생성 (전체 9,094편 태그 탐색)
 python3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성
 ```
 
@@ -794,5 +795,7 @@ LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/pa
 | `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |
 | `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |
 | `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |
+| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙, 관심 분류로 필터 |
+| `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |
 | `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |
 | `index.html` | 검색·필터가 되는 단일 HTML 페이지 |

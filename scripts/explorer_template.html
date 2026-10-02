@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NeurIPS 2026 논문 탐색기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a library catalogue — tag facets on the left (each with live counts), the result list on the right. */
+:root {
+  --bg: #f4f6f7; --surface: #ffffff; --line: #dce2e5; --ink: #12191d; --ink-2: #47545b; --ink-3: #7a868c;
+  --accent: #0b6b74; --accent-soft: #e1f0f1; --code: #edf1f3; --hl: #12191d;
+  --f-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, "IBM Plex Sans KR", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #101518; --surface: #171e22; --line: #2a343a; --ink: #edf2f4; --ink-2: #b4c0c6; --ink-3: #85929a; --accent: #5cc4cd; --accent-soft: #14353a; --code: #212a30; --hl: #edf2f4; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #101518; --surface: #171e22; --line: #2a343a; --ink: #edf2f4; --ink-2: #b4c0c6; --ink-3: #85929a; --accent: #5cc4cd; --accent-soft: #14353a; --code: #212a30; --hl: #edf2f4; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.6 var(--f-body); padding: 0 16px; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+header.top { max-width: 1280px; margin: 0 auto; padding-block: 24px 12px; display: flex; flex-direction: column; gap: 10px; }
+h1 { margin: 0; font-size: clamp(22px, 3.4vw, 30px); line-height: 1.3; text-wrap: balance; }
+.sub { color: var(--ink-2); max-width: 80ch; margin: 0; }
+.nav { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13.5px; }
+.layout { max-width: 1280px; margin: 0 auto; padding-bottom: 60px; display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 20px; align-items: start; }
+aside { position: sticky; top: env(safe-area-inset-top, 0px); max-height: 100vh; overflow-y: auto; padding: 12px 0 24px; display: flex; flex-direction: column; gap: 10px; }
+.fg { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.fg > summary { list-style: none; cursor: pointer; padding: 10px 12px; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center; }
+.fg > summary::-webkit-details-marker { display: none; }
+.fg > summary::after { content: "＋"; color: var(--ink-3); font-weight: 400; }
+.fg[open] > summary::after { content: "－"; }
+.fg .body { padding: 0 8px 10px; display: flex; flex-direction: column; gap: 1px; max-height: 420px; overflow-y: auto; }
+.ft { display: grid; grid-template-columns: 18px minmax(0, 1fr) auto; gap: 6px; align-items: center; padding: 3px 6px; border-radius: 6px; cursor: pointer; font-size: 13px; color: var(--ink-2); border: 0; background: none; text-align: left; font-family: inherit; width: 100%; }
+.ft:hover { background: var(--code); }
+.ft .bx { width: 14px; height: 14px; border: 1.5px solid var(--ink-3); border-radius: 3px; }
+.ft[aria-pressed="true"] { color: var(--ink); font-weight: 600; }
+.ft[aria-pressed="true"] .bx { background: var(--accent); border-color: var(--accent); }
+.ft .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ft .c { font: 12px var(--f-mono); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.ft.zero { opacity: .45; }
+.area { display: flex; flex-direction: column; }
+.area .row { display: grid; grid-template-columns: minmax(0, 1fr) 24px; align-items: center; }
+.area .tog { border: 0; background: none; color: var(--ink-3); cursor: pointer; font-size: 13px; padding: 2px; }
+.area .kids { padding-left: 18px; display: none; }
+.area.open .kids { display: flex; flex-direction: column; }
+.fsearch { margin: 0 6px 6px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: 13px var(--f-body); }
+main { min-width: 0; padding-top: 12px; display: flex; flex-direction: column; gap: 12px; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#q { flex: 1 1 280px; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+select { padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+.sel { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 28px; }
+.pill { display: inline-flex; gap: 6px; align-items: center; font-size: 12.5px; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--ink); border: 1px solid var(--accent); cursor: pointer; font-family: inherit; }
+.pill b { font-weight: 400; color: var(--ink-3); }
+.clear { font-size: 12.5px; background: none; border: 0; color: var(--accent); cursor: pointer; text-decoration: underline; font-family: inherit; }
+.count { font-size: 13.5px; color: var(--ink-2); }
+.count b { font-variant-numeric: tabular-nums; color: var(--ink); }
+.list { display: flex; flex-direction: column; gap: 8px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.card .ttl { font-weight: 600; color: var(--ink); text-decoration: none; line-height: 1.45; }
+.card .ttl:hover { text-decoration: underline; }
+.card .au { font-size: 12.5px; color: var(--ink-3); }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tg { font: 500 11.5px/1.2 var(--f-body); padding: 3px 7px; border-radius: 4px; background: var(--code); color: var(--ink-2); border: 1px solid transparent; cursor: pointer; }
+.tg:hover { border-color: var(--accent); }
+.tg.area { background: var(--accent-soft); color: var(--accent); }
+.tg.oral { background: var(--hl); color: var(--bg); }
+.tg.spot { border-color: var(--accent); color: var(--accent); background: transparent; }
+.tg.kw { font-family: var(--f-mono); font-size: 11px; }
+.card details { font-size: 13.5px; color: var(--ink-2); }
+.card summary { cursor: pointer; color: var(--ink-3); font-size: 12.5px; }
+.more { align-self: center; padding: 9px 18px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; }
+.empty { padding: 30px; text-align: center; color: var(--ink-3); background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; }
+.mobile-toggle { display: none; }
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static; max-height: none; padding: 0; display: none; }
+  aside.show { display: flex; }
+  .mobile-toggle { display: inline-block; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>NeurIPS 2026 논문 탐색기</h1>
+  <p class="sub" id="lead"></p>
+  <div class="nav"><a href="atlas.html">전체 지형도</a><a href="index.html">관심 분야 216편</a><a href="HIGHLIGHTS.md">하이라이트 목록</a><a href="README.md">README</a></div>
+</header>
+<div class="layout">
+  <aside id="facets" aria-label="태그 필터"></aside>
+  <main>
+    <div class="bar">
+      <button class="mobile-toggle" id="ftoggle" type="button">태그 필터 열기</button>
+      <input id="q" type="search" placeholder="제목·저자·초록 앞부분 검색 (공백으로 여러 단어)" aria-label="검색">
+      <select id="sort" aria-label="정렬"><option value="hl">Oral·Spotlight 먼저</option><option value="title">제목순</option></select>
+    </div>
+    <div class="sel" id="sel"></div>
+    <div class="count" id="count"></div>
+    <div class="list" id="list"></div>
+    <button class="more" id="more" type="button" hidden>더 보기</button>
+  </main>
+</div>
+<script>
+const D = /*DATA*/null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const R = D.rows.map(r => ({ id: r[0], t: r[1], au: r[2], ab: r[3], f: r[4], tr: r[5], a: r[6], s: r[7], k: r[8], c: r[9], b: r[10],
+  hay: (r[1] + ' ' + r[2] + ' ' + r[3]).toLowerCase() }));
+const AREAS = Object.keys(D.areas);
+// groups: area+subtopic share one group (OR), the rest are independent groups (AND across groups)
+const G = ['area', 'kw', 'fmt', 'trk', 'cat', 'bench'];
+const S = { area: new Set(), sub: new Set(), kw: new Set(), fmt: new Set(), trk: new Set(), cat: new Set(), bench: new Set() };
+const passGroup = {
+  area: p => (!S.area.size && !S.sub.size) || S.area.has(p.a) || p.s.some(x => S.sub.has(x)),
+  kw: p => !S.kw.size || p.k.some(x => S.kw.has(x)),
+  fmt: p => !S.fmt.size || S.fmt.has(p.f),
+  trk: p => !S.trk.size || S.trk.has(p.tr),
+  cat: p => !S.cat.size || p.c.some(x => S.cat.has(x)),
+  bench: p => !S.bench.size || p.b.some(x => S.bench.has(x)),
+};
+let shown = 60, result = [];
+$('#lead').textContent = `${R.length.toLocaleString('en-US')}편 전체에 분야·세부 주제·키워드·발표 형식·트랙 태그를 붙였다. 같은 묶음 안에서 여러 태그를 고르면 하나라도 해당하는 논문, 다른 묶음끼리는 모두 해당하는 논문을 보여준다. 태그 옆 숫자는 다른 묶음의 필터를 적용한 상태에서의 편수다. 검색은 제목·저자와 초록 앞 420자만 본다.`;
+
+function render() {
+  const terms = $('#q').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const cnt = { area: {}, sub: {}, kw: {}, fmt: {}, trk: {}, cat: {}, bench: {} };
+  const inc = (g, k) => cnt[g][k] = (cnt[g][k] || 0) + 1;
+  const tally = (g, p) => {
+    if (g === 'area') { inc('area', p.a); p.s.forEach(x => inc('sub', x)); }
+    else if (g === 'kw') p.k.forEach(x => inc('kw', x));
+    else if (g === 'fmt') inc('fmt', p.f);
+    else if (g === 'trk') inc('trk', p.tr);
+    else if (g === 'cat') p.c.forEach(x => inc('cat', x));
+    else if (g === 'bench') p.b.forEach(x => inc('bench', x));
+  };
+  result = [];
+  for (const p of R) {
+    if (terms.length && !terms.every(w => p.hay.includes(w))) continue;
+    const fails = G.filter(g => !passGroup[g](p));
+    if (fails.length === 0) { result.push(p); G.forEach(g => tally(g, p)); }
+    else if (fails.length === 1) tally(fails[0], p);
+  }
+  if ($('#sort').value === 'hl') result.sort((x, y) => (x.f > 1) - (y.f > 1) || x.f - y.f || x.t.localeCompare(y.t));
+  else result.sort((x, y) => x.t.localeCompare(y.t));
+  renderFacets(cnt); renderSel();
+  $('#count').innerHTML = `<b>${result.length.toLocaleString('en-US')}</b>편 (전체 ${R.length.toLocaleString('en-US')}편)`;
+  shown = 60; renderList();
+}
+function chip(g, k, label, n) {
+  const on = (g === 'sub' ? S.sub : S[g]).has(k);
+  return `<button class="ft ${n ? '' : 'zero'}" type="button" data-g="${g}" data-k="${esc(k)}" aria-pressed="${on}"><span class="bx"></span><span class="nm" title="${esc(label)}">${esc(label)}</span><span class="c">${(n || 0).toLocaleString('en-US')}</span></button>`;
+}
+const openAreas = new Set(); const openGroups = new Set(['area', 'kw']);
+function group(id, title, inner, extra = '') {
+  return `<details class="fg" data-id="${id}" ${openGroups.has(id) ? 'open' : ''}><summary>${title}</summary><div class="body">${extra}${inner}</div></details>`;
+}
+let kwFilter = '';
+function renderFacets(cnt) {
+  const areaHtml = AREAS.map(a => a).sort((x, y) => (cnt.area[y] || 0) - (cnt.area[x] || 0)).map(a => {
+    const kids = D.subs.map((s, i) => [s, i]).filter(([s]) => s[0] === a).sort((x, y) => (cnt.sub[y[1]] || 0) - (cnt.sub[x[1]] || 0))
+      .map(([s, i]) => chip('sub', i, s[1], cnt.sub[i])).join('');
+    return `<div class="area ${openAreas.has(a) ? 'open' : ''}" data-a="${a}"><div class="row">${chip('area', a, D.areas[a], cnt.area[a])}<button class="tog" type="button" data-a="${a}" aria-label="세부 주제 펼치기">${openAreas.has(a) ? '▾' : '▸'}</button></div><div class="kids">${kids}</div></div>`;
+  }).join('');
+  const kws = D.topics.map((t, i) => [t, i]).filter(([t]) => !kwFilter || t.toLowerCase().includes(kwFilter)).sort((x, y) => (cnt.kw[y[1]] || 0) - (cnt.kw[x[1]] || 0)).map(([t, i]) => chip('kw', i, t, cnt.kw[i])).join('');
+  let h = group('area', '분야 → 세부 주제', areaHtml)
+    + group('kw', '키워드 주제', kws, `<input class="fsearch" id="kwq" type="search" placeholder="키워드 찾기" value="${esc(kwFilter)}" aria-label="키워드 주제 찾기">`)
+    + group('fmt', '발표 형식', D.fmts.map((t, i) => chip('fmt', i, t, cnt.fmt[i])).join(''))
+    + group('trk', '트랙', D.trks.map((t, i) => chip('trk', i, t, cnt.trk[i])).join(''))
+    + group('cat', '관심 분류 (의료·RAG 216편)', D.cats.map((t, i) => chip('cat', i, t, cnt.cat[i])).join(''));
+  if (D.benches.length) h += group('bench', '의료 QA 벤치마크 (실험에 사용)', D.benches.map((t, i) => [t, i]).sort((x, y) => (cnt.bench[y[1]] || 0) - (cnt.bench[x[1]] || 0)).map(([t, i]) => chip('bench', i, t, cnt.bench[i])).join(''));
+  const fs = $('#facets'), st = fs.scrollTop; fs.innerHTML = h; fs.scrollTop = st;
+  const kq = $('#kwq'); if (kq && document.activeElement?.id !== 'kwq') {}
+}
+const label = (g, k) => g === 'area' ? D.areas[k] : g === 'sub' ? D.subs[k][1] : g === 'kw' ? D.topics[k] : g === 'fmt' ? D.fmts[k] : g === 'trk' ? D.trks[k] : g === 'cat' ? D.cats[k] : D.benches[k];
+function renderSel() {
+  const all = [];
+  for (const g of ['area', 'sub', 'kw', 'fmt', 'trk', 'cat', 'bench']) S[g].forEach(k => all.push([g, k]));
+  $('#sel').innerHTML = all.map(([g, k]) => `<button class="pill" type="button" data-g="${g}" data-k="${esc(k)}">${esc(label(g, k))} <b>✕</b></button>`).join('') + (all.length ? '<button class="clear" type="button" id="clr">모두 지우기</button>' : '');
+}
+function card(p) {
+  const tags = [`<span class="tg area" data-g="area" data-k="${p.a}">${esc(D.areas[p.a])}</span>`]
+    .concat(p.s.map(x => `<span class="tg" data-g="sub" data-k="${x}">${esc(D.subs[x][1])}</span>`))
+    .concat(p.f <= 1 ? [`<span class="tg ${p.f === 0 ? 'oral' : 'spot'}" data-g="fmt" data-k="${p.f}">${D.fmts[p.f]}</span>`] : [])
+    .concat(p.c.map(x => `<span class="tg" data-g="cat" data-k="${x}">${esc(D.cats[x])}</span>`))
+    .concat(p.b.map(x => `<span class="tg" data-g="bench" data-k="${x}">${esc(D.benches[x])}</span>`))
+    .concat(p.k.map(x => `<span class="tg kw" data-g="kw" data-k="${x}">${esc(D.topics[x])}</span>`));
+  return `<article class="card"><a class="ttl" href="https://neurips.cc/virtual/2026/poster/${p.id}" target="_blank" rel="noopener">${esc(p.t)}</a><div class="au">${esc(p.au)}</div><div class="tags">${tags.join('')}</div><details><summary>초록 앞부분</summary>${esc(p.ab)}</details></article>`;
+}
+function renderList() {
+  $('#list').innerHTML = result.length ? result.slice(0, shown).map(card).join('') : '<div class="empty">조건에 맞는 논문이 없다. 태그를 줄이거나 검색어를 바꿔 보라.</div>';
+  $('#more').hidden = shown >= result.length;
+  $('#more').textContent = `더 보기 (${Math.min(60, result.length - shown)}편 더 · 남은 ${result.length - shown}편)`;
+}
+function toggle(g, k) {
+  const key = (g === 'area' || g === 'sub') && g === 'area' ? k : (isNaN(+k) ? k : +k);
+  const set = S[g]; set.has(key) ? set.delete(key) : set.add(key); render();
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-g]');
+  if (t && !t.classList.contains('tog')) { e.preventDefault(); toggle(t.dataset.g, t.dataset.k); return; }
+  const tg = e.target.closest('.tog');
+  if (tg) { const a = tg.dataset.a; openAreas.has(a) ? openAreas.delete(a) : openAreas.add(a); tg.closest('.area').classList.toggle('open'); tg.textContent = openAreas.has(a) ? '▾' : '▸'; return; }
+  if (e.target.id === 'clr') { Object.values(S).forEach(s => s.clear()); render(); }
+});
+document.addEventListener('toggle', e => { const d = e.target; if (d.classList?.contains('fg')) d.open ? openGroups.add(d.dataset.id) : openGroups.delete(d.dataset.id); }, true);
+document.addEventListener('input', e => {
+  if (e.target.id === 'kwq') { kwFilter = e.target.value.toLowerCase(); const pos = e.target.selectionStart; render(); const k = $('#kwq'); k.focus(); k.setSelectionRange(pos, pos); }
+});
+let qt; $('#q').addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(render, 150); });
+$('#sort').addEventListener('change', render);
+$('#more').addEventListener('click', () => { shown += 60; renderList(); });
+$('#ftoggle').addEventListener('click', () => { const a = $('#facets'); a.classList.toggle('show'); $('#ftoggle').textContent = a.classList.contains('show') ? '태그 필터 닫기' : '태그 필터 열기'; });
+render();
+</script>
+</body>
+</html>
