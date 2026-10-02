@@ -65,6 +65,89 @@ RAG 122편의 세부 유형:
 - 확실히 커진 분야는 LLM 에이전트·도구·검색(비중 ×2.3)이고, 의료·헬스케어도 작게 늘었다. 컴퓨터 비전·3D, 학습 이론, 기타 ML은 편수는 늘었지만 비중은 줄었다.
 - 하이라이트 비율은 과학·생물과 학습 이론이 기준선보다 높고, 의료·헬스케어가 가장 낮다. "데이터셋·벤치마크" 분야는 묶음 사이 편차가 커서(2.3–10.5%) 해석하지 않는다.
 
+## 관심 분야별 연구 흐름
+
+각 분야의 논문을 읽고 여러 논문이 함께 움직이는 방향과 그 방향이 붙잡은 문제를 한 줄씩 적었다. 괄호의 편수는 그 흐름에 주로 속하는 논문 수를 판독으로 어림한 값이고, 링크는 대표 논문이다. RAG와 의료 세 분야는 위 216편 목록, LLM 에이전트와 LLM은 학회 전체에서 해당 분야로 배정된 논문이 대상이다.
+
+### RAG (122편 · 216편 목록의 RAG)
+
+RAG가 단발 검색에서 RL로 학습된 장기 agentic search·deep research로 이동하며, 멀티모달 확장과 신뢰성·보안·효율이 함께 과제로 부상
+
+- 텍스트 RAG를 시각 문서·비디오·이미지 생성으로 넓히며, 시각 증거를 능동 탐색하는 multimodal search agent와 cross-modal 검색을 구축 (약 21편) — [OpenSearch-VL](https://neurips.cc/virtual/2026/poster/152165), [VSearcher](https://neurips.cc/virtual/2026/poster/149459), [DocAtlas](https://neurips.cc/virtual/2026/poster/148605), [BayesRAG](https://neurips.cc/virtual/2026/poster/154974)
+- flat top-k 검색이 multi-hop bridge 증거를 놓쳐, KG·graph 구성, query 분해·반복 검증, retriever-free 탐색으로 증거 구조를 재설계 (약 17편) — [Hi-Q](https://neurips.cc/virtual/2026/poster/155067), [Learning Minimal Sufficient Evidence Graphs for GraphRAG …](https://neurips.cc/virtual/2026/poster/154710), [Foresight-over-Graph](https://neurips.cc/virtual/2026/poster/150820), [Geometric Gain Graph](https://neurips.cc/virtual/2026/poster/151572)
+- outcome reward만으론 긴 검색 trajectory의 credit 배분이 어려워, process reward·self-distillation으로 search agent RL 개선 (약 15편) — [Beyond Outcome Rewards](https://neurips.cc/virtual/2026/poster/148305), [PiCA](https://neurips.cc/virtual/2026/poster/155622), [SD-Search](https://neurips.cc/virtual/2026/poster/155518), [Quest](https://neurips.cc/virtual/2026/poster/150926)
+- 검색 문맥과 parametric 지식 충돌로 생기는 unfaithful 생성·hallucination을 decoding·representation 개입과 탐지·attribution으로 대응 (약 14편) — [Conflict-Suppressed RAG](https://neurips.cc/virtual/2026/poster/148415), [ReCon](https://neurips.cc/virtual/2026/poster/149688), [Beyond Uniform Detection](https://neurips.cc/virtual/2026/poster/155755), [Reading Attribution from Attention](https://neurips.cc/virtual/2026/poster/156092)
+- 웹·코퍼스 의존이 공격면이 되어, search agent·GraphRAG 대상 poisoning·injection 공격과 방어, privacy 유출, GEO 조작을 분석 (약 13편) — [The Web Doesn't Sit Still](https://neurips.cc/virtual/2026/poster/149493), [When Poison Meets Structure](https://neurips.cc/virtual/2026/poster/152350), [Privacy-Preserving Retrieval-Augmented Generation with Pl…](https://neurips.cc/virtual/2026/poster/150803), [EcoGEO](https://neurips.cc/virtual/2026/poster/153813)
+- 단일 정답 점수로는 deep research agent의 실패 원인을 알 수 없어, 실제 질의·live 갱신·trajectory 단위 진단 벤치마크를 구축 (약 12편) — [GISA](https://neurips.cc/virtual/2026/poster/139591), [MiroEval](https://neurips.cc/virtual/2026/poster/139149), [SciResearchBench](https://neurips.cc/virtual/2026/poster/139663), [RealDev-QA](https://neurips.cc/virtual/2026/poster/139440)
+- 긴 검색 문맥의 prefill 비용과 latency를 줄이려 KV cache 재사용, latent space retrieval, 문맥 압축, speculative 실행을 도입 (약 11편) — [KVFocus](https://neurips.cc/virtual/2026/poster/149014), [MiniPIC](https://neurips.cc/virtual/2026/poster/151329), [LatentRAG](https://neurips.cc/virtual/2026/poster/153688), [OpticalRAG](https://neurips.cc/virtual/2026/poster/152209)
+- flat RAG가 장기 agent 기억의 중복·시간 정보를 못 다뤄, 계층 구조·evidence-gap 추적·시간 인지 검색 memory와 그 평가를 제안 (약 6편) — [Beyond RAG for Agent Memory](https://neurips.cc/virtual/2026/poster/150607), [Knowing What is Missing](https://neurips.cc/virtual/2026/poster/149691), [RL-Guided Temporal Localization for Dual-Channel Retrieva…](https://neurips.cc/virtual/2026/poster/152090), [RAG in a Trenchcoat](https://neurips.cc/virtual/2026/poster/151457)
+- 나머지 약 13편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.
+
+### LLM 에이전트 (621편 · 학회 전체, 분야 "LLM 에이전트·도구·검색")
+
+LLM agent 연구는 단발 tool call을 넘어 장기·실환경 workflow로 확장되며, 평가·RL 보상·memory·skill·안전을 trajectory 수준에서 다루는 쪽으로 이동
+
+- 단일 task 성공률 benchmark가 실제 업무를 반영하지 못해, 전문 직무·장기 SWE·enterprise workflow를 실환경에서 재는 benchmark로 이동 (약 115편) — [Agents' Last Exam](https://neurips.cc/virtual/2026/poster/139517), [BankerToolBench](https://neurips.cc/virtual/2026/poster/139094), [SWE-Marathon](https://neurips.cc/virtual/2026/poster/139342), [SlopCodeBench](https://neurips.cc/virtual/2026/poster/138903)
+- outcome reward만으로는 긴 multi-turn trajectory의 credit assignment가 어려워, step 단위 process reward·advantage 설계로 이동 (약 80편) — [Beyond Outcome Rewards](https://neurips.cc/virtual/2026/poster/148305), [PiCA](https://neurips.cc/virtual/2026/poster/155622), [Counterfactual Rollout Replay](https://neurips.cc/virtual/2026/poster/151386), [What Makes Two States the Same? Value-Aware State Matchin…](https://neurips.cc/virtual/2026/poster/152187)
+- agent 수를 늘려도 성능이 보장되지 않아, MAS가 언제 이득인지 분석하고 topology·communication(latent 포함)을 최적화하는 방향으로 이동 (약 70편) — [The Illusion of Multi-Agent Advantage](https://neurips.cc/virtual/2026/poster/139826), [When Do Multi-Agent Systems Help? An Information Bottlene…](https://neurips.cc/virtual/2026/poster/153823), [FlowMAS](https://neurips.cc/virtual/2026/poster/152834), [CacheMAS](https://neurips.cc/virtual/2026/poster/154215)
+- context window를 넘는 장기 상호작용에서 기억이 누락·오염되어, 무엇을 쓰고·갱신·검색할지 학습하는 agent memory와 진단 benchmark로 이동 (약 65편) — [MemSkill](https://neurips.cc/virtual/2026/poster/155719), [Memory-R2](https://neurips.cc/virtual/2026/poster/152449), [MEME](https://neurips.cc/virtual/2026/poster/138915), [Useful Memories Become Faulty When Continuously Updated b…](https://neurips.cc/virtual/2026/poster/148715)
+- similarity top-k 검색이 multi-hop·지식 충돌에 약해, graph 구조·agentic 반복 검색·충돌 억제로 증거 선택을 정교화하는 RAG로 이동 (약 65편) — [Learning Minimal Sufficient Evidence Graphs for GraphRAG …](https://neurips.cc/virtual/2026/poster/154710), [Mitigating Knowledge Conflicts in Retrieval-Augmented Gen…](https://neurips.cc/virtual/2026/poster/148202), [Beyond Semantic Similarity](https://neurips.cc/virtual/2026/poster/155649), [LatentRAG](https://neurips.cc/virtual/2026/poster/153688)
+- 수작업 prompt·harness·skill 설계가 병목이라, 실행 trace로부터 skill library와 harness를 스스로 생성·정제하는 self-evolving agent로 이동 (약 50편) — [SkillOS](https://neurips.cc/virtual/2026/poster/151446), [SkillForge](https://neurips.cc/virtual/2026/poster/151649), [AutoSaddler](https://neurips.cc/virtual/2026/poster/151256), [Hyperagents](https://neurips.cc/virtual/2026/poster/153670)
+- task 성공만 보면 prompt injection·부수효과·은밀한 악의 행동을 놓쳐, 아키텍처 격리·runtime 감시·안전 benchmark로 대응하는 방향 (약 50편) — [CaMeLs Can Use Computers Too](https://neurips.cc/virtual/2026/poster/155134), [LITMUS](https://neurips.cc/virtual/2026/poster/150415), [MOSAIC-Bench](https://neurips.cc/virtual/2026/poster/139179), [Task Success Is Not Enough](https://neurips.cc/virtual/2026/poster/138911)
+- 검증 가능한 학습 환경·task가 부족해, 임의 software·terminal·MCP·시뮬레이터로 verifiable 환경과 trajectory를 대규모 합성하는 방향 (약 40편) — [Gym-Anything](https://neurips.cc/virtual/2026/poster/150621), [SETA](https://neurips.cc/virtual/2026/poster/139707), [GenEnv](https://neurips.cc/virtual/2026/poster/152039), [Firefly](https://neurips.cc/virtual/2026/poster/155698)
+- 나머지 약 86편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.
+
+### LLM (754편 · 학회 전체, 분야 "LLM 추론·학습·RL 후처리")
+
+LLM 연구는 RLVR/GRPO 기반 reasoning post-training을 축으로, 학습 신호의 밀도·효율·안정성과 추론 compute 최적화를 개선하는 방향으로 수렴 중
+
+- 긴 CoT의 overthinking과 다중 샘플링 비용이 커, 길이 보상·early exit·적응적 샘플/검증 배분으로 test-time compute를 효율화 (약 85편) — [LEAD](https://neurips.cc/virtual/2026/poster/149222), [TERMINATOR](https://neurips.cc/virtual/2026/poster/148583), [Early Signals, Strong Decisions](https://neurips.cc/virtual/2026/poster/154126), [Prefill-Guided Trace Allocation for Sample-Efficient Test…](https://neurips.cc/virtual/2026/poster/154693)
+- GRPO의 균일한 token advantage와 entropy collapse가 학습을 막아, token/step 단위 credit assignment와 탐색 제어로 RLVR 목적함수를 재설계 (약 70편) — [Credit Assignment with Resets in Language Model Reasoning](https://neurips.cc/virtual/2026/poster/151001), [STARE](https://neurips.cc/virtual/2026/poster/152111), [Learning to Explore with Parameter-Space Noise](https://neurips.cc/virtual/2026/poster/154785), [Unveiling Implicit Advantage Symmetry](https://neurips.cc/virtual/2026/poster/153467)
+- fine-tuning이 기존 능력을 망각·간섭시켜, LoRA/PEFT 구조, model merging, continual 학습, knowledge editing으로 적응과 보존을 양립 (약 65편) — [AMARIS](https://neurips.cc/virtual/2026/poster/154547), [Estimating and Orthogonalizing Unknown Pre-training Gradi…](https://neurips.cc/virtual/2026/poster/152597), [Learning Rate Matters](https://neurips.cc/virtual/2026/poster/148585), [Norm Anchors Make Model Edits Last](https://neurips.cc/virtual/2026/poster/152750)
+- 고품질 데이터가 compute보다 빨리 고갈되어, data-constrained scaling law·data mixing/selection·합성 데이터로 사전학습을 재설계 (약 55편) — [Bridging Compute- and Data-Optimal Pretraining](https://neurips.cc/virtual/2026/poster/155350), [Data-Constrained Language Model Pretraining](https://neurips.cc/virtual/2026/poster/149999), [CausalMix](https://neurips.cc/virtual/2026/poster/154762), [A Bitter Lesson for Data Filtering](https://neurips.cc/virtual/2026/poster/155947)
+- 선호 라벨이 noisy·고비용이고 reward가 해킹되어, robust DPO/Nash 정렬·rubric 기반 reward·reward hacking 진단으로 정렬 신호를 개선 (약 55편) — [Correct, Route, Calibrate](https://neurips.cc/virtual/2026/poster/152258), [Robust Nash Alignment under Preference Uncertainty](https://neurips.cc/virtual/2026/poster/154554), [Not Every Rubric Teaches Equally](https://neurips.cc/virtual/2026/poster/155810), [Reward Hacking in Rubric-Based Reinforcement Learning](https://neurips.cc/virtual/2026/poster/154025)
+- RLVR의 희소 보상을 보완하려 on-policy (self-)distillation으로 이동했고, 그 불안정성과 teacher 신호 품질 저하를 고치는 연구가 집중 (약 50편) — [KL for a KL](https://neurips.cc/virtual/2026/poster/149290), [Your Teacher Can’t Help You Here](https://neurips.cc/virtual/2026/poster/154216), [The Many Faces of On-Policy Distillation](https://neurips.cc/virtual/2026/poster/153073), [Self-Distilled RLVR](https://neurips.cc/virtual/2026/poster/152431)
+- RL post-training이 새 추론 능력을 만드는지 기존 분포를 sharpen할 뿐인지 불명확해, 통제된 synthetic 환경과 mechanistic 분석으로 검증 (약 45편) — [How New Strategies Emerge in RL Post-Training](https://neurips.cc/virtual/2026/poster/151430), [The Reasoning Boundary Paradox](https://neurips.cc/virtual/2026/poster/150680), [Irreducible Supervision Enables Compositional Generalizat…](https://neurips.cc/virtual/2026/poster/149659), [How does RL Post-training Induce Skill Composition? A Cas…](https://neurips.cc/virtual/2026/poster/148203)
+- rollout 생성이 RLVR 비용을 지배해, prompt 선택·curriculum·rollout 예산 배분과 off-policy 보정·비동기 시스템으로 학습을 효율화 (약 40편) — [Train at the Moving Edge](https://neurips.cc/virtual/2026/poster/149668), [DUET](https://neurips.cc/virtual/2026/poster/153196), [VESPO](https://neurips.cc/virtual/2026/poster/155242), [DORA](https://neurips.cc/virtual/2026/poster/154440)
+- 나머지 약 289편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.
+
+### Medical QA (25편 · 216편 목록)
+
+시험형 정답 정확도를 넘어, 실제 임상 workflow·영상 근거·오도 맥락 하에서 근거에 기반한 신뢰 가능한 의료 추론을 평가하고 학습시키는 방향
+
+- 고립된 2D 이미지 VQA로는 임상 판독을 못 재므로, 다중 시퀀스·3D·종단 MRI/유방촬영/병리 benchmark로 영상 근거 사용의 실패를 드러냄 (약 4편) — [BrainTRACE](https://neurips.cc/virtual/2026/poster/139162), [CardioLens](https://neurips.cc/virtual/2026/poster/139679), [MammoGPS](https://neurips.cc/virtual/2026/poster/138998), [VIPER](https://neurips.cc/virtual/2026/poster/139742)
+- 정보가 미리 주어진 vignette 대신, 근거가 순차적으로 쌓이는 진단 trajectory·응급실·care pathway·다회차 EHR QA로 평가 이동 (약 4편) — [DDx-TRACE](https://neurips.cc/virtual/2026/poster/139550), [ER-Reason](https://neurips.cc/virtual/2026/poster/138971), [NPCBench](https://neurips.cc/virtual/2026/poster/139689), [EHRNote-ChatQA](https://neurips.cc/virtual/2026/poster/139551)
+- 높은 정답률이 안전을 뜻하지 않아, 오도 맥락·깨진 영상 근거에서의 silent failure와 시각 붕괴를 측정하고 abstention·검증으로 보완 (약 4편) — [MedMisBench](https://neurips.cc/virtual/2026/poster/139561), [MedVIGIL](https://neurips.cc/virtual/2026/poster/139346), [Selective Answering for Medical VQA via Parallel Independ…](https://neurips.cc/virtual/2026/poster/150272), [Diagnosing and Repairing Visual Collapse in Compact Medic…](https://neurips.cc/virtual/2026/poster/149438)
+- 전문가 라벨이 비싸 answer-level reward가 거칠어, case report self-play·self-evolving agent·논문 기반 추론 trace로 의료 추론 학습 (약 4편) — [CasePlay](https://neurips.cc/virtual/2026/poster/153097), [MedZERO](https://neurips.cc/virtual/2026/poster/155563), [Teach-to-Reason](https://neurips.cc/virtual/2026/poster/150121), [OpenMedReason](https://neurips.cc/virtual/2026/poster/139693)
+- top-k 검색·답만으로는 검증이 어려워, 최소 충분 근거 선택·체계적 문헌 결론 합성·인용 기반 QA로 evidence-grounded 답변을 추구 (약 4편) — [Less Evidence, Better Answering](https://neurips.cc/virtual/2026/poster/152857), [Can AI Agents Synthesize Scientific Conclusions?](https://neurips.cc/virtual/2026/poster/139077), [MutQA](https://neurips.cc/virtual/2026/poster/139212)
+- 기존 의료 benchmark가 포화·평면적이라, 대규모 open suite·graph 구조 지표·다직종 면허시험으로 평가 체계 자체를 재구성 (약 3편) — [Medmarks](https://neurips.cc/virtual/2026/poster/139434), [LG-Bench](https://neurips.cc/virtual/2026/poster/139764), [JMed48k](https://neurips.cc/virtual/2026/poster/139030)
+- 나머지 약 2편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.
+
+### Medical LLM / VLM (70편 · 216편 목록)
+
+의료 LLM/VLM 연구는 시험형 정확도를 넘어, 실제 임상 workflow 평가·시각 근거 grounding·rubric 기반 RL·안전한 기권으로 이동 중
+
+- 단일 이미지 VQA 정확도로는 실제 판독 능력을 못 재므로, 다중 시퀀스·종단·장시간 영상·병리 다중스케일 등 workflow형 VLM 벤치마크로 이동 (약 13편) — [CardioLens](https://neurips.cc/virtual/2026/poster/139679), [BrainTRACE](https://neurips.cc/virtual/2026/poster/139162), [MedHorizon](https://neurips.cc/virtual/2026/poster/139391), [PathView-Bench](https://neurips.cc/virtual/2026/poster/139172)
+- 전문가 라벨 부족과 answer-level reward의 한계를 넘기 위해, rubric·self-play·distillation 기반 RL post-training으로 의료 추론 모델을 학습 (약 12편) — [CasePlay](https://neurips.cc/virtual/2026/poster/153097), [CLR-voyance ](https://neurips.cc/virtual/2026/poster/150688), [Incentivizing Medical Vision Capabilities from Large-Scal…](https://neurips.cc/virtual/2026/poster/156128), [TraceDx](https://neurips.cc/virtual/2026/poster/149401)
+- 정적 시험형 QA가 실제 진료와 괴리되어, 정보 수집·믿음 갱신·종단 진료 경로를 실제 기록으로 평가하는 sequential 임상추론 벤치마크로 이동 (약 10편) — [ER-Reason](https://neurips.cc/virtual/2026/poster/138971), [DDx-TRACE](https://neurips.cc/virtual/2026/poster/139550), [RealICU](https://neurips.cc/virtual/2026/poster/138984), [NPCBench](https://neurips.cc/virtual/2026/poster/139689)
+- 의료 VLM이 이미지를 무시하고 언어 prior로 답하는 문제를 attention head·residual 분석으로 진단하고, grounding 손실·데이터 선택·기권으로 교정 (약 9편) — [CRAFT](https://neurips.cc/virtual/2026/poster/149960), [Diagnosing and Repairing Visual Collapse in Compact Medic…](https://neurips.cc/virtual/2026/poster/149438), [MedVIGOR](https://neurips.cc/virtual/2026/poster/150235), [MedVIGIL](https://neurips.cc/virtual/2026/poster/139346)
+- 보고서 생성의 hallucination·누락을 줄이려 diffusion planning·anomaly 증거 선택·preference optimization과 3D CT 표현 학습을 결합 (약 9편) — [Anchoring LLM-based Chest X-ray Report Generation via Dif…](https://neurips.cc/virtual/2026/poster/148935), [Glance Before You Tell](https://neurips.cc/virtual/2026/poster/149584), [Positive-Unlabeled Preference Optimization For Chest X-ra…](https://neurips.cc/virtual/2026/poster/154826), [SliceWorld](https://neurips.cc/virtual/2026/poster/150217)
+- 정신건강 상담·임상 윤리에서 표면적 safety 점수로는 부족해, 임상가 기반 위험 분류·guardrail·오도 맥락 저항·LLM-judge 검증 체계를 구축 (약 7편) — [MindGuard](https://neurips.cc/virtual/2026/poster/138950), [TherapyGym](https://neurips.cc/virtual/2026/poster/139071), [MedMisBench](https://neurips.cc/virtual/2026/poster/139561), [Alignment Is Not Enough for Safe Medical LLM Evaluation](https://neurips.cc/virtual/2026/poster/140065)
+- 고위험 임상 의사결정에서 근거 없는 확신을 막기 위해, calibration·Bayesian 사후추론·uncertainty routing으로 deferral 가능한 agent를 설계 (약 5편) — [Calibrating Agentic LLMs for Clinical Prediction](https://neurips.cc/virtual/2026/poster/149149), [MoBayes](https://neurips.cc/virtual/2026/poster/152953), [Teaching LLMs to Recommend and Defer in Underrepresented …](https://neurips.cc/virtual/2026/poster/154539), [Learning When to Collaborate](https://neurips.cc/virtual/2026/poster/148185)
+- EHR·유전체 예측의 표현 설계 병목을 풀기 위해, LLM이 만든 rubric·rationale·온톨로지 임베딩을 하위 예측 모델의 입력·학습신호로 활용 (약 4편) — [LLMs can construct powerful representations and streamlin…](https://neurips.cc/virtual/2026/poster/153045), [On-Policy Hindsight Distillation for Early Risk Prediction](https://neurips.cc/virtual/2026/poster/153484), [SMI](https://neurips.cc/virtual/2026/poster/154857)
+- 나머지 약 1편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.
+
+### Medical Agent (26편 · 216편 목록)
+
+의료 agent 연구는 정적 QA를 넘어 다회차 진단과 실제 시스템 workflow 실행으로 평가·학습을 옮기고, 배포 제약 속 신뢰성과 경험 기억을 함께 다룬다
+
+- 정적 QA가 진료의 단계적 정보수집을 못 담아, patient simulator 기반 다회차 진단 환경과 RL로 질문·검사 정책을 학습하는 쪽으로 이동 (약 7편) — [MedExAgent](https://neurips.cc/virtual/2026/poster/149616), [TraceDx](https://neurips.cc/virtual/2026/poster/149401), [CoE-Agent](https://neurips.cc/virtual/2026/poster/155085), [ClinMAS](https://neurips.cc/virtual/2026/poster/139102)
+- privacy·비용·small LLM·calibration 제약에서 multi-agent 협업이 불안정해, 선택적 routing·기여도 집계·handoff context 통제로 재설계 (약 5편) — [Learning When to Collaborate](https://neurips.cc/virtual/2026/poster/148185), [CoMMa](https://neurips.cc/virtual/2026/poster/153350), [Risk-Calibrated Context Selection for Healthcare Multi-Ag…](https://neurips.cc/virtual/2026/poster/154212), [Calibrating Agentic LLMs for Clinical Prediction](https://neurips.cc/virtual/2026/poster/149149)
+- EHR·임상시험 분석이 암묵적 임상 semantics에서 깨지므로, 명세·skill·검증 단계를 갖춘 연구 자동화 agent와 벤치마크로 이동 (약 5편) — [M4Bench](https://neurips.cc/virtual/2026/poster/139625), [ProCARE](https://neurips.cc/virtual/2026/poster/149562), [TrialAgentBench](https://neurips.cc/virtual/2026/poster/139604), [BioXArena](https://neurips.cc/virtual/2026/poster/138952)
+- 답 정확도만으로는 실무 수행력을 못 재므로, EHR API·MCP 도구·영상 viewer를 직접 조작하는 장기 workflow 실행·근거 검증 벤치마크로 이동 (약 4편) — [PhysicianBench](https://neurips.cc/virtual/2026/poster/139788), [χ-Bench](https://neurips.cc/virtual/2026/poster/139361), [REAL-MED](https://neurips.cc/virtual/2026/poster/139773), [MedFlowBench](https://neurips.cc/virtual/2026/poster/139506)
+- 진료 경험이 누적되는 장기 사용에서 raw trace 기억이 취약해, skill memory·종단 episode 평가·memory saturation 벤치마크로 경험 축적을 다룸 (약 4편) — [Experience Makes Skillful](https://neurips.cc/virtual/2026/poster/150444), [MedEvoEval](https://neurips.cc/virtual/2026/poster/139548), [MedMemoryBench](https://neurips.cc/virtual/2026/poster/139145), [RealICU](https://neurips.cc/virtual/2026/poster/138984)
+- 나머지 약 1편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.
+
 ## 논문 목록
 
 ### Medical QA (25편)
@@ -708,6 +791,7 @@ LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/pa
 | `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |
 | `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |
 | `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |
+| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |
 | `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |
 | `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |
 | `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |

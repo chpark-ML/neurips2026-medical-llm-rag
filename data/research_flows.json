@@ -1,0 +1,1322 @@
+{
+ "rag": {
+  "title": "RAG",
+  "scope": "216편 목록의 RAG",
+  "n": 122,
+  "summary_ko": "RAG가 단발 검색에서 RL로 학습된 장기 agentic search·deep research로 이동하며, 멀티모달 확장과 신뢰성·보안·효율이 함께 과제로 부상",
+  "flows": [
+   {
+    "line_ko": "텍스트 RAG를 시각 문서·비디오·이미지 생성으로 넓히며, 시각 증거를 능동 탐색하는 multimodal search agent와 cross-modal 검색을 구축",
+    "n_approx": 21,
+    "refs": [
+     {
+      "id": "152165",
+      "title": "OpenSearch-VL: An Open Recipe for Frontier Multimodal Search Agents",
+      "short": "OpenSearch-VL",
+      "url": "https://neurips.cc/virtual/2026/poster/152165"
+     },
+     {
+      "id": "149459",
+      "title": "VSearcher: Long-Horizon Multimodal Search Agent via Reinforcement Learning",
+      "short": "VSearcher",
+      "url": "https://neurips.cc/virtual/2026/poster/149459"
+     },
+     {
+      "id": "148605",
+      "title": "DocAtlas: Long-Document Understanding as Mutable-State Interaction",
+      "short": "DocAtlas",
+      "url": "https://neurips.cc/virtual/2026/poster/148605"
+     },
+     {
+      "id": "154974",
+      "title": "BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation",
+      "short": "BayesRAG",
+      "url": "https://neurips.cc/virtual/2026/poster/154974"
+     }
+    ]
+   },
+   {
+    "line_ko": "flat top-k 검색이 multi-hop bridge 증거를 놓쳐, KG·graph 구성, query 분해·반복 검증, retriever-free 탐색으로 증거 구조를 재설계",
+    "n_approx": 17,
+    "refs": [
+     {
+      "id": "155067",
+      "title": "Hi-Q: Hierarchical Evidence-guided Query Refinement for Multi-Hop Question Answering",
+      "short": "Hi-Q",
+      "url": "https://neurips.cc/virtual/2026/poster/155067"
+     },
+     {
+      "id": "154710",
+      "title": "Learning Minimal Sufficient Evidence Graphs for GraphRAG via Nash-Guided Optimization",
+      "short": "Learning Minimal Sufficient Evidence Graphs for GraphRAG …",
+      "url": "https://neurips.cc/virtual/2026/poster/154710"
+     },
+     {
+      "id": "150820",
+      "title": "Foresight-over-Graph: Reasoning Beyond Local Horizons for Knowledge Base Question Answering",
+      "short": "Foresight-over-Graph",
+      "url": "https://neurips.cc/virtual/2026/poster/150820"
+     },
+     {
+      "id": "151572",
+      "title": "Geometric Gain Graph: Zero-Token Graph Construction for Multi-Hop RAG",
+      "short": "Geometric Gain Graph",
+      "url": "https://neurips.cc/virtual/2026/poster/151572"
+     }
+    ]
+   },
+   {
+    "line_ko": "outcome reward만으론 긴 검색 trajectory의 credit 배분이 어려워, process reward·self-distillation으로 search agent RL 개선",
+    "n_approx": 15,
+    "refs": [
+     {
+      "id": "148305",
+      "title": "Beyond Outcome Rewards: Process-Aware Optimization for Search Agents",
+      "short": "Beyond Outcome Rewards",
+      "url": "https://neurips.cc/virtual/2026/poster/148305"
+     },
+     {
+      "id": "155622",
+      "title": "PiCA: Pivot-Based Credit Assignment For Search Agentic Reinforcement Learning",
+      "short": "PiCA",
+      "url": "https://neurips.cc/virtual/2026/poster/155622"
+     },
+     {
+      "id": "155518",
+      "title": "SD-Search: Hindsight Self-Distillation for Search-Augmented Reasoning",
+      "short": "SD-Search",
+      "url": "https://neurips.cc/virtual/2026/poster/155518"
+     },
+     {
+      "id": "150926",
+      "title": "Quest: Training Frontier Deep Research Agents with Fully Synthetic Tasks",
+      "short": "Quest",
+      "url": "https://neurips.cc/virtual/2026/poster/150926"
+     }
+    ]
+   },
+   {
+    "line_ko": "검색 문맥과 parametric 지식 충돌로 생기는 unfaithful 생성·hallucination을 decoding·representation 개입과 탐지·attribution으로 대응",
+    "n_approx": 14,
+    "refs": [
+     {
+      "id": "148415",
+      "title": "Conflict-Suppressed RAG: A Simple Decoding-Time Framework for Faithful Retrieval-Augmented Generation",
+      "short": "Conflict-Suppressed RAG",
+      "url": "https://neurips.cc/virtual/2026/poster/148415"
+     },
+     {
+      "id": "149688",
+      "title": "ReCon: Toward Balanced Learning under Inter-Context and Context-Memory Conflicts",
+      "short": "ReCon",
+      "url": "https://neurips.cc/virtual/2026/poster/149688"
+     },
+     {
+      "id": "155755",
+      "title": "Beyond Uniform Detection: Adaptive Hallucination Detection for RAG Across Response Regimes",
+      "short": "Beyond Uniform Detection",
+      "url": "https://neurips.cc/virtual/2026/poster/155755"
+     },
+     {
+      "id": "156092",
+      "title": "Reading Attribution from Attention: Evidence Heads as Latent Attribution Mechanisms in LLMs",
+      "short": "Reading Attribution from Attention",
+      "url": "https://neurips.cc/virtual/2026/poster/156092"
+     }
+    ]
+   },
+   {
+    "line_ko": "웹·코퍼스 의존이 공격면이 되어, search agent·GraphRAG 대상 poisoning·injection 공격과 방어, privacy 유출, GEO 조작을 분석",
+    "n_approx": 13,
+    "refs": [
+     {
+      "id": "149493",
+      "title": "The Web Doesn't Sit Still: Adversarial Self-Evolving Attacks on Search Agents",
+      "short": "The Web Doesn't Sit Still",
+      "url": "https://neurips.cc/virtual/2026/poster/149493"
+     },
+     {
+      "id": "152350",
+      "title": "When Poison Meets Structure: Topology-based Defense against Poisoning Attack on Graph-based Retrieval-Augmented Generation",
+      "short": "When Poison Meets Structure",
+      "url": "https://neurips.cc/virtual/2026/poster/152350"
+     },
+     {
+      "id": "150803",
+      "title": "Privacy-Preserving Retrieval-Augmented Generation with Plausible Deniability",
+      "short": "Privacy-Preserving Retrieval-Augmented Generation with Pl…",
+      "url": "https://neurips.cc/virtual/2026/poster/150803"
+     },
+     {
+      "id": "153813",
+      "title": "EcoGEO: Trajectory-Aware Evidence Ecosystems for Web-Enabled LLM Search Agents",
+      "short": "EcoGEO",
+      "url": "https://neurips.cc/virtual/2026/poster/153813"
+     }
+    ]
+   },
+   {
+    "line_ko": "단일 정답 점수로는 deep research agent의 실패 원인을 알 수 없어, 실제 질의·live 갱신·trajectory 단위 진단 벤치마크를 구축",
+    "n_approx": 12,
+    "refs": [
+     {
+      "id": "139591",
+      "title": "GISA: A Benchmark for General Information-Seeking Assistant",
+      "short": "GISA",
+      "url": "https://neurips.cc/virtual/2026/poster/139591"
+     },
+     {
+      "id": "139149",
+      "title": "MiroEval: Benchmarking Multimodal Deep Research Agents in Process and Outcome",
+      "short": "MiroEval",
+      "url": "https://neurips.cc/virtual/2026/poster/139149"
+     },
+     {
+      "id": "139663",
+      "title": "SciResearchBench: Benchmarking AI Agents on Complex Scientific Literature Discovery",
+      "short": "SciResearchBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139663"
+     },
+     {
+      "id": "139440",
+      "title": "RealDev-QA: Trajectory-Level Diagnosis for Developer RAG Under Real-World Noises",
+      "short": "RealDev-QA",
+      "url": "https://neurips.cc/virtual/2026/poster/139440"
+     }
+    ]
+   },
+   {
+    "line_ko": "긴 검색 문맥의 prefill 비용과 latency를 줄이려 KV cache 재사용, latent space retrieval, 문맥 압축, speculative 실행을 도입",
+    "n_approx": 11,
+    "refs": [
+     {
+      "id": "149014",
+      "title": "KVFocus: A Perturbation-Theoretic Token-Risk Score for Selective KV Cache Reuse in RAG",
+      "short": "KVFocus",
+      "url": "https://neurips.cc/virtual/2026/poster/149014"
+     },
+     {
+      "id": "151329",
+      "title": "MiniPIC: Flexible Position-Independent Caching in <100LOC",
+      "short": "MiniPIC",
+      "url": "https://neurips.cc/virtual/2026/poster/151329"
+     },
+     {
+      "id": "153688",
+      "title": "LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG",
+      "short": "LatentRAG",
+      "url": "https://neurips.cc/virtual/2026/poster/153688"
+     },
+     {
+      "id": "152209",
+      "title": "OpticalRAG: Pixel-Space Compression for Token-Efficient Retrieval-Augmented Generation",
+      "short": "OpticalRAG",
+      "url": "https://neurips.cc/virtual/2026/poster/152209"
+     }
+    ]
+   },
+   {
+    "line_ko": "flat RAG가 장기 agent 기억의 중복·시간 정보를 못 다뤄, 계층 구조·evidence-gap 추적·시간 인지 검색 memory와 그 평가를 제안",
+    "n_approx": 6,
+    "refs": [
+     {
+      "id": "150607",
+      "title": "Beyond RAG for Agent Memory: Retrieval by Decoupling and Aggregation",
+      "short": "Beyond RAG for Agent Memory",
+      "url": "https://neurips.cc/virtual/2026/poster/150607"
+     },
+     {
+      "id": "149691",
+      "title": "Knowing What is Missing: Efficient Conversational Memory via Explicit Evidence-Gap Tracking",
+      "short": "Knowing What is Missing",
+      "url": "https://neurips.cc/virtual/2026/poster/149691"
+     },
+     {
+      "id": "152090",
+      "title": "RL-Guided Temporal Localization for Dual-Channel Retrieval in Long-Horizon Agent Memory",
+      "short": "RL-Guided Temporal Localization for Dual-Channel Retrieva…",
+      "url": "https://neurips.cc/virtual/2026/poster/152090"
+     },
+     {
+      "id": "151457",
+      "title": "RAG in a Trenchcoat: When Minimal Memory Is Enough for Agentic Systems, and When It Isn’t",
+      "short": "RAG in a Trenchcoat",
+      "url": "https://neurips.cc/virtual/2026/poster/151457"
+     }
+    ]
+   }
+  ]
+ },
+ "agent": {
+  "title": "LLM 에이전트",
+  "scope": "학회 전체, 분야 \"LLM 에이전트·도구·검색\"",
+  "n": 621,
+  "summary_ko": "LLM agent 연구는 단발 tool call을 넘어 장기·실환경 workflow로 확장되며, 평가·RL 보상·memory·skill·안전을 trajectory 수준에서 다루는 쪽으로 이동",
+  "flows": [
+   {
+    "line_ko": "단일 task 성공률 benchmark가 실제 업무를 반영하지 못해, 전문 직무·장기 SWE·enterprise workflow를 실환경에서 재는 benchmark로 이동",
+    "n_approx": 115,
+    "refs": [
+     {
+      "id": "139517",
+      "title": "Agents' Last Exam",
+      "short": "Agents' Last Exam",
+      "url": "https://neurips.cc/virtual/2026/poster/139517"
+     },
+     {
+      "id": "139094",
+      "title": "BankerToolBench: Evaluating AI Agents in End-to-End Investment Banking Workflows",
+      "short": "BankerToolBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139094"
+     },
+     {
+      "id": "139342",
+      "title": "SWE-Marathon: Can AI Agents Autonomously Complete Ultra-Long-Horizon Software Work?",
+      "short": "SWE-Marathon",
+      "url": "https://neurips.cc/virtual/2026/poster/139342"
+     },
+     {
+      "id": "138903",
+      "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
+      "short": "SlopCodeBench",
+      "url": "https://neurips.cc/virtual/2026/poster/138903"
+     }
+    ]
+   },
+   {
+    "line_ko": "outcome reward만으로는 긴 multi-turn trajectory의 credit assignment가 어려워, step 단위 process reward·advantage 설계로 이동",
+    "n_approx": 80,
+    "refs": [
+     {
+      "id": "148305",
+      "title": "Beyond Outcome Rewards: Process-Aware Optimization for Search Agents",
+      "short": "Beyond Outcome Rewards",
+      "url": "https://neurips.cc/virtual/2026/poster/148305"
+     },
+     {
+      "id": "155622",
+      "title": "PiCA: Pivot-Based Credit Assignment For Search Agentic Reinforcement Learning",
+      "short": "PiCA",
+      "url": "https://neurips.cc/virtual/2026/poster/155622"
+     },
+     {
+      "id": "151386",
+      "title": "Counterfactual Rollout Replay: Forkable Environments as Free Process Rewards for Software Engineering Agents",
+      "short": "Counterfactual Rollout Replay",
+      "url": "https://neurips.cc/virtual/2026/poster/151386"
+     },
+     {
+      "id": "152187",
+      "title": "What Makes Two States the Same? Value-Aware State Matching for Multi-Turn Agent Credit Assignment",
+      "short": "What Makes Two States the Same? Value-Aware State Matchin…",
+      "url": "https://neurips.cc/virtual/2026/poster/152187"
+     }
+    ]
+   },
+   {
+    "line_ko": "agent 수를 늘려도 성능이 보장되지 않아, MAS가 언제 이득인지 분석하고 topology·communication(latent 포함)을 최적화하는 방향으로 이동",
+    "n_approx": 70,
+    "refs": [
+     {
+      "id": "139826",
+      "title": "The Illusion of Multi-Agent Advantage",
+      "short": "The Illusion of Multi-Agent Advantage",
+      "url": "https://neurips.cc/virtual/2026/poster/139826"
+     },
+     {
+      "id": "153823",
+      "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+      "short": "When Do Multi-Agent Systems Help? An Information Bottlene…",
+      "url": "https://neurips.cc/virtual/2026/poster/153823"
+     },
+     {
+      "id": "152834",
+      "title": "FlowMAS: Learning Multi-Agent Workflow Topology via Information-guided Generative Flow Network",
+      "short": "FlowMAS",
+      "url": "https://neurips.cc/virtual/2026/poster/152834"
+     },
+     {
+      "id": "154215",
+      "title": "CacheMAS: Cache Communication for Single-Pass, Jointly-Optimized Multi-Agent Systems",
+      "short": "CacheMAS",
+      "url": "https://neurips.cc/virtual/2026/poster/154215"
+     }
+    ]
+   },
+   {
+    "line_ko": "context window를 넘는 장기 상호작용에서 기억이 누락·오염되어, 무엇을 쓰고·갱신·검색할지 학습하는 agent memory와 진단 benchmark로 이동",
+    "n_approx": 65,
+    "refs": [
+     {
+      "id": "155719",
+      "title": "MemSkill: Learning and Evolving Memory Skills for Self-Evolving Agents",
+      "short": "MemSkill",
+      "url": "https://neurips.cc/virtual/2026/poster/155719"
+     },
+     {
+      "id": "152449",
+      "title": "Memory-R2: Fair Credit Assignment for Long-Horizon Memory-Augmented LLM Agents",
+      "short": "Memory-R2",
+      "url": "https://neurips.cc/virtual/2026/poster/152449"
+     },
+     {
+      "id": "138915",
+      "title": "MEME: Multi-Entity & Evolving Memory Evaluation",
+      "short": "MEME",
+      "url": "https://neurips.cc/virtual/2026/poster/138915"
+     },
+     {
+      "id": "148715",
+      "title": "Useful Memories Become Faulty When Continuously Updated by LLMs",
+      "short": "Useful Memories Become Faulty When Continuously Updated b…",
+      "url": "https://neurips.cc/virtual/2026/poster/148715"
+     }
+    ]
+   },
+   {
+    "line_ko": "similarity top-k 검색이 multi-hop·지식 충돌에 약해, graph 구조·agentic 반복 검색·충돌 억제로 증거 선택을 정교화하는 RAG로 이동",
+    "n_approx": 65,
+    "refs": [
+     {
+      "id": "154710",
+      "title": "Learning Minimal Sufficient Evidence Graphs for GraphRAG via Nash-Guided Optimization",
+      "short": "Learning Minimal Sufficient Evidence Graphs for GraphRAG …",
+      "url": "https://neurips.cc/virtual/2026/poster/154710"
+     },
+     {
+      "id": "148202",
+      "title": "Mitigating Knowledge Conflicts in Retrieval-Augmented Generation via Inference-Time Representation Editing",
+      "short": "Mitigating Knowledge Conflicts in Retrieval-Augmented Gen…",
+      "url": "https://neurips.cc/virtual/2026/poster/148202"
+     },
+     {
+      "id": "155649",
+      "title": "Beyond Semantic Similarity: Rethinking Retrieval for Agentic Search via Direct Corpus Interaction",
+      "short": "Beyond Semantic Similarity",
+      "url": "https://neurips.cc/virtual/2026/poster/155649"
+     },
+     {
+      "id": "153688",
+      "title": "LatentRAG: Latent Reasoning and Retrieval for Efficient Agentic RAG",
+      "short": "LatentRAG",
+      "url": "https://neurips.cc/virtual/2026/poster/153688"
+     }
+    ]
+   },
+   {
+    "line_ko": "수작업 prompt·harness·skill 설계가 병목이라, 실행 trace로부터 skill library와 harness를 스스로 생성·정제하는 self-evolving agent로 이동",
+    "n_approx": 50,
+    "refs": [
+     {
+      "id": "151446",
+      "title": "SkillOS: Learning Skill Curation for Self-Evolving Agents",
+      "short": "SkillOS",
+      "url": "https://neurips.cc/virtual/2026/poster/151446"
+     },
+     {
+      "id": "151649",
+      "title": "SkillForge: Co-Evolving Skills and Agents via Dynamic Skill Lifecycles",
+      "short": "SkillForge",
+      "url": "https://neurips.cc/virtual/2026/poster/151649"
+     },
+     {
+      "id": "151256",
+      "title": "AutoSaddler: Automatic Harness Optimization with Durable Updates from Agent Execution Traces",
+      "short": "AutoSaddler",
+      "url": "https://neurips.cc/virtual/2026/poster/151256"
+     },
+     {
+      "id": "153670",
+      "title": "Hyperagents",
+      "short": "Hyperagents",
+      "url": "https://neurips.cc/virtual/2026/poster/153670"
+     }
+    ]
+   },
+   {
+    "line_ko": "task 성공만 보면 prompt injection·부수효과·은밀한 악의 행동을 놓쳐, 아키텍처 격리·runtime 감시·안전 benchmark로 대응하는 방향",
+    "n_approx": 50,
+    "refs": [
+     {
+      "id": "155134",
+      "title": "CaMeLs Can Use Computers Too: System-level Security for Computer Use Agents",
+      "short": "CaMeLs Can Use Computers Too",
+      "url": "https://neurips.cc/virtual/2026/poster/155134"
+     },
+     {
+      "id": "150415",
+      "title": "LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Real OS Environments",
+      "short": "LITMUS",
+      "url": "https://neurips.cc/virtual/2026/poster/150415"
+     },
+     {
+      "id": "139179",
+      "title": "MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents",
+      "short": "MOSAIC-Bench",
+      "url": "https://neurips.cc/virtual/2026/poster/139179"
+     },
+     {
+      "id": "138911",
+      "title": "Task Success Is Not Enough: Side-effect-Aware Evaluation of Tool-Using Language Model Agents",
+      "short": "Task Success Is Not Enough",
+      "url": "https://neurips.cc/virtual/2026/poster/138911"
+     }
+    ]
+   },
+   {
+    "line_ko": "검증 가능한 학습 환경·task가 부족해, 임의 software·terminal·MCP·시뮬레이터로 verifiable 환경과 trajectory를 대규모 합성하는 방향",
+    "n_approx": 40,
+    "refs": [
+     {
+      "id": "150621",
+      "title": "Gym-Anything: Turn Any Software into an Agent Environment",
+      "short": "Gym-Anything",
+      "url": "https://neurips.cc/virtual/2026/poster/150621"
+     },
+     {
+      "id": "139707",
+      "title": "SETA: Scaling Environments for Terminal Agents",
+      "short": "SETA",
+      "url": "https://neurips.cc/virtual/2026/poster/139707"
+     },
+     {
+      "id": "152039",
+      "title": "GenEnv: Difficulty-Aligned Co-Evolution Between LLM Agents and Environment Simulators",
+      "short": "GenEnv",
+      "url": "https://neurips.cc/virtual/2026/poster/152039"
+     },
+     {
+      "id": "155698",
+      "title": "Firefly: Illuminating Verified Real-world Tool Call Data Generation",
+      "short": "Firefly",
+      "url": "https://neurips.cc/virtual/2026/poster/155698"
+     }
+    ]
+   }
+  ]
+ },
+ "llm": {
+  "title": "LLM",
+  "scope": "학회 전체, 분야 \"LLM 추론·학습·RL 후처리\"",
+  "n": 754,
+  "summary_ko": "LLM 연구는 RLVR/GRPO 기반 reasoning post-training을 축으로, 학습 신호의 밀도·효율·안정성과 추론 compute 최적화를 개선하는 방향으로 수렴 중",
+  "flows": [
+   {
+    "line_ko": "긴 CoT의 overthinking과 다중 샘플링 비용이 커, 길이 보상·early exit·적응적 샘플/검증 배분으로 test-time compute를 효율화",
+    "n_approx": 85,
+    "refs": [
+     {
+      "id": "149222",
+      "title": "LEAD: Length-Efficient Adaptive and Dynamic Reasoning for Large Language Models",
+      "short": "LEAD",
+      "url": "https://neurips.cc/virtual/2026/poster/149222"
+     },
+     {
+      "id": "148583",
+      "title": "TERMINATOR: Learning Optimal Exit Points for Early Stopping in Chain-of-Thought Reasoning",
+      "short": "TERMINATOR",
+      "url": "https://neurips.cc/virtual/2026/poster/148583"
+     },
+     {
+      "id": "154126",
+      "title": "Early Signals, Strong Decisions: Prefix-Guided Sampling for Parallel Test-Time Scaling",
+      "short": "Early Signals, Strong Decisions",
+      "url": "https://neurips.cc/virtual/2026/poster/154126"
+     },
+     {
+      "id": "154693",
+      "title": "Prefill-Guided Trace Allocation for Sample-Efficient Test-Time Scaling",
+      "short": "Prefill-Guided Trace Allocation for Sample-Efficient Test…",
+      "url": "https://neurips.cc/virtual/2026/poster/154693"
+     }
+    ]
+   },
+   {
+    "line_ko": "GRPO의 균일한 token advantage와 entropy collapse가 학습을 막아, token/step 단위 credit assignment와 탐색 제어로 RLVR 목적함수를 재설계",
+    "n_approx": 70,
+    "refs": [
+     {
+      "id": "151001",
+      "title": "Credit Assignment with Resets in Language Model Reasoning",
+      "short": "Credit Assignment with Resets in Language Model Reasoning",
+      "url": "https://neurips.cc/virtual/2026/poster/151001"
+     },
+     {
+      "id": "152111",
+      "title": "STARE: Surprisal-Guided Token-Level Advantage Reweighting for Policy Entropy Stability",
+      "short": "STARE",
+      "url": "https://neurips.cc/virtual/2026/poster/152111"
+     },
+     {
+      "id": "154785",
+      "title": "Learning to Explore with Parameter-Space Noise: A Deep Dive into Parameter-Space Noise for Reinforcement Learning with Verifiable Rewards",
+      "short": "Learning to Explore with Parameter-Space Noise",
+      "url": "https://neurips.cc/virtual/2026/poster/154785"
+     },
+     {
+      "id": "153467",
+      "title": "Unveiling Implicit Advantage Symmetry: Why GRPO Struggles with Exploration and Difficulty Adaptation",
+      "short": "Unveiling Implicit Advantage Symmetry",
+      "url": "https://neurips.cc/virtual/2026/poster/153467"
+     }
+    ]
+   },
+   {
+    "line_ko": "fine-tuning이 기존 능력을 망각·간섭시켜, LoRA/PEFT 구조, model merging, continual 학습, knowledge editing으로 적응과 보존을 양립",
+    "n_approx": 65,
+    "refs": [
+     {
+      "id": "154547",
+      "title": "AMARIS: Merging Generalist and Specialist LLMs via Adaptive Subspace Inheritance",
+      "short": "AMARIS",
+      "url": "https://neurips.cc/virtual/2026/poster/154547"
+     },
+     {
+      "id": "152597",
+      "title": "Estimating and Orthogonalizing Unknown Pre-training Gradients for Continual Fine-tuning of Large Language Models",
+      "short": "Estimating and Orthogonalizing Unknown Pre-training Gradi…",
+      "url": "https://neurips.cc/virtual/2026/poster/152597"
+     },
+     {
+      "id": "148585",
+      "title": "Learning Rate Matters: Vanilla LoRA May Suffice for LLM Fine-tuning",
+      "short": "Learning Rate Matters",
+      "url": "https://neurips.cc/virtual/2026/poster/148585"
+     },
+     {
+      "id": "152750",
+      "title": "Norm Anchors Make Model Edits Last",
+      "short": "Norm Anchors Make Model Edits Last",
+      "url": "https://neurips.cc/virtual/2026/poster/152750"
+     }
+    ]
+   },
+   {
+    "line_ko": "고품질 데이터가 compute보다 빨리 고갈되어, data-constrained scaling law·data mixing/selection·합성 데이터로 사전학습을 재설계",
+    "n_approx": 55,
+    "refs": [
+     {
+      "id": "155350",
+      "title": "Bridging Compute- and Data-Optimal Pretraining",
+      "short": "Bridging Compute- and Data-Optimal Pretraining",
+      "url": "https://neurips.cc/virtual/2026/poster/155350"
+     },
+     {
+      "id": "149999",
+      "title": "Data-Constrained Language Model Pretraining: Improved Regularization and Scaling Laws",
+      "short": "Data-Constrained Language Model Pretraining",
+      "url": "https://neurips.cc/virtual/2026/poster/149999"
+     },
+     {
+      "id": "154762",
+      "title": "CausalMix: Data Mixture as Causal Inference for Language Model Training",
+      "short": "CausalMix",
+      "url": "https://neurips.cc/virtual/2026/poster/154762"
+     },
+     {
+      "id": "155947",
+      "title": "A Bitter Lesson for Data Filtering",
+      "short": "A Bitter Lesson for Data Filtering",
+      "url": "https://neurips.cc/virtual/2026/poster/155947"
+     }
+    ]
+   },
+   {
+    "line_ko": "선호 라벨이 noisy·고비용이고 reward가 해킹되어, robust DPO/Nash 정렬·rubric 기반 reward·reward hacking 진단으로 정렬 신호를 개선",
+    "n_approx": 55,
+    "refs": [
+     {
+      "id": "152258",
+      "title": "Correct, Route, Calibrate: Efficient Preference Optimization from Noisy, Heterogeneous Human Feedback",
+      "short": "Correct, Route, Calibrate",
+      "url": "https://neurips.cc/virtual/2026/poster/152258"
+     },
+     {
+      "id": "154554",
+      "title": "Robust Nash Alignment under Preference Uncertainty",
+      "short": "Robust Nash Alignment under Preference Uncertainty",
+      "url": "https://neurips.cc/virtual/2026/poster/154554"
+     },
+     {
+      "id": "155810",
+      "title": "Not Every Rubric Teaches Equally: Policy-Aware Rubric Rewards for RLVR",
+      "short": "Not Every Rubric Teaches Equally",
+      "url": "https://neurips.cc/virtual/2026/poster/155810"
+     },
+     {
+      "id": "154025",
+      "title": "Reward Hacking in Rubric-Based Reinforcement Learning",
+      "short": "Reward Hacking in Rubric-Based Reinforcement Learning",
+      "url": "https://neurips.cc/virtual/2026/poster/154025"
+     }
+    ]
+   },
+   {
+    "line_ko": "RLVR의 희소 보상을 보완하려 on-policy (self-)distillation으로 이동했고, 그 불안정성과 teacher 신호 품질 저하를 고치는 연구가 집중",
+    "n_approx": 50,
+    "refs": [
+     {
+      "id": "149290",
+      "title": "KL for a KL: On-Policy Distillation with Control Variate Baseline",
+      "short": "KL for a KL",
+      "url": "https://neurips.cc/virtual/2026/poster/149290"
+     },
+     {
+      "id": "154216",
+      "title": "Your Teacher Can’t Help You Here: Combating Supervision Fidelity Decay in On-Policy Distillation",
+      "short": "Your Teacher Can’t Help You Here",
+      "url": "https://neurips.cc/virtual/2026/poster/154216"
+     },
+     {
+      "id": "153073",
+      "title": "The Many Faces of On-Policy Distillation: Pitfalls, Mechanisms, and Fixes",
+      "short": "The Many Faces of On-Policy Distillation",
+      "url": "https://neurips.cc/virtual/2026/poster/153073"
+     },
+     {
+      "id": "152431",
+      "title": "Self-Distilled RLVR",
+      "short": "Self-Distilled RLVR",
+      "url": "https://neurips.cc/virtual/2026/poster/152431"
+     }
+    ]
+   },
+   {
+    "line_ko": "RL post-training이 새 추론 능력을 만드는지 기존 분포를 sharpen할 뿐인지 불명확해, 통제된 synthetic 환경과 mechanistic 분석으로 검증",
+    "n_approx": 45,
+    "refs": [
+     {
+      "id": "151430",
+      "title": "How New Strategies Emerge in RL Post-Training: A Controlled Study",
+      "short": "How New Strategies Emerge in RL Post-Training",
+      "url": "https://neurips.cc/virtual/2026/poster/151430"
+     },
+     {
+      "id": "150680",
+      "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
+      "short": "The Reasoning Boundary Paradox",
+      "url": "https://neurips.cc/virtual/2026/poster/150680"
+     },
+     {
+      "id": "149659",
+      "title": "Irreducible Supervision Enables Compositional Generalization in Post-Training",
+      "short": "Irreducible Supervision Enables Compositional Generalizat…",
+      "url": "https://neurips.cc/virtual/2026/poster/149659"
+     },
+     {
+      "id": "148203",
+      "title": "How does RL Post-training Induce Skill Composition? A Case Study on Countdown",
+      "short": "How does RL Post-training Induce Skill Composition? A Cas…",
+      "url": "https://neurips.cc/virtual/2026/poster/148203"
+     }
+    ]
+   },
+   {
+    "line_ko": "rollout 생성이 RLVR 비용을 지배해, prompt 선택·curriculum·rollout 예산 배분과 off-policy 보정·비동기 시스템으로 학습을 효율화",
+    "n_approx": 40,
+    "refs": [
+     {
+      "id": "149668",
+      "title": "Train at the Moving Edge: Rollout-Efficient RL for Large Reasoning Models",
+      "short": "Train at the Moving Edge",
+      "url": "https://neurips.cc/virtual/2026/poster/149668"
+     },
+     {
+      "id": "153196",
+      "title": "DUET: Optimize Token-Budget Allocation for Reinforcement Learning with Verifiable Rewards",
+      "short": "DUET",
+      "url": "https://neurips.cc/virtual/2026/poster/153196"
+     },
+     {
+      "id": "155242",
+      "title": "VESPO: Variational Sequence-level Soft Policy Optimization for Off-Policy LLM Training",
+      "short": "VESPO",
+      "url": "https://neurips.cc/virtual/2026/poster/155242"
+     },
+     {
+      "id": "154440",
+      "title": "DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training",
+      "short": "DORA",
+      "url": "https://neurips.cc/virtual/2026/poster/154440"
+     }
+    ]
+   }
+  ]
+ },
+ "medical_qa": {
+  "title": "Medical QA",
+  "scope": "216편 목록",
+  "n": 25,
+  "summary_ko": "시험형 정답 정확도를 넘어, 실제 임상 workflow·영상 근거·오도 맥락 하에서 근거에 기반한 신뢰 가능한 의료 추론을 평가하고 학습시키는 방향",
+  "flows": [
+   {
+    "line_ko": "고립된 2D 이미지 VQA로는 임상 판독을 못 재므로, 다중 시퀀스·3D·종단 MRI/유방촬영/병리 benchmark로 영상 근거 사용의 실패를 드러냄",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "139162",
+      "title": "BrainTRACE: Tracing Longitudinal, Multimodal, and Volumetric Evidence in Brain MRI Clinical Reasoning",
+      "short": "BrainTRACE",
+      "url": "https://neurips.cc/virtual/2026/poster/139162"
+     },
+     {
+      "id": "139679",
+      "title": "CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi-Sequence Cardiac MRI Evaluations",
+      "short": "CardioLens",
+      "url": "https://neurips.cc/virtual/2026/poster/139679"
+     },
+     {
+      "id": "138998",
+      "title": "MammoGPS: A Benchmark for Visual Grounding, Perception, and Spatial Reasoning in Mammography",
+      "short": "MammoGPS",
+      "url": "https://neurips.cc/virtual/2026/poster/138998"
+     },
+     {
+      "id": "139742",
+      "title": "VIPER: An Expert-Curated Benchmark for Vision-Language Models in Veterinary Pathology",
+      "short": "VIPER",
+      "url": "https://neurips.cc/virtual/2026/poster/139742"
+     }
+    ]
+   },
+   {
+    "line_ko": "정보가 미리 주어진 vignette 대신, 근거가 순차적으로 쌓이는 진단 trajectory·응급실·care pathway·다회차 EHR QA로 평가 이동",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "139550",
+      "title": "DDx-TRACE: A Benchmark for Medical Diagnostic Trajectories in VLMs",
+      "short": "DDx-TRACE",
+      "url": "https://neurips.cc/virtual/2026/poster/139550"
+     },
+     {
+      "id": "138971",
+      "title": "ER-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room",
+      "short": "ER-Reason",
+      "url": "https://neurips.cc/virtual/2026/poster/138971"
+     },
+     {
+      "id": "139689",
+      "title": "NPCBench: A Clinical Apprenticeship Benchmark for Guideline-Constrained Care-Pathway Reasoning in Nasopharyngeal Carcinoma",
+      "short": "NPCBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139689"
+     },
+     {
+      "id": "139551",
+      "title": "EHRNote-ChatQA: A Benchmark for Evidence-Grounded Multi-Turn Clinical Question Answering over Longitudinal Discharge Summaries",
+      "short": "EHRNote-ChatQA",
+      "url": "https://neurips.cc/virtual/2026/poster/139551"
+     }
+    ]
+   },
+   {
+    "line_ko": "높은 정답률이 안전을 뜻하지 않아, 오도 맥락·깨진 영상 근거에서의 silent failure와 시각 붕괴를 측정하고 abstention·검증으로 보완",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "139561",
+      "title": "MedMisBench: Measuring Epistemic Resilience of LLMs Under Misleading Medical Context",
+      "short": "MedMisBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139561"
+     },
+     {
+      "id": "139346",
+      "title": "MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence",
+      "short": "MedVIGIL",
+      "url": "https://neurips.cc/virtual/2026/poster/139346"
+     },
+     {
+      "id": "150272",
+      "title": "Selective Answering for Medical VQA via Parallel Independent Claim Verification",
+      "short": "Selective Answering for Medical VQA via Parallel Independ…",
+      "url": "https://neurips.cc/virtual/2026/poster/150272"
+     },
+     {
+      "id": "149438",
+      "title": "Diagnosing and Repairing Visual Collapse in Compact Medical Multimodal LLMs",
+      "short": "Diagnosing and Repairing Visual Collapse in Compact Medic…",
+      "url": "https://neurips.cc/virtual/2026/poster/149438"
+     }
+    ]
+   },
+   {
+    "line_ko": "전문가 라벨이 비싸 answer-level reward가 거칠어, case report self-play·self-evolving agent·논문 기반 추론 trace로 의료 추론 학습",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "153097",
+      "title": "CasePlay: Self-Play Reinforcement Learning from Case Reports for Medical Reasoning",
+      "short": "CasePlay",
+      "url": "https://neurips.cc/virtual/2026/poster/153097"
+     },
+     {
+      "id": "155563",
+      "title": "MedZERO: Self-Evolving Agents for Open-Ended Medical Reasoning Through Controlled Knowledge Accumulation",
+      "short": "MedZERO",
+      "url": "https://neurips.cc/virtual/2026/poster/155563"
+     },
+     {
+      "id": "150121",
+      "title": "Teach-to-Reason: Competition-Guided Reasoning with a Self-Improving Teacher",
+      "short": "Teach-to-Reason",
+      "url": "https://neurips.cc/virtual/2026/poster/150121"
+     },
+     {
+      "id": "139693",
+      "title": "OpenMedReason: Scientific Reasoning Supervision for Medical Vision–Language Models",
+      "short": "OpenMedReason",
+      "url": "https://neurips.cc/virtual/2026/poster/139693"
+     }
+    ]
+   },
+   {
+    "line_ko": "top-k 검색·답만으로는 검증이 어려워, 최소 충분 근거 선택·체계적 문헌 결론 합성·인용 기반 QA로 evidence-grounded 답변을 추구",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "152857",
+      "title": "Less Evidence, Better Answering: Gain-Aware Minimal Evidence Subset Selection for Medical QA",
+      "short": "Less Evidence, Better Answering",
+      "url": "https://neurips.cc/virtual/2026/poster/152857"
+     },
+     {
+      "id": "139077",
+      "title": "Can AI Agents Synthesize Scientific Conclusions?",
+      "short": "Can AI Agents Synthesize Scientific Conclusions?",
+      "url": "https://neurips.cc/virtual/2026/poster/139077"
+     },
+     {
+      "id": "139212",
+      "title": "MutQA: A Cross-Validated Q&A Dataset for Genetic Mutations",
+      "short": "MutQA",
+      "url": "https://neurips.cc/virtual/2026/poster/139212"
+     }
+    ]
+   },
+   {
+    "line_ko": "기존 의료 benchmark가 포화·평면적이라, 대규모 open suite·graph 구조 지표·다직종 면허시험으로 평가 체계 자체를 재구성",
+    "n_approx": 3,
+    "refs": [
+     {
+      "id": "139434",
+      "title": "Medmarks: A Comprehensive Open-Source LLM Benchmark Suite for Medical Tasks",
+      "short": "Medmarks",
+      "url": "https://neurips.cc/virtual/2026/poster/139434"
+     },
+     {
+      "id": "139764",
+      "title": "LG-Bench: A Graph-Structured Evaluation Benchmark for Life Science",
+      "short": "LG-Bench",
+      "url": "https://neurips.cc/virtual/2026/poster/139764"
+     },
+     {
+      "id": "139030",
+      "title": "JMed48k: A Multi-Profession Japanese Medical Licensing Benchmark for Vision-Language Model Evaluation",
+      "short": "JMed48k",
+      "url": "https://neurips.cc/virtual/2026/poster/139030"
+     }
+    ]
+   }
+  ]
+ },
+ "medical_llm": {
+  "title": "Medical LLM / VLM",
+  "scope": "216편 목록",
+  "n": 70,
+  "summary_ko": "의료 LLM/VLM 연구는 시험형 정확도를 넘어, 실제 임상 workflow 평가·시각 근거 grounding·rubric 기반 RL·안전한 기권으로 이동 중",
+  "flows": [
+   {
+    "line_ko": "단일 이미지 VQA 정확도로는 실제 판독 능력을 못 재므로, 다중 시퀀스·종단·장시간 영상·병리 다중스케일 등 workflow형 VLM 벤치마크로 이동",
+    "n_approx": 13,
+    "refs": [
+     {
+      "id": "139679",
+      "title": "CardioLens: Revealing the Clinical Reality Gap of MLLMs via Multi-Sequence Cardiac MRI Evaluations",
+      "short": "CardioLens",
+      "url": "https://neurips.cc/virtual/2026/poster/139679"
+     },
+     {
+      "id": "139162",
+      "title": "BrainTRACE: Tracing Longitudinal, Multimodal, and Volumetric Evidence in Brain MRI Clinical Reasoning",
+      "short": "BrainTRACE",
+      "url": "https://neurips.cc/virtual/2026/poster/139162"
+     },
+     {
+      "id": "139391",
+      "title": "MedHorizon: Towards Long-context Medical Video Understanding in the Wild",
+      "short": "MedHorizon",
+      "url": "https://neurips.cc/virtual/2026/poster/139391"
+     },
+     {
+      "id": "139172",
+      "title": "PathView-Bench: Can Multimodal Large Language Models Achieve Fine-grained Multiscale Understanding of Pathology Images?",
+      "short": "PathView-Bench",
+      "url": "https://neurips.cc/virtual/2026/poster/139172"
+     }
+    ]
+   },
+   {
+    "line_ko": "전문가 라벨 부족과 answer-level reward의 한계를 넘기 위해, rubric·self-play·distillation 기반 RL post-training으로 의료 추론 모델을 학습",
+    "n_approx": 12,
+    "refs": [
+     {
+      "id": "153097",
+      "title": "CasePlay: Self-Play Reinforcement Learning from Case Reports for Medical Reasoning",
+      "short": "CasePlay",
+      "url": "https://neurips.cc/virtual/2026/poster/153097"
+     },
+     {
+      "id": "150688",
+      "title": "CLR-voyance : Reinforcing Open-Ended Reasoning for Inpatient Clinical Decision Support with Outcome-Aware Rubrics",
+      "short": "CLR-voyance ",
+      "url": "https://neurips.cc/virtual/2026/poster/150688"
+     },
+     {
+      "id": "156128",
+      "title": "Incentivizing Medical Vision Capabilities from Large-Scale Multimodal Pre-training",
+      "short": "Incentivizing Medical Vision Capabilities from Large-Scal…",
+      "url": "https://neurips.cc/virtual/2026/poster/156128"
+     },
+     {
+      "id": "149401",
+      "title": "TraceDx: Criticality-Weighted Atomic Facts as a Training Signal for Sequential Clinical Diagnosis",
+      "short": "TraceDx",
+      "url": "https://neurips.cc/virtual/2026/poster/149401"
+     }
+    ]
+   },
+   {
+    "line_ko": "정적 시험형 QA가 실제 진료와 괴리되어, 정보 수집·믿음 갱신·종단 진료 경로를 실제 기록으로 평가하는 sequential 임상추론 벤치마크로 이동",
+    "n_approx": 10,
+    "refs": [
+     {
+      "id": "138971",
+      "title": "ER-Reason: A Benchmark Dataset for LLM Clinical Reasoning in the Emergency Room",
+      "short": "ER-Reason",
+      "url": "https://neurips.cc/virtual/2026/poster/138971"
+     },
+     {
+      "id": "139550",
+      "title": "DDx-TRACE: A Benchmark for Medical Diagnostic Trajectories in VLMs",
+      "short": "DDx-TRACE",
+      "url": "https://neurips.cc/virtual/2026/poster/139550"
+     },
+     {
+      "id": "138984",
+      "title": "RealICU: Do LLM Agents Understand Long-Context ICU Data? A Benchmark Beyond Behavior Imitation",
+      "short": "RealICU",
+      "url": "https://neurips.cc/virtual/2026/poster/138984"
+     },
+     {
+      "id": "139689",
+      "title": "NPCBench: A Clinical Apprenticeship Benchmark for Guideline-Constrained Care-Pathway Reasoning in Nasopharyngeal Carcinoma",
+      "short": "NPCBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139689"
+     }
+    ]
+   },
+   {
+    "line_ko": "의료 VLM이 이미지를 무시하고 언어 prior로 답하는 문제를 attention head·residual 분석으로 진단하고, grounding 손실·데이터 선택·기권으로 교정",
+    "n_approx": 9,
+    "refs": [
+     {
+      "id": "149960",
+      "title": "CRAFT: Causal Responsibility and Failure Tracing in Medical Vision Language Models",
+      "short": "CRAFT",
+      "url": "https://neurips.cc/virtual/2026/poster/149960"
+     },
+     {
+      "id": "149438",
+      "title": "Diagnosing and Repairing Visual Collapse in Compact Medical Multimodal LLMs",
+      "short": "Diagnosing and Repairing Visual Collapse in Compact Medic…",
+      "url": "https://neurips.cc/virtual/2026/poster/149438"
+     },
+     {
+      "id": "150235",
+      "title": "MedVIGOR: Visual Evidence Internalization for Observation-Driven Reasoning in Medical VLMs",
+      "short": "MedVIGOR",
+      "url": "https://neurips.cc/virtual/2026/poster/150235"
+     },
+     {
+      "id": "139346",
+      "title": "MedVIGIL: Evaluating Trustworthy Medical VLMs Under Broken Visual Evidence",
+      "short": "MedVIGIL",
+      "url": "https://neurips.cc/virtual/2026/poster/139346"
+     }
+    ]
+   },
+   {
+    "line_ko": "보고서 생성의 hallucination·누락을 줄이려 diffusion planning·anomaly 증거 선택·preference optimization과 3D CT 표현 학습을 결합",
+    "n_approx": 9,
+    "refs": [
+     {
+      "id": "148935",
+      "title": "Anchoring LLM-based Chest X-ray Report Generation via Diffusion Language Planning",
+      "short": "Anchoring LLM-based Chest X-ray Report Generation via Dif…",
+      "url": "https://neurips.cc/virtual/2026/poster/148935"
+     },
+     {
+      "id": "149584",
+      "title": "Glance Before You Tell: Anomaly-Guided 3D Radiology Report Generation with Heat-Conduction Slice Encoders",
+      "short": "Glance Before You Tell",
+      "url": "https://neurips.cc/virtual/2026/poster/149584"
+     },
+     {
+      "id": "154826",
+      "title": "Positive-Unlabeled Preference Optimization For Chest X-ray Report Generation",
+      "short": "Positive-Unlabeled Preference Optimization For Chest X-ra…",
+      "url": "https://neurips.cc/virtual/2026/poster/154826"
+     },
+     {
+      "id": "150217",
+      "title": "SliceWorld: A Predictive and Controllable World-State Model for CT Report Generation",
+      "short": "SliceWorld",
+      "url": "https://neurips.cc/virtual/2026/poster/150217"
+     }
+    ]
+   },
+   {
+    "line_ko": "정신건강 상담·임상 윤리에서 표면적 safety 점수로는 부족해, 임상가 기반 위험 분류·guardrail·오도 맥락 저항·LLM-judge 검증 체계를 구축",
+    "n_approx": 7,
+    "refs": [
+     {
+      "id": "138950",
+      "title": "MindGuard: Guardrail Classifiers for Multi-Turn Mental Health Support",
+      "short": "MindGuard",
+      "url": "https://neurips.cc/virtual/2026/poster/138950"
+     },
+     {
+      "id": "139071",
+      "title": "TherapyGym: Evaluating and Aligning Clinical Fidelity and Safety in Therapy Chatbots",
+      "short": "TherapyGym",
+      "url": "https://neurips.cc/virtual/2026/poster/139071"
+     },
+     {
+      "id": "139561",
+      "title": "MedMisBench: Measuring Epistemic Resilience of LLMs Under Misleading Medical Context",
+      "short": "MedMisBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139561"
+     },
+     {
+      "id": "140065",
+      "title": "Alignment Is Not Enough for Safe Medical LLM Evaluation",
+      "short": "Alignment Is Not Enough for Safe Medical LLM Evaluation",
+      "url": "https://neurips.cc/virtual/2026/poster/140065"
+     }
+    ]
+   },
+   {
+    "line_ko": "고위험 임상 의사결정에서 근거 없는 확신을 막기 위해, calibration·Bayesian 사후추론·uncertainty routing으로 deferral 가능한 agent를 설계",
+    "n_approx": 5,
+    "refs": [
+     {
+      "id": "149149",
+      "title": "Calibrating Agentic LLMs for Clinical Prediction",
+      "short": "Calibrating Agentic LLMs for Clinical Prediction",
+      "url": "https://neurips.cc/virtual/2026/poster/149149"
+     },
+     {
+      "id": "152953",
+      "title": "MoBayes: A Modular Bayesian Framework for Separating Reasoning from Language in Conversational Clinical Decision Support",
+      "short": "MoBayes",
+      "url": "https://neurips.cc/virtual/2026/poster/152953"
+     },
+     {
+      "id": "154539",
+      "title": "Teaching LLMs to Recommend and Defer in Underrepresented Epilepsy Care",
+      "short": "Teaching LLMs to Recommend and Defer in Underrepresented …",
+      "url": "https://neurips.cc/virtual/2026/poster/154539"
+     },
+     {
+      "id": "148185",
+      "title": "Learning When to Collaborate: Selective Multi-Agent Medical Reasoning via Uncertainty-Aware Routing",
+      "short": "Learning When to Collaborate",
+      "url": "https://neurips.cc/virtual/2026/poster/148185"
+     }
+    ]
+   },
+   {
+    "line_ko": "EHR·유전체 예측의 표현 설계 병목을 풀기 위해, LLM이 만든 rubric·rationale·온톨로지 임베딩을 하위 예측 모델의 입력·학습신호로 활용",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "153045",
+      "title": "LLMs can construct powerful representations and streamline sample-efficient supervised learning",
+      "short": "LLMs can construct powerful representations and streamlin…",
+      "url": "https://neurips.cc/virtual/2026/poster/153045"
+     },
+     {
+      "id": "153484",
+      "title": "On-Policy Hindsight Distillation for Early Risk Prediction",
+      "short": "On-Policy Hindsight Distillation for Early Risk Prediction",
+      "url": "https://neurips.cc/virtual/2026/poster/153484"
+     },
+     {
+      "id": "154857",
+      "title": "SMI: Semantic Medical ID for Hierarchy-Aware Concept Representation",
+      "short": "SMI",
+      "url": "https://neurips.cc/virtual/2026/poster/154857"
+     }
+    ]
+   }
+  ]
+ },
+ "medical_agent": {
+  "title": "Medical Agent",
+  "scope": "216편 목록",
+  "n": 26,
+  "summary_ko": "의료 agent 연구는 정적 QA를 넘어 다회차 진단과 실제 시스템 workflow 실행으로 평가·학습을 옮기고, 배포 제약 속 신뢰성과 경험 기억을 함께 다룬다",
+  "flows": [
+   {
+    "line_ko": "정적 QA가 진료의 단계적 정보수집을 못 담아, patient simulator 기반 다회차 진단 환경과 RL로 질문·검사 정책을 학습하는 쪽으로 이동",
+    "n_approx": 7,
+    "refs": [
+     {
+      "id": "149616",
+      "title": "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments",
+      "short": "MedExAgent",
+      "url": "https://neurips.cc/virtual/2026/poster/149616"
+     },
+     {
+      "id": "149401",
+      "title": "TraceDx: Criticality-Weighted Atomic Facts as a Training Signal for Sequential Clinical Diagnosis",
+      "short": "TraceDx",
+      "url": "https://neurips.cc/virtual/2026/poster/149401"
+     },
+     {
+      "id": "155085",
+      "title": "CoE-Agent: Co-Evolving Patient-Doctor Agents via Interactive Policy Graph Optimization for Clinical Decision Making",
+      "short": "CoE-Agent",
+      "url": "https://neurips.cc/virtual/2026/poster/155085"
+     },
+     {
+      "id": "139102",
+      "title": "ClinMAS: A Knowledge-Grounded Multi-Agent Simulation Framework for Evaluating Clinical Reasoning in LLMs",
+      "short": "ClinMAS",
+      "url": "https://neurips.cc/virtual/2026/poster/139102"
+     }
+    ]
+   },
+   {
+    "line_ko": "privacy·비용·small LLM·calibration 제약에서 multi-agent 협업이 불안정해, 선택적 routing·기여도 집계·handoff context 통제로 재설계",
+    "n_approx": 5,
+    "refs": [
+     {
+      "id": "148185",
+      "title": "Learning When to Collaborate: Selective Multi-Agent Medical Reasoning via Uncertainty-Aware Routing",
+      "short": "Learning When to Collaborate",
+      "url": "https://neurips.cc/virtual/2026/poster/148185"
+     },
+     {
+      "id": "153350",
+      "title": "CoMMa: Contribution-Aware Medical Multi-Agents for Decentralized Oncology Decision Support",
+      "short": "CoMMa",
+      "url": "https://neurips.cc/virtual/2026/poster/153350"
+     },
+     {
+      "id": "154212",
+      "title": "Risk-Calibrated Context Selection for Healthcare Multi-Agent Handoff",
+      "short": "Risk-Calibrated Context Selection for Healthcare Multi-Ag…",
+      "url": "https://neurips.cc/virtual/2026/poster/154212"
+     },
+     {
+      "id": "149149",
+      "title": "Calibrating Agentic LLMs for Clinical Prediction",
+      "short": "Calibrating Agentic LLMs for Clinical Prediction",
+      "url": "https://neurips.cc/virtual/2026/poster/149149"
+     }
+    ]
+   },
+   {
+    "line_ko": "EHR·임상시험 분석이 암묵적 임상 semantics에서 깨지므로, 명세·skill·검증 단계를 갖춘 연구 자동화 agent와 벤치마크로 이동",
+    "n_approx": 5,
+    "refs": [
+     {
+      "id": "139625",
+      "title": "M4Bench: Evaluating Procedural Specification for Clinical EHR Derivation Agents",
+      "short": "M4Bench",
+      "url": "https://neurips.cc/virtual/2026/poster/139625"
+     },
+     {
+      "id": "149562",
+      "title": "ProCARE: Real-World Study Automation via Profile-Grounded Evidence Contracts",
+      "short": "ProCARE",
+      "url": "https://neurips.cc/virtual/2026/poster/149562"
+     },
+     {
+      "id": "139604",
+      "title": "TrialAgentBench: Evaluating AI Agents for Clinical-Trial Analysis and Long-Horizon Drug-Development Decisions",
+      "short": "TrialAgentBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139604"
+     },
+     {
+      "id": "138952",
+      "title": "BioXArena: Benchmarking LLM Agents on Multi-Modal Biomedical Machine Learning Tasks",
+      "short": "BioXArena",
+      "url": "https://neurips.cc/virtual/2026/poster/138952"
+     }
+    ]
+   },
+   {
+    "line_ko": "답 정확도만으로는 실무 수행력을 못 재므로, EHR API·MCP 도구·영상 viewer를 직접 조작하는 장기 workflow 실행·근거 검증 벤치마크로 이동",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "139788",
+      "title": "PhysicianBench: Evaluating LLM Agents in Real-World EHR Environments",
+      "short": "PhysicianBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139788"
+     },
+     {
+      "id": "139361",
+      "title": "χ-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
+      "short": "χ-Bench",
+      "url": "https://neurips.cc/virtual/2026/poster/139361"
+     },
+     {
+      "id": "139773",
+      "title": "REAL-MED: Benchmarking LLM Agents on Real-World Medical Tasks",
+      "short": "REAL-MED",
+      "url": "https://neurips.cc/virtual/2026/poster/139773"
+     },
+     {
+      "id": "139506",
+      "title": "MedFlowBench: Auditing Medical Agents in Full-Study Workflows",
+      "short": "MedFlowBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139506"
+     }
+    ]
+   },
+   {
+    "line_ko": "진료 경험이 누적되는 장기 사용에서 raw trace 기억이 취약해, skill memory·종단 episode 평가·memory saturation 벤치마크로 경험 축적을 다룸",
+    "n_approx": 4,
+    "refs": [
+     {
+      "id": "150444",
+      "title": "Experience Makes Skillful: Enabling Generalizable Medical Agent Reasoning via Self-Evolving Skill Memory",
+      "short": "Experience Makes Skillful",
+      "url": "https://neurips.cc/virtual/2026/poster/150444"
+     },
+     {
+      "id": "139548",
+      "title": "MedEvoEval: Evaluating Continual Evolution of Doctor Agents through Simulated Clinical Episodes",
+      "short": "MedEvoEval",
+      "url": "https://neurips.cc/virtual/2026/poster/139548"
+     },
+     {
+      "id": "139145",
+      "title": "MedMemoryBench: Benchmarking Agent Memory in Personalized Healthcare",
+      "short": "MedMemoryBench",
+      "url": "https://neurips.cc/virtual/2026/poster/139145"
+     },
+     {
+      "id": "138984",
+      "title": "RealICU: Do LLM Agents Understand Long-Context ICU Data? A Benchmark Beyond Behavior Imitation",
+      "short": "RealICU",
+      "url": "https://neurips.cc/virtual/2026/poster/138984"
+     }
+    ]
+   }
+  ]
+ }
+}

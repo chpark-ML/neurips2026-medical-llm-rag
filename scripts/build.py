@@ -131,6 +131,20 @@ for a in AS['areas']:
 w('')
 w('- 확실히 커진 분야는 LLM 에이전트·도구·검색(비중 ×2.3)이고, 의료·헬스케어도 작게 늘었다. 컴퓨터 비전·3D, 학습 이론, 기타 ML은 편수는 늘었지만 비중은 줄었다.')
 w('- 하이라이트 비율은 과학·생물과 학습 이론이 기준선보다 높고, 의료·헬스케어가 가장 낮다. "데이터셋·벤치마크" 분야는 묶음 사이 편차가 커서(2.3–10.5%) 해석하지 않는다.\n')
+RF = json.load(open('data/research_flows.json'))
+w('## 관심 분야별 연구 흐름\n')
+w('각 분야의 논문을 읽고 여러 논문이 함께 움직이는 방향과 그 방향이 붙잡은 문제를 한 줄씩 적었다. 괄호의 편수는 그 흐름에 주로 속하는 논문 수를 판독으로 어림한 값이고, 링크는 대표 논문이다. RAG와 의료 세 분야는 위 216편 목록, LLM 에이전트와 LLM은 학회 전체에서 해당 분야로 배정된 논문이 대상이다.\n')
+for key in ['rag', 'agent', 'llm', 'medical_qa', 'medical_llm', 'medical_agent']:
+    t = RF[key]
+    w(f"### {t['title']} ({t['n']}편 · {t['scope']})\n")
+    w(f"{t['summary_ko']}\n")
+    for f in t['flows']:
+        refs_ = ', '.join(f"[{r['short']}]({r['url']})" for r in f['refs'])
+        w(f"- {f['line_ko']} (약 {f['n_approx']}편) — {refs_}")
+    rest = t['n'] - sum(f['n_approx'] for f in t['flows'])
+    if rest > 0:
+        w(f"- 나머지 약 {rest}편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.")
+    w('')
 w('## 논문 목록\n')
 for k, n, desc in CATS[:4]:
     w(f'### {n} ({counts[k]}편)\n')
@@ -217,6 +231,7 @@ w('| `HIGHLIGHTS.md` | NeurIPS 2026 전체 Oral·Spotlight 논문, 분야별 |')
 w('| `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |')
 w('| `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |')
 w('| `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |')
+w('| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |')
 w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |')
 w('| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |')
 w('| `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |')
