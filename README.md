@@ -791,6 +791,7 @@ LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/pa
 | `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |
 | `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |
 | `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |
+| `data/opd_papers.json` | on-policy·self-distillation 논문(유형, 설정, 한 줄 요약, 발표 형식), 연구 흐름, 집계 |
 | `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |
 | `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |
 | `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |

@@ -231,6 +231,7 @@ w('| `HIGHLIGHTS.md` | NeurIPS 2026 전체 Oral·Spotlight 논문, 분야별 |')
 w('| `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |')
 w('| `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |')
 w('| `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |')
+w('| `data/opd_papers.json` | on-policy·self-distillation 논문(유형, 설정, 한 줄 요약, 발표 형식), 연구 흐름, 집계 |')
 w('| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |')
 w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |')
 w('| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |')
@@ -311,7 +312,7 @@ IDX_CSS = """
 .stat .num { display: block; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .stat .lbl { color: var(--ink-2); font-size: 13px; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-#q, #hq { flex: 1 1 260px; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+#q, #hq, #oq { flex: 1 1 260px; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
 .controls select { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; max-width: 100%; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; font: inherit; font-size: 13px; }
@@ -375,6 +376,43 @@ sec_papers = lvl('216', 'papers', '관심 분야 논문 216편',
     f'<select id="sub" aria-label="RAG 세부 유형"><option value="">RAG 유형 전체</option>{sub_opts}</select>'
     f'<select id="dec" aria-label="발표 형식"><option value="">발표 형식 전체</option><option>Oral</option><option>Spotlight</option><option>Poster</option></select></div>'
     f'<div class="chips">{cat_chips}</div><div class="count" id="count"></div><div class="plist" id="plist"></div>')
+OP = json.load(open('data/opd_papers.json'))
+op_types = {'on-policy': 'On-policy distillation (외부 교사)', 'both': 'On-policy self-distillation', 'self': 'Self-distillation (자기 롤아웃 외)'}
+op_flows = ''.join(f"<li>{html.escape(f['line_ko'])} <span class=\"muted\">(약 {f['n_approx']}편)</span> — " + ', '.join(f'<a href="{r["url"]}" target="_blank" rel="noopener">{html.escape(r["short"])}</a>' for r in f['refs']) + '</li>' for f in OP['flows'])
+op_set_chips = ''.join(f'<button class="chip ochip" data-k="{html.escape(k)}" aria-pressed="false">{html.escape(k)} <span>{v}</span></button>' for k, v in OP['stats']['by_setting'])
+op_type_opts = ''.join(f'<option value="{k}">{v} ({OP["stats"]["by_type"].get(k, 0)})</option>' for k, v in op_types.items())
+ost = OP['stats']
+sec_opd = lvl('OPD', 'opd', f"On-policy · Self-distillation ({ost['n']}편)",
+    f"학생 모델이 직접 만든 출력에 교사가 신호를 주는 on-policy distillation과, 모델이 자기 자신(이전·힌트를 받은·더 긴 추론의 자신)을 교사로 쓰는 self-distillation 연구다. 학회 전체 {T['N2026']:,}편에서 키워드로 후보 {ost['candidates']}편을 뽑고 초록을 읽어 {ost['n']}편을 골랐다. 고전적인 오프라인 지식 증류와 비전 자기지도학습의 self-distillation은 뺐다.",
+    f'<div class="big"><div><b>{ost["title_opd"][0]} → {ost["title_opd"][1]}</b><span>제목에 on-policy distillation이 들어간 논문 (2025 → 2026)</span></div>'
+    f'<div><b>{ost["title_sd"][0]} → {ost["title_sd"][1]}</b><span>제목에 self-distillation이 들어간 논문 (2025 → 2026)</span></div>'
+    f'<div><b>{ost["hl"]}/{ost["known"]}편</b><span>Oral·Spotlight (형식을 아는 논문 기준, {ost["hl_rate"]}%, 학회 기준선 {HT["base_rate"]}%)</span></div></div>'
+    f'<p>{html.escape(OP["summary_ko"])}</p><ul class="notes">{op_flows}</ul>'
+    f'<div class="controls"><input id="oq" type="search" placeholder="검색: 제목·요약·저자" aria-label="on-policy·self-distillation 논문 검색">'
+    f'<select id="otype" aria-label="유형"><option value="">유형 전체</option>{op_type_opts}</select></div>'
+    f'<div class="chips">{op_set_chips}</div><div class="count" id="ocount"></div><div class="plist" id="olist"></div>')
+OP_JS = """<script>
+(() => {
+const O = __O__, TY = __TY__;
+const $ = s => document.querySelector(s);
+const esc = s => (s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const sel = new Set();
+function render() {
+  const q = $('#oq').value.trim().toLowerCase(), ty = $('#otype').value;
+  const L = O.filter(p => (!sel.size || sel.has(p.setting)) && (!ty || p.type === ty) && (!q || (p.title + ' ' + p.summary_ko + ' ' + p.authors).toLowerCase().includes(q)))
+    .sort((a, b) => ((a.decision === 'Oral' || a.decision === 'Spotlight') ? 0 : 1) - ((b.decision === 'Oral' || b.decision === 'Spotlight') ? 0 : 1) || a.title.localeCompare(b.title));
+  $('#ocount').textContent = L.length + '편 표시 중 (전체 ' + O.length + '편)';
+  $('#olist').innerHTML = L.map(p => `<article class="paper"><a class="ttl" href="${p.url}" target="_blank" rel="noopener">${esc(p.title)}</a>
+    <div class="sum">${esc(p.summary_ko)}</div><div class="meta"><span class="tag r">${TY[p.type]}</span><span class="tag">${esc(p.setting)}</span>
+    ${p.decision && p.decision !== 'Poster' ? `<span class="tag dec">${p.decision}</span>` : ''}</div>
+    <details><summary>저자</summary><div class="auth">${esc(p.authors)}</div></details></article>`).join('');
+}
+document.querySelectorAll('.ochip').forEach(b => b.onclick = () => { sel.has(b.dataset.k) ? sel.delete(b.dataset.k) : sel.add(b.dataset.k); b.setAttribute('aria-pressed', sel.has(b.dataset.k)); render(); });
+['#oq', '#otype'].forEach(s => $(s).addEventListener('input', render));
+render();
+})();
+</script>"""
+OP_JS = OP_JS.replace('__O__', json.dumps(OP['papers'], ensure_ascii=False)).replace('__TY__', json.dumps(op_types, ensure_ascii=False))
 hl_more = (f'<div class="sub"><h3>NeurIPS 2026 전체 하이라이트 {HT["n_highlight"]}편</h3>'
     f'<p class="muted">발표 형식을 아는 {HT["n_known"]:,}편 중 Oral {HT["n_oral"]}편, Spotlight {HT["n_highlight"] - HT["n_oral"]}편(기준선 {HT["base_rate"]}%). {T["N2026"] - HT["n_known"]:,}편은 형식 정보가 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. 분야·요약은 초록을 읽고 LLM이 붙였다.</p>'
     f'<ul class="notes">{hl_notes}</ul>'
@@ -447,8 +485,8 @@ render(); hrender();
 for k, v in {'__P__': papers_js, '__H__': hl_js, '__AREA__': AREA_KO, '__CAT__': CAT_NAME, '__SUB__': SUB_NAME}.items():
     IDX_JS = IDX_JS.replace(k, json.dumps(v, ensure_ascii=False))
 page = open('scripts/interests_template.html').read()
-for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers, '<!--HL_MORE-->': hl_more,
-             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS}.items():
+for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers + sec_opd, '<!--HL_MORE-->': hl_more,
+             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS}.items():
     assert page.count(k) == 1, k
     page = page.replace(k, v)
 page = page.replace('/*DATA*/null', json.dumps(atlas_data(), ensure_ascii=False))

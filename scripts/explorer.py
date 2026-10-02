@@ -1,7 +1,7 @@
 """Render explorer.html: every NeurIPS 2026 paper with browsable tags.
 Tags: research area (14, data/area_labels.json), sub-topic within the area (data/subtopic_labels.json),
 keyword topic (regexes in scripts/topic_trends.py), presentation format and track (data/decisions.json),
-this repo's interest categories (data/papers.json), and medical QA benchmarks used in experiments
+this repo's interest categories (data/papers.json, data/opd_papers.json), and medical QA benchmarks used in experiments
 (data/medqa_benchmark_papers.json, when present).
 Needs data/raw/neurips2026_posters.json (scripts/fetch.sh) for titles, authors and abstracts."""
 import json, re, os, sys, pathlib
@@ -11,6 +11,9 @@ from topic_trends import T
 A = json.load(open('data/raw/neurips2026_posters.json'))
 AL = json.load(open('data/area_labels.json')); D = json.load(open('data/decisions.json'))
 P = {p['id']: p['cats'] for p in json.load(open('data/papers.json'))}
+if os.path.exists('data/opd_papers.json'):
+    for p in json.load(open('data/opd_papers.json'))['papers']:
+        P.setdefault(p['id'], []).append('opd')
 ST = json.load(open('data/subtopic_labels.json'))
 MB = {}
 if os.path.exists('data/medqa_benchmark_papers.json'):
@@ -20,7 +23,7 @@ pid = lambda x: x['virtualsite_url'].rsplit('/', 1)[-1]
 KO = {'A': 'LLM 추론·학습·RL 후처리', 'B': 'LLM 에이전트·도구·검색', 'C': '정렬·안전·해석', 'D': '효율 모델·시스템',
       'E': '멀티모달·비전-언어', 'F': '생성 모델', 'G': '컴퓨터 비전·3D', 'H': '강화학습·로보틱스', 'I': '학습 이론·최적화',
       'J': '확률·인과·통계', 'K': '의료·헬스케어', 'L': '과학·생물', 'M': '데이터셋·벤치마크', 'N': '기타 ML (그래프·시계열 등)'}
-CATS = {'medical_qa': 'Medical QA', 'medical_rag': 'Medical RAG', 'medical_agent': 'Medical Agent', 'medical_llm': 'Medical LLM / VLM', 'rag': 'RAG'}
+CATS = {'medical_qa': 'Medical QA', 'medical_rag': 'Medical RAG', 'medical_agent': 'Medical Agent', 'medical_llm': 'Medical LLM / VLM', 'rag': 'RAG', 'opd': 'On-policy·Self-distillation'}
 topics = list(T); trx = [re.compile(v, re.I) for v in T.values()]
 sub_vocab = []  # [area code, name]
 sub_index = {}

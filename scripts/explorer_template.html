@@ -171,7 +171,7 @@ function renderFacets(cnt) {
     + group('kw', '키워드 주제', kws, `<input class="fsearch" id="kwq" type="search" placeholder="키워드 찾기" value="${esc(kwFilter)}" aria-label="키워드 주제 찾기">`)
     + group('fmt', '발표 형식', D.fmts.map((t, i) => chip('fmt', i, t, cnt.fmt[i])).join(''))
     + group('trk', '트랙', D.trks.map((t, i) => chip('trk', i, t, cnt.trk[i])).join(''))
-    + group('cat', '관심 분류 (의료·RAG 216편)', D.cats.map((t, i) => chip('cat', i, t, cnt.cat[i])).join(''));
+    + group('cat', '관심 분류 (의료·RAG 216편, on-policy·self-distillation)', D.cats.map((t, i) => chip('cat', i, t, cnt.cat[i])).join(''));
   if (D.benches.length) h += group('bench', '의료 QA 벤치마크 (실험에 사용)', D.benches.map((t, i) => [t, i]).sort((x, y) => (cnt.bench[y[1]] || 0) - (cnt.bench[x[1]] || 0)).map(([t, i]) => chip('bench', i, t, cnt.bench[i])).join(''));
   const fs = $('#facets'), st = fs.scrollTop; fs.innerHTML = h; fs.scrollTop = st;
   const kq = $('#kwq'); if (kq && document.activeElement?.id !== 'kwq') {}
