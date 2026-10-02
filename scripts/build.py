@@ -407,7 +407,7 @@ CLIP_JS = r'''<script>
 document.querySelectorAll('.clip').forEach(clip => {
   const btn = clip.nextElementSibling;
   if (!btn || !btn.classList.contains('cliptog')) return;
-  const items = () => clip.querySelectorAll('.paper, tbody tr').length;
+  const items = () => clip.querySelectorAll('.paper, tbody tr, li').length;
   const update = () => {
     clip.classList.toggle('over', clip.scrollHeight > 470);
     btn.hidden = !(clip.scrollHeight > 470);
@@ -602,6 +602,32 @@ sec_method = lvl('방법', 'method', '어떻게 모았나', '이 페이지의 �
 <li>발표 형식: neurips.cc의 orals-posters JSON 두 스냅샷(받을 때마다 다른 일부만 담김)을 합쳤다. 전체 {T["N2026"]:,}편 중 {HT["n_known"]:,}편의 형식을 알고, 216편 중 {len(P) - n_dec}편은 모른다.</li>
 <li>한계: 사람 검수가 아닌 LLM 판독이고, 순수 검색·임베딩 논문과 LLM이 없는 의료 영상·EHR 모델은 216편에서 제외했다.</li>
 </ol>""")
+NBI = json.load(open('data/interests_notable.json'))
+Pid = {p['id']: p for p in P}
+nb_both = sorted([x for x in NBI['papers'] if x['tier'] == 'both'], key=lambda x: clean(Pid[x['id']]['title']).lower())
+nb_one = sorted([x for x in NBI['papers'] if x['tier'] == 'one'], key=lambda x: clean(Pid[x['id']]['title']).lower())
+nb_cats = collections.Counter(c for x in nb_both for c in Pid[x['id']]['cats'])
+def nb_card(x):
+    p = Pid[x['id']]
+    return (f'<article class="paper" data-cats="{" ".join(p["cats"])}"><a class="ttl" href="{p["url"]}" target="_blank" rel="noopener">{html.escape(clean(p["title"]))}</a>'
+            f'<div class="sum">{html.escape(p["summary_ko"])}</div><div class="sum" style="font-size:12.5px"><b style="color:var(--accent)">제1저자</b> {html.escape(", ".join(x["lead"]))} · <b style="color:var(--accent)">마지막 저자</b> {html.escape(", ".join(x["senior"]))}</div>'
+            f'<div class="meta">' + ''.join(f'<span class="tag {"r" if c == "rag" else "m"}">{CAT_NAME[c]}</span>' for c in p['cats'])
+            + (f'<span class="tag dec">{p["decision"]}</span>' if p['decision'] in ('Oral', 'Spotlight') else '') + '</div></article>')
+sec_notable = lvl('★', 'notable', f'잘 알려진 기관이 이끈 연구 ({len(nb_both)}편)',
+    f'관심 분야 {len(P)}편 중 제1저자(연구를 주도한 사람)와 마지막 저자(대개 책임 연구자)의 소속이 모두 주요 대학·대형 병원·빅테크 연구소 목록({len(NBI["institutions"])}곳)에 있는 논문이다. 기관의 명성은 연구의 질을 보증하지 않으며, 논문 자체의 품질은 따로 평가하지 않았다.',
+    '<div class="chips">' + ''.join(f'<button class="chip nchip" data-k="{k}" aria-pressed="false">{CAT_NAME[k]} <span>{v}</span></button>' for k, v in nb_cats.most_common()) + '</div>'
+    f'<div class="clip"><div class="plist" id="nlist">{"".join(nb_card(x) for x in nb_both)}</div></div><button class="cliptog" type="button" hidden></button>'
+    f'<div class="sub"><h3>한쪽 저자만 해당하는 논문 ({len(nb_one)}편)</h3><div class="clip"><ul class="notes">'
+    + ''.join(f'<li><a href="{Pid[x["id"]]["url"]}" target="_blank" rel="noopener">{html.escape(clean(Pid[x["id"]]["title"]))}</a> <span class="muted">— {"제1저자 " + html.escape(", ".join(x["lead"])) if x["lead"] else "마지막 저자 " + html.escape(", ".join(x["senior"]))}</span></li>' for x in nb_one)
+    + '</ul></div><button class="cliptog" type="button" hidden></button></div>'
+    f'<details class="tablebox"><summary>기관 목록 ({len(NBI["institutions"])}곳)</summary><p class="muted" style="margin-top:6px">' + ' · '.join(html.escape(i['name']) for i in NBI['institutions']) + '</p></details>')
+NB_JS = """<script>
+(() => {
+const sel = new Set();
+const apply = () => document.querySelectorAll('#nlist .paper').forEach(a => { a.hidden = sel.size > 0 && !a.dataset.cats.split(' ').some(c => sel.has(c)); });
+document.querySelectorAll('.nchip').forEach(b => b.onclick = () => { sel.has(b.dataset.k) ? sel.delete(b.dataset.k) : sel.add(b.dataset.k); b.setAttribute('aria-pressed', sel.has(b.dataset.k)); apply(); });
+})();
+</script>"""
 IDX_JS = """<script>
 (() => {
 const P = __P__, H = __H__, AREA = __AREA__, CAT = __CAT__, SUB = __SUB__;
@@ -657,7 +683,7 @@ for k, v in {'__P__': papers_js, '__H__': hl_js, '__AREA__': AREA_KO, '__CAT__':
     IDX_JS = IDX_JS.replace(k, json.dumps(v, ensure_ascii=False))
 page = open('scripts/interests_template.html').read()
 for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers + sec_opd + sec_mb, '<!--HL_MORE-->': hl_more,
-             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS + MB_JS + CLIP_JS}.items():
+             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_notable + sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS + MB_JS + NB_JS + CLIP_JS}.items():
     assert page.count(k) == 1, k
     page = page.replace(k, v)
 page = page.replace('/*DATA*/null', json.dumps(atlas_data(), ensure_ascii=False))

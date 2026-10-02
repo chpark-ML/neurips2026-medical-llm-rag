@@ -1,0 +1,1235 @@
+{
+ "rule": "제1저자 또는 마지막 저자의 소속이 scripts/notable_inst.py 목록에 있는 기관이면 선택. 둘 다 해당하면 주요 선별(both), 한쪽만이면 보조(one).",
+ "institutions": [
+  {
+   "name": "Stanford",
+   "kind": "대학"
+  },
+  {
+   "name": "MIT",
+   "kind": "대학"
+  },
+  {
+   "name": "Harvard",
+   "kind": "대학"
+  },
+  {
+   "name": "Carnegie Mellon",
+   "kind": "대학"
+  },
+  {
+   "name": "UC Berkeley",
+   "kind": "대학"
+  },
+  {
+   "name": "Princeton",
+   "kind": "대학"
+  },
+  {
+   "name": "Caltech",
+   "kind": "대학"
+  },
+  {
+   "name": "Yale",
+   "kind": "대학"
+  },
+  {
+   "name": "Columbia",
+   "kind": "대학"
+  },
+  {
+   "name": "Cornell",
+   "kind": "대학"
+  },
+  {
+   "name": "Univ. of Washington",
+   "kind": "대학"
+  },
+  {
+   "name": "Johns Hopkins",
+   "kind": "대학·병원"
+  },
+  {
+   "name": "Duke",
+   "kind": "대학"
+  },
+  {
+   "name": "UPenn",
+   "kind": "대학"
+  },
+  {
+   "name": "UChicago",
+   "kind": "대학"
+  },
+  {
+   "name": "UCLA",
+   "kind": "대학"
+  },
+  {
+   "name": "UC San Diego",
+   "kind": "대학"
+  },
+  {
+   "name": "Univ. of Michigan",
+   "kind": "대학"
+  },
+  {
+   "name": "NYU",
+   "kind": "대학"
+  },
+  {
+   "name": "Oxford",
+   "kind": "대학"
+  },
+  {
+   "name": "Cambridge",
+   "kind": "대학"
+  },
+  {
+   "name": "Imperial College",
+   "kind": "대학"
+  },
+  {
+   "name": "UCL",
+   "kind": "대학"
+  },
+  {
+   "name": "ETH Zurich",
+   "kind": "대학"
+  },
+  {
+   "name": "EPFL",
+   "kind": "대학"
+  },
+  {
+   "name": "TU Munich",
+   "kind": "대학"
+  },
+  {
+   "name": "LMU Munich",
+   "kind": "대학"
+  },
+  {
+   "name": "Max Planck",
+   "kind": "연구소"
+  },
+  {
+   "name": "Univ. of Toronto",
+   "kind": "대학"
+  },
+  {
+   "name": "Vector Institute",
+   "kind": "연구소"
+  },
+  {
+   "name": "Mila",
+   "kind": "연구소"
+  },
+  {
+   "name": "McGill",
+   "kind": "대학"
+  },
+  {
+   "name": "Tsinghua",
+   "kind": "대학"
+  },
+  {
+   "name": "Peking Univ.",
+   "kind": "대학"
+  },
+  {
+   "name": "Shanghai Jiao Tong",
+   "kind": "대학"
+  },
+  {
+   "name": "Zhejiang Univ.",
+   "kind": "대학"
+  },
+  {
+   "name": "Fudan",
+   "kind": "대학"
+  },
+  {
+   "name": "Univ. of Tokyo",
+   "kind": "대학"
+  },
+  {
+   "name": "KAIST",
+   "kind": "대학"
+  },
+  {
+   "name": "Seoul National Univ.",
+   "kind": "대학"
+  },
+  {
+   "name": "NUS",
+   "kind": "대학"
+  },
+  {
+   "name": "HKUST",
+   "kind": "대학"
+  },
+  {
+   "name": "HKU",
+   "kind": "대학"
+  },
+  {
+   "name": "CUHK",
+   "kind": "대학"
+  },
+  {
+   "name": "RIKEN",
+   "kind": "연구소"
+  },
+  {
+   "name": "Mayo Clinic",
+   "kind": "병원"
+  },
+  {
+   "name": "Mass General Brigham",
+   "kind": "병원"
+  },
+  {
+   "name": "MD Anderson",
+   "kind": "병원"
+  },
+  {
+   "name": "Memorial Sloan Kettering",
+   "kind": "병원"
+  },
+  {
+   "name": "UCSF",
+   "kind": "대학·병원"
+  },
+  {
+   "name": "Cleveland Clinic",
+   "kind": "병원"
+  },
+  {
+   "name": "Mount Sinai",
+   "kind": "병원"
+  },
+  {
+   "name": "Charité",
+   "kind": "병원"
+  },
+  {
+   "name": "Google / DeepMind",
+   "kind": "기업"
+  },
+  {
+   "name": "Microsoft",
+   "kind": "기업"
+  },
+  {
+   "name": "Meta",
+   "kind": "기업"
+  },
+  {
+   "name": "OpenAI",
+   "kind": "기업"
+  },
+  {
+   "name": "Anthropic",
+   "kind": "기업"
+  },
+  {
+   "name": "NVIDIA",
+   "kind": "기업"
+  },
+  {
+   "name": "Apple",
+   "kind": "기업"
+  },
+  {
+   "name": "Amazon",
+   "kind": "기업"
+  },
+  {
+   "name": "IBM Research",
+   "kind": "기업"
+  },
+  {
+   "name": "Alibaba",
+   "kind": "기업"
+  },
+  {
+   "name": "Tencent",
+   "kind": "기업"
+  },
+  {
+   "name": "ByteDance",
+   "kind": "기업"
+  },
+  {
+   "name": "Salesforce",
+   "kind": "기업"
+  },
+  {
+   "name": "Samsung",
+   "kind": "기업"
+  },
+  {
+   "name": "Allen Institute for AI",
+   "kind": "연구소"
+  }
+ ],
+ "papers": [
+  {
+   "id": "139361",
+   "tier": "one",
+   "lead": [
+    "Salesforce"
+   ],
+   "senior": []
+  },
+  {
+   "id": "139715",
+   "tier": "one",
+   "lead": [
+    "Univ. of Washington"
+   ],
+   "senior": []
+  },
+  {
+   "id": "139188",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Seoul National Univ."
+   ]
+  },
+  {
+   "id": "155404",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "UC San Diego"
+   ]
+  },
+  {
+   "id": "152416",
+   "tier": "both",
+   "lead": [
+    "Stanford"
+   ],
+   "senior": [
+    "Stanford"
+   ]
+  },
+  {
+   "id": "149582",
+   "tier": "both",
+   "lead": [
+    "Tencent"
+   ],
+   "senior": [
+    "Tencent"
+   ]
+  },
+  {
+   "id": "148935",
+   "tier": "both",
+   "lead": [
+    "Stanford"
+   ],
+   "senior": [
+    "Stanford"
+   ]
+  },
+  {
+   "id": "154780",
+   "tier": "one",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": []
+  },
+  {
+   "id": "150023",
+   "tier": "both",
+   "lead": [
+    "Oxford"
+   ],
+   "senior": [
+    "Oxford"
+   ]
+  },
+  {
+   "id": "155755",
+   "tier": "both",
+   "lead": [
+    "Samsung"
+   ],
+   "senior": [
+    "KAIST"
+   ]
+  },
+  {
+   "id": "149149",
+   "tier": "both",
+   "lead": [
+    "Cornell",
+    "Zhejiang Univ."
+   ],
+   "senior": [
+    "Cornell"
+   ]
+  },
+  {
+   "id": "150537",
+   "tier": "both",
+   "lead": [
+    "CUHK",
+    "HKU"
+   ],
+   "senior": [
+    "CUHK",
+    "HKU"
+   ]
+  },
+  {
+   "id": "139077",
+   "tier": "both",
+   "lead": [
+    "Princeton"
+   ],
+   "senior": [
+    "Princeton"
+   ]
+  },
+  {
+   "id": "148640",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Mila"
+   ]
+  },
+  {
+   "id": "152838",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Tsinghua"
+   ]
+  },
+  {
+   "id": "153097",
+   "tier": "both",
+   "lead": [
+    "HKU"
+   ],
+   "senior": [
+    "ByteDance"
+   ]
+  },
+  {
+   "id": "154638",
+   "tier": "both",
+   "lead": [
+    "Cornell"
+   ],
+   "senior": [
+    "Google / DeepMind"
+   ]
+  },
+  {
+   "id": "139102",
+   "tier": "one",
+   "lead": [
+    "Zhejiang Univ."
+   ],
+   "senior": []
+  },
+  {
+   "id": "150688",
+   "tier": "one",
+   "lead": [
+    "Carnegie Mellon"
+   ],
+   "senior": []
+  },
+  {
+   "id": "153350",
+   "tier": "both",
+   "lead": [
+    "Harvard"
+   ],
+   "senior": [
+    "Harvard",
+    "Mass General Brigham"
+   ]
+  },
+  {
+   "id": "149212",
+   "tier": "both",
+   "lead": [
+    "Fudan"
+   ],
+   "senior": [
+    "Fudan"
+   ]
+  },
+  {
+   "id": "150664",
+   "tier": "one",
+   "lead": [
+    "NYU"
+   ],
+   "senior": []
+  },
+  {
+   "id": "154287",
+   "tier": "both",
+   "lead": [
+    "Microsoft"
+   ],
+   "senior": [
+    "UChicago"
+   ]
+  },
+  {
+   "id": "139550",
+   "tier": "both",
+   "lead": [
+    "TU Munich"
+   ],
+   "senior": [
+    "TU Munich"
+   ]
+  },
+  {
+   "id": "153645",
+   "tier": "both",
+   "lead": [
+    "Fudan"
+   ],
+   "senior": [
+    "Alibaba"
+   ]
+  },
+  {
+   "id": "152229",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Cambridge"
+   ]
+  },
+  {
+   "id": "148605",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Cornell"
+   ]
+  },
+  {
+   "id": "139483",
+   "tier": "both",
+   "lead": [
+    "MIT"
+   ],
+   "senior": [
+    "Columbia"
+   ]
+  },
+  {
+   "id": "151511",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Shanghai Jiao Tong"
+   ]
+  },
+  {
+   "id": "139595",
+   "tier": "both",
+   "lead": [
+    "KAIST"
+   ],
+   "senior": [
+    "KAIST"
+   ]
+  },
+  {
+   "id": "151304",
+   "tier": "one",
+   "lead": [
+    "MIT"
+   ],
+   "senior": []
+  },
+  {
+   "id": "139551",
+   "tier": "both",
+   "lead": [
+    "KAIST"
+   ],
+   "senior": [
+    "KAIST"
+   ]
+  },
+  {
+   "id": "152590",
+   "tier": "both",
+   "lead": [
+    "NUS"
+   ],
+   "senior": [
+    "NUS"
+   ]
+  },
+  {
+   "id": "138971",
+   "tier": "both",
+   "lead": [
+    "UC Berkeley"
+   ],
+   "senior": [
+    "UC Berkeley"
+   ]
+  },
+  {
+   "id": "150444",
+   "tier": "one",
+   "lead": [
+    "Fudan"
+   ],
+   "senior": []
+  },
+  {
+   "id": "153631",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "UPenn"
+   ]
+  },
+  {
+   "id": "139748",
+   "tier": "one",
+   "lead": [
+    "Univ. of Michigan"
+   ],
+   "senior": []
+  },
+  {
+   "id": "153875",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "HKUST"
+   ]
+  },
+  {
+   "id": "153355",
+   "tier": "both",
+   "lead": [
+    "CUHK",
+    "HKU"
+   ],
+   "senior": [
+    "CUHK",
+    "HKU"
+   ]
+  },
+  {
+   "id": "139751",
+   "tier": "both",
+   "lead": [
+    "KAIST"
+   ],
+   "senior": [
+    "KAIST"
+   ]
+  },
+  {
+   "id": "139078",
+   "tier": "both",
+   "lead": [
+    "LMU Munich"
+   ],
+   "senior": [
+    "LMU Munich"
+   ]
+  },
+  {
+   "id": "156128",
+   "tier": "both",
+   "lead": [
+    "CUHK",
+    "HKU"
+   ],
+   "senior": [
+    "CUHK",
+    "HKU"
+   ]
+  },
+  {
+   "id": "139030",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Univ. of Tokyo"
+   ]
+  },
+  {
+   "id": "149691",
+   "tier": "one",
+   "lead": [
+    "Shanghai Jiao Tong"
+   ],
+   "senior": []
+  },
+  {
+   "id": "156148",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Alibaba"
+   ]
+  },
+  {
+   "id": "149014",
+   "tier": "both",
+   "lead": [
+    "Shanghai Jiao Tong"
+   ],
+   "senior": [
+    "Shanghai Jiao Tong"
+   ]
+  },
+  {
+   "id": "148185",
+   "tier": "one",
+   "lead": [
+    "Tsinghua"
+   ],
+   "senior": []
+  },
+  {
+   "id": "152857",
+   "tier": "both",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": [
+    "HKUST"
+   ]
+  },
+  {
+   "id": "139764",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Shanghai Jiao Tong"
+   ]
+  },
+  {
+   "id": "153045",
+   "tier": "both",
+   "lead": [
+    "MIT"
+   ],
+   "senior": [
+    "MIT"
+   ]
+  },
+  {
+   "id": "153327",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "NUS"
+   ]
+  },
+  {
+   "id": "139625",
+   "tier": "both",
+   "lead": [
+    "MIT"
+   ],
+   "senior": [
+    "MIT"
+   ]
+  },
+  {
+   "id": "139506",
+   "tier": "both",
+   "lead": [
+    "LMU Munich"
+   ],
+   "senior": [
+    "TU Munich"
+   ]
+  },
+  {
+   "id": "139391",
+   "tier": "both",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": [
+    "HKUST"
+   ]
+  },
+  {
+   "id": "138975",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "TU Munich"
+   ]
+  },
+  {
+   "id": "139145",
+   "tier": "both",
+   "lead": [
+    "Zhejiang Univ."
+   ],
+   "senior": [
+    "Zhejiang Univ."
+   ]
+  },
+  {
+   "id": "139561",
+   "tier": "both",
+   "lead": [
+    "Oxford"
+   ],
+   "senior": [
+    "Oxford"
+   ]
+  },
+  {
+   "id": "139346",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Mass General Brigham"
+   ]
+  },
+  {
+   "id": "150235",
+   "tier": "one",
+   "lead": [
+    "HKU"
+   ],
+   "senior": []
+  },
+  {
+   "id": "155563",
+   "tier": "both",
+   "lead": [
+    "CUHK",
+    "HKU"
+   ],
+   "senior": [
+    "CUHK",
+    "HKU"
+   ]
+  },
+  {
+   "id": "151480",
+   "tier": "both",
+   "lead": [
+    "Fudan"
+   ],
+   "senior": [
+    "Fudan"
+   ]
+  },
+  {
+   "id": "151329",
+   "tier": "both",
+   "lead": [
+    "IBM Research"
+   ],
+   "senior": [
+    "IBM Research"
+   ]
+  },
+  {
+   "id": "139149",
+   "tier": "both",
+   "lead": [
+    "NUS"
+   ],
+   "senior": [
+    "Alibaba"
+   ]
+  },
+  {
+   "id": "152953",
+   "tier": "both",
+   "lead": [
+    "EPFL"
+   ],
+   "senior": [
+    "EPFL"
+   ]
+  },
+  {
+   "id": "139689",
+   "tier": "both",
+   "lead": [
+    "Zhejiang Univ."
+   ],
+   "senior": [
+    "Duke"
+   ]
+  },
+  {
+   "id": "138886",
+   "tier": "both",
+   "lead": [
+    "Tencent"
+   ],
+   "senior": [
+    "Salesforce"
+   ]
+  },
+  {
+   "id": "153484",
+   "tier": "both",
+   "lead": [
+    "Cornell"
+   ],
+   "senior": [
+    "Cornell"
+   ]
+  },
+  {
+   "id": "139693",
+   "tier": "both",
+   "lead": [
+    "Vector Institute"
+   ],
+   "senior": [
+    "Vector Institute"
+   ]
+  },
+  {
+   "id": "152165",
+   "tier": "both",
+   "lead": [
+    "Tencent"
+   ],
+   "senior": [
+    "Tencent"
+   ]
+  },
+  {
+   "id": "139788",
+   "tier": "both",
+   "lead": [
+    "Stanford"
+   ],
+   "senior": [
+    "Stanford"
+   ]
+  },
+  {
+   "id": "155622",
+   "tier": "both",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": [
+    "HKUST"
+   ]
+  },
+  {
+   "id": "154826",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Columbia"
+   ]
+  },
+  {
+   "id": "151457",
+   "tier": "both",
+   "lead": [
+    "NVIDIA"
+   ],
+   "senior": [
+    "UChicago"
+   ]
+  },
+  {
+   "id": "152822",
+   "tier": "both",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": [
+    "HKUST"
+   ]
+  },
+  {
+   "id": "139773",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "ByteDance"
+   ]
+  },
+  {
+   "id": "139440",
+   "tier": "both",
+   "lead": [
+    "Zhejiang Univ."
+   ],
+   "senior": [
+    "NUS"
+   ]
+  },
+  {
+   "id": "138984",
+   "tier": "both",
+   "lead": [
+    "TU Munich"
+   ],
+   "senior": [
+    "TU Munich"
+   ]
+  },
+  {
+   "id": "154257",
+   "tier": "one",
+   "lead": [
+    "NVIDIA"
+   ],
+   "senior": []
+  },
+  {
+   "id": "148700",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Carnegie Mellon"
+   ]
+  },
+  {
+   "id": "154894",
+   "tier": "both",
+   "lead": [
+    "Peking Univ."
+   ],
+   "senior": [
+    "Peking Univ."
+   ]
+  },
+  {
+   "id": "152090",
+   "tier": "both",
+   "lead": [
+    "Tsinghua"
+   ],
+   "senior": [
+    "Tsinghua"
+   ]
+  },
+  {
+   "id": "154429",
+   "tier": "both",
+   "lead": [
+    "NYU"
+   ],
+   "senior": [
+    "NYU"
+   ]
+  },
+  {
+   "id": "148234",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "UCL"
+   ]
+  },
+  {
+   "id": "150272",
+   "tier": "both",
+   "lead": [
+    "KAIST"
+   ],
+   "senior": [
+    "KAIST"
+   ]
+  },
+  {
+   "id": "139739",
+   "tier": "both",
+   "lead": [
+    "UPenn"
+   ],
+   "senior": [
+    "UPenn"
+   ]
+  },
+  {
+   "id": "139475",
+   "tier": "both",
+   "lead": [
+    "UChicago"
+   ],
+   "senior": [
+    "UC Berkeley"
+   ]
+  },
+  {
+   "id": "154857",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "McGill"
+   ]
+  },
+  {
+   "id": "148421",
+   "tier": "one",
+   "lead": [
+    "Yale"
+   ],
+   "senior": []
+  },
+  {
+   "id": "139217",
+   "tier": "one",
+   "lead": [
+    "UC San Diego"
+   ],
+   "senior": []
+  },
+  {
+   "id": "155345",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Microsoft"
+   ]
+  },
+  {
+   "id": "153041",
+   "tier": "one",
+   "lead": [
+    "Johns Hopkins"
+   ],
+   "senior": []
+  },
+  {
+   "id": "150121",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Amazon"
+   ]
+  },
+  {
+   "id": "154539",
+   "tier": "both",
+   "lead": [
+    "UCLA"
+   ],
+   "senior": [
+    "UCLA"
+   ]
+  },
+  {
+   "id": "139071",
+   "tier": "both",
+   "lead": [
+    "Stanford"
+   ],
+   "senior": [
+    "Stanford"
+   ]
+  },
+  {
+   "id": "139021",
+   "tier": "both",
+   "lead": [
+    "KAIST"
+   ],
+   "senior": [
+    "KAIST"
+   ]
+  },
+  {
+   "id": "148687",
+   "tier": "both",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": [
+    "HKUST"
+   ]
+  },
+  {
+   "id": "138990",
+   "tier": "both",
+   "lead": [
+    "Vector Institute"
+   ],
+   "senior": [
+    "Vector Institute"
+   ]
+  },
+  {
+   "id": "149401",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Vector Institute"
+   ]
+  },
+  {
+   "id": "139604",
+   "tier": "both",
+   "lead": [
+    "Oxford"
+   ],
+   "senior": [
+    "Oxford"
+   ]
+  },
+  {
+   "id": "155841",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "Shanghai Jiao Tong"
+   ]
+  },
+  {
+   "id": "149641",
+   "tier": "one",
+   "lead": [],
+   "senior": [
+    "CUHK",
+    "HKU"
+   ]
+  },
+  {
+   "id": "150417",
+   "tier": "one",
+   "lead": [
+    "HKUST"
+   ],
+   "senior": []
+  },
+  {
+   "id": "155923",
+   "tier": "one",
+   "lead": [
+    "Harvard",
+    "MIT"
+   ],
+   "senior": []
+  }
+ ]
+}
