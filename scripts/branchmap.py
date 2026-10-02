@@ -93,7 +93,23 @@ def render(key):
     if T.get('unplaced'):
         secs += '<section class="branch" id="other"><header><span class="bnum">·</span><div><h2>어느 갈래에도 두지 않은 논문</h2></div></header><div class="papers">' + ''.join(
             card(u['id']).replace('</p>', f'</p><p class="why">{e(u["reason"])}</p>', 1) for u in T['unplaced']) + '</div></section>'
+    if key == 'med_datasets' and __import__('os').path.exists('data/med_datasets_notable.json'):
+        NB = json.load(open('data/med_datasets_notable.json'))
+        both = [x for x in NB['papers'] if x['tier'] == 'both']; one = [x for x in NB['papers'] if x['tier'] == 'one']
+        def inst_line(x):
+            l = ', '.join(x['lead']) or '—'; sr = ', '.join(x['senior']) or '—'
+            return f'<p class="inst"><b>제1저자</b> {e(l)} · <b>마지막 저자</b> {e(sr)}</p>'
+        cards = ''.join(card(x['id']).replace('<div class="tags">', inst_line(x) + '<div class="tags">', 1) for x in sorted(both, key=lambda x: clean(cfg['paper'](x['id'])['title']).lower()))
+        ones = ''.join(f'<li><a href="{e(cfg["paper"](x["id"])["url"])}" target="_blank" rel="noopener">{e(clean(cfg["paper"](x["id"])["title"]))}</a> <span class="muted2">— {"제1저자 " + e(", ".join(x["lead"])) if x["lead"] else "마지막 저자 " + e(", ".join(x["senior"]))}</span></li>' for x in sorted(one, key=lambda x: clean(cfg['paper'](x['id'])['title']).lower()))
+        secs += (f'<section class="branch notable" id="notable"><header><span class="bnum">★</span><div><h2>잘 알려진 기관이 이끈 연구 ({len(both)}편)</h2>'
+                 f'<p class="shiftbig">제1저자와 마지막 저자가 모두 주요 대학·병원·기업 연구소 소속</p></div></header>'
+                 f'<p class="problem"><b>고른 기준</b> 위 60편 중 제1저자(연구를 주도한 사람)와 마지막 저자(대개 책임 연구자)의 소속이 모두 아래 기관 목록에 있는 논문이다. 기관 목록은 세계적으로 알려진 대학, 대형 병원·의대, 빅테크 연구소로 정했다. 기관의 명성은 연구의 질을 보증하지 않고, 논문 자체의 품질은 따로 평가하지 않았다.</p>'
+                 f'<div class="papers">{cards}</div>'
+                 f'<div class="sub"><h3>한쪽 저자만 해당하는 논문 <span class="cnt">{len(one)}편</span></h3><p class="sd">제1저자나 마지막 저자 중 한 명만 목록의 기관 소속이다.</p><ul class="onelist">{ones}</ul></div>'
+                 f'<details class="instlist"><summary>기관 목록 ({len(NB["institutions"])}곳)</summary><p>' + ' · '.join(f'{e(i["name"])}' for i in NB['institutions']) + '</p></details></section>')
     legend = ''.join(f'<span><span class="tag {k}">{e(v)}</span></span>' for k, v in cfg['legend'])
+    if 'id="notable"' in secs:
+        legend += ' · <a href="#notable">★ 잘 알려진 기관이 이끈 연구로 바로 가기</a>'
     page = (open('scripts/branchmap_template.html').read()
             .replace('{{TITLE}}', e(cfg['title'])).replace('{{KICKER}}', e(cfg['kicker'])).replace('{{H1}}', e(cfg['h1']))
             .replace('{{SUMMARY}}', e(T['summary_ko'])).replace('{{SCOPE}}', e(cfg['scope']))
