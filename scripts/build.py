@@ -8,6 +8,7 @@ P = json.load(open('data/papers.json'))
 T = json.load(open('data/topic_trends.json'))
 H = json.load(open('data/highlights.json'))
 HT = json.load(open('data/highlight_topics.json'))
+AS = json.load(open('data/area_stats.json'))
 
 CATS = [
     ('medical_qa', 'Medical QA', '의료·임상·생의학 질의응답, medical VQA, 시험형 QA, 임상 추론 QA'),
@@ -86,7 +87,7 @@ w = md.append
 w('# NeurIPS 2026 — Medical QA · Medical RAG · Medical Agent · Medical LLM · RAG 논문 정리\n')
 w(f'NeurIPS 2026 채택 논문 **{T["N2026"]:,}편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **{len(P)}편**을 모았다. '
   '키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.\n')
-w('> 같은 내용을 검색·필터가 되는 페이지로 보려면 [`index.html`](index.html)을 브라우저로 열면 된다. NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
+w('> 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.\n')
 w('## 한눈에 보기\n')
 w('| 분류 | 편수 | 기준 |\n|---|---:|---|')
 for k, n, desc in CATS:
@@ -103,6 +104,8 @@ w(f'1. **원천 데이터**: neurips.cc 공식 다운로드(`/Downloads/2026`)�
 w('2. **1차 후보 추출**: 의료 용어 × LLM/에이전트 용어, 또는 retrieval/RAG/search 용어가 제목·초록에 있는 논문 1,103편 (`scripts/candidates.py`).')
 w('3. **분류**: 후보 1,103편 전부의 제목·초록을 LLM(Claude)이 읽고 핵심 기여 기준으로 분류. 지나가듯 언급하거나 RAG를 baseline으로만 쓴 논문은 제외. 이어 제외된 논문 중 신호가 강한 167편을 초록 전문으로 다시 읽는 2차 재검토로 17편을 추가했고, 경계 사례는 직접 읽어 2편을 더하고 1편을 뺐다.')
 w(f'4. **발표 형식(Oral/Spotlight/Poster)과 트랙**은 neurips.cc의 orals-posters JSON에서 붙였다. 이 JSON은 받을 때마다 일부만 담겨 있어(2026-10-01 5,547편, 10-02 5,896편) 두 스냅샷을 합쳤고, 그래도 이 목록 {len(P)}편 중 {len(P) - n_dec}편은 발표 형식을 알 수 없다(`scripts/decisions.py`).\n')
+w('5. **분야 분포**: 2026년 9,094편과 2025년 5,860편 전부에 LLM이 제목만 보고 14개 분야 중 하나를 배정했다(`scripts/area_prompt.md`, 약 1,000편씩 14묶음). 묶음마다 분야 비중이 조금씩 달라서, 그 흩어짐으로 오차를 어림하고 오차의 두 배보다 큰 변화만 증가·감소로 본다(`scripts/areas.py`). 검증으로, 위 의료 논문 100편 중 87편이 의료·헬스케어로 배정됐다.')
+w('6. **키워드 정규식**: MCP, LLM 불확실성·calibration, LLM 에이전트, activation steering은 다른 뜻까지 잡던 정규식을 좁혔다(예: `calibrat` 단독 → LLM 용어가 함께 있어야 매칭).\n')
 w('**한계**: 분류는 사람 검수가 아닌 LLM 판독이라 경계 사례(예: 단백질 언어모델 + retrieval, 의료가 여러 응용 중 하나인 논문)는 기준에 따라 달라질 수 있다. 순수 검색·임베딩 논문(생성 없음)과 LLM이 없는 의료 영상·EHR 예측 모델은 의도적으로 제외했다. 한 줄 요약은 초록 기반 자동 요약이다.\n')
 
 def paper_table(lst):
@@ -116,6 +119,18 @@ def paper_table(lst):
         out.append(f"| {i} | [{t}]({p['url']}) | {p['summary_ko'].replace('|', '/')} | {tags} | {dec} |")
     return '\n'.join(out)
 
+KO_AREA = {'A': 'LLM 추론·학습·RL 후처리', 'B': 'LLM 에이전트·도구·검색', 'C': '정렬·안전·해석', 'D': '효율 모델·시스템', 'E': '멀티모달·비전-언어',
+           'F': '생성 모델', 'G': '컴퓨터 비전·3D', 'H': '강화학습·로보틱스', 'I': '학습 이론·최적화', 'J': '확률·인과·통계',
+           'K': '의료·헬스케어', 'L': '과학·생물', 'M': '데이터셋·벤치마크', 'N': '기타 ML (그래프·시계열 등)'}
+w('## 학회 전체는 어떻게 나뉘나 (14개 분야)\n')
+w(f"모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 {AS['known']:,}편 기준이고, 기준선은 {AS['base_rate']}%다. 더 자세한 그림은 [`atlas.html`](atlas.html).\n")
+w('| 분야 | 2025 비중 | 2026 비중 (편수) | 변화 | 하이라이트 비율 (95% 구간) |\n|---|---:|---:|---:|---:|')
+for a in AS['areas']:
+    ch = f"{a['diff_pp']:+.1f}%p" if a['clear_change'] else '비슷'
+    w(f"| {KO_AREA[a['code']]} | {a['share2025']}% | {a['share2026']}% ({a['n2026']:,}) | {ch} | {a['hl_rate']}% ({a['hl_ci'][0]}–{a['hl_ci'][1]}%) |")
+w('')
+w('- 확실히 커진 분야는 LLM 에이전트·도구·검색(비중 ×2.3)이고, 의료·헬스케어도 작게 늘었다. 컴퓨터 비전·3D, 학습 이론, 기타 ML은 편수는 늘었지만 비중은 줄었다.')
+w('- 하이라이트 비율은 과학·생물과 학습 이론이 기준선보다 높고, 의료·헬스케어가 가장 낮다. "데이터셋·벤치마크" 분야는 묶음 사이 편차가 커서(2.3–10.5%) 해석하지 않는다.\n')
 w('## 논문 목록\n')
 for k, n, desc in CATS[:4]:
     w(f'### {n} ({counts[k]}편)\n')
@@ -129,6 +144,13 @@ for k, n in SUBS:
 
 w('## 키워드 트렌드 분석 (NeurIPS 2025 → 2026)\n')
 w(f'방법: 주제별 정규식이 제목+초록에 걸리는 논문 비율을 2025({T["N2025"]:,}편)와 2026({T["N2026"]:,}편)에서 각각 계산하고, 비율의 배수(2026 비율 ÷ 2025 비율)를 성장으로 봤다. 정규식은 `scripts/topic_trends.py`에 있다. 키워드 매칭이라 한 단어가 여러 뜻으로 쓰이는 경우(예: calibration)는 과대 집계될 수 있다.\n')
+mp = AS['med_llm_pool']
+w(f"### 의료 × LLM 논문 안에서 커진 주제\n")
+w(f"의료 용어와 LLM 용어가 함께 나오는 논문({mp['n2025']}편 → {mp['n2026']}편) 안에서 각 주제를 다루는 논문의 비율. 같은 키워드 규칙을 두 해에 똑같이 적용했다.\n")
+w('| 주제 | 2025 | 2026 |\n|---|---:|---:|')
+for t in AS['med_themes']:
+    w(f"| {t['theme']} | {t['share2025']}% ({t['n2025']}) | {t['share2026']}% ({t['n2026']}) |")
+w('')
 w('### 요약\n')
 for n_ in TREND_NOTES:
     w(f'- {n_}')
@@ -183,8 +205,8 @@ for r in lift_rows:
     w(f"| {r['topic']} | {r['n']} | {r['highlights']} | {r['rate']}% | ×{r['lift']} |")
 w('')
 w('## 재현\n')
-w('```bash\nbash scripts/fetch.sh            # neurips.cc에서 2025·2026 포스터 목록 다운로드 → data/raw/\npython3 scripts/candidates.py    # 1차 키워드 후보 (1,103편)\npython3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data/decisions.json, papers.json 갱신\npython3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json\npython3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json\npython3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json\npython3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성\n```\n')
-w('LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/papers.json`의 `cats`, `rag_sub`, `summary_ko` 필드와 `data/highlight_labels.json`(하이라이트의 분야·요약)이다.\n')
+w('```bash\nbash scripts/fetch.sh            # neurips.cc에서 2025·2026 포스터 목록 다운로드 → data/raw/\npython3 scripts/candidates.py    # 1차 키워드 후보 (1,103편)\npython3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data/decisions.json, papers.json 갱신\npython3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json\npython3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json\npython3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json\npython3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json\npython3 scripts/atlas.py         # atlas.html 생성\npython3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성\n```\n')
+w('LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/papers.json`의 `cats`, `rag_sub`, `summary_ko` 필드, `data/highlight_labels.json`(하이라이트의 분야·요약), `data/area_labels.json`(전체 논문의 분야)이다.\n')
 w('## 파일\n')
 w('| 파일 | 내용 |\n|---|---|')
 w('| `data/papers.json` | 216편: 제목, 저자, 초록, NeurIPS 페이지 URL, OpenReview URL(있으면), 발표 형식, 트랙, 분류, 한 줄 요약 |')
@@ -195,6 +217,9 @@ w('| `HIGHLIGHTS.md` | NeurIPS 2026 전체 Oral·Spotlight 논문, 분야별 |')
 w('| `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |')
 w('| `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |')
 w('| `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |')
+w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |')
+w('| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |')
+w('| `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |')
 w('| `index.html` | 검색·필터가 되는 단일 HTML 페이지 |')
 open('README.md', 'w').write('\n'.join(md) + '\n')
 
@@ -377,13 +402,13 @@ footer {{ color: var(--ink-3); font-size: 13px; padding: 28px 0 48px; border-top
 <body>
 <header class="top"><div class="wrap">
   <div class="brand">NeurIPS 2026 · Med LLM/RAG</div>
-  <nav><a href="#papers">논문</a><a href="#trends">트렌드</a><a href="#next">연구 주제</a><a href="#medqa">Medical QA 아이디어</a><a href="#highlights">하이라이트</a><a href="#method">방법</a></nav>
+  <nav><a href="#papers">논문</a><a href="#trends">트렌드</a><a href="#next">연구 주제</a><a href="#medqa">Medical QA 아이디어</a><a href="#highlights">하이라이트</a><a href="#method">방법</a><a href="atlas.html">전체 지형도 ↗</a></nav>
   <button id="theme" type="button" aria-label="테마 전환">테마</button>
 </div></header>
 <main class="wrap">
 <div class="hero">
   <h1>NeurIPS 2026에서 의료 QA·RAG·에이전트·LLM과 RAG를 다룬 논문 {len(P)}편</h1>
-  <p>채택 논문 {T["N2026"]:,}편의 제목·초록을 읽고 핵심 기여 기준으로 분류했다. 의료 관련 {n_med}편, RAG {counts["rag"]}편이며 한 논문이 여러 분류에 속할 수 있다. 카드를 누르면 해당 분류로 목록이 걸러진다.</p>
+  <p>채택 논문 {T["N2026"]:,}편의 제목·초록을 읽고 핵심 기여 기준으로 분류했다. 의료 관련 {n_med}편, RAG {counts["rag"]}편이며 한 논문이 여러 분류에 속할 수 있다. 카드를 누르면 해당 분류로 목록이 걸러진다. 학회 전체에서 이 주제들까지 위에서 아래로 내려가는 요약은 <a href="atlas.html">전체 지형도</a>에 있다.</p>
   <div class="stats">{stat_cards}</div>
   <div class="substat">RAG 세부 유형: {' · '.join(f'{n} {sub_counts[k]}' for k, n in SUBS)}</div>
 </div>

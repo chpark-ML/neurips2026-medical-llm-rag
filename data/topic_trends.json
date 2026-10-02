@@ -4,11 +4,11 @@
  "rows": [
   {
    "topic": "MCP (Model Context Protocol)",
-   "n2026": 19,
+   "n2026": 17,
    "n2025": 1,
-   "share2026": 0.21,
+   "share2026": 0.19,
    "share2025": 0.02,
-   "growth": 12.24
+   "growth": 10.95
   },
   {
    "topic": "Tool use / function calling",
@@ -43,6 +43,14 @@
    "growth": 3.03
   },
   {
+   "topic": "Steering / activation editing",
+   "n2026": 47,
+   "n2025": 10,
+   "share2026": 0.52,
+   "share2025": 0.17,
+   "growth": 3.03
+  },
+  {
    "topic": "Reinforcement learning w/ verifiable rewards (RLVR)",
    "n2026": 141,
    "n2025": 31,
@@ -60,11 +68,11 @@
   },
   {
    "topic": "Uncertainty / calibration (LLM)",
-   "n2026": 694,
-   "n2025": 210,
-   "share2026": 7.63,
-   "share2025": 3.58,
-   "growth": 2.13
+   "n2026": 386,
+   "n2025": 107,
+   "share2026": 4.24,
+   "share2025": 1.83,
+   "growth": 2.32
   },
   {
    "topic": "Reward hacking / deception",
@@ -75,20 +83,20 @@
    "growth": 2.1
   },
   {
-   "topic": "Steering / activation editing",
-   "n2026": 249,
-   "n2025": 79,
-   "share2026": 2.74,
-   "share2025": 1.35,
-   "growth": 2.03
-  },
-  {
    "topic": "Flow matching",
    "n2026": 231,
    "n2025": 79,
    "share2026": 2.54,
    "share2025": 1.35,
    "growth": 1.88
+  },
+  {
+   "topic": "LLM agents / agentic",
+   "n2026": 769,
+   "n2025": 272,
+   "share2026": 8.46,
+   "share2025": 4.64,
+   "growth": 1.82
   },
   {
    "topic": "World models",
@@ -113,14 +121,6 @@
    "share2026": 0.57,
    "share2025": 0.34,
    "growth": 1.68
-  },
-  {
-   "topic": "LLM agents / agentic",
-   "n2026": 1311,
-   "n2025": 542,
-   "share2026": 14.42,
-   "share2025": 9.25,
-   "growth": 1.56
   },
   {
    "topic": "Agent safety / guardrails",

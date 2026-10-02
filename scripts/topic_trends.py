@@ -1,7 +1,8 @@
 import json,re,collections
 # curated topic lexicon: topic -> regex over title+abstract
 T={
- 'LLM agents / agentic':r'\bagent(s|ic)?\b',
+ # agent words alone also match RL agents, so require an LLM term somewhere in the text
+ 'LLM agents / agentic':r'(?s)^(?=.*\bagent(?:s|ic)?\b)(?=.*(?:\b(?:LLMs?|large language models?|language models?|MLLMs?|VLMs?|LVLMs?|vision[- ]language models?|GPT-?\w*|foundation models?)\b))',
  'Multi-agent systems':r'multi-?agent',
  'Reinforcement learning w/ verifiable rewards (RLVR)':r'\bRLVR\b|verifiable reward',
  'GRPO':r'\bGRPO\b',
@@ -10,7 +11,8 @@ T={
  'Overthinking / efficient reasoning':r'overthink|efficient reasoning|reasoning efficiency|adaptive thinking|token budget',
  'Diffusion language models':r'diffusion (large )?language model|\bdLLMs?\b|masked diffusion model',
  'Tool use / function calling':r'tool[- ](use|calling|learning|augmented)|function[- ]calling',
- 'MCP (Model Context Protocol)':r'\bMCP\b|model context protocol',
+ # bare MCP also matches other acronyms (e.g. multi-chunk prediction): keep it only next to agent/tool
+ 'MCP (Model Context Protocol)':r'(?s)model context protocol|^(?=.*(?-i:\bMCP\b))(?=.*\b(?:agent|tool)s?\b)',
  'Computer-use / GUI / web agents':r'\bGUI\b|computer[- ]use|web agent|browser agent|OS agent',
  'Software engineering agents':r'SWE-?bench|software engineering agent|coding agent|code agent',
  'Deep research / search agents':r'deep research|search agent|agentic search|search-r1',
@@ -20,10 +22,11 @@ T={
  'Reward models / LLM-as-a-judge':r'reward model|LLM[- ]as[- ]a[- ]judge|\bjudge model|generative verifier|process reward',
  'Process reward models (PRM)':r'process reward|\bPRMs?\b',
  'Hallucination':r'hallucinat',
- 'Uncertainty / calibration (LLM)':r'uncertainty (quantification|estimation)|calibrat',
+ # calibrat alone matched camera/classifier calibration: require an LLM term
+ 'Uncertainty / calibration (LLM)':r'(?s)^(?=.*(?:uncertainty|calibrat))(?=.*(?:\b(?:LLMs?|large language models?|language models?|MLLMs?|VLMs?|LVLMs?|vision[- ]language models?|GPT-?\w*|foundation models?)\b))',
  'Jailbreak / red teaming':r'jailbreak|red[- ]team',
  'Interpretability / SAE':r'sparse autoencoder|\bSAEs?\b|mechanistic interpretab|circuit',
- 'Steering / activation editing':r'steering vector|activation steering|representation engineering|\bsteer(ing)?\b',
+ 'Steering / activation editing':r'steering vector|activation steering|representation engineering|activation (?:editing|addition)',
  'Reward hacking / deception':r'reward hacking|deceptive|deception|sandbagging|scheming|sycophan',
  'Unlearning':r'unlearn',
  'Watermarking':r'watermark',

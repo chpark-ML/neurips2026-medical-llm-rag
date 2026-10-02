@@ -2,7 +2,7 @@
 
 NeurIPS 2026 채택 논문 **9,094편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **216편**을 모았다. 키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.
 
-> 같은 내용을 검색·필터가 되는 페이지로 보려면 [`index.html`](index.html)을 브라우저로 열면 된다. NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.
+> 학회 전체에서 의료 QA까지 위에서 아래로 내려가며 보는 요약은 [`atlas.html`](atlas.html), 논문 목록을 검색·필터하는 페이지는 [`index.html`](index.html)이다(둘 다 브라우저로 연다). NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 따로 정리했다.
 
 ## 한눈에 보기
 
@@ -36,7 +36,34 @@ RAG 122편의 세부 유형:
 3. **분류**: 후보 1,103편 전부의 제목·초록을 LLM(Claude)이 읽고 핵심 기여 기준으로 분류. 지나가듯 언급하거나 RAG를 baseline으로만 쓴 논문은 제외. 이어 제외된 논문 중 신호가 강한 167편을 초록 전문으로 다시 읽는 2차 재검토로 17편을 추가했고, 경계 사례는 직접 읽어 2편을 더하고 1편을 뺐다.
 4. **발표 형식(Oral/Spotlight/Poster)과 트랙**은 neurips.cc의 orals-posters JSON에서 붙였다. 이 JSON은 받을 때마다 일부만 담겨 있어(2026-10-01 5,547편, 10-02 5,896편) 두 스냅샷을 합쳤고, 그래도 이 목록 216편 중 34편은 발표 형식을 알 수 없다(`scripts/decisions.py`).
 
+5. **분야 분포**: 2026년 9,094편과 2025년 5,860편 전부에 LLM이 제목만 보고 14개 분야 중 하나를 배정했다(`scripts/area_prompt.md`, 약 1,000편씩 14묶음). 묶음마다 분야 비중이 조금씩 달라서, 그 흩어짐으로 오차를 어림하고 오차의 두 배보다 큰 변화만 증가·감소로 본다(`scripts/areas.py`). 검증으로, 위 의료 논문 100편 중 87편이 의료·헬스케어로 배정됐다.
+6. **키워드 정규식**: MCP, LLM 불확실성·calibration, LLM 에이전트, activation steering은 다른 뜻까지 잡던 정규식을 좁혔다(예: `calibrat` 단독 → LLM 용어가 함께 있어야 매칭).
+
 **한계**: 분류는 사람 검수가 아닌 LLM 판독이라 경계 사례(예: 단백질 언어모델 + retrieval, 의료가 여러 응용 중 하나인 논문)는 기준에 따라 달라질 수 있다. 순수 검색·임베딩 논문(생성 없음)과 LLM이 없는 의료 영상·EHR 예측 모델은 의도적으로 제외했다. 한 줄 요약은 초록 기반 자동 요약이다.
+
+## 학회 전체는 어떻게 나뉘나 (14개 분야)
+
+모든 논문의 분야 비중(전체 중 %)을 2025년과 비교했다. '변화'는 오차(±2 표준오차)보다 큰 경우에만 숫자로 적었다. 하이라이트 비율은 발표 형식을 아는 7,688편 기준이고, 기준선은 5.27%다. 더 자세한 그림은 [`atlas.html`](atlas.html).
+
+| 분야 | 2025 비중 | 2026 비중 (편수) | 변화 | 하이라이트 비율 (95% 구간) |
+|---|---:|---:|---:|---:|
+| 기타 ML (그래프·시계열 등) | 11.69% | 9.76% (888) | -1.9%p | 4.94% (3.62–6.7%) |
+| 정렬·안전·해석 | 8.84% | 9.26% (842) | 비슷 | 6.35% (4.75–8.45%) |
+| 강화학습·로보틱스 | 8.34% | 8.35% (759) | 비슷 | 4.39% (3.05–6.27%) |
+| LLM 추론·학습·RL 후처리 | 8.86% | 8.29% (754) | 비슷 | 3.53% (2.34–5.28%) |
+| 생성 모델 | 8.07% | 8.15% (741) | 비슷 | 5.36% (3.86–7.4%) |
+| 학습 이론·최적화 | 9.81% | 7.7% (700) | -2.1%p | 7.99% (6.06–10.47%) |
+| 컴퓨터 비전·3D | 9.88% | 7.55% (687) | -2.3%p | 5.72% (4.1–7.92%) |
+| 과학·생물 | 6.91% | 7.18% (653) | 비슷 | 8.87% (6.79–11.5%) |
+| LLM 에이전트·도구·검색 | 2.99% | 6.83% (621) | +3.8%p | 4.36% (2.92–6.45%) |
+| 데이터셋·벤치마크 | 4.35% | 6.52% (593) | 비슷 | 4.66% (3.12–6.89%) |
+| 효율 모델·시스템 | 6.19% | 6.43% (585) | 비슷 | 3.54% (2.25–5.52%) |
+| 확률·인과·통계 | 5.77% | 6.05% (550) | 비슷 | 4.17% (2.71–6.35%) |
+| 멀티모달·비전-언어 | 6.08% | 5.14% (467) | 비슷 | 5.51% (3.67–8.21%) |
+| 의료·헬스케어 | 2.22% | 2.79% (254) | +0.6%p | 1.94% (0.76–4.89%) |
+
+- 확실히 커진 분야는 LLM 에이전트·도구·검색(비중 ×2.3)이고, 의료·헬스케어도 작게 늘었다. 컴퓨터 비전·3D, 학습 이론, 기타 ML은 편수는 늘었지만 비중은 줄었다.
+- 하이라이트 비율은 과학·생물과 학습 이론이 기준선보다 높고, 의료·헬스케어가 가장 낮다. "데이터셋·벤치마크" 분야는 묶음 사이 편차가 커서(2.3–10.5%) 해석하지 않는다.
 
 ## 논문 목록
 
@@ -362,36 +389,54 @@ RAG 122편의 세부 유형:
 
 방법: 주제별 정규식이 제목+초록에 걸리는 논문 비율을 2025(5,860편)와 2026(9,094편)에서 각각 계산하고, 비율의 배수(2026 비율 ÷ 2025 비율)를 성장으로 봤다. 정규식은 `scripts/topic_trends.py`에 있다. 키워드 매칭이라 한 단어가 여러 뜻으로 쓰이는 경우(예: calibration)는 과대 집계될 수 있다.
 
+### 의료 × LLM 논문 안에서 커진 주제
+
+의료 용어와 LLM 용어가 함께 나오는 논문(76편 → 170편) 안에서 각 주제를 다루는 논문의 비율. 같은 키워드 규칙을 두 해에 똑같이 적용했다.
+
+| 주제 | 2025 | 2026 |
+|---|---:|---:|
+| 근거·귀속·환각 | 22.4% (17) | 47.1% (80) |
+| 검색 (RAG) | 3.9% (3) | 16.5% (28) |
+| 에이전트·멀티에이전트 | 15.8% (12) | 26.5% (45) |
+| 안전·신뢰 | 21.1% (16) | 28.8% (49) |
+| 추론 (reasoning) | 40.8% (31) | 41.2% (70) |
+| RL (GRPO·RLVR 등) | 10.5% (8) | 10.0% (17) |
+| 불확실성·abstain | 18.4% (14) | 17.6% (30) |
+| 대화·문진 | 11.8% (9) | 10.6% (18) |
+| 질의응답 (QA/VQA) | 23.7% (18) | 21.8% (37) |
+| 리포트 생성 | 6.6% (5) | 4.7% (8) |
+| 벤치마크 (제목) | 25.0% (19) | 18.2% (31) |
+
 ### 요약
 
-- **에이전트가 학회의 중심축이 됐다.** 초록에 agent/agentic이 나오는 논문 비율이 9.25% → 14.42% (2025 → 2026). 그 안에서도 tool use·function calling(×3.8), deep research·search agent(×3.5), SWE·coding agent(×3.1), MCP(1편 → 19편)가 가장 빠르게 늘었다.
+- **LLM 에이전트가 가장 크게 커진 분야다.** 14개 분야 중 'LLM 에이전트·도구·검색'만 비중이 2.99% → 6.83%로 두 배 넘게 커졌다. 키워드로 보면 LLM 용어와 agent/agentic이 함께 나오는 논문이 4.64% → 8.46%(×1.82). 그 안에서도 tool use·function calling(×3.8), deep research·search agent(×3.5), SWE·coding agent(×3.1), MCP(1편 → 17편)가 가장 빠르게 늘었다.
 - **RL 후처리는 'RLVR + on-policy'로 수렴 중.** RLVR/verifiable reward ×2.9, GRPO ×1.7. 제목 기준으로는 `RLVR` 1편 → 20편, `on-policy distillation` 0편 → 18편, `credit assignment` 5편 → 22편.
 - **'근거(evidence)와 감사(audit)'가 새 키워드.** 제목에 `evidence`가 들어간 논문이 5편 → 90편, `audit/auditing` 4편 → 55편, `diagnosing/diagnostic` 6편 → 52편. 정답률보다 *왜 맞았는지·어디서 틀렸는지*를 보는 논문이 늘었다.
-- **신뢰성 축이 두 배.** uncertainty/calibration ×2.1, reward hacking·deception·sycophancy ×2.1, activation steering ×2.0.
+- **신뢰성 축이 두 배.** LLM 불확실성·calibration ×2.3(107 → 386편), reward hacking·deception·sycophancy ×2.1, activation steering ×3.0(10 → 47편).
 - **생성 모델은 flow matching(×1.9)·diffusion LM(×3.0)·world model(×1.7)로 이동.**
 - **RAG는 정체, agentic search로 흡수 중.** 'RAG' 키워드 비율은 1.31% → 1.26%(×0.96)로 평탄하지만 deep research/search agent는 ×3.5. 이 저장소의 RAG 122편 중 31편이 agentic search 유형이다.
-- **의료는 완만한 성장, Medical QA는 급증.** medical/clinical 언급 3.65% → 4.82%(×1.3), Medical QA 키워드 매칭은 6편 → 26편(×2.8).
+- **의료는 완만한 성장, Medical QA는 급증.** 의료·헬스케어 분야 비중 2.22% → 2.79%, 의료 용어와 LLM 용어가 함께 나오는 논문 76편 → 170편(비중 ×1.44), Medical QA 키워드 매칭은 6편 → 26편(×2.8).
 - **하락 키워드.** in-context learning ×0.59, synthetic data ×0.64, (단어로서의) reasoning model/long CoT ×0.66, 3D Gaussian splatting ×0.68, differential privacy ×0.69, GNN ×0.72, federated learning ×0.73.
 
 ### 성장 상위 20개 주제
 
 | 주제 | 2025 편수 (비율) | 2026 편수 (비율) | 배수 |
 |---|---:|---:|---:|
-| MCP (Model Context Protocol) | 1 (0.02%) | 19 (0.21%) | ×12.24 |
+| MCP (Model Context Protocol) | 1 (0.02%) | 17 (0.19%) | ×10.95 |
 | Tool use / function calling | 24 (0.41%) | 141 (1.55%) | ×3.79 |
 | Deep research / search agents | 10 (0.17%) | 55 (0.6%) | ×3.54 |
 | Software engineering agents | 16 (0.27%) | 76 (0.84%) | ×3.06 |
 | Diffusion language models | 23 (0.39%) | 108 (1.19%) | ×3.03 |
+| Steering / activation editing | 10 (0.17%) | 47 (0.52%) | ×3.03 |
 | Reinforcement learning w/ verifiable rewards (RLVR) | 31 (0.53%) | 141 (1.55%) | ×2.93 |
 | Medical QA | 6 (0.1%) | 26 (0.29%) | ×2.79 |
-| Uncertainty / calibration (LLM) | 210 (3.58%) | 694 (7.63%) | ×2.13 |
+| Uncertainty / calibration (LLM) | 107 (1.83%) | 386 (4.24%) | ×2.32 |
 | Reward hacking / deception | 31 (0.53%) | 101 (1.11%) | ×2.1 |
-| Steering / activation editing | 79 (1.35%) | 249 (2.74%) | ×2.03 |
 | Flow matching | 79 (1.35%) | 231 (2.54%) | ×1.88 |
+| LLM agents / agentic | 272 (4.64%) | 769 (8.46%) | ×1.82 |
 | World models | 65 (1.11%) | 174 (1.91%) | ×1.72 |
 | GRPO | 90 (1.54%) | 237 (2.61%) | ×1.7 |
 | Agent memory | 20 (0.34%) | 52 (0.57%) | ×1.68 |
-| LLM agents / agentic | 542 (9.25%) | 1311 (14.42%) | ×1.56 |
 | Agent safety / guardrails | 20 (0.34%) | 46 (0.51%) | ×1.48 |
 | Interpretability / SAE | 91 (1.55%) | 202 (2.22%) | ×1.43 |
 | Knowledge distillation | 235 (4.01%) | 510 (5.61%) | ×1.4 |
@@ -462,7 +507,7 @@ RAG 122편의 세부 유형:
 
 ### 5. 에이전트의 불확실성·선택적 응답
 
-- **근거**: uncertainty/calibration 키워드 ×2.1로 상위 성장. 단일 응답 calibration은 많지만 다단계 에이전트의 calibration(언제 멈추고 사람에게 넘길지)은 적다.
+- **근거**: LLM 불확실성·calibration 키워드가 ×2.3(107 → 386편)으로 상위 성장. 단일 응답 calibration은 많지만 다단계 에이전트의 calibration(언제 멈추고 사람에게 넘길지)은 적다.
 - **아이디어**: 다회 tool use 에이전트에서 단계별 위험을 누적해 conformal 방식으로 '넘김(defer)' 시점을 보장하는 방법.
 - **관련 NeurIPS 2026 논문**: [Calibrating Agentic LLMs for Clinical Prediction](https://neurips.cc/virtual/2026/poster/149149), [Selective Answering for Medical VQA via Parallel Independent Claim Verification](https://neurips.cc/virtual/2026/poster/150272), [Learning When to Collaborate](https://neurips.cc/virtual/2026/poster/148185), [MoBayes](https://neurips.cc/virtual/2026/poster/152953)
 
@@ -575,9 +620,9 @@ RAG 122편의 세부 유형:
 
 ### 주제별 하이라이트 비율
 
-- **빠르게 크는 주제일수록 하이라이트 비율은 낮았다.** 전체 기준선 5.27%에 비해 tool use 2.63%(×0.50), agent memory 2.33%(×0.44), RAG 2.08%(×0.40), RLVR 3.36%(×0.64), activation steering 2.75%(×0.52). 논문이 몰리는 주제에서는 '같은 방향의 개선'만으로는 눈에 띄기 어렵다는 신호로 읽힌다(해석).
-- **기준선보다 높은 쪽은 데이터 선별(10.0%, ×1.9), state space·linear attention(9.0%, ×1.71), 정형 수학·정리 증명(8.51%, ×1.62), 효율적 추론·overthinking(8.11%, ×1.54).** 다만 해당 하이라이트가 4–9편이라 우연 변동이 크다.
-- **분야별로는 이론·최적화(60편)와 과학·의료·생물(46편)이 가장 많다.** Oral만 보면 이론·최적화 16편, 과학·의료·생물 14편, 정렬·안전·해석 12편 순.
+- **빠르게 크는 주제의 하이라이트 비율은 약간 낮은 경향이 있지만 확정할 수준은 아니다.** 비중이 2배 이상 된 10개 주제를 묶으면 4.04%(841편 중 34편), 나머지는 5.42%(차이 검정 p ≈ 0.09). 주제별로는 tool use 2.63%, agent memory 2.33%, RAG 2.08%, RLVR 3.36%로 기준선 5.27%보다 낮지만, 표본이 작아 95% 구간이 대부분 기준선을 포함한다.
+- **기준선보다 높은 쪽은 데이터 선별(10.0%), state space·linear attention(9.0%), 정형 수학·정리 증명(8.51%), 효율적 추론·overthinking(8.11%).** 다만 해당 하이라이트가 4–9편이라 우연 변동이 크다.
+- **분야 단위로 보면 차이가 뚜렷하다.** 각 분야 논문 중 하이라이트 비율이 과학·생물 8.87%(95% 구간 6.8–11.5%), 학습 이론·최적화 7.99%(6.1–10.5%)로 기준선보다 높고, 의료·헬스케어는 1.94%(206편 중 4편, 0.8–4.9%)로 14개 분야 중 가장 낮다(`data/area_stats.json`).
 - **의료 키워드(medical/clinical 등)가 나오는 논문의 하이라이트 비율은 3.36%(357편 중 12편)로 기준선보다 낮다.** 이 저장소의 의료 QA·RAG·에이전트 분류에서는 하이라이트가 0편이고, 의료 LLM/VLM에서 2편이 나왔다.
 
 주제 정규식은 트렌드 분석과 같고, 발표 형식을 아는 논문이 40편 이상인 주제만 실었다. 기준선은 5.27%. 하이라이트 편수가 한 자릿수인 주제가 많아 비율 차이는 참고용이다.
@@ -604,20 +649,21 @@ RAG 122편의 세부 유형:
 | Graph neural networks | 136 | 7 | 5.15% | ×0.98 |
 | World models | 140 | 7 | 5.0% | ×0.95 |
 | Synthetic data | 141 | 7 | 4.96% | ×0.94 |
+| Steering / activation editing | 41 | 2 | 4.88% | ×0.93 |
 | Benchmark / evaluation papers | 1327 | 65 | 4.9% | ×0.93 |
 | Multimodal LLM (MLLM/VLM) | 640 | 31 | 4.84% | ×0.92 |
 | Reward hacking / deception | 84 | 4 | 4.76% | ×0.9 |
 | Flow matching | 190 | 9 | 4.74% | ×0.9 |
 | Scientific discovery / AI scientist | 42 | 2 | 4.76% | ×0.9 |
 | Protein / molecule | 212 | 10 | 4.72% | ×0.9 |
-| Uncertainty / calibration (LLM) | 594 | 27 | 4.55% | ×0.86 |
+| LLM agents / agentic | 643 | 29 | 4.51% | ×0.86 |
 | Jailbreak / red teaming | 66 | 3 | 4.55% | ×0.86 |
 | Self-evolving / self-improving | 68 | 3 | 4.41% | ×0.84 |
 | Knowledge distillation | 431 | 19 | 4.41% | ×0.84 |
-| LLM agents / agentic | 1122 | 48 | 4.28% | ×0.81 |
 | Deep research / search agents | 47 | 2 | 4.26% | ×0.81 |
 | Causal inference | 387 | 16 | 4.13% | ×0.78 |
 | Continual learning | 122 | 5 | 4.1% | ×0.78 |
+| Uncertainty / calibration (LLM) | 320 | 12 | 3.75% | ×0.71 |
 | Reward models / LLM-as-a-judge | 137 | 5 | 3.65% | ×0.69 |
 | Multi-agent systems | 222 | 8 | 3.6% | ×0.68 |
 | Reinforcement learning w/ verifiable rewards (RLVR) | 119 | 4 | 3.36% | ×0.64 |
@@ -625,7 +671,6 @@ RAG 122편의 세부 유형:
 | Medical / clinical | 357 | 12 | 3.36% | ×0.64 |
 | Hallucination | 155 | 5 | 3.23% | ×0.61 |
 | Software engineering agents | 71 | 2 | 2.82% | ×0.53 |
-| Steering / activation editing | 218 | 6 | 2.75% | ×0.52 |
 | Tool use / function calling | 114 | 3 | 2.63% | ×0.5 |
 | Mixture of Experts | 115 | 3 | 2.61% | ×0.5 |
 | Agent memory | 43 | 1 | 2.33% | ×0.44 |
@@ -644,10 +689,12 @@ python3 scripts/decisions.py     # Oral/Spotlight/Poster·트랙 병합 → data
 python3 scripts/topic_trends.py  # 주제별 비율 → data/topic_trends.json
 python3 scripts/title_terms.py   # 제목 n-gram 증가 → data/title_terms.json
 python3 scripts/highlights.py    # 하이라이트 목록·주제별 비율 → data/highlights.json, data/highlight_topics.json
+python3 scripts/areas.py         # 14개 분야 비중·하이라이트 비율, 의료×LLM 주제 변화 → data/area_stats.json
+python3 scripts/atlas.py         # atlas.html 생성
 python3 scripts/build.py         # README.md, HIGHLIGHTS.md, index.html 생성
 ```
 
-LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/papers.json`의 `cats`, `rag_sub`, `summary_ko` 필드와 `data/highlight_labels.json`(하이라이트의 분야·요약)이다.
+LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/papers.json`의 `cats`, `rag_sub`, `summary_ko` 필드, `data/highlight_labels.json`(하이라이트의 분야·요약), `data/area_labels.json`(전체 논문의 분야)이다.
 
 ## 파일
 
@@ -661,4 +708,7 @@ LLM 분류 단계는 스크립트로 남기지 않았고, 그 결과가 `data/pa
 | `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |
 | `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |
 | `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |
+| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |
+| `data/area_stats.json` | 분야별 비중·변화·오차·하이라이트 비율, 의료×LLM 주제 변화, 트랙·형식 분포 |
+| `atlas.html` | 학회 전체 → 분야 → 트렌드 → 의료·RAG → 하이라이트 순서의 요약 페이지 |
 | `index.html` | 검색·필터가 되는 단일 HTML 페이지 |

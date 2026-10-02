@@ -1,0 +1,387 @@
+{
+ "n2026": 9094,
+ "n2025": 5860,
+ "known": 7688,
+ "base_rate": 5.27,
+ "areas": [
+  {
+   "code": "N",
+   "name": "Other ML (graphs, time series, federated, etc.)",
+   "n2025": 685,
+   "n2026": 888,
+   "share2025": 11.69,
+   "share2026": 9.76,
+   "growth": 0.84,
+   "diff_pp": -1.92,
+   "se_pp": 0.91,
+   "clear_change": true,
+   "known": 770,
+   "highlights": 38,
+   "orals": 9,
+   "hl_rate": 4.94,
+   "hl_ci": [
+    3.62,
+    6.7
+   ]
+  },
+  {
+   "code": "C",
+   "name": "Alignment, safety & interpretability",
+   "n2025": 518,
+   "n2026": 842,
+   "share2025": 8.84,
+   "share2026": 9.26,
+   "growth": 1.05,
+   "diff_pp": 0.42,
+   "se_pp": 0.75,
+   "clear_change": false,
+   "known": 677,
+   "highlights": 43,
+   "orals": 14,
+   "hl_rate": 6.35,
+   "hl_ci": [
+    4.75,
+    8.45
+   ]
+  },
+  {
+   "code": "H",
+   "name": "Reinforcement learning, robotics & embodied",
+   "n2025": 489,
+   "n2026": 759,
+   "share2025": 8.34,
+   "share2026": 8.35,
+   "growth": 1.0,
+   "diff_pp": 0.0,
+   "se_pp": 0.44,
+   "clear_change": false,
+   "known": 638,
+   "highlights": 28,
+   "orals": 8,
+   "hl_rate": 4.39,
+   "hl_ci": [
+    3.05,
+    6.27
+   ]
+  },
+  {
+   "code": "A",
+   "name": "LLM reasoning, training & RL post-training",
+   "n2025": 519,
+   "n2026": 754,
+   "share2025": 8.86,
+   "share2026": 8.29,
+   "growth": 0.94,
+   "diff_pp": -0.57,
+   "se_pp": 0.73,
+   "clear_change": false,
+   "known": 624,
+   "highlights": 22,
+   "orals": 6,
+   "hl_rate": 3.53,
+   "hl_ci": [
+    2.34,
+    5.28
+   ]
+  },
+  {
+   "code": "F",
+   "name": "Generative models",
+   "n2025": 473,
+   "n2026": 741,
+   "share2025": 8.07,
+   "share2026": 8.15,
+   "growth": 1.01,
+   "diff_pp": 0.08,
+   "se_pp": 0.62,
+   "clear_change": false,
+   "known": 634,
+   "highlights": 34,
+   "orals": 6,
+   "hl_rate": 5.36,
+   "hl_ci": [
+    3.86,
+    7.4
+   ]
+  },
+  {
+   "code": "I",
+   "name": "Learning theory & optimization",
+   "n2025": 575,
+   "n2026": 700,
+   "share2025": 9.81,
+   "share2026": 7.7,
+   "growth": 0.78,
+   "diff_pp": -2.11,
+   "se_pp": 0.64,
+   "clear_change": true,
+   "known": 588,
+   "highlights": 47,
+   "orals": 19,
+   "hl_rate": 7.99,
+   "hl_ci": [
+    6.06,
+    10.47
+   ]
+  },
+  {
+   "code": "G",
+   "name": "Computer vision & 3D",
+   "n2025": 579,
+   "n2026": 687,
+   "share2025": 9.88,
+   "share2026": 7.55,
+   "growth": 0.76,
+   "diff_pp": -2.33,
+   "se_pp": 1.03,
+   "clear_change": true,
+   "known": 577,
+   "highlights": 33,
+   "orals": 8,
+   "hl_rate": 5.72,
+   "hl_ci": [
+    4.1,
+    7.92
+   ]
+  },
+  {
+   "code": "L",
+   "name": "Science & biology",
+   "n2025": 405,
+   "n2026": 653,
+   "share2025": 6.91,
+   "share2026": 7.18,
+   "growth": 1.04,
+   "diff_pp": 0.27,
+   "se_pp": 0.79,
+   "clear_change": false,
+   "known": 564,
+   "highlights": 50,
+   "orals": 15,
+   "hl_rate": 8.87,
+   "hl_ci": [
+    6.79,
+    11.5
+   ]
+  },
+  {
+   "code": "B",
+   "name": "LLM agents & tool use",
+   "n2025": 175,
+   "n2026": 621,
+   "share2025": 2.99,
+   "share2026": 6.83,
+   "growth": 2.29,
+   "diff_pp": 3.84,
+   "se_pp": 0.52,
+   "clear_change": true,
+   "known": 528,
+   "highlights": 23,
+   "orals": 10,
+   "hl_rate": 4.36,
+   "hl_ci": [
+    2.92,
+    6.45
+   ]
+  },
+  {
+   "code": "M",
+   "name": "Datasets, benchmarks & evaluation",
+   "n2025": 255,
+   "n2026": 593,
+   "share2025": 4.35,
+   "share2026": 6.52,
+   "growth": 1.5,
+   "diff_pp": 2.17,
+   "se_pp": 1.16,
+   "clear_change": false,
+   "known": 494,
+   "highlights": 23,
+   "orals": 9,
+   "hl_rate": 4.66,
+   "hl_ci": [
+    3.12,
+    6.89
+   ]
+  },
+  {
+   "code": "D",
+   "name": "Efficient models & systems",
+   "n2025": 363,
+   "n2026": 585,
+   "share2025": 6.19,
+   "share2026": 6.43,
+   "growth": 1.04,
+   "diff_pp": 0.24,
+   "se_pp": 0.48,
+   "clear_change": false,
+   "known": 509,
+   "highlights": 18,
+   "orals": 3,
+   "hl_rate": 3.54,
+   "hl_ci": [
+    2.25,
+    5.52
+   ]
+  },
+  {
+   "code": "J",
+   "name": "Probabilistic, causal & statistical ML",
+   "n2025": 338,
+   "n2026": 550,
+   "share2025": 5.77,
+   "share2026": 6.05,
+   "growth": 1.05,
+   "diff_pp": 0.28,
+   "se_pp": 0.69,
+   "clear_change": false,
+   "known": 480,
+   "highlights": 20,
+   "orals": 3,
+   "hl_rate": 4.17,
+   "hl_ci": [
+    2.71,
+    6.35
+   ]
+  },
+  {
+   "code": "E",
+   "name": "Multimodal & vision-language",
+   "n2025": 356,
+   "n2026": 467,
+   "share2025": 6.08,
+   "share2026": 5.14,
+   "growth": 0.85,
+   "diff_pp": -0.94,
+   "se_pp": 0.97,
+   "clear_change": false,
+   "known": 399,
+   "highlights": 22,
+   "orals": 7,
+   "hl_rate": 5.51,
+   "hl_ci": [
+    3.67,
+    8.21
+   ]
+  },
+  {
+   "code": "K",
+   "name": "Health & medicine",
+   "n2025": 130,
+   "n2026": 254,
+   "share2025": 2.22,
+   "share2026": 2.79,
+   "growth": 1.26,
+   "diff_pp": 0.57,
+   "se_pp": 0.27,
+   "clear_change": true,
+   "known": 206,
+   "highlights": 4,
+   "orals": 1,
+   "hl_rate": 1.94,
+   "hl_ci": [
+    0.76,
+    4.89
+   ]
+  }
+ ],
+ "med_llm_pool": {
+  "n2025": 76,
+  "n2026": 170,
+  "share2025": 1.3,
+  "share2026": 1.87
+ },
+ "med_themes": [
+  {
+   "theme": "근거·귀속·환각",
+   "n2025": 17,
+   "n2026": 80,
+   "share2025": 22.4,
+   "share2026": 47.1
+  },
+  {
+   "theme": "검색 (RAG)",
+   "n2025": 3,
+   "n2026": 28,
+   "share2025": 3.9,
+   "share2026": 16.5
+  },
+  {
+   "theme": "에이전트·멀티에이전트",
+   "n2025": 12,
+   "n2026": 45,
+   "share2025": 15.8,
+   "share2026": 26.5
+  },
+  {
+   "theme": "안전·신뢰",
+   "n2025": 16,
+   "n2026": 49,
+   "share2025": 21.1,
+   "share2026": 28.8
+  },
+  {
+   "theme": "추론 (reasoning)",
+   "n2025": 31,
+   "n2026": 70,
+   "share2025": 40.8,
+   "share2026": 41.2
+  },
+  {
+   "theme": "RL (GRPO·RLVR 등)",
+   "n2025": 8,
+   "n2026": 17,
+   "share2025": 10.5,
+   "share2026": 10.0
+  },
+  {
+   "theme": "불확실성·abstain",
+   "n2025": 14,
+   "n2026": 30,
+   "share2025": 18.4,
+   "share2026": 17.6
+  },
+  {
+   "theme": "대화·문진",
+   "n2025": 9,
+   "n2026": 18,
+   "share2025": 11.8,
+   "share2026": 10.6
+  },
+  {
+   "theme": "질의응답 (QA/VQA)",
+   "n2025": 18,
+   "n2026": 37,
+   "share2025": 23.7,
+   "share2026": 21.8
+  },
+  {
+   "theme": "리포트 생성",
+   "n2025": 5,
+   "n2026": 8,
+   "share2025": 6.6,
+   "share2026": 4.7
+  },
+  {
+   "theme": "벤치마크 (제목)",
+   "n2025": 19,
+   "n2026": 31,
+   "share2025": 25.0,
+   "share2026": 18.2
+  }
+ ],
+ "tracks": {
+  "None": 1212,
+  "Main": 6836,
+  "Evaluations & Datasets": 852,
+  "Journal": 64,
+  "Position": 130
+ },
+ "formats": {
+  "None": 1276,
+  "Poster": 7283,
+  "Spotlight": 287,
+  "Oral": 118,
+  "Accept": 130
+ }
+}

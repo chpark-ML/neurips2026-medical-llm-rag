@@ -7,13 +7,13 @@ or data/papers.json — build.py does not recompute them, so update both togethe
 """
 
 TREND_NOTES = [
-    "**에이전트가 학회의 중심축이 됐다.** 초록에 agent/agentic이 나오는 논문 비율이 9.25% → 14.42% (2025 → 2026). 그 안에서도 tool use·function calling(×3.8), deep research·search agent(×3.5), SWE·coding agent(×3.1), MCP(1편 → 19편)가 가장 빠르게 늘었다.",
+    "**LLM 에이전트가 가장 크게 커진 분야다.** 14개 분야 중 'LLM 에이전트·도구·검색'만 비중이 2.99% → 6.83%로 두 배 넘게 커졌다. 키워드로 보면 LLM 용어와 agent/agentic이 함께 나오는 논문이 4.64% → 8.46%(×1.82). 그 안에서도 tool use·function calling(×3.8), deep research·search agent(×3.5), SWE·coding agent(×3.1), MCP(1편 → 17편)가 가장 빠르게 늘었다.",
     "**RL 후처리는 'RLVR + on-policy'로 수렴 중.** RLVR/verifiable reward ×2.9, GRPO ×1.7. 제목 기준으로는 `RLVR` 1편 → 20편, `on-policy distillation` 0편 → 18편, `credit assignment` 5편 → 22편.",
     "**'근거(evidence)와 감사(audit)'가 새 키워드.** 제목에 `evidence`가 들어간 논문이 5편 → 90편, `audit/auditing` 4편 → 55편, `diagnosing/diagnostic` 6편 → 52편. 정답률보다 *왜 맞았는지·어디서 틀렸는지*를 보는 논문이 늘었다.",
-    "**신뢰성 축이 두 배.** uncertainty/calibration ×2.1, reward hacking·deception·sycophancy ×2.1, activation steering ×2.0.",
+    "**신뢰성 축이 두 배.** LLM 불확실성·calibration ×2.3(107 → 386편), reward hacking·deception·sycophancy ×2.1, activation steering ×3.0(10 → 47편).",
     "**생성 모델은 flow matching(×1.9)·diffusion LM(×3.0)·world model(×1.7)로 이동.**",
     "**RAG는 정체, agentic search로 흡수 중.** 'RAG' 키워드 비율은 1.31% → 1.26%(×0.96)로 평탄하지만 deep research/search agent는 ×3.5. 이 저장소의 RAG 122편 중 31편이 agentic search 유형이다.",
-    "**의료는 완만한 성장, Medical QA는 급증.** medical/clinical 언급 3.65% → 4.82%(×1.3), Medical QA 키워드 매칭은 6편 → 26편(×2.8).",
+    "**의료는 완만한 성장, Medical QA는 급증.** 의료·헬스케어 분야 비중 2.22% → 2.79%, 의료 용어와 LLM 용어가 함께 나오는 논문 76편 → 170편(비중 ×1.44), Medical QA 키워드 매칭은 6편 → 26편(×2.8).",
     "**하락 키워드.** in-context learning ×0.59, synthetic data ×0.64, (단어로서의) reasoning model/long CoT ×0.66, 3D Gaussian splatting ×0.68, differential privacy ×0.69, GNN ×0.72, federated learning ×0.73.",
 ]
 
@@ -44,7 +44,7 @@ NEXT_TOPICS = [
     },
     {
         "title": "에이전트의 불확실성·선택적 응답",
-        "why": "uncertainty/calibration 키워드 ×2.1로 상위 성장. 단일 응답 calibration은 많지만 다단계 에이전트의 calibration(언제 멈추고 사람에게 넘길지)은 적다.",
+        "why": "LLM 불확실성·calibration 키워드가 ×2.3(107 → 386편)으로 상위 성장. 단일 응답 calibration은 많지만 다단계 에이전트의 calibration(언제 멈추고 사람에게 넘길지)은 적다.",
         "idea": "다회 tool use 에이전트에서 단계별 위험을 누적해 conformal 방식으로 '넘김(defer)' 시점을 보장하는 방법.",
         "papers": ["Calibrating Agentic LLMs", "Selective Answering for Medical VQA", "Learning When to Collaborate", "MoBayes"],
     },
@@ -133,9 +133,9 @@ MEDQA_IDEAS = [
 
 # Highlights (Oral + Spotlight). Numbers come from data/highlight_topics.json.
 HIGHLIGHT_NOTES = [
-    "**빠르게 크는 주제일수록 하이라이트 비율은 낮았다.** 전체 기준선 5.27%에 비해 tool use 2.63%(×0.50), agent memory 2.33%(×0.44), RAG 2.08%(×0.40), RLVR 3.36%(×0.64), activation steering 2.75%(×0.52). 논문이 몰리는 주제에서는 '같은 방향의 개선'만으로는 눈에 띄기 어렵다는 신호로 읽힌다(해석).",
-    "**기준선보다 높은 쪽은 데이터 선별(10.0%, ×1.9), state space·linear attention(9.0%, ×1.71), 정형 수학·정리 증명(8.51%, ×1.62), 효율적 추론·overthinking(8.11%, ×1.54).** 다만 해당 하이라이트가 4–9편이라 우연 변동이 크다.",
-    "**분야별로는 이론·최적화(60편)와 과학·의료·생물(46편)이 가장 많다.** Oral만 보면 이론·최적화 16편, 과학·의료·생물 14편, 정렬·안전·해석 12편 순.",
+    "**빠르게 크는 주제의 하이라이트 비율은 약간 낮은 경향이 있지만 확정할 수준은 아니다.** 비중이 2배 이상 된 10개 주제를 묶으면 4.04%(841편 중 34편), 나머지는 5.42%(차이 검정 p ≈ 0.09). 주제별로는 tool use 2.63%, agent memory 2.33%, RAG 2.08%, RLVR 3.36%로 기준선 5.27%보다 낮지만, 표본이 작아 95% 구간이 대부분 기준선을 포함한다.",
+    "**기준선보다 높은 쪽은 데이터 선별(10.0%), state space·linear attention(9.0%), 정형 수학·정리 증명(8.51%), 효율적 추론·overthinking(8.11%).** 다만 해당 하이라이트가 4–9편이라 우연 변동이 크다.",
+    "**분야 단위로 보면 차이가 뚜렷하다.** 각 분야 논문 중 하이라이트 비율이 과학·생물 8.87%(95% 구간 6.8–11.5%), 학습 이론·최적화 7.99%(6.1–10.5%)로 기준선보다 높고, 의료·헬스케어는 1.94%(206편 중 4편, 0.8–4.9%)로 14개 분야 중 가장 낮다(`data/area_stats.json`).",
     "**의료 키워드(medical/clinical 등)가 나오는 논문의 하이라이트 비율은 3.36%(357편 중 12편)로 기준선보다 낮다.** 이 저장소의 의료 QA·RAG·에이전트 분류에서는 하이라이트가 0편이고, 의료 LLM/VLM에서 2편이 나왔다.",
 ]
 
