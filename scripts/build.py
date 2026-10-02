@@ -84,7 +84,8 @@ def hl_table(lst, with_area=False):
 # ---------------------------------------------------------------- README.md
 md = []
 w = md.append
-w('# NeurIPS 2026 — Medical QA · Medical RAG · Medical Agent · Medical LLM · RAG 논문 정리\n')
+w('# NeurIPS 2026 관심 분야 상세 리포트\n')
+w('> 요약과 웹 페이지 링크는 [README](README.md)에 있다. 이 문서는 표와 목록을 모두 담은 상세판이다.\n')
 w(f'NeurIPS 2026 채택 논문 **{T["N2026"]:,}편** 중, 아래 다섯 주제 중 하나 이상을 핵심 기여로 다룬 논문 **{len(P)}편**을 모았다. '
   '키워드 트렌드 분석(2025 대비)과 다음 연구 주제 제안, Medical QA 연구 아이디어를 함께 정리했다.\n')
 w('> **웹 페이지 (휴대폰에서도 열림)** — 네 페이지는 서로 독립적이다.\n>\n> - [관심 분야 리포트](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html): 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 관심 분야 216편, on-policy·self-distillation 74편, 의료 QA 벤치마크 실험 논문, 하이라이트, 연구 제안\n> - [NeurIPS 2026 논문 탐색기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html): 학회 전체 9,094편을 분야·세부 주제(212개)·키워드·발표 형식·트랙으로 걸러 보기 (관심 분야와 무관한 전체 보기)\n> - [Medical QA 연구 지도](https://chpark-ml.github.io/neurips2026-medical-llm-rag/medical_qa.html): Medical QA 논문 30편을 큰 갈래 5개 → 세부 갈래 11개로 나눈 연구 흐름\n> - [On-policy·Self-distillation 연구 지도](https://chpark-ml.github.io/neurips2026-medical-llm-rag/opsd.html): 74편을 큰 갈래 6개 → 세부 갈래 20개로 나눈 연구 흐름\n>\n> NeurIPS 2026 전체의 Oral·Spotlight 논문은 [`HIGHLIGHTS.md`](HIGHLIGHTS.md)에 분야별로 정리했다.\n')
@@ -269,6 +270,7 @@ w('| `HIGHLIGHTS.md` | NeurIPS 2026 전체 Oral·Spotlight 논문, 분야별 |')
 w('| `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |')
 w('| `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |')
 w('| `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |')
+w('| `data/dataset_track_stats.json` | Evaluations & Datasets 트랙과 Main 트랙의 의료 논문 수·비율, 해당 논문 id, 판정 규칙 |')
 w('| `data/medqa_benchmark_papers.json` | 의료 QA 벤치마크 본문 검색·판정 결과: 논문별 벤치마크, 모델, 학습 여부, 문제·방법, 검증된 성능 수치, 검색 범위 |')
 w('| `data/opd_papers.json` | on-policy·self-distillation 논문(유형, 설정, 한 줄 요약, 발표 형식), 연구 흐름, 집계 |')
 w('| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |')
@@ -279,7 +281,62 @@ w('| `data/branch_medical_qa.json`, `data/branch_opsd.json` | 갈래 지도 데�
 w('| `explorer.html` | 전체 9,094편 태그 탐색기: 분야 → 세부 주제, 키워드 주제, 발표 형식, 트랙으로 필터 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/explorer.html)) |')
 w('| `data/subtopic_labels.json` | 분야별 세부 주제 212개와 논문별 세부 주제 1–2개 (LLM이 제목·초록 앞부분으로 배정, `scripts/subtopic_prompt.md`) |')
 w('| `interests.html` | 관심 분야 리포트: 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 216편 목록, on-policy·self-distillation, 의료 QA 벤치마크 실험 논문, 하이라이트 405편, 연구 제안 ([열기](https://chpark-ml.github.io/neurips2026-medical-llm-rag/interests.html)) |')
-open('README.md', 'w').write('\n'.join(md) + '\n')
+open('REPORT.md', 'w').write('\n'.join(md) + '\n')
+
+# ---------------------------------------------------------------- README.md (short)
+BASE = 'https://chpark-ml.github.io/neurips2026-medical-llm-rag'
+OPN = len(json.load(open('data/opd_papers.json'))['papers'])
+ar = {a['code']: a for a in AS['areas']}
+mth = {t['theme']: t for t in AS['med_themes']}
+DS = json.load(open('data/dataset_track_stats.json'))
+rm = []
+r = rm.append
+r('# NeurIPS 2026 — 의료 QA·RAG·에이전트·LLM 논문 정리\n')
+r(f'NeurIPS 2026 채택 논문 {T["N2026"]:,}편을 분야·주제로 나누고, 의료 QA·의료 RAG·의료 에이전트·의료 LLM·RAG·on-policy/self-distillation 논문을 골라 정리했다.\n')
+r('## 웹 페이지\n')
+r('휴대폰에서도 열린다. 네 페이지는 서로 독립적이다.\n')
+r('| 페이지 | 내용 |\n|---|---|')
+r(f'| [관심 분야 리포트]({BASE}/interests.html) | 학회 전체 → 분야 → 트렌드 → 의료·RAG 순서의 분석, 관심 분야 논문 목록, 하이라이트, 연구 제안 |')
+r(f'| [논문 탐색기]({BASE}/explorer.html) | 전체 {T["N2026"]:,}편을 분야·세부 주제(212개)·키워드·발표 형식으로 걸러 보기 |')
+r(f'| [Medical QA 연구 지도]({BASE}/medical_qa.html) | Medical QA 논문을 갈래로 나눈 연구 흐름 |')
+r(f'| [On-policy·Self-distillation 연구 지도]({BASE}/opsd.html) | OPD·OPSD 논문을 갈래로 나눈 연구 흐름 |')
+r('')
+r('## 숫자로 보기\n')
+r('| 항목 | 편수 |\n|---|---:|')
+r(f'| NeurIPS 2026 전체 | {T["N2026"]:,} |')
+r(f'| 관심 분야 (의료 {n_med} · RAG {counts["rag"]}, 일부 겹침) | {len(P)} |')
+r(f'| On-policy·Self-distillation | {OPN} |')
+if MB:
+    r(f"| 기존 의료 QA 벤치마크로 실험 (그중 의료 QA가 주 타깃) | {len([p for p in MB['papers'] if p['used_in_experiments']])} ({len(mb_main)}) |")
+r(f'| Oral·Spotlight (발표 형식을 아는 {HT["n_known"]:,}편 중) | {HT["n_highlight"]} |')
+r('')
+r('## 주요 관찰\n')
+r(f"- **LLM 에이전트만 크게 커졌다.** 14개 분야 중 'LLM 에이전트·도구·검색'의 비중이 {ar['B']['share2025']}% → {ar['B']['share2026']}%로 오차를 넘어 늘어난 유일한 큰 변화다.")
+r(f"- **의료는 작고 하이라이트가 적다.** 의료·헬스케어 분야는 {ar['K']['share2026']}%이고, Oral·Spotlight 비율이 {ar['K']['hl_rate']}%({ar['K']['highlights']}/{ar['K']['known']}편)로 14개 분야 중 가장 낮다(학회 기준선 {AS['base_rate']}%).")
+r(f"- **의료는 데이터셋 트랙에 몰린다.** Evaluations & Datasets 트랙 {DS['ed']}편 중 {DS['ed_med']}편({DS['ed_rate']}%)이 의료로, Main 트랙({DS['main_rate']}%)의 약 {DS['ed_rate'] / DS['main_rate']:.0f}배다. 그중 {DS['ed_med_llm_bench']}편이 의료 LLM 벤치마크다.")
+r(f"- **의료 LLM 연구의 질문이 '근거'로 옮겨갔다.** 의료×LLM 논문 중 근거·귀속·환각을 다루는 비율이 {mth['근거·귀속·환각']['share2025']}% → {mth['근거·귀속·환각']['share2026']}%, 검색(RAG)은 {mth['검색 (RAG)']['share2025']}% → {mth['검색 (RAG)']['share2026']}%.")
+r("- **RAG는 agentic search로 흡수되는 중이다.** 'RAG'라는 말을 쓰는 논문 비중은 그대로(×0.96)인데 deep research·search agent는 ×3.5.")
+if MB:
+    r(f"- **MedQA 류 벤치마크 실험 논문 {len([p for p in MB['papers'] if p['used_in_experiments']])}편 중 대부분은 일반 LLM 논문이다.** 의료 QA 자체를 목표로 한 것은 {len(mb_main)}편이다.")
+r('')
+r('## 파일\n')
+r('| 파일 | 내용 |\n|---|---|')
+r('| [`REPORT.md`](REPORT.md) | 상세판: 분야·트렌드 표, 관심 분야별 연구 흐름, 216편·의료 QA 벤치마크 논문 목록과 성능 표, 연구 제안 |')
+r('| [`HIGHLIGHTS.md`](HIGHLIGHTS.md) | 학회 전체 Oral·Spotlight 405편, 분야별 |')
+r('| `interests.html`, `explorer.html`, `medical_qa.html`, `opsd.html` | 위 웹 페이지의 원본 |')
+r('| `data/` | 모든 집계와 분류 결과 (JSON·CSV). 파일별 설명은 REPORT.md 끝에 있다 |')
+r('| `scripts/` | 데이터 수집·분류·집계·페이지 생성 코드 |')
+r('')
+r('## 어떻게 만들었나\n')
+r(f'- 원천: neurips.cc 공식 포스터 목록(2026 {T["N2026"]:,}편, 2025 {T["N2025"]:,}편)과 발표 형식 정보, 공개된 arXiv 본문.')
+r('- 분야·세부 주제·관심 분야 분류와 한 줄 요약은 LLM이 제목·초록(일부는 본문)을 읽고 붙였다. 사람이 검수하지 않았다.')
+r('- 트렌드는 주제별 키워드 정규식으로 센 비율이고, 하이라이트 비율에는 95% 신뢰구간을 함께 봤다.')
+r('- 의료 QA 벤치마크 실험 여부는 arXiv 본문을 읽어 판정했고, 성능 수치는 본문에 그대로 있는 값만 남겼다. arXiv 판이 없는 논문은 확인하지 못했다.')
+r('')
+r('## 재현\n')
+r('```bash\nbash scripts/fetch.sh && python3 scripts/decisions.py && python3 scripts/topic_trends.py && python3 scripts/highlights.py && python3 scripts/areas.py\npython3 scripts/build.py && python3 scripts/explorer.py && python3 scripts/branchmap.py\n```\n')
+r('LLM 판독 단계의 결과는 `data/`에 저장돼 있어, 위 명령만으로 페이지와 문서를 다시 만들 수 있다. 의료 QA 벤치마크 본문 검색은 `scripts/medqa_bench/`에 따로 있다.\n')
+open('README.md', 'w').write('\n'.join(rm) + '\n')
 
 # ---------------------------------------------------------------- HIGHLIGHTS.md
 hm = []
@@ -287,7 +344,7 @@ w = hm.append
 w('# NeurIPS 2026 하이라이트 (Oral · Spotlight) 논문\n')
 w(f"발표 형식을 아는 {HT['n_known']:,}편 중 Oral {HT['n_oral']}편, Spotlight {HT['n_highlight'] - HT['n_oral']}편, 합계 **{HT['n_highlight']}편**. "
   f"{T['N2026'] - HT['n_known']:,}편은 neurips.cc 데이터에 형식이 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. "
-  '분야와 한 줄 요약은 초록을 읽고 LLM이 붙였다. 의료·RAG 관점의 해석은 [README](README.md#하이라이트-oral--spotlight)에 있다.\n')
+  '분야와 한 줄 요약은 초록을 읽고 LLM이 붙였다. 의료·RAG 관점의 해석은 [REPORT](REPORT.md#하이라이트-oral--spotlight)에 있다.\n')
 w('| 분야 | Oral | Spotlight | 합계 |\n|---|---:|---:|---:|')
 for a in AREAS:
     o = sum(h['area'] == a and h['decision'] == 'Oral' for h in H); t_ = sum(h['area'] == a for h in H)
@@ -603,4 +660,4 @@ for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-
     page = page.replace(k, v)
 page = page.replace('/*DATA*/null', json.dumps(atlas_data(), ensure_ascii=False))
 open('interests.html', 'w').write(page)
-print('README.md', len(md), 'lines; interests.html', len(page) // 1024, 'KB;', len(P), 'papers')
+print('REPORT.md', len(md), 'lines; README.md', len(rm), 'lines; interests.html', len(page) // 1024, 'KB;', len(P), 'papers')

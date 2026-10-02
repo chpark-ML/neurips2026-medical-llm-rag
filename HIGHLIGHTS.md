@@ -1,6 +1,6 @@
 # NeurIPS 2026 하이라이트 (Oral · Spotlight) 논문
 
-발표 형식을 아는 7,688편 중 Oral 118편, Spotlight 287편, 합계 **405편**. 1,406편은 neurips.cc 데이터에 형식이 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. 분야와 한 줄 요약은 초록을 읽고 LLM이 붙였다. 의료·RAG 관점의 해석은 [README](README.md#하이라이트-oral--spotlight)에 있다.
+발표 형식을 아는 7,688편 중 Oral 118편, Spotlight 287편, 합계 **405편**. 1,406편은 neurips.cc 데이터에 형식이 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. 분야와 한 줄 요약은 초록을 읽고 LLM이 붙였다. 의료·RAG 관점의 해석은 [REPORT](REPORT.md#하이라이트-oral--spotlight)에 있다.
 
 | 분야 | Oral | Spotlight | 합계 |
 |---|---:|---:|---:|
