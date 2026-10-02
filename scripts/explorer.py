@@ -25,8 +25,11 @@ FMT = ['Oral', 'Spotlight', 'Poster', 'Accept', None]; TRK = ['Main', 'Evaluatio
 
 
 def authors(s):
-    names = [re.sub(r'\s*\(.*?\)\s*', '', a).strip() for a in re.split(r',\s*(?![^()]*\))', s)]
-    names = [n for n in names if n]
+    prev = None
+    while prev != s:  # drop affiliations, including nested parentheses
+        prev, s = s, re.sub(r'\([^()]*\)', '', s)
+    s = re.sub(r'\s*[()]', '', s)  # a few source strings have unbalanced parentheses
+    names = [n.strip() for n in s.split(',') if n.strip()]
     return ', '.join(names[:4]) + (f' 외 {len(names) - 4}명' if len(names) > 4 else '')
 
 
