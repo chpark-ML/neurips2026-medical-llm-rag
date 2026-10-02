@@ -130,3 +130,21 @@ MEDQA_IDEAS = [
         "papers": ["SafeDrug", "MindGuard", "TherapyGym"],
     },
 ]
+
+# Highlights (Oral + Spotlight). Numbers come from data/highlight_topics.json.
+HIGHLIGHT_NOTES = [
+    "**빠르게 크는 주제일수록 하이라이트 비율은 낮았다.** 전체 기준선 5.27%에 비해 tool use 2.63%(×0.50), agent memory 2.33%(×0.44), RAG 2.08%(×0.40), RLVR 3.36%(×0.64), activation steering 2.75%(×0.52). 논문이 몰리는 주제에서는 '같은 방향의 개선'만으로는 눈에 띄기 어렵다는 신호로 읽힌다(해석).",
+    "**기준선보다 높은 쪽은 데이터 선별(10.0%, ×1.9), state space·linear attention(9.0%, ×1.71), 정형 수학·정리 증명(8.51%, ×1.62), 효율적 추론·overthinking(8.11%, ×1.54).** 다만 해당 하이라이트가 4–9편이라 우연 변동이 크다.",
+    "**분야별로는 이론·최적화(60편)와 과학·의료·생물(46편)이 가장 많다.** Oral만 보면 이론·최적화 16편, 과학·의료·생물 14편, 정렬·안전·해석 12편 순.",
+    "**의료 키워드(medical/clinical 등)가 나오는 논문의 하이라이트 비율은 3.36%(357편 중 12편)로 기준선보다 낮다.** 이 저장소의 의료 QA·RAG·에이전트 분류에서는 하이라이트가 0편이고, 의료 LLM/VLM에서 2편이 나왔다.",
+]
+
+# Highlights whose core application is medicine, picked by reading the abstracts
+# (the keyword match finds 12, but 7 only mention healthcare as an example).
+MED_HIGHLIGHTS = [
+    "Incentivizing Medical Vision Capabilities",
+    "CRAFT: Causal Responsibility",
+    "STREAM: Stochastic Riemannian Flow Matching",
+    "Entropy Minimization without Model Collapse",
+    "What do EEG Foundation Models Capture",
+]

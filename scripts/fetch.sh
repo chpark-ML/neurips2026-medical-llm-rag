@@ -13,6 +13,7 @@ for Y in 2025 2026; do
     -o "data/raw/neurips${Y}_posters.json"
   rm -f "$CJ" "$CJ.html"
 done
-# Oral/spotlight decisions and track (partial coverage: ~5.5k of ~9.1k papers in 2026)
-curl -s -A "$UA" -o data/raw/neurips2026_orals_posters.json https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json
+# Oral/spotlight decisions and track. Each download is a different partial subset, so keep
+# dated snapshots; scripts/decisions.py merges every data/raw/neurips2026_orals_posters*.json.
+curl -s -A "$UA" -o "data/raw/neurips2026_orals_posters_$(date +%F).json" https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json
 python3 -c "import json;[print(f, len(json.load(open('data/raw/'+f)))) for f in ['neurips2025_posters.json','neurips2026_posters.json']]"

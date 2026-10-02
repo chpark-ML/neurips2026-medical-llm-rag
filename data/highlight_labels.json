@@ -1,0 +1,2027 @@
+[
+{
+"id": "155977",
+"area": "Computer vision & 3D",
+"summary_ko": "3D 재구성 모델의 장기꼬리 상황 적응을 위한 관계 구조 복원 PEFT, 3R-Adapter"
+},
+{
+"id": "155947",
+"area": "Efficient models & systems",
+"summary_ko": "대규모 연산 환경에서는 데이터 필터링이 불필요하며 저품질 데이터도 성능을 높임을 보인 스케일링 연구"
+},
+{
+"id": "148821",
+"area": "Multimodal & vision-language",
+"summary_ko": "비디오 MLLM용 예측 기반 시각 코드 AdaCodec으로 토큰 예산을 대폭 절감"
+},
+{
+"id": "153394",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "딥 RL에서 eligibility trace에 적응형 벡터 스텝사이즈를 도입한 스트리밍 알고리즘"
+},
+{
+"id": "151962",
+"area": "Computer vision & 3D",
+"summary_ko": "모호성 인지 적응형 구면 Transformer로 파노라마 시맨틱 분할 강건성 향상"
+},
+{
+"id": "154534",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "원본 데이터 없이 gradient 제약 최적화로 추천 모델을 언러닝하는 AdaSRU"
+},
+{
+"id": "149019",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "외생 변동 하에서 협력적 MARL을 위한 ED-POMDP 정식화와 LEICA 알고리즘"
+},
+{
+"id": "139558",
+"area": "LLM agents & tool use",
+"summary_ko": "LLM 에이전트가 행동을 멈춰야 할 때를 아는지 평가하는 AgentAbstain 벤치마크"
+},
+{
+"id": "152173",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "Theory-of-Mind 추론으로 악의적 LLM 에이전트를 감시하는 Agent-ToM"
+},
+{
+"id": "154668",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "비지도 통합 그래프 클러스터링을 위한 그래프 파운데이션 모델 GFM-UC"
+},
+{
+"id": "139265",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "Allen 구간 대수 기반 LLM 시간 추론 평가 프레임워크 ALTER"
+},
+{
+"id": "148276",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "LLM의 마음이론 능력이 범용적 표상-현실 불일치 감지 메커니즘임을 규명"
+},
+{
+"id": "154490",
+"area": "Science, health & biology",
+"summary_ko": "포인트 클라우드 물리 학습을 위한 meshfree exterior calculus와 MEEC-Net"
+},
+{
+"id": "154781",
+"area": "Science, health & biology",
+"summary_ko": "신경 집단 코드의 상호정보량을 드러내는 다중 스케일 정보 기하"
+},
+{
+"id": "152756",
+"area": "Learning theory & optimization",
+"summary_ko": "Muon과 Schedule-Free 평균화를 결합한 스케줄 불필요 옵티마이저 AMUSE"
+},
+{
+"id": "153364",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "데이터 매니폴드에 궤적을 고정하는 이중수준 최적화 기반 전이 적대 공격"
+},
+{
+"id": "149524",
+"area": "LLM agents & tool use",
+"summary_ko": "인구 규모 LLM 에이전트 시뮬레이션을 프로토타입 기반으로 확장하는 APS"
+},
+{
+"id": "139215",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "LLM 안전 심판이 정책 문구 변화에 불변인지 검증하는 스트레스 테스트"
+},
+{
+"id": "151320",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "T2I 충실도 벤치마크 Arena-T2I Hard와 의존성 인식 체크리스트 보상"
+},
+{
+"id": "154777",
+"area": "Learning theory & optimization",
+"summary_ko": "ICL에서 CoT 깊이에 따른 일반화를 정확히 풀어낸 이론 모델"
+},
+{
+"id": "149483",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "테스트 기반 코드 생성의 선택 및 backprompting에 대한 이론적 분석"
+},
+{
+"id": "155253",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "선형 깊이 성장의 Width-Limited Tree Search로 LLM 추론 시간 탐색 개선"
+},
+{
+"id": "154941",
+"area": "Efficient models & systems",
+"summary_ko": "Query-Key 경로 파라미터를 최대 95% 줄이는 Basis-Mediated Bilinear Attention"
+},
+{
+"id": "139293",
+"area": "Multimodal & vision-language",
+"summary_ko": "자율 화학 실험실용 MLLM 구체화 능력 평가 벤치마크 BEAKER"
+},
+{
+"id": "139741",
+"area": "Multimodal & vision-language",
+"summary_ko": "유아기 비언어 사회 추론을 평가하는 비디오 벤치마크 NEST"
+},
+{
+"id": "149277",
+"area": "Multimodal & vision-language",
+"summary_ko": "행동 기하 지도로 비디오 파운데이션 모델을 인간 사회 지각에 정렬"
+},
+{
+"id": "150673",
+"area": "Learning theory & optimization",
+"summary_ko": "노이즈 있는 전문가에서 on-policy distillation이 BC보다 우월함을 증명"
+},
+{
+"id": "138960",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "LLM 벤치마크의 건강도를 정량화하는 Benchmark Health Index"
+},
+{
+"id": "148246",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "맥락 분포와 관계 유사도로 그래프 구조를 인코딩하는 프레임워크"
+},
+{
+"id": "139098",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "포인트 클라우드 SSL 평가를 위한 통제된 진단 프로토콜"
+},
+{
+"id": "151996",
+"area": "Computer vision & 3D",
+"summary_ko": "분류학 OU 사전분포로 조류 3D 형상 복원의 미관측 종 일반화 개선"
+},
+{
+"id": "148807",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "가역 잠재 변환으로 LLM 행동을 제어하는 비선형 activation steering INNSteer"
+},
+{
+"id": "153816",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "OT 기반 동적 전문가 라우팅 디코더로 시계열 예측 성능 향상"
+},
+{
+"id": "151663",
+"area": "Efficient models & systems",
+"summary_ko": "파라미터화 관점의 극단적 시각 토큰 압축 코더 Braco"
+},
+{
+"id": "155649",
+"area": "LLM agents & tool use",
+"summary_ko": "임베딩 검색 대신 grep 등 터미널 도구로 코퍼스를 직접 탐색하는 에이전트 검색 DCI"
+},
+{
+"id": "153924",
+"area": "Science, health & biology",
+"summary_ko": "핫스팟 인식 다목적 RL로 다양한 결합 모드의 분자를 설계하는 BindMol"
+},
+{
+"id": "149098",
+"area": "Multimodal & vision-language",
+"summary_ko": "Wasserstein barycenter로 다중 모달리티를 정렬하는 BaryBind"
+},
+{
+"id": "151362",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "매니폴드 유도 표현 분리로 그래프 대조학습을 개선하는 MGRD"
+},
+{
+"id": "155412",
+"area": "Science, health & biology",
+"summary_ko": "구조 MRI를 조건으로 전뇌 4D fMRI 동역학을 생성하는 BrainWorld"
+},
+{
+"id": "148644",
+"area": "Science, health & biology",
+"summary_ko": "신경 PDE 솔버의 end-to-end 비용을 따지는 breakeven complexity 지표"
+},
+{
+"id": "155451",
+"area": "Efficient models & systems",
+"summary_ko": "small-world 연결성으로 information island를 깨는 희소 파인튜닝 SWIFT"
+},
+{
+"id": "152515",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "비디오 확산 모델을 위한 의미/범용 전문가 분리 SplitMoE"
+},
+{
+"id": "155350",
+"area": "Efficient models & systems",
+"summary_ko": "compute-optimal과 data-optimal을 잇는 Compute-Data 스케일링 법칙"
+},
+{
+"id": "153217",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "일선 관료의 재량권을 제한 예산 동적 할당으로 모델링한 이론과 실증"
+},
+{
+"id": "156046",
+"area": "Science, health & biology",
+"summary_ko": "프로모터-단백질 대조 사전학습으로 박테리아 유전자 조절 표현 학습"
+},
+{
+"id": "152525",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "정답 라벨 없이 약한 참조 모델로 강한 모델을 보정하는 후처리 프레임워크"
+},
+{
+"id": "151481",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "in-context learning이 내재적 호기심 보상을 지원할 수 있는지 이론적으로 분석"
+},
+{
+"id": "139774",
+"area": "LLM agents & tool use",
+"summary_ko": "재난 대응 지리공간 추론 에이전트 벤치마크 DORA"
+},
+{
+"id": "155638",
+"area": "Computer vision & 3D",
+"summary_ko": "쌍별 편집 관계로 아티팩트를 명시적으로 분리하는 이미지 조작 위치 추정"
+},
+{
+"id": "149782",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "폐형 투영으로 제약 만족을 보장하는 뉴로심볼릭 레이어 Casper"
+},
+{
+"id": "151014",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "지정 모델만 해독 가능한 비전이 가능 예제(NTE)로 모델별 데이터 사용 권한 통제"
+},
+{
+"id": "151296",
+"area": "Science, health & biology",
+"summary_ko": "희소 상호작용 인과 모델로 단백질-분자 가상 스크리닝 일반화 향상"
+},
+{
+"id": "152473",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "비마르코프 시스템에서 변수 클러스터 간 인과 발견 알고리즘"
+},
+{
+"id": "153331",
+"area": "Computer vision & 3D",
+"summary_ko": "로버스트 각도 동기화를 전역 최적으로 인증하는 branch-and-bound 알고리즘"
+},
+{
+"id": "153626",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "관계 그래프 판별로 모델 간 전이 가능한 환각 탐지를 수행하는 CHORD"
+},
+{
+"id": "154638",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "지오 등록 데이터로 현실 도시를 근거로 한 비디오 생성 CityRAG"
+},
+{
+"id": "152087",
+"area": "Multimodal & vision-language",
+"summary_ko": "명확화 요청을 감독으로 삼는 비전-언어 인터페이스 강화학습 AC-RL"
+},
+{
+"id": "153511",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "베이지안 보정과 3자 협력으로 준지도 엣지 분류를 수행하는 CLEAR"
+},
+{
+"id": "152543",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "Clio 같은 LLM 인사이트 시스템에서 개인정보를 추출하는 공격 CLIOPATRA"
+},
+{
+"id": "149779",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "폐루프 데이터 혼합 최적화로 자율주행 실제-합성 공동학습을 개선하는 AutoScale"
+},
+{
+"id": "152567",
+"area": "Computer vision & 3D",
+"summary_ko": "3DGS 3D 시각 그라운딩을 클러스터 선택으로 재정의한 ClusterSplat"
+},
+{
+"id": "151062",
+"area": "Science, health & biology",
+"summary_ko": "희소 자동미분으로 MLIP의 정확한 Hessian을 O(N)에 계산"
+},
+{
+"id": "153990",
+"area": "Efficient models & systems",
+"summary_ko": "chunked prefill 가속을 위한 Block-Union KV 선택 CompactAttention"
+},
+{
+"id": "154865",
+"area": "Science, health & biology",
+"summary_ko": "구조적 가지치기로 SO(3) 등변 원자 파운데이션 모델을 경량화"
+},
+{
+"id": "155902",
+"area": "Computer vision & 3D",
+"summary_ko": "이미지 복잡도를 활용한 Gaussian Splatting 연속 LOD 방법"
+},
+{
+"id": "151019",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "복잡도 인지 LoRA 집계로 모달리티 이질적 연합 Re-ID 수행"
+},
+{
+"id": "151946",
+"area": "LLM agents & tool use",
+"summary_ko": "컴퓨터 사용 에이전트 평가의 통계적 함정과 DigiWorld 벤치마크"
+},
+{
+"id": "148758",
+"area": "Computer vision & 3D",
+"summary_ko": "전역 잠재 상태와 flow matching으로 임의 해상도 3D 표면을 복원하는 Surflo"
+},
+{
+"id": "153249",
+"area": "Learning theory & optimization",
+"summary_ko": "Hilbert bundle과 cellular sheaf 기반 무한차원 신호용 기하 딥러닝 일관성 이론"
+},
+{
+"id": "154512",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "MARL에서 공유 초기화가 joint-policy 지형을 결정함을 보인 coordination connectivity"
+},
+{
+"id": "154255",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "잠재 가우시안 모델의 ILA 오차를 importance sampling으로 보정"
+},
+{
+"id": "149960",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "의료 VLM의 중재/제동 실패를 담당하는 attention head를 인과적으로 규명한 CRAFT"
+},
+{
+"id": "153663",
+"area": "Computer vision & 3D",
+"summary_ko": "1차 노드와 2차 엣지 할당을 결합한 Cross-order Consensus 그래프 매칭"
+},
+{
+"id": "154603",
+"area": "Science, health & biology",
+"summary_ko": "범용 MLIP의 물리 사전지식을 결정 생성 모델에 전이하는 CrystalREPA"
+},
+{
+"id": "151876",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "확산 언어모델에서 위험 토큰을 재마스킹하는 테스트 시점 안전 정렬 CURE"
+},
+{
+"id": "151520",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "Delta debugging으로 비전 모델의 최소 충분 설명을 찾는 DD-CAM"
+},
+{
+"id": "151036",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "Dirichlet 측지 거리로 노이즈에 강한 few-shot 학습을 수행하는 DDGE"
+},
+{
+"id": "139355",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "데이터셋 증류 평가의 공정성을 재검토한 DD-Ranking 프레임워크"
+},
+{
+"id": "152417",
+"area": "Learning theory & optimization",
+"summary_ko": "토큰 학습 시간 분포로 스케일링 법칙을 분해하고 재구성"
+},
+{
+"id": "150168",
+"area": "Science, health & biology",
+"summary_ko": "희소 오토인코더로 지구 관측 임베딩을 해석 가능한 특징으로 분해"
+},
+{
+"id": "151547",
+"area": "Science, health & biology",
+"summary_ko": "이산 확산 모델로 복잡한 진화 과정의 계통수를 추론하는 생성 모델"
+},
+{
+"id": "153737",
+"area": "Computer vision & 3D",
+"summary_ko": "학습 가능한 좌표 재매핑으로 Gibbs 아티팩트를 줄인 Deformable 2DGS"
+},
+{
+"id": "154303",
+"area": "Computer vision & 3D",
+"summary_ko": "루프 트랜스포머로 파라미터 효율적인 다중 뷰 3D 재구성을 하는 DéjàView"
+},
+{
+"id": "153494",
+"area": "Multimodal & vision-language",
+"summary_ko": "교사-학생 답변 발산이 큰 프롬프트로 VLM 증류를 개선하는 DeltaPrompts"
+},
+{
+"id": "154008",
+"area": "Science, health & biology",
+"summary_ko": "구면 스펙트럼 대각 상호작용으로 지구 동역학을 예측하는 DIAGNO"
+},
+{
+"id": "152327",
+"area": "Learning theory & optimization",
+"summary_ko": "Hadamard 초기화로 cross-entropy 동역학을 풀어낸 neural collapse 이론"
+},
+{
+"id": "152753",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "확산 모델로 공통 요인과 고유 요인을 분리하는 대조 분석 Diff-CA"
+},
+{
+"id": "150440",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "위험 민감 동역학 샘플러로 분포적 강건 domain randomization 수행"
+},
+{
+"id": "139308",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "이미지 편집 모델이 실제 조명을 이해하는지 평가하는 3DLP 벤치마크"
+},
+{
+"id": "154186",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "key-orthogonal 투영으로 attention 재라우팅을 막는 activation steering SKOP"
+},
+{
+"id": "139569",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "ImageNet-1k 검증셋을 처음부터 재주석한 ReImageNet"
+},
+{
+"id": "150945",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "추론 모델의 thinking 토큰이 안전성에 도움이 되는지 분석"
+},
+{
+"id": "155336",
+"area": "Learning theory & optimization",
+"summary_ko": "동기식 SGD가 이질적 환경에서 거의 최적임을 증명"
+},
+{
+"id": "152718",
+"area": "Efficient models & systems",
+"summary_ko": "기대 수락 길이에서 유도한 위치별 가중 손실로 병렬 speculative drafting 개선"
+},
+{
+"id": "139806",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "마인크래프트 복셀 월드 데이터셋과 3D 확산 생성 모델 Dream-Cubed"
+},
+{
+"id": "154932",
+"area": "LLM agents & tool use",
+"summary_ko": "터미널 관측 토큰 예측 보조 손실로 CLI 에이전트 RL을 개선하는 ECHO"
+},
+{
+"id": "148733",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "선형 base drift 재정식화로 Adjoint Matching을 효율화한 확산 미세조정 EAM"
+},
+{
+"id": "149789",
+"area": "LLM agents & tool use",
+"summary_ko": "실제 하드웨어 피드백으로 MCU용 AI를 최적화하는 코딩 에이전트 아레나"
+},
+{
+"id": "152582",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "제어 가능한 정보 생산(CIP)에 기반한 내재 동기 프레임워크"
+},
+{
+"id": "149828",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "예측 편향을 줄여 엔트로피 최소화의 모델 붕괴를 막는 의료영상 TTA"
+},
+{
+"id": "151010",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "Empirical Bayes로 환경 변화에 강건한 표현을 학습"
+},
+{
+"id": "150429",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "Cognitive Well을 피하는 추론 파이프라인으로 저비용 IMO급 수학 풀이"
+},
+{
+"id": "139125",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "스파이킹 신경 활동 토크나이저를 평가하는 프레임워크와 벤치마크"
+},
+{
+"id": "148437",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "평가 인식 언급이 LLM 행동에 미치는 영향이 제한적임을 실험으로 확인"
+},
+{
+"id": "139130",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "AI 평가 결과 보고를 통합하는 Evaluation Cards 해석 계층"
+},
+{
+"id": "154073",
+"area": "Efficient models & systems",
+"summary_ko": "delta-rule 선형 어텐션을 연속시간 정확해로 푸는 Exact Flow Linear Attention"
+},
+{
+"id": "155943",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "잔차 신경망에서 가우시안 모멘트를 정확히 전파하는 2차 방법"
+},
+{
+"id": "154319",
+"area": "LLM agents & tool use",
+"summary_ko": "탐색 단계 통신으로 오류 전파를 막는 에이전트 test-time scaling ExComm"
+},
+{
+"id": "139760",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "실행 가능성을 반영한 Expected Harm으로 LLM 안전 평가를 재고"
+},
+{
+"id": "149912",
+"area": "LLM agents & tool use",
+"summary_ko": "관측 데이터에서 통계적으로 검증된 가설을 찾는 2-에이전트 ExperiGen"
+},
+{
+"id": "154246",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "기상 변수를 매개로 미관측 지점의 대기질을 추정하는 ExtrapAir"
+},
+{
+"id": "152237",
+"area": "Learning theory & optimization",
+"summary_ko": "로지스틱 회귀 경사하강법의 max-margin 약한 정렬 속도 이론"
+},
+{
+"id": "149055",
+"area": "Learning theory & optimization",
+"summary_ko": "forward-KL 정규화 오프라인 컨텍스추얼 밴딧의 fast rate 증명"
+},
+{
+"id": "148197",
+"area": "Science, health & biology",
+"summary_ko": "맥스웰 방정식의 정확해 뉴런으로 희소 데이터에서 전자기장 복원"
+},
+{
+"id": "149922",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "테스트 시 미래 상상 없이도 강한 World Action Model Fast-WAM"
+},
+{
+"id": "156133",
+"area": "Learning theory & optimization",
+"summary_ko": "f-DP 필터의 유효성 조건과 근사 해법 분석"
+},
+{
+"id": "152364",
+"area": "Efficient models & systems",
+"summary_ko": "특징 드리프트를 줄이는 모델 병합 후 레이어별 보정 FeatCal"
+},
+{
+"id": "153586",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "스펙트럼 직교성으로 연합 연속 언러닝을 수행하는 FedSOUL"
+},
+{
+"id": "148321",
+"area": "Efficient models & systems",
+"summary_ko": "암호화 데이터 위 트랜스포머 파인튜닝을 8배 빠르게 하는 FHE 설계 Felid"
+},
+{
+"id": "150728",
+"area": "Science, health & biology",
+"summary_ko": "모바일 기기에서 동작하는 빠른 뇌-텍스트 디코딩 FETTUCCINE"
+},
+{
+"id": "151026",
+"area": "Science, health & biology",
+"summary_ko": "all-atom flow map 증류로 단백질 cofolding을 few-step으로 수행"
+},
+{
+"id": "155800",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "그래프 시계열을 위한 필터링 기반 conformal 타원체 예측 집합"
+},
+{
+"id": "149171",
+"area": "Learning theory & optimization",
+"summary_ko": "Mamba 동역학에서 첫 토큰이 후속 토큰을 끌어당기는 현상 이론 분석"
+},
+{
+"id": "152494",
+"area": "LLM agents & tool use",
+"summary_ko": "가설 검정 신뢰성을 위해 RL로 학습한 LLM 에이전트 Fisher-R1과 P-Bench"
+},
+{
+"id": "148427",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "주파수 선택성과 시간 형성으로 해석 가능한 스파이킹 뉴런 FiTS"
+},
+{
+"id": "152411",
+"area": "Learning theory & optimization",
+"summary_ko": "대형 피드포워드 망의 전역 Lipschitz 상수를 빠르게 추정하는 FLIP"
+},
+{
+"id": "150977",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "비율 클리핑 대신 divergence 제약을 쓰는 flow matching RL Flow-DPPO"
+},
+{
+"id": "153016",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "SDE 추론으로 flow matching 모델에 RL을 적용하는 통합 이론 프레임워크"
+},
+{
+"id": "139401",
+"area": "Science, health & biology",
+"summary_ko": "생태계 플럭스 외삽을 위한 분포 이동 벤치마크 FLUXtrapolation"
+},
+{
+"id": "148155",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "normalizing flow로 상호정보량을 추정하는 FMMI"
+},
+{
+"id": "154897",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "분해된 마스크 크로스코더로 층 간 특징을 발견하는 fmxcoders"
+},
+{
+"id": "150986",
+"area": "Learning theory & optimization",
+"summary_ko": "제약 최적화에서 FTRL이 수렴하지 않을 수 있음을 증명"
+},
+{
+"id": "150485",
+"area": "Learning theory & optimization",
+"summary_ko": "군에서 변환 범주로 확장한 범주적 등변 딥러닝 기초 이론"
+},
+{
+"id": "150427",
+"area": "Efficient models & systems",
+"summary_ko": "분수 동역학 기반 멱법칙 장기 기억의 SSM 아키텍처 FRAC"
+},
+{
+"id": "155558",
+"area": "Learning theory & optimization",
+"summary_ko": "대수적 스펙트럼 곡선으로 행렬 크기 간 스펙트럼을 외삽하는 free decompression"
+},
+{
+"id": "155600",
+"area": "Learning theory & optimization",
+"summary_ko": "Muon 등 비유클리드 옵티마이저의 heavy-tailed 잡음 하 최적 샘플 복잡도 이론 분석"
+},
+{
+"id": "154659",
+"area": "Learning theory & optimization",
+"summary_ko": "random-order 모델에서 average sensitivity로부터 small-loss regret bound 도출"
+},
+{
+"id": "152123",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "AR 모델을 block-diffusion LLM으로 적응시키는 context-causal 경로와 NBDIFF-7B"
+},
+{
+"id": "151843",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "닫힌형 코딩 문제를 open-ended 문제로 진화시켜 LLM 코더를 학습하는 FrontierSmith"
+},
+{
+"id": "138976",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "이력서 스크리닝 편향 평가 결과가 실험 설계 선택에 크게 좌우됨을 보임"
+},
+{
+"id": "152559",
+"area": "Science, health & biology",
+"summary_ko": "에너지 기반 모델 EBMol로 물리적으로 일관된 3D 분자 생성"
+},
+{
+"id": "154240",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "분포를 학습 중 drift시켜 one-step 생성을 달성하는 Drifting Models (FID 1.54)"
+},
+{
+"id": "151044",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "선호 튜닝된 비디오 생성기를 flow matching 속도 오차 기반 reward model로 활용"
+},
+{
+"id": "150840",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "리만 기하로 신경 표현의 내재적 기하를 비교하는 metric similarity analysis"
+},
+{
+"id": "139481",
+"area": "Multimodal & vision-language",
+"summary_ko": "기호적으로 검증 가능한 기하 추론 멀티모달 데이터셋 GeoSym127K 합성"
+},
+{
+"id": "149346",
+"area": "Science, health & biology",
+"summary_ko": "도시 3D 바람 예측과 에너지 효율적 UAV 경로 계획 프레임워크"
+},
+{
+"id": "153434",
+"area": "Science, health & biology",
+"summary_ko": "RNA 역접힘을 위한 구조 인식 잠재 확산 모델 GOLD"
+},
+{
+"id": "155778",
+"area": "Computer vision & 3D",
+"summary_ko": "Gabor 필터와 Gram 상관을 결합한 해석 가능한 텍스처 합성 GramStatTexNet"
+},
+{
+"id": "155097",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "전염 기반 mesoscopic rewiring으로 GNN/Graph Transformer 성능 향상"
+},
+{
+"id": "153337",
+"area": "Efficient models & systems",
+"summary_ko": "다중 4-bit grid 선택으로 LLM 양자화 정확도를 높이는 Grid Games"
+},
+{
+"id": "152249",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "검증기 없이 hint 기반 내재 보상으로 LLM이 자기 진화하는 G-Zero"
+},
+{
+"id": "139828",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "사람이 있는 환경의 로봇 조작 시연 데이터셋 HABIT"
+},
+{
+"id": "139278",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "인권 맥락의 현실적 제약 추론을 평가하는 LLM 벤치마크 HearSayBench"
+},
+{
+"id": "148497",
+"area": "Efficient models & systems",
+"summary_ko": "구조적 KV 재사용으로 임바디드 에이전트 메모리 추론을 가속하는 HeMeR"
+},
+{
+"id": "150706",
+"area": "Learning theory & optimization",
+"summary_ko": "functional scaling law로 signSGD가 SGD를 능가하는 조건 분석"
+},
+{
+"id": "148472",
+"area": "Computer vision & 3D",
+"summary_ko": "객체-배경 의미 거리에 따라 인식 정확도가 단조 감소함을 보이는 벤치마크"
+},
+{
+"id": "151003",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "쌍곡 공간 entailment cone 기반 계층 인식 Concept Bottleneck Model"
+},
+{
+"id": "151393",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "개념과 문맥의 상호작용을 uniqueness/redundancy/synergy로 분해하는 설명 기법"
+},
+{
+"id": "149451",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "개별 처치효과에 대한 distribution-free 예측 추론의 불가능성 증명"
+},
+{
+"id": "155618",
+"area": "Learning theory & optimization",
+"summary_ko": "제약 능동 선형회귀를 위한 ellipsoid 정규화 leverage score 샘플링"
+},
+{
+"id": "153555",
+"area": "Learning theory & optimization",
+"summary_ko": "병렬 GP bandit 최적화의 batch 크기 의존 없는 개선 regret 분석"
+},
+{
+"id": "150734",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "스펙트럼 불일치를 줄여 text-to-motion 잠재 확산용 토크나이저 개선"
+},
+{
+"id": "156128",
+"area": "Multimodal & vision-language",
+"summary_ko": "6천만 쌍 의료 영상-텍스트 사전학습 후 RL로 의료 VLM 성능 도출"
+},
+{
+"id": "150230",
+"area": "LLM agents & tool use",
+"summary_ko": "구현과 증명을 함께 합성해 검증된 분산 시스템을 생성하는 에이전트 IDS"
+},
+{
+"id": "139055",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "다양한 산업 도메인·언어를 아우르는 코드 생성 벤치마크 IndustryCode"
+},
+{
+"id": "155775",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "고엔트로피 분기점에서만 개입하는 희소 inference-time alignment"
+},
+{
+"id": "139783",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "곤충 표본 인식 및 해부학적 부위 분할 데이터셋 InSpect"
+},
+{
+"id": "148654",
+"area": "Learning theory & optimization",
+"summary_ko": "임베딩 차원이 검색 모델의 장벽이 아닌 이유를 margin 이론으로 규명"
+},
+{
+"id": "149224",
+"area": "LLM agents & tool use",
+"summary_ko": "segment 단위 credit assignment로 도구 호출 시점을 학습하는 CARL"
+},
+{
+"id": "139323",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "T2I 모델의 세계 지식 grounding을 진단하는 벤치마크 KnowVis"
+},
+{
+"id": "153588",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "사전학습 LDM 지식을 픽셀 공간 확산 모델로 전이하는 L2P"
+},
+{
+"id": "154464",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "언어 조건 시각 내비게이션 데이터셋과 world model 기반 정책 학습"
+},
+{
+"id": "139074",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "제한된 라벨로 최적 LLM을 고르는 능동 모델 선택 Select-LLM"
+},
+{
+"id": "150511",
+"area": "Learning theory & optimization",
+"summary_ko": "다음 토큰 분포가 모호할수록 학습이 어려운 'ambiguity의 저주' 이론 분석"
+},
+{
+"id": "151424",
+"area": "Multimodal & vision-language",
+"summary_ko": "공유 잠재 공간에서 교차 모달 추론을 수행하는 통합 모델 LatentUM"
+},
+{
+"id": "152085",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "Arena식 선호 기반 LLM 리더보드의 조작 취약성 분석"
+},
+{
+"id": "151132",
+"area": "Science, health & biology",
+"summary_ko": "Euler-Lagrange 잔차 최소화로 학습된 Lagrangian으로 PDE 예측"
+},
+{
+"id": "150499",
+"area": "Science, health & biology",
+"summary_ko": "위상과 기하를 분리한 Riemannian Hodge message passing 물리장 서로게이트"
+},
+{
+"id": "149465",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "Neural Ratio Estimation이 가우시안 조건분포 학습에서 비효율적임을 증명"
+},
+{
+"id": "155071",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "Riemannian 최적화로 순환 가중치의 해석 가능한 Schur form을 찾는 SchurMO"
+},
+{
+"id": "152289",
+"area": "Learning theory & optimization",
+"summary_ko": "저랭크 RNN 학습 동역학을 loss-visible/invisible overlap으로 이론 분석"
+},
+{
+"id": "151712",
+"area": "Science, health & biology",
+"summary_ko": "다중 피험자 fMRI 인코딩을 위한 sparse semantic-cortical atom 학습"
+},
+{
+"id": "155783",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "마음 이론 기반 RL로 ML 모델 오류를 자동 감사하는 RLAuditor"
+},
+{
+"id": "154117",
+"area": "Learning theory & optimization",
+"summary_ko": "정보 설계와 메커니즘 설계를 결합한 설득 기반 가격 책정의 학습 이론"
+},
+{
+"id": "150415",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "실제 OS 환경에서 LLM 에이전트의 행동 jailbreak를 평가하는 LITMUS"
+},
+{
+"id": "148220",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "초등 수준 지식만 담은 88B 토큰 코퍼스와 LittleLearner 모델"
+},
+{
+"id": "154957",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "LLM 추론과 쌍곡 부분공간을 활용한 tabular 랜덤 포레스트 HOT"
+},
+{
+"id": "155658",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "비정상 환경에서 Gaussian trust region으로 PPO 행동 전환 개선"
+},
+{
+"id": "151978",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "국소 동역학 불일치 기반 데이터 선택의 off-dynamics 오프라인 RL"
+},
+{
+"id": "154333",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "LoRA 가중치를 입력받아 파인튜닝 행동을 설명하는 weight-space 해석 LoRAcles"
+},
+{
+"id": "152798",
+"area": "Computer vision & 3D",
+"summary_ko": "3DGS 클로즈업 렌더링을 위한 training-free 멀티플레인 어텐션 MACRO"
+},
+{
+"id": "155987",
+"area": "Learning theory & optimization",
+"summary_ko": "랜덤 프로젝션 기반 강건한 스트림 distinct counting MaxSketch"
+},
+{
+"id": "149010",
+"area": "Science, health & biology",
+"summary_ko": "커넥톰 제약 초파리 시각 모델의 강건성과 효율성을 충돌 감지로 평가"
+},
+{
+"id": "151389",
+"area": "Science, health & biology",
+"summary_ko": "앙상블 기하 조건화로 데이터 부족 하 극단 사건 에뮬레이션 개선"
+},
+{
+"id": "156000",
+"area": "LLM agents & tool use",
+"summary_ko": "AI 에이전트의 선택을 유도하는 환경 변화(mecha-nudge)를 bit 단위로 측정"
+},
+{
+"id": "151799",
+"area": "Science, health & biology",
+"summary_ko": "화학 반응 메커니즘 다이어그램을 SM-SMARTS로 파싱하는 VLM MechParser"
+},
+{
+"id": "154136",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "연속 barycentric dominance field로 확산 기반 3D 메시 생성"
+},
+{
+"id": "150591",
+"area": "Science, health & biology",
+"summary_ko": "다중 개체 상호작용을 인코딩하는 마우스 행동 foundation model MICE"
+},
+{
+"id": "149598",
+"area": "Learning theory & optimization",
+"summary_ko": "직교 데이터에서 ReLU 망의 incremental learning과 implicit bias 증명"
+},
+{
+"id": "149255",
+"area": "Science, health & biology",
+"summary_ko": "EEG-이미지-텍스트 대조 정렬로 zero-shot 시각 디코딩 수행"
+},
+{
+"id": "139545",
+"area": "Multimodal & vision-language",
+"summary_ko": "평가-데이터 flywheel로 문서 파싱 성능을 끌어올린 MinerU2.5-Pro"
+},
+{
+"id": "153397",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "open-world 준지도 학습에서 신뢰도 오보정 완화 OpenMCM"
+},
+{
+"id": "150297",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "sheaf effective resistance로 rewiring 없이 GNN over-squashing 완화"
+},
+{
+"id": "139626",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "AI가 새로운 ML 방법을 발명할 수 있는지 평가하는 MLS-Bench"
+},
+{
+"id": "151888",
+"area": "Science, health & biology",
+"summary_ko": "상상 이미지 선명도 판단을 예측해 비전 모델의 공통 성분 발견"
+},
+{
+"id": "149894",
+"area": "Computer vision & 3D",
+"summary_ko": "언어 지시 기반 3D 점 궤적 예측 모델 MolmoMotion과 데이터셋"
+},
+{
+"id": "155123",
+"area": "Computer vision & 3D",
+"summary_ko": "지속 인스턴스 상태를 쓰는 단안 온라인 3D 인스턴스 분할"
+},
+{
+"id": "155847",
+"area": "Computer vision & 3D",
+"summary_ko": "단안 비디오에서 픽셀별 world-space SE(3) 운동을 예측하는 MoSE3"
+},
+{
+"id": "139560",
+"area": "Science, health & biology",
+"summary_ko": "성숙 mRNA 속성·기능 예측 벤치마크 mRNABench"
+},
+{
+"id": "148768",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "클래스 증분 학습의 비대칭 보정을 위한 다중 그룹 temperature scaling"
+},
+{
+"id": "151022",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "추론 토큰을 연속 multiplexed 잠재 토큰으로 증류하는 MUX"
+},
+{
+"id": "149318",
+"area": "Computer vision & 3D",
+"summary_ko": "비강건 특징이 clean 이미지에서 모델을 오도하는 Natural Jammers 규명"
+},
+{
+"id": "155304",
+"area": "Learning theory & optimization",
+"summary_ko": "1-bit 피드백 하 고정 신뢰도 best-arm identification의 준최적 알고리즘"
+},
+{
+"id": "149150",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "타원 분포에 대한 준최적 강건 공분산/산란 행렬 추정"
+},
+{
+"id": "152610",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "한쪽만 검증 가능한 보상에서 negative만 억제하는 NOPO"
+},
+{
+"id": "155022",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "도메인별 순차 RL로 범용 추론 모델을 만드는 Nemotron-Cascade"
+},
+{
+"id": "156109",
+"area": "LLM agents & tool use",
+"summary_ko": "선언적 지식을 절차적 지식으로 컴파일하는 평생학습 임바디드 에이전트"
+},
+{
+"id": "148241",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "LLM이 미지의 activation monitor를 회피하도록 학습될 수 있음을 보임"
+},
+{
+"id": "150753",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "신경망으로 MAP 추론 상계의 warm-start를 만드는 Neural Dual Bounds"
+},
+{
+"id": "153194",
+"area": "Science, health & biology",
+"summary_ko": "신경 집단 tuning 통계를 다중 과제 일반화의 prior로 연결하는 이론"
+},
+{
+"id": "154463",
+"area": "Science, health & biology",
+"summary_ko": "인지 기반 적응적 블러링으로 EEG 시각 디코딩 성능 향상"
+},
+{
+"id": "149843",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "신경 Langevin 동역학으로 조합 최적화 문제를 해결하는 NLD4CO"
+},
+{
+"id": "154832",
+"area": "Efficient models & systems",
+"summary_ko": "분산 학습의 silent bug를 탐지·위치 추적하는 차분 테스트 시스템 nnTrace"
+},
+{
+"id": "152186",
+"area": "Computer vision & 3D",
+"summary_ko": "입력 노이즈 정규화로 학습 이미지 압축의 BD-rate 개선"
+},
+{
+"id": "153119",
+"area": "Computer vision & 3D",
+"summary_ko": "실제 신원과 충돌하지 않는 가상 얼굴 신원 대규모 생성 및 프로비저닝"
+},
+{
+"id": "148835",
+"area": "Science, health & biology",
+"summary_ko": "국소 가소성과 수상돌기 계산으로 구현되는 생물학적 블라인드 소스 분리 네트워크"
+},
+{
+"id": "151090",
+"area": "LLM agents & tool use",
+"summary_ko": "LLM 에이전트 다중 환경에서 악용에 강한 규범 집행 메커니즘 설계"
+},
+{
+"id": "139282",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "객체 검출 벤치마크의 누락 라벨을 재주석하고 불확실성 인식 벤치마크 구축"
+},
+{
+"id": "150573",
+"area": "Science, health & biology",
+"summary_ko": "물리 개념 병목으로 해석 가능한 해양 예측 모델 OceanCBM"
+},
+{
+"id": "139388",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "반사실 워크플로로 AI 도구 의존도를 측정하는 offloading score"
+},
+{
+"id": "155919",
+"area": "Multimodal & vision-language",
+"summary_ko": "VLM 기반 이중 브랜치 다인 시선 추적 통합 프레임워크 OmniGF"
+},
+{
+"id": "148266",
+"area": "Multimodal & vision-language",
+"summary_ko": "파노라마 재투영으로 VLM의 3D 장면 이해를 수행하는 OneCanvas"
+},
+{
+"id": "149658",
+"area": "Learning theory & optimization",
+"summary_ko": "L_p 불확실성 집합 robust MDP의 정책 반복 복잡도와 하한 분석"
+},
+{
+"id": "152162",
+"area": "Learning theory & optimization",
+"summary_ko": "단조 ReLU 망과 ICNN의 표현에 필요한 깊이 하한 증명"
+},
+{
+"id": "155689",
+"area": "Learning theory & optimization",
+"summary_ko": "LLM 학습률 스케일링의 비선형성과 effective learning rate 분석"
+},
+{
+"id": "154387",
+"area": "Computer vision & 3D",
+"summary_ko": "조건부 독립 가정을 완화해 Dice/IoU를 직접 최적화하는 분할 추론"
+},
+{
+"id": "154185",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "고차원 confidence sequence의 tight하고 계산 가능한 외부 근사"
+},
+{
+"id": "139275",
+"area": "Science, health & biology",
+"summary_ko": "병코돌고래 휘파람 대규모 종단 데이터셋과 벤치마크 OpenWhistle"
+},
+{
+"id": "152628",
+"area": "Learning theory & optimization",
+"summary_ko": "적응적 차분 프라이버시 k-PCA의 최적 샘플 복잡도 알고리즘"
+},
+{
+"id": "148362",
+"area": "Learning theory & optimization",
+"summary_ko": "heavy-tail 기울기 하 pure DP 볼록 최적화의 최적 rate 규명"
+},
+{
+"id": "153807",
+"area": "Learning theory & optimization",
+"summary_ko": "온라인 예측기 재보정의 최적 rate 알고리즘과 하한"
+},
+{
+"id": "149258",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "지지도 임계값 전 구간에서 KL 최적 subgroup을 찾는 이론과 알고리즘"
+},
+{
+"id": "150719",
+"area": "Efficient models & systems",
+"summary_ko": "dual-view 확산으로 무손실 병렬 토큰 생성을 달성하는 Orthrus"
+},
+{
+"id": "139129",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "통신 도메인 AI용 오픈 데이터셋, 벤치마크, 사후학습 모델 OTel"
+},
+{
+"id": "151816",
+"area": "Multimodal & vision-language",
+"summary_ko": "바운딩 박스 shortcut 없이 점 프롬프트로 접지하는 3D VLM P3-VLM"
+},
+{
+"id": "154087",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "위상 조건부 잔차 변조로 시계열 예측을 개선하는 Paloma"
+},
+{
+"id": "151484",
+"area": "Computer vision & 3D",
+"summary_ko": "비전 토큰을 위한 외삽 가능한 포물선 위치 인코딩 PaPE"
+},
+{
+"id": "148849",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "병렬 스캔 기반 RNN 학습으로 긴 시퀀스 동역학계 복원"
+},
+{
+"id": "154172",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "선호 가중치 조건화로 추론 시 보상 trade-off를 조절하는 확산 후학습"
+},
+{
+"id": "152738",
+"area": "Computer vision & 3D",
+"summary_ko": "평면 지도 primitive에 접지해 feed-forward 카메라 위치 추정"
+},
+{
+"id": "151017",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "제어 단계별 조건화 LoRA로 VLA 정책을 효율적으로 적응"
+},
+{
+"id": "153024",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "패치 단위 적응적 조건 선택의 다중 조건 text-to-image 생성"
+},
+{
+"id": "150211",
+"area": "Science, health & biology",
+"summary_ko": "해마 순환망의 이완 동역학이 최적 목표 지향 내비게이션을 구현함을 증명"
+},
+{
+"id": "155736",
+"area": "Computer vision & 3D",
+"summary_ko": "장기 비디오의 밀집 3D 궤적을 추정하는 feed-forward 4D 복원 Point4D"
+},
+{
+"id": "152082",
+"area": "Learning theory & optimization",
+"summary_ko": "point-to-manifold 거리를 쓰는 Generative Matching Unit의 표현력 이론"
+},
+{
+"id": "154663",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "LLM 사전학습 포이즈닝은 모델 크기와 무관하게 거의 일정한 문서 수로 충분"
+},
+{
+"id": "156031",
+"area": "Science, health & biology",
+"summary_ko": "SO(2)^K 등변 각도 어텐션으로 cryo-EM 이미지 집합 처리"
+},
+{
+"id": "139670",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "양측 승인 균형으로 AI 정치적 중립성을 정의하고 대규모 인간 평가"
+},
+{
+"id": "148977",
+"area": "Learning theory & optimization",
+"summary_ko": "voter interval 선호에서 Thiele 투표 규칙의 다항시간 알고리즘"
+},
+{
+"id": "153425",
+"area": "Learning theory & optimization",
+"summary_ko": "가우시안 하 다중클래스 선형 분류기의 다항시간 강건 학습"
+},
+{
+"id": "151721",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "능동 데이터 수집 이후에도 유효한 선택적 추론 프레임워크"
+},
+{
+"id": "150880",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "반복 인간 평가로 proxy 최적화 시 인간 이득 곡선을 예측"
+},
+{
+"id": "150363",
+"area": "Learning theory & optimization",
+"summary_ko": "근사 MDL 하에서도 순차 예측이 신뢰 가능한 조건의 이론"
+},
+{
+"id": "153423",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "후보 풀을 구분하는 질문으로 모호한 인스턴스 내비게이션 수행"
+},
+{
+"id": "139766",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "불확실성 인지 ML을 위한 모듈형 파이썬 패키지 probly"
+},
+{
+"id": "151998",
+"area": "Multimodal & vision-language",
+"summary_ko": "LLM 임베더를 CLIP에 점진 정렬해 장문·다국어 지원하는 ProCLIP"
+},
+{
+"id": "151228",
+"area": "Learning theory & optimization",
+"summary_ko": "반공간 함수 클래스의 proper agnostic 학습 효율 알고리즘"
+},
+{
+"id": "153925",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "prospective coding으로 깊은 연속시간 순환망의 학습 개선"
+},
+{
+"id": "152935",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "학습된 백업 정책과 미분가능 projection으로 증명 가능한 안전 RL"
+},
+{
+"id": "150472",
+"area": "Efficient models & systems",
+"summary_ko": "MoE 모델을 가지치기·증류로 dense 언어 모델로 변환"
+},
+{
+"id": "139681",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "PULSE 다섯 모달리티 동기화 장기 일상활동 sensorimotor 데이터셋과 벤치마크"
+},
+{
+"id": "149953",
+"area": "Efficient models & systems",
+"summary_ko": "웹 코퍼스 quantile benchmarking으로 open LLM 사전학습 top-p 혼합 비율 결정"
+},
+{
+"id": "151668",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "양자화된 추론 모델의 overthinking 오류 분석과 training-free logit penalty"
+},
+{
+"id": "151581",
+"area": "Learning theory & optimization",
+"summary_ko": "확산 모델 샘플링의 score query 하한 Ω(√d) 증명"
+},
+{
+"id": "154374",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "저항 거리 기반 multi-hop 집계 GNN으로 이더리움 계정 분류"
+},
+{
+"id": "152497",
+"area": "LLM agents & tool use",
+"summary_ko": "엣지-클라우드 LLM 에이전트 단계별 자원 오케스트레이션 RAOP (GRPO)"
+},
+{
+"id": "139504",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "이벤트 시퀀스 예측의 정확도 대 현실성 trade-off 벤치마크"
+},
+{
+"id": "152594",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "확산 언어모델의 undecoded token을 latent token으로 활용한 추론 개선"
+},
+{
+"id": "150701",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "해밀토니안 인과 모델로 인과성과 비평형 열역학 통합"
+},
+{
+"id": "151084",
+"area": "Science, health & biology",
+"summary_ko": "미분가능 음향 시뮬레이터로 음성에서 성도 형상 복원"
+},
+{
+"id": "152379",
+"area": "Learning theory & optimization",
+"summary_ko": "재귀 학습된 확산 모델의 극한 분포와 스펙트럼 특성 이론"
+},
+{
+"id": "148399",
+"area": "Learning theory & optimization",
+"summary_ko": "참조 모델과의 샘플별 손실 비교로 gradient를 적응적으로 스케일링"
+},
+{
+"id": "148781",
+"area": "Learning theory & optimization",
+"summary_ko": "agnostic 온라인 학습의 regret–oracle complexity trade-off"
+},
+{
+"id": "154908",
+"area": "Efficient models & systems",
+"summary_ko": "fast weight 모델에 next-sequence prediction과 GRPO를 적용한 ReFINE"
+},
+{
+"id": "154593",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "정렬 불필요 확률적 multi-view anchor graph 클러스터링"
+},
+{
+"id": "154990",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "표현 공간 Fréchet distance를 학습 손실로 사용하는 FD-Loss 생성 모델 후처리"
+},
+{
+"id": "151431",
+"area": "Computer vision & 3D",
+"summary_ko": "얼굴 임베딩의 Procrustes rigidity로 backfill 없는 모델 업그레이드 호환"
+},
+{
+"id": "150681",
+"area": "Learning theory & optimization",
+"summary_ko": "데이터를 코딩해 모델 압축성을 재는 requential coding과 PAC-Bayes 일반화 bound"
+},
+{
+"id": "148940",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "임바디드 에이전트 시스템의 resilience 평가 지표와 최적화"
+},
+{
+"id": "153897",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "가중치 공간 재파라미터화로 파인튜닝 중 안전성 보존 (WSR-Tune)"
+},
+{
+"id": "156114",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "대규모 embodied CoT 코퍼스와 CoT-dropout VLA 모델 ERVLA"
+},
+{
+"id": "149478",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "분포 이동에 강건한 robust satisficing 앙상블 RSE"
+},
+{
+"id": "155206",
+"area": "Multimodal & vision-language",
+"summary_ko": "MLLM 평생 지식 편집을 위한 risk-aware 직교 부분공간 ROSE"
+},
+{
+"id": "150582",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "적대적 팀원 생성으로 ad hoc teamwork를 학습하는 ROTATE"
+},
+{
+"id": "153092",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "불규칙 다변량 시계열용 path signature 커널 attention Rubato"
+},
+{
+"id": "149838",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "오디오에서 타임스탬프 포함 피아노 악보를 전사하는 Rubato 모델"
+},
+{
+"id": "149672",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "마스크 확산 LM 기반 생성형 safety guard LLaDA Guard"
+},
+{
+"id": "139139",
+"area": "Multimodal & vision-language",
+"summary_ko": "생성 이미지의 salient artifact를 VLM이 이해하는지 진단하는 SalArt-VQA"
+},
+{
+"id": "155674",
+"area": "Computer vision & 3D",
+"summary_ko": "프롬프트 기반 다중 동물 단일 이미지 3D 복원 SAM 3D Animal"
+},
+{
+"id": "149340",
+"area": "Learning theory & optimization",
+"summary_ko": "fat-shattering 기반 최적 스케일 학습가능성과 uniform convergence"
+},
+{
+"id": "139114",
+"area": "Science, health & biology",
+"summary_ko": "박테리아 유전체 언어모델용 대규모 코퍼스 BacCorpus와 벤치마크 BacBench"
+},
+{
+"id": "148475",
+"area": "Multimodal & vision-language",
+"summary_ko": "텍스트·비전·오디오 멀티모달 데이터 혼합 scaling law"
+},
+{
+"id": "153396",
+"area": "Multimodal & vision-language",
+"summary_ko": "비전·오디오·언어를 묶는 의미-공간 omni-modal 표현 SceneBind"
+},
+{
+"id": "154773",
+"area": "Multimodal & vision-language",
+"summary_ko": "역할 인식 scene-state 구성으로 통합 3D 장면 이해 (3D-LMM)"
+},
+{
+"id": "150697",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "Householder 직교 노이즈로 모션 제어 가능한 비디오 확산"
+},
+{
+"id": "150042",
+"area": "Learning theory & optimization",
+"summary_ko": "선택적 SSM(Mamba)이 보편 시퀀스 근사기임을 증명"
+},
+{
+"id": "152431",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "RLVR에 self-distillation 토큰 단위 신호를 결합한 RLSD"
+},
+{
+"id": "155631",
+"area": "LLM agents & tool use",
+"summary_ko": "모델 출력 자체가 오케스트레이터 프로그램인 self-programmed execution"
+},
+{
+"id": "149029",
+"area": "Multimodal & vision-language",
+"summary_ko": "라벨 없는 자기참조 보상으로 멀티모달 추론 일관성 정렬 SR-MCR"
+},
+{
+"id": "153569",
+"area": "Computer vision & 3D",
+"summary_ko": "에너지 분포 거리 Eld로 합성 데이터의 시각 사전학습 품질 예측"
+},
+{
+"id": "151764",
+"area": "Computer vision & 3D",
+"summary_ko": "편집 이미지 쌍에서 마스크를 자동 생성하는 조작 영역 탐지 어노테이터 SIGMA"
+},
+{
+"id": "151264",
+"area": "LLM agents & tool use",
+"summary_ko": "frozen 에이전트를 위한 스킬 문서 텍스트 공간 최적화 SkillOpt"
+},
+{
+"id": "138946",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "커뮤니티 검증된 퀴어 슬랭 데이터셋 SLAyiNG과 언어 편향 분석"
+},
+{
+"id": "149874",
+"area": "LLM agents & tool use",
+"summary_ko": "LLM 없는 MCTS로 대규모 에이전트 풀에서 역할별 팀 구성 SMART"
+},
+{
+"id": "150828",
+"area": "Learning theory & optimization",
+"summary_ko": "SOCP 기반으로 표현력을 확장한 input convex neural network"
+},
+{
+"id": "148491",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "Minecraft 멀티플레이어 비디오 월드 모델 Solaris"
+},
+{
+"id": "152035",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "국소 차분 프라이버시 하 최적 이진 가설검정 메커니즘 구조(SPR)"
+},
+{
+"id": "154927",
+"area": "LLM agents & tool use",
+"summary_ko": "형식 검증된 계획과 런타임 강제로 안전한 LLM 에이전트 Soteria"
+},
+{
+"id": "148588",
+"area": "Learning theory & optimization",
+"summary_ko": "randomized subspace descent의 안정성 기반 일반화 분석"
+},
+{
+"id": "154914",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "시계열 예측 source-free 도메인 적응을 위한 Spectral Energy Allocation"
+},
+{
+"id": "152228",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "특이값 편향을 뒤집는 spectral reverse 그래프 프롬프팅"
+},
+{
+"id": "148878",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "von Mises-Fisher 구면 flow로 범주형 데이터 생성"
+},
+{
+"id": "150935",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "메타 전략 감독을 갖춘 멀티에이전트 수학 추론 STAR-Math"
+},
+{
+"id": "139110",
+"area": "Science, health & biology",
+"summary_ko": "기공(stomata) 검출 분류군 일반화 벤치마크 StomataBench"
+},
+{
+"id": "149538",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "리만 flow matching으로 병리 조직 이미지 생성 STREAM"
+},
+{
+"id": "153529",
+"area": "Multimodal & vision-language",
+"summary_ko": "강한 모달리티에서 약한 모달리티로 정렬을 전이하는 MLLM 병합 DCAT"
+},
+{
+"id": "150921",
+"area": "Learning theory & optimization",
+"summary_ko": "replicable 분포 검정기가 고확률 검정기를 함의함을 증명"
+},
+{
+"id": "149475",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "SDE의 strong solution map을 학습하는 Strong Stochastic Flow Maps"
+},
+{
+"id": "150200",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "은닉 상태 엔트로피로 instruction hierarchy 위반을 탐지·교정하는 AEO"
+},
+{
+"id": "148778",
+"area": "Learning theory & optimization",
+"summary_ko": "positive-only 학습에서 proper 학습의 특성화와 분리 결과"
+},
+{
+"id": "149981",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "시각 보정 에피소드로 제로샷 시뮬레이터가 되는 로봇 월드 모델 SyncWorld"
+},
+{
+"id": "139796",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "능동 촉각 인식 벤치마크 Tactile MNIST"
+},
+{
+"id": "148670",
+"area": "Science, health & biology",
+"summary_ko": "LLM 관계 사전을 쓰는 그래프 베이지안 최적화로 과학적 발견 TagBO"
+},
+{
+"id": "155753",
+"area": "Computer vision & 3D",
+"summary_ko": "memory consolidation으로 tail signal 소실을 완화하는 long-tailed 인식"
+},
+{
+"id": "155443",
+"area": "Science, health & biology",
+"summary_ko": "생태학 점유 모델링에서 전문가 검토 대상을 능동 선택하는 ACORN"
+},
+{
+"id": "153677",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "semi-discrete flow matching의 종단 할당 영역 tessellation 기하 분석"
+},
+{
+"id": "148311",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "swap regret에 대해 actionable하고 testable한 보정 지표 SCDL"
+},
+{
+"id": "153845",
+"area": "Learning theory & optimization",
+"summary_ko": "Massart 잡음 하 일반 halfspace의 testable learning 알고리즘"
+},
+{
+"id": "148465",
+"area": "Multimodal & vision-language",
+"summary_ko": "캡션을 부분 제약으로 보는 core-residual 비전-언어 정렬"
+},
+{
+"id": "152268",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "Leela Chess Zero에서 학습된 prior가 look-ahead를 덮어쓰는 현상 분석"
+},
+{
+"id": "154497",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "activation patching의 다중 매개자 상호작용 효과 분석"
+},
+{
+"id": "153185",
+"area": "Multimodal & vision-language",
+"summary_ko": "텍스트·이미지·오디오 tri-modal masked diffusion 모델 설계 공간"
+},
+{
+"id": "154572",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "비례적 순차 결정을 위한 선형 랭킹 규칙 angular mean"
+},
+{
+"id": "139445",
+"area": "Datasets, benchmarks & evaluation",
+"summary_ko": "LLM 사실성을 종합 평가하는 FACTS Leaderboard"
+},
+{
+"id": "149891",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "비디오 확산 모델이 내부적으로 물리적 타당성을 인코딩함을 프로빙"
+},
+{
+"id": "154101",
+"area": "Learning theory & optimization",
+"summary_ko": "비볼록 게임에서 정규화 학습의 장기 분포 large deviations 분석"
+},
+{
+"id": "152307",
+"area": "LLM reasoning & RL post-training",
+"summary_ko": "선형 부분공간 정렬로 모델 간 추론 능력을 전이하는 UNLOCK"
+},
+{
+"id": "152129",
+"area": "Learning theory & optimization",
+"summary_ko": "계층적 특징 학습의 장난감 모델 Multiscale Single-Index Model"
+},
+{
+"id": "152312",
+"area": "Science, health & biology",
+"summary_ko": "자극 조건부 neural SDE로 지각 의사결정 반응시간을 모델링"
+},
+{
+"id": "153597",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "KL 예산 하 언어모델 정렬의 정보이론적 한계"
+},
+{
+"id": "152757",
+"area": "Learning theory & optimization",
+"summary_ko": "랜덤 샘플을 활용하는 온라인 알고리즘 ORS 모델과 secretary 문제"
+},
+{
+"id": "149695",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "score matching과 Stein 항등식 기반 비선형 필터 Score Kalman Filter"
+},
+{
+"id": "155585",
+"area": "Learning theory & optimization",
+"summary_ko": "심층 네트워크의 sign code가 분류를 좌우함을 분석"
+},
+{
+"id": "151725",
+"area": "Learning theory & optimization",
+"summary_ko": "performative prediction에서 no-regret 알고리즘의 안정 수렴"
+},
+{
+"id": "149266",
+"area": "Computer vision & 3D",
+"summary_ko": "비디오 확산 모델 표현을 활용한 egocentric 양손 4D 모션 복원 ViDiHand"
+},
+{
+"id": "150294",
+"area": "Learning theory & optimization",
+"summary_ko": "3층 ReLU 네트워크의 파라미터 대칭성 완전 특성화"
+},
+{
+"id": "151028",
+"area": "Multimodal & vision-language",
+"summary_ko": "VLM 자체 오류를 demonstration으로 쓰는 visual ICL SMILE"
+},
+{
+"id": "148184",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "Gaussian DDPM 공분산 매칭과 Lanczos 샘플러"
+},
+{
+"id": "151372",
+"area": "Multimodal & vision-language",
+"summary_ko": "VLM의 상대 자세 식별 편향을 줄이는 반복 debiasing SKR-ID"
+},
+{
+"id": "150085",
+"area": "Multimodal & vision-language",
+"summary_ko": "연속 좌표 행동공간 기반 수치적 visual chain-of-thought NV-CoT"
+},
+{
+"id": "151700",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "멀티변량·스트리밍을 지원하는 xLSTM 시계열 파운데이션 모델 TiRex-2"
+},
+{
+"id": "150329",
+"area": "Learning theory & optimization",
+"summary_ko": "거절 옵션 분류의 최소 차원 convex calibrated surrogate loss"
+},
+{
+"id": "155526",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "PPO clipped actor update의 수렴성을 근사 하강으로 분석"
+},
+{
+"id": "152751",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "Rectified flow transformer의 의미 일관적 tuning-free 맞춤 생성"
+},
+{
+"id": "150633",
+"area": "Computer vision & 3D",
+"summary_ko": "구조적으로 불안정한 pseudo 라벨 하 학습 가능 topology 감독"
+},
+{
+"id": "151685",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "전략적 위험 회피로 일반화 가능한 협력 MARL 에이전트 학습"
+},
+{
+"id": "155367",
+"area": "Computer vision & 3D",
+"summary_ko": "투과 장면용 이중 Gaussian 분리 재구성 TransmissiveGS"
+},
+{
+"id": "151038",
+"area": "Efficient models & systems",
+"summary_ko": "다중 drafter를 접목하는 tree 기반 speculative decoding TreeGraft"
+},
+{
+"id": "153899",
+"area": "Computer vision & 3D",
+"summary_ko": "복잡한 위상 변화를 다루는 비디오-to-4D 메쉬 생성 Trellis4D"
+},
+{
+"id": "150288",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "에이전트 추론으로 시계열 데이터 품질을 평가하는 TSQAgent와 TSQBench"
+},
+{
+"id": "154935",
+"area": "Computer vision & 3D",
+"summary_ko": "MLP baking으로 decoder-only view synthesis 렌더링 가속 TTB"
+},
+{
+"id": "154261",
+"area": "Multimodal & vision-language",
+"summary_ko": "오픈 가중치 CLIP의 self-supervised 파인튜닝 TuneCLIP"
+},
+{
+"id": "153417",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "Schrödinger bridge 기반 두 단계 simulation-based inference RSBI"
+},
+{
+"id": "153791",
+"area": "Learning theory & optimization",
+"summary_ko": "grokking과 double descent의 representation-readout 분해"
+},
+{
+"id": "155440",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "데이터 적응형 토큰 병합 U-Net 확산 트랜스포머 UDT"
+},
+{
+"id": "154876",
+"area": "Multimodal & vision-language",
+"summary_ko": "불완전 cross-modal hashing을 위한 생성적 보완과 graph attention"
+},
+{
+"id": "150314",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "f8 prior를 f32 잠재공간으로 증류하는 고해상도 생성 UltraDiff"
+},
+{
+"id": "154307",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "얽힌 pairwise 감독에서의 확률적 constrained clustering"
+},
+{
+"id": "148612",
+"area": "Multimodal & vision-language",
+"summary_ko": "VLM 내부의 3D 장면 위상 표현 발견과 Dirichlet 정규화"
+},
+{
+"id": "155323",
+"area": "Learning theory & optimization",
+"summary_ko": "predictive coding의 sample efficiency를 target alignment로 분석"
+},
+{
+"id": "150807",
+"area": "Computer vision & 3D",
+"summary_ko": "MLLM 포렌식 선호 학습으로 일반화 가능한 합성 이미지 탐지 UniFPL"
+},
+{
+"id": "154794",
+"area": "Learning theory & optimization",
+"summary_ko": "얕은 신경망의 uniform-in-time weak propagation of chaos"
+},
+{
+"id": "153300",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "control maximization으로 목표조건 RL과 비지도 스킬 학습 통합"
+},
+{
+"id": "149011",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "cross-task 재목적화 공격에 강건한 비전 모델 fingerprinting UniReFP"
+},
+{
+"id": "149440",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "JSD 기반 LLM unlearning JensUn과 평가 데이터셋 LPF"
+},
+{
+"id": "153824",
+"area": "Science, health & biology",
+"summary_ko": "해석 가능한 그래프 학습으로 다영역 ECoG 의도 사전 디코딩"
+},
+{
+"id": "149484",
+"area": "Computer vision & 3D",
+"summary_ko": "시간적 포렌식 미세구조로 AI 생성 비디오 제로샷 탐지"
+},
+{
+"id": "139039",
+"area": "Science, health & biology",
+"summary_ko": "바이러스 단백질 variant 효과 예측용 pLM 벤치마크 ViroGym"
+},
+{
+"id": "148995",
+"area": "LLM agents & tool use",
+"summary_ko": "불완전 질의 하 대화형 Text-to-Vis 벤치마크와 Vis-MCTS"
+},
+{
+"id": "148647",
+"area": "Computer vision & 3D",
+"summary_ko": "장면 그래프 기반 객체 중심 3D Gaussian Splatting 시맨틱 lifting"
+},
+{
+"id": "155322",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "변동성 whitening 확률 잔차 모델링 장기 시계열 예측 VolaRM"
+},
+{
+"id": "153732",
+"area": "Alignment, safety & interpretability",
+"summary_ko": "LVLM 예측을 해석하는 약지도 개념 벡터 학습 TGCL"
+},
+{
+"id": "150655",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "Weisfeiler-Leman 불완전성 증명과 simple-spectrum 그래프 canonicalization"
+},
+{
+"id": "150770",
+"area": "Science, health & biology",
+"summary_ko": "EEG 파운데이션 모델이 포착하는 임상 특징 분석"
+},
+{
+"id": "154141",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "픽셀 공간 flow matching에서 v-prediction 실패 원인 PCA 분석"
+},
+{
+"id": "149855",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "확산 prior와 기하 prior를 분리한 다양체 경로 geodesic force matching"
+},
+{
+"id": "155858",
+"area": "Probabilistic, causal & statistical ML",
+"summary_ko": "노이즈가 Rashomon set과 단순 모델 존재를 유도하는 기하 분석"
+},
+{
+"id": "153281",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "off-policy RL에서 non-uniform replay가 유효한 조건 분석"
+},
+{
+"id": "155843",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "flow 기반 RLHF의 다양성 붕괴를 perceptual entropy로 방지"
+},
+{
+"id": "154032",
+"area": "Reinforcement learning, robotics & embodied",
+"summary_ko": "학습된 force-regulation 모듈로 휴머노이드 전신 compliant 제어"
+},
+{
+"id": "150411",
+"area": "Other ML (graphs, time series, federated, etc.)",
+"summary_ko": "Winfree 진동 신경망 WONN으로 ImageNet·Maze 추론"
+},
+{
+"id": "149768",
+"area": "Computer vision & 3D",
+"summary_ko": "SE(3) 궤적 시퀀스 생성 모델 World Motion Models"
+},
+{
+"id": "149437",
+"area": "Computer vision & 3D",
+"summary_ko": "픽셀 정렬 다층 기하로 가려진 영역까지 완성하는 World Tracing"
+},
+{
+"id": "150454",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "Wasserstein-tilted flow map으로 simulation-free 생성 flow RL 파인튜닝"
+},
+{
+"id": "148447",
+"area": "Generative models (diffusion, flow, image/video)",
+"summary_ko": "perceptually uniform 공간에서 확산 모델 HDR 이미지 생성 X2HDR"
+}
+]

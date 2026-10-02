@@ -20,9 +20,9 @@
   "authors": "Junhe Yang (University of Washington), Soumyakanti Pan (University of Washington), Hyun Seung Lim (Northeastern University), YUE CHU (Ohio State University, Columbus), Yuting Guo (Emory University), Nishtha Agarwal (University of Washington), Varun Babbar (Duke University), Gaurav Rajesh Parikh (Duke University, Duke Kunshan University), Yiqun Chen (Johns Hopkins University), Chris A Rees (Emory University), Ziyaad Dangor (University of Witwatersrand), Sanjay G Lala (University of Witwatersrand), Zehang Li (University of California, Santa Cruz), Samuel J Clark (Ohio State University, Columbus), Zhenke Wu (University of Michigan), Abhirup Datta (Johns Hopkins University), Li Liu (Johns Hopkins University), Cynthia Rudin (Duke), Samuel Scarpino (Northeastern University), Benjamin M Gyori (Northeastern University), Tyler H. McCormick",
   "abstract": "Accurately attributing causes of death is vital for global health, yet fewer than 5% of deaths in resource-constrained regions are medically certified. To assign causes to these unlabeled deaths at scale, practitioners traditionally rely on verbal autopsy, using supervised statistical models to classify based on structured survey data. However, modern mortality surveillance increasingly collects rich, unstructured multimodal data, such as free-text caregiver narratives and postmortem diagnostics, which traditional supervised statistical models struggle to seamlessly integrate. In this paper, we present a comprehensive, multimodal benchmark for cause-of-death classification using data from the Child Health and Mortality Prevention Surveillance (CHAMPS) network, a unique surveillance platform spanning nine countries across South Asia and Sub-Saharan Africa. Using this dataset, we introduce an evaluation framework designed to rigorously assess diagnostic reasoning, moving beyond traditional metrics that fail to capture complex clinical realities. We demonstrate the utility of this benchmark by evaluating zero-shot large language models against supervised baselines across various data modalities. Our results reveal distinct differences in how these modeling approaches synthesize unstructured medical evidence. This benchmark provide a rigorously defined resource for assessing clinical reasoning in next-generation mortality surveillance.",
   "url": "https://neurips.cc/virtual/2026/poster/139715",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=8qRMs3zaOJ",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_llm"
   ],
@@ -80,9 +80,9 @@
   "authors": "Nilesh Pandey (Qualcomm AI Research), Jason Kong (University of California, San Diego), Lanxiang Hu (University of California, San Diego), Quanling Zhao (UC San Diego), Yujie Zhao (University of California, San Diego), Onat Gungor (West Virginia University), Hao Zhang (University of California, San Diego), Tajana S Rosing (UCSD)",
   "abstract": "Memory-augmented LLM agents have gained substantial attention recently for their ability to maintain context across hundreds of interactions through agentic memory systems that actively curate retrieved content with LLM-generated metadata such as summaries, keywords, and tags. However, from an inference cost standpoint, every retrieval triggers a full re-encoding of these structured memory units into Key-Value (KV) states, which dominates prefill latency. Existing training-free KV reuse methods mitigate this by selectively recomputing a small fraction of tokens, but were designed for RAG-style raw passages and degrade substantially on structured agentic memories. In this work, we present AgentKVShift, a training-free, probe-guided KV residual correction method that operates per retrieved memory unit. One of the crucial insights we demonstrate is that the per-memory KV reuse residual decomposes into a shared memory-level offset plus small token-wise fluctuations. Estimating this offset from a small probe set allows us to correct every reused token in the memory unit by a single weighted correction. Unlike prior reuse methods which decide which tokens to recompute and leave the rest of the cache stale, AgentKVShift also corrects the tokens it does not recompute, turning the refresh budget into useful signal across the entire chunk. Through extensive experiments across four open source LLMs spanning 3B to 32B parameters and two long-horizon agentic memory benchmarks covering long-term dialogue and agentic applications, we show that AgentKVShift achieves near full recompute performance while refreshing only 10-30% of the cache, outperforming existing baselines at the same recompute ratio. AgentKVShift requires up to 5x lower recompute to reach this near-full performance, which prior reuse methods only attain at 45-55% refresh. By operating in this lower recompute regime, AgentKVShift delivers prefill speedups of 2-3.5x over no-KV-reuse on a single A100 GPU. Lastly, AgentKVShift orthogonally composes with KV cache quantization, retaining over 2x the F1 of prior reuse methods under aggressive 2- and 4-bit settings, making it a simple, yet effective choice for serving long-horizon agentic memory workloads.",
   "url": "https://neurips.cc/virtual/2026/poster/155404",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=5uRXWGrFvm",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -95,9 +95,9 @@
   "authors": "Mohammad Asadi (Stanford University), Soheil Hor (Amazon), Bardiya Akhbari (Amazon), Jack W O&amp;#x27;Sullivan (Stanford University), Tahoura Nedaee (Stanford University), Layne Price (Amazon), Raviteja Anantha Ramesh (Amazon), Euan Ashley (Stanford University), Ehsan Adeli (Stanford University)",
   "abstract": "Retrieval-augmented forecasting promises to adapt frozen Time Series Foundation Models (TSFMs) to new domains without fine-tuning, but recent methods typically rely on learned fusion modules, i.e., trained adapters that merge retrieved examples into the backbone's forecast, based on the assumption that frozen backbones cannot dynamically incorporate retrieved context on their own. We show this assumption is unnecessary. We introduce $\\textbf{Align-RAG}$, a training-free method that applies a closed-form per-pair amplitude rescaling and integer-lag phase shift to retrieved past--future windows before they enter a frozen backbone's context. With no learned parameters, Align-RAG outperforms the state-of-the-art trained retrieval adapter on a frozen Chronos-Bolt on all seven datasets of the standard benchmark (avg $-3.75\\%$ MSE), showing that the gains previously attributed to learned fusion are recoverable without any training. Align-RAG further improves zero-shot MSE on four additional frozen TSFMs with various architectures by $2.5\\%$ to $13.7\\%$ per backbone with no per-backbone tuning. To probe why alignment helps, we compare the frozen backbone's prediction shift under aligned demonstrations to the closed-form ridge prediction shift on the same pairs. We find that aligned demonstrations induce prediction shifts that track a closed-form ridge predictor on the same pairs, with a future-shuffle control ruling out a futures-averaging account. Together, these results indicate that frozen TSFMs already support dynamic in-context use of retrievals, and that closed-form alignment should be the default baseline for retrieval-augmented forecasting before any fusion module is trained. Code available at: \\url{https://anonymous.4open.science/r/phase-rag-4D92}",
   "url": "https://neurips.cc/virtual/2026/poster/152416",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=THqFc0nGPv",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -125,9 +125,9 @@
   "authors": "Zhiwen You (University of Illinois Urbana-Champaign), Yikun Han (University of Illinois at Urbana-Champaign), Jana Diesner (Technische Universität München), Yue Guo (University of Illinois at Urbana-Champaign)",
   "abstract": "LLMs-as-judges (LLJs) are increasingly used to reduce the cost of expert review in medical evaluation. However, high alignment with clinicians does not by itself establish validity or safety. This position paper argues that current reporting practices for medical LLJs are insufficient: LLJ-clinician alignment should not be reported as standalone evidence that a judge is reliable, clinically grounded, or safe for downstream use. We identify four risks: unstable evaluations across prompts, runs, and judge models; opaque scores that hide clinically meaningful errors; weak validity under clinical uncertainty and limited clinician agreement; and downstream safety or data contamination risks when flawed scores influence model selection or synthetic data filtering. By re-examining LLJ evaluation setups used in prior medical studies, we show that judges treated as practical evaluators in the literature can still reject clinically equivalent diagnoses, overrate incomplete or unsafe answers, reward unsupported clinical notes, and penalize appropriate treatment plans. We propose a protocol for medical LLJ evaluation that requires task-specific codebooks, expert-annotated validation sets, codebook-derived prompts, robustness testing, clinical error analysis, uncertainty reporting, and transparent disclosure before LLJ scores are used for medical benchmarking or decision support.",
   "url": "https://neurips.cc/virtual/2026/poster/140065",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=Tju86JH3mo",
+  "decision": "Accept",
+  "track": "Position",
   "cats": [
    "medical_llm"
   ],
@@ -155,9 +155,9 @@
   "authors": "Mohan Zhang (University of North Carolina at Chapel Hill), Zhen Tan (Arizona State University), Songyuan Sui (Rice University), Tianlong Chen ( University of North Carolina at Chapel Hill)",
   "abstract": "Medical vision-language models are often adapted under high-quality acquisition conditions. At target deployment, the same model may face lower-quality scanners, protocols, reconstructions, or artifacts. These shifts change the visual evidence, while the intended clinical question remains unchanged. As a result, a source-adapted model can fail under this acquisition shift. Methods are proposed to solve this problem. Medical acquisition-shift correction mainly targets image-only predictors, leaving the multimodal model underexplored. Robust training depends on anticipated degradations, and generic test-time tuning can easily overfit the small target training set, leaving unknown acquisition shifts insufficiently corrected. In this paper, we hypothesize that acquisition-like augmentations of target examples can expose parameter directions responsible for acquisition-shift failures. Based on it, we propose \\textsc{ASSET}, an \\emph{Acquisition-Sensitive Subspace Estimation} method for test-time adaptation. ASSET estimates an acquisition-sensitive parameter subspace from prediction and gradient changes under these augmentations. It then adapts the model within this subspace through iterative estimate-and-update rounds. Comprehensive experiments show the advantages of ASSET. For example, ASSET consistently improves target accuracy under acquisition-quality shift across datasets and backbones by 2.62\\% on average, while preserving performance when no shift is present. Under the strongest acquisition-quality shift, ASSET even improves target accuracy by 4.12\\%, showing that the correction generalizes to severe shifts.",
   "url": "https://neurips.cc/virtual/2026/poster/153026",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=OZI1vf23wm",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -215,9 +215,9 @@
   "authors": "Haoze Wu (HKUST), Chuqiao Kuang (Alibaba Group), Tianyi Zhuang (Huawei Noah’s Ark Lab), Xiaoguang Li (Huawei Technologies Ltd.)",
   "abstract": "Deep search agents operate over trajectories spanning dozens of steps, yet standard reinforcement learning provides only a single outcome reward per trajectory — supervision that is far too sparse for effective credit assignment. On-policy self-distillation (OPSD) addresses this by using the model's own logits as dense token-level teachers, but extending it to search agents introduces a fundamental tension: the teacher, having access to privileged information such as the correct answer, produces a distribution that differs systematically from the student's exploration-based reasoning, and naive distillation causes the student to inherit this information asymmetry rather than learn better search strategies. We resolve this tension through two contributions. First, we construct Evidence Anchors — concise, step-level evidence snippets extracted from the web — as privileged information that captures key reasoning steps without revealing the entire answer path. Second, we propose Step-Level Self-Distilled Policy Optimization (SSPO), which converts teacher–student disagreement into step-level advantage weights within GRPO, applied exclusively to incorrect trajectories. This design decouples what to update from how much to update: the outcome reward determines the direction of policy change, while the teacher modulates its magnitude at each step. Correct trajectories are left untouched, preserving their diversity. On Qwen3-8B, SSPO consistently outperforms GRPO across BrowseComp, GAIA, and FRAMES, surpassing or matching GRPO trained with twice as many gradient steps while adding only about 5\\% overhead per step from a single additional forward pass.",
   "url": "https://neurips.cc/virtual/2026/poster/154780",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=B1ywhnzK7h",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -230,9 +230,9 @@
   "authors": "Zhanghao Hu (King&#x27;s College London), Qinglin Zhu (King&#x27;s College London, University of London), Runcong Zhao (King&#x27;s College London, University of London), Di Liang (ByteDance Inc.), Hanqi Yan (King&#x27;s College London), Yulan He (King&#x27;s College London), Lin Gui (King&#x27;s College London, University of London)",
   "abstract": "Standard Retrieval Augmented Generation (RAG) is poorly matched to agent memory. Unlike large heterogeneous corpora, agent memory forms a bounded and coherent interaction stream in which many spans are highly correlated or near duplicates. As a result, flat top-$k$ similarity retrieval often returns redundant context, while summary-centric hierarchies can blur the subtle details that distinguish one candidate from another. We argue that agent memory should follow the principle of decoupling before aggregation: the system should first isolate reusable facts, updates, and distinguishing details from similar histories, and only then organise them for efficient retrieval. Based on this principle, we propose xMemory, which constructs a revisable hierarchical memory structure from original messages to segments, memory components, and groups. xMemory segments interaction history into local events, decouples each segment into memory components, aggregates related components into high-level groups using a sparsity--semantic faithfulness objective, and maintains this structure incrementally as memory evolves. At inference time, xMemory retrieves top-down, first selecting a compact backbone of complementary groups and components, and then expanding to segments and raw messages only when additional evidence reduces the reader's uncertainty. Experiments on LoCoMo and PerLTQA across diverse open source and closed source LLMs show consistent gains in answer quality and inference token efficiency, supported by analyses of redundancy, evidence density, and coverage.",
   "url": "https://neurips.cc/virtual/2026/poster/150607",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=gtGRNOmx4m",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -351,9 +351,9 @@
   "authors": "Jiazheng Li (University of Connecticut), Chi-Hao Wu (Memories.ai), Yunze Liu (NVIDIA), Kaize Ding (Northwestern University), Jundong Li (University of Virginia), Chuxu Zhang (University of Connecticut)",
   "abstract": "Understanding ultra-long videos such as egocentric recordings, live streams, or   surveillance footage spanning days to weeks, remains a challenge. For   current multimodal LLMs: even with million-token context windows, frame   budgets cover only tens of minutes of densely sampled video, and most   evidence is discarded before inference begins. Memory-augmented and   agentic approaches help with scale, but their retrieval remains   fragmented across modalities and lacks long-range narrative summaries   that span days or weeks. We propose MAGIC-Video, a training-free   framework built around a multimodal memory graph with interleaved narrative chain: the   graph unifies episodic, semantic, and visual content through six typed   edges and supports cross-modal retrieval, while the chain distils   long-horizon entity biographies and recurring activity events.   At inference time, an agentic loop   interleaves graph retrieval with narrative fact injection, covering both   the modality and time dimensions of ultra-long video in a single retrieval   pipeline. On EgoLifeQA, Ego-R1 and MM-Lifelong, MAGIC-Video consistently   outperforms strong general-purpose, long-video, and agentic baselines,   with gains of 10.1, 7.4, and 5.9 points over the prior best agentic   system on each benchmark.",
   "url": "https://neurips.cc/virtual/2026/poster/156072",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=0evT0zV3xO",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -413,9 +413,9 @@
   "authors": "Behzad Shayegh (RBC Borealis), Mohamed Osama Ahmed (Borealis AI), Fred Tung (Borealis AI), Leo Feng (Borealis AI &amp; Mila)",
   "abstract": "Large language models have demonstrated impressive retrieval-augmented capabilities. However, a crucial area remains underexplored: their ability to appropriately adapt responses to the certainty of the retrieved information. It is a limitation with real consequences in high-stakes domains like medicine and finance. We evaluate eight LLMs on their *context-certainty obedience*, measuring how well they adjust responses to match expressed context certainty. Our analysis reveals systematic limitations: LLMs struggle to recall prior knowledge after observing an uncertain context, misinterpret expressed certainties, and overtrust complex contexts. To address these, we propose an interaction strategy combining prior reminders, certainty recalibration, and context simplification. This approach reduces obedience errors by 25% on average, without modifying model weights, demonstrating the efficacy of interaction design in enhancing LLM reliability. Our contributions include a principled evaluation metric, empirical insights into LLMs' uncertainty handling, and a portable strategy to improve context-certainty obedience across diverse LLMs.",
   "url": "https://neurips.cc/virtual/2026/poster/148640",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=wC9bWYQsxZ",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -428,9 +428,9 @@
   "authors": "Yanyu Zhu, Hoilam Pao, Zhaoyu Hu (Xi&#x27;an Jiaotong University), Yufei zhang (Meituan), Jiajun Chai (Institute of automation, Chinese academy of science, Chinese Academy of Sciences), Guojun Yin (University of Science and Technology of China), Wei Lin (Meituan), Dongnian Wang (Meituan), Hai-Tao Zheng (Tsinghua University, Tsinghua University), Hong-Gee Kim (Seoul National University), Shaoxiong Zhan (Tsinghua University)",
   "abstract": "Reinforcement learning with verifiable rewards (RLVR) has become the dominant paradigm for post-training large language models (LLMs) on complex reasoning and multi-step agentic tasks. However, the standard scalar reward signal is sparse and uninformative: it conveys whether a trajectory succeeded but not which reasoning steps failed or how to correct them, severely limiting sample efficiency on long-horizon tasks where successful trajectories are rare. We propose \\textbf{CARD} (\\textbf{C}ritique-\\textbf{A}ugmented \\textbf{R}einforcement \\textbf{D}istillation), a training framework that amplifies the learning signal from a \\texttt{verify\\_answer} tool within the GRPO objective via two complementary signals. First, a token-level self-distillation reweighting measures how much each token's generation was shaped by the expert critique: tokens that merely echo the critique text are masked, while critique-driven revision tokens are amplified. Second, a rejection-sampling distillation loss maximizes the likelihood of critique-free trajectories for responses where the critique provably improved the answer, directly accelerating the internalization of critique-guided behavior. Together, these two signals distill critique-augmented reasoning into the model's base policy without requiring additional rollouts or separate reward models. Experiments on four long-form deep search benchmarks and three multi-hop question-answering benchmarks demonstrate consistent improvements over the GRPO baseline. On the deep search benchmarks, CARD improves average performance by 40\\% over the Qwen3-8B base model and by 6\\% over GRPO; with Qwen3-14B, the gains are 46\\% and 7\\%, respectively. These results establish expert critique as an effective and scalable source of rich text supervision for reinforcement learning of long-horizon research agents. Furthermore, we show that \\texttt{verify\\_answer} can serve as a test-time self-revision scaffold: at inference, the tool returns only task rubric criteria---without expert feedback---prompting the model to reflect on its draft and self-revise, yielding consistent performance gains over the no-VA baseline.",
   "url": "https://neurips.cc/virtual/2026/poster/152838",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=Q15eHqL9AR",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -568,9 +568,9 @@
   "authors": "Yuanye Xu, Yuting Wang (University of the Chinese Academy of Sciences), Linyi Guo (Northwest Polytechnical University Xi&#x27;an), Fu Ning (Northwestern Polytechnical University)",
   "abstract": "Retrieval-Augmented Generation (RAG) improves the factual accuracy of large language models (LLMs) by grounding responses in external evidence. However, when retrieved context conflicts with models' internal parametric knowledge, LLMs may still generate answers that contradict the provided evidence, posing a key challenge to contextual faithfulness and the reliability of RAG systems. Motivated by recent mechanistic findings on the distinct propagation and progressive accumulation of parametric and contextual signals in LLMs, we propose Conflict-Suppressed RAG (CSRAG), a simple, training-free, decoding-time framework for resolving knowledge conflicts. CSRAG biases generation toward retrieved evidence by suppressing tokens associated with parametric knowledge while boosting tokens from the context via two complementary logits processors. Experiments on six challenging faithfulness benchmarks demonstrate that CSRAG consistently achieves state-of-the-art or near state-of-the-art performance across multiple backbone LLMs, while remaining fully training-free and lightweight.",
   "url": "https://neurips.cc/virtual/2026/poster/148415",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=y0Ra4QaGgR",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -643,9 +643,9 @@
   "authors": "Minbiao Han (Microsoft), Seyed A Esmaeili (Princeton University), Michael Albert (University of Virginia, Charlottesville), Haifeng Xu (University of Chicago)",
   "abstract": "We study the problem of data selling for Retrieval Augmented Generation (RAG) tasks in Generative AI applications. We model each buyer's valuation of a dataset with a natural coverage-based valuation function that increases with the inclusion of more relevant data points that would enhance responses to anticipated queries. Motivated by issues such as data control and prior-free revenue maximization, we focus on the scenario where each data point can be allocated to only one buyer. We show that the problem of welfare maximization in this setting is NP-hard even with two bidders, but  design a polynomial-time $(1-1/e)$ approximation algorithm for any number of bidders. Unfortunately, however, this efficient allocation algorithm fails to be incentive compatible. The crux of our approach is   a carefully tailored  post-processing step called data burning which retains the $(1-1/e)$ approximation factor but achieves incentive compatibility. Our thorough experiments on synthetic and real-world image and text datasets  demonstrate the practical effectiveness of our algorithm compared to popular baseline algorithms for combinatorial auctions.",
   "url": "https://neurips.cc/virtual/2026/poster/154287",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=EtzYBT7sG8",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -658,9 +658,9 @@
   "authors": "Jiazhen Pan (Technical University of Munich), Weixiang Shen (Ludwig-Maximilians-Universität München), Jun Li (Technische Universität München), Julian Canisius (Technical University of Munich), Felix Bitzer (Technical University of Munich, Department of Neuroradiology), Paula Roßmüller (Klinikum rechts der Isar Technical University Munich), Jiancheng Yang (ELLIS Institute Finland &amp; Aalto University), Virginie Kreutzinger (Technical University of Munich), Daniel Rueckert (Technische Universität München), Benedikt Wiestler (Technical University of Munich)",
   "abstract": "Medical diagnosis is not a single prediction from a fully specified vignette. It is a sequential workup: clinicians decide what evidence to obtain, revise a differential diagnosis, and stop when the diagnosis is sufficiently supported. Most medical AI benchmarks instead reveal the relevant context upfront and score only the final answer, making unsupported correct guesses, premature closure, inefficient workups, and poor uncertainty updating invisible. We introduce DDx-TRACE, a physician-adjudicated benchmark for multimodal neuroradiology that evaluates diagnostic trajectories under hidden evidence over 211 challenging cases. Each case begins with limited clinical history; models request imaging studies in free form, receive matched image bundles when available, update a probabilistic differential diagnosis after each turn, and stop with a localized final diagnosis. Evaluating state-of-the-art VLMs, we find that final diagnosis scores can substantially misrepresent workup quality: models may guess plausible diagnoses without essential evidence, request useful studies but misinterpret raw images, or acquire evidence inefficiently while updating uncertainty poorly. Controlled evidence variants isolate bottlenecks in planning, visual evidence extraction, and downstream differential reasoning. DDx-TRACE shifts medical AI evaluation from final answers to evidence-supported diagnostic trajectories.",
   "url": "https://neurips.cc/virtual/2026/poster/139550",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=JBTAcOAyaB",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_llm",
    "medical_qa"
@@ -720,9 +720,9 @@
   "authors": "Zhihua Tian (Virginia Polytechnic Institute and State University), Yuhan Chen (Virginia Polytechnic Institute and State University), Yao Tang (Zhejiang University), Jian Liu (Zhejiang University), Ruoxi Jia (Virginia Tech)",
   "abstract": "Generative Engine Optimization (GEO) aims to improve content visibility in AI-generated responses. However, existing methods measure contribution—how much a document influences a response—rather than citation, the mechanism that actually drives traffic back to creators. Also, these methods apply generic rewriting rules uniformly, failing to diagnose why individual document are not cited. This paper introduces a diagnostic approach to GEO that asks why a document fails to be cited and intervenes accordingly. We develop a unified framework comprising: (1) the first taxonomy of citation failure modes spanning different stages of a citation pipeline; (2) AgentGEO, an agentic system that diagnoses failures using this taxonomy, selects targeted repairs from a corresponding tool library, and iterates until citation is achieved; and (3) a document-centric benchmark evaluating whether optimizations generalize across held-out queries. AgentGEO achieves 15-40\\% relative improvement in citation rates across engines and citation methods, while modifying only 5\\% of content, compared to 25\\% for baselines. Our analysis reveals that generic optimization can harm long-tail content and some documents face challenges that optimization alone cannot fully address—findings with implications for equitable visibility in AI-mediated information access.",
   "url": "https://neurips.cc/virtual/2026/poster/153428",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=LQ9A5Gzy4H",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -766,9 +766,9 @@
   "authors": "Hongchen Wei (Wuhan University), Yuanzhe Wang (University of Chinese Academy of sciences), Bei Liu (Microsoft Research Asia), Yifan Yang (Microsoft), Qi Dai (Microsoft Research Asia), Kai Qiu (Microsoft), Yunsheng Li (Microsoft), Dongdong Chen (Microsoft Cloud AI), Chong Luo (MSRA), Zhenzhong Chen (Wuhan University), Baining Guo (Department of Computer Science, Cornell University)",
   "abstract": "Long-document understanding requires models to find and combine evidence across many pages, layouts, tables, figures, and charts. Existing retrieval-augmented systems usually select evidence from a static index before generation, while recent agentic systems add multi-turn tool use but often rely on frozen proprietary backbones whose behavior is set by prompts. We present DocAtlas, a system that treats long-document understanding as a mutable-state information-seeking process. We instantiate DocAtlas as a mutable document harness: an external environment that determines what document information is searched, read, stored, reviewed, and shown to the model at each step. Given a document and question, the harness exposes search, reading, note-taking, and review tools, maintains a hierarchical tree and note store, and updates both as the agent records evidence. DocAtlas combines self-improving retrieval, selective evidence access, and active working memory under a fixed context budget. The same harness supports inference-time use with large VLMs and end-to-end reinforcement learning for compact VLM agents. With GPT-5.4, DocAtlas reaches 71.4\\% on MMLongBench-Doc, exceeding the human-expert reference of 65.8\\%. A Qwen3.5-4B VLM trained with end-to-end RL in the DocAtlas environment reaches 63.7\\%, compared with a 54.4\\% direct-input baseline, showing that mutable document-harness design can improve compact document agents by a large margin.",
   "url": "https://neurips.cc/virtual/2026/poster/148605",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=wV6e00cQ2S",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -932,9 +932,9 @@
   "authors": "Haoran Sun (Fudan University), Wenjie Li (Shanghai Jiaotong University), Yujie Zhang (Fudan University), Zekai Lin (Fudan University), Fanrui Zhang (University of Science and Technology of China), Kaitao Chen (Fudan University), Xingqi He (Fudan University), Yichen Li (Huazhong University of Science and Technology), Mianxin Liu (Shanghai Artificial Intelligence Laboratory), Lei Liu (Fudan University), Yankai Jiang (Shanghai Artificial Intelligence Laboratory)",
   "abstract": "Medical agent systems are increasingly expected to support interactive clinical decision making rather than only static question answering. In such settings, effective agents must reuse prior experience across evolving cases, yet existing memory mechanisms often retain raw historical traces that are redundant, noisy, and difficult to govern. More importantly, they rarely distinguish which memories are truly useful for future reasoning. This limits their ability to accumulate compact and reliable experience for long-horizon clinical reasoning. To close this gap, we propose SkeMex, a post-deployment self-evolution framework that improves medical agents through a skill-based memory without updating model weights. SkeMex distills informative interaction trajectories into structured skills that encode reusable procedural knowledge, and organizes them into a multi-branch repository spanning general, task-specific, and action-level experience. To determine which memories should be reused and retained, SkeMex estimates context-dependent utility from environment feedback and uses it to guide value-aware retrieval and repository governance. A closed-loop ``Read--Write--Assess--Govern\" lifecycle further supports continual evolution by writing new skills, updating utilities, promoting useful memories, and removing harmful entries. Experiments across diverse clinical tasks show that SkeMex consistently outperforms representative memory-based agents in both offline and online settings. It also generalizes across model backbones and supports transferable skill memory. All data and code will be released publicly.",
   "url": "https://neurips.cc/virtual/2026/poster/150444",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=i09nlt9B6r",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_agent"
   ],
@@ -962,9 +962,9 @@
   "authors": "Piotr Kuterba (Jagiellonian University), Józef Spałek (Jagiellonian University)",
   "abstract": "Mathematical autoformalization can fail before proof generation, when an informal concept is grounded to the wrong Lean/Mathlib object. Multilingual terminology makes this step non-monotonic: aliases can recover missing concepts, but under collision stress they can also pull retrieval toward nearby, non-interchangeable anchors. We introduce FACBench, a targeted dependency-light benchmark and audit protocol for multilingual formal-anchor grounding before proof generation. FACBench combines a five-language concept inventory with controlled collision queries, Mathlib-graph stress tests, no-label ablations, theorem-like probes, and Lean-facing anchor checks. In controlled collision settings, naive multilingual alias union can place the expected anchor in the candidate list while ranking a nearby distractor first. A simple rule-based source/context guard improves top-1 anchor accuracy over naive multilingual retrieval by about 11 percentage points on controlled collisions and 28 percentage points on a Mathlib-graph-mined controlled holdout. Less scaffolded and theorem-like probes show where this guard stops helping and point to the need for role-aware grounding. FACBench provides reusable collision-focused evaluation and regression-test scenarios for retrieval-augmented autoformalization systems.",
   "url": "https://neurips.cc/virtual/2026/poster/139472",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=NpetAmYjE2",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "rag"
   ],
@@ -977,9 +977,9 @@
   "authors": "Harry Li (Mott Community College), Thea Cao (Slippery Rock University of Pennsylvania)",
   "abstract": "Filtered vector search in private and on-prem retrieval-augmented generation (RAG) systems must control tail risk under fixed latency, RAM, and SSD budgets, not merely pick a fast backend. Our measurements isolate a recurring ambiguity regime concentrated in the 5-15% failure band, where small shifts in vector-metadata alignment flip which familiar P1-P4 action is safe and create 3-6 P95 spread. We study that regime as authorization over fixed actions rather than as generic planning. The paper contributes a measured failure-band stress test, an auditable authorize/veto rule over fixed P1-P4 actions, and PACER as one concrete controller that combines recall-floor adjustment, calibrated tail intervals, and regime-local fallback. The measured failure band exposes a different runtime decision boundary: when the provisional winner is separated enough to trust and when uncertainty should refuse it. On Medium+EntDoc, evaluated on a dual-AMD EPYC 7543 server with 128GB RAM at matched recall in the 5-15% failure band, PACER reduces P95 by 46%\\ and P99 by 45%\\ relative to the strongest baseline while maintaining 0.94-0.98\\ Recall@20. The gain concentrates where plan rankings are unstable and weakens when the authorization logic is stripped back, while feasibility, transfer, drift, and hierarchy-aligned slices remain supporting diagnostics. For recurring fixed-budget filtered retrieval, these results show that an auditable authorize/veto layer over fixed actions can materially stabilize tail latency in the measured failure band.",
   "url": "https://neurips.cc/virtual/2026/poster/153631",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=JxfZ6eyRMh",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1052,9 +1052,9 @@
   "authors": "Kaituo Feng (The Chinese University of Hong Kong), Manyuan Zhang (The Chinese University of Hong Kong), Shuang Chen (Tencent), Yunlong Lin (Xiamen University), Kaixuan Fan (The Chinese University of Hong Kong), Yilei Jiang (The Chinese University of Hong Kong), Hongyu Li (Meituan), Dian Zheng (The Chinese University of Hong Kong), Chenyang Wang (UC Berkeley), Xiangyu Yue (The Chinese University of Hong Kong)",
   "abstract": "Recent image generation models have shown strong capabilities in generating high-fidelity and photorealistic images. However, they are fundamentally constrained by frozen internal knowledge, thus often failing on real-world scenarios that are knowledge-intensive or require up-to-date information. In this paper, we present Gen-Searcher, as the first attempt to train a search-augmented image generation agent, which performs multi-hop reasoning and search to collect the textual knowledge and reference images needed for grounded generation. To achieve this, we construct a tailored data pipeline and curate two high-quality datasets, Gen-Searcher-SFT-10k and Gen-Searcher-RL-6k, containing diverse search-intensive prompts and corresponding ground-truth synthesis images. We further introduce KnowGen, a comprehensive benchmark that explicitly requires search-grounded external knowledge for image generation and evaluates models from multiple dimensions. Based on these resources, we train Gen-Searcher with SFT followed by agentic reinforcement learning with dual reward feedback, which combines text-based and image-based rewards to provide more stable and informative learning signals for GRPO training. Experiments show that Gen-Searcher brings substantial gains, improving Qwen-Image by around 16 points on KnowGen and 15 points on WISE. We hope this work can serve as an open foundation for search agents in image generation, and we fully open-source our data, models, and code.",
   "url": "https://neurips.cc/virtual/2026/poster/153355",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=M0ZcmOLHIp",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1112,9 +1112,9 @@
   "authors": "Jonggwon Park (DEEPNOID Inc.), Seongeun Lee (Deepnoid Inc.), Junhyun Park (DEEPNOID), Hannah Yun (DEEPNOID), Hyunwoong Kim (Deepnoid), Sohyun Jeong (DALPHA), Hyewon Kang (DEEPNOID), Byungmu Yoon (Korea Trade Network), Kyoyun Choi (Sejong University)",
   "abstract": "Vision-language models (VLMs) for radiology have emerged as a scalable paradigm by leveraging image-report pairs naturally produced in clinical workflows. However, this pairing reveals a mismatch in scale: each finding occupies only a small region of the image, yet supervision is provided only at the global image-report level. This poses a central challenge: prior approaches spread weight densely across all patches rather than concentrating on the sparse subset relevant to a given query. To address this, we present GLINT (Gated Language-Image alignmeNT), a framework that explicitly models this sparse correspondence. On the alignment side, we introduce Sparsely Gated Alignment, a novel architecture in which a sigmoid gate over a separate gate embedding space activates only the patches relevant to each textual query, enforcing explicit sparsity. On the representation side, we add Dense Feature Regularization, which anchors the trainable encoder's intermediate features to a frozen self-supervised learning (SSL) teacher, preserving the fine-grained patch features that the gate relies on. The same recipe applies to both 2D chest X-ray (CXR) and 3D chest computed tomography (CT), built with DINOv3 and V-JEPA 2.1, respectively. GLINT enables zero-shot classification, grounding, and segmentation from free-text queries, and to our knowledge is the first to demonstrate zero-shot segmentation on 3D CT volumes without mask supervision. Notably, the most pronounced gains arise on zero-shot grounding and segmentation, where sparse, query-specific localization is required, consistent with our design intent. In downstream evaluation, GLINT outperforms both SSL encoders and medical VLMs on classification, report generation, and segmentation.",
   "url": "https://neurips.cc/virtual/2026/poster/154081",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=GLHgQkefOp",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -1127,9 +1127,9 @@
   "authors": "Huaiyu Qin (Renmin University of China), Chunyu Wei (Renmin University of China), Yueguo Chen (Renmin University of China), Yunhai Wang (Shandong University)",
   "abstract": "Retrieval-augmented generation (RAG) divides into two camps failing in complementary ways on broad, long-tailed questions: iterative agentic RAG re-queries a biased distribution and drifts on prominent aspects, while structural RAG commits to a hierarchy fixed upfront and cannot admit aspects it initially missed. We propose GBT-RAG, which unifies the two by transposing gradient boosting into the text domain: each round is a query decomposition tree fitted to its predecessors' residual gap. This raises two challenges mirroring the pillars of boosting---natural-language critiques are not quantifiable, and successive rounds drift rather than fit the residual. We address the first with a text gradient, a structured residual in the retriever's embedding space whose support localizes missingness to specific leaves; we address the second by growing each tree only over under-covered leaves and admitting each rewrite through a monotone-improvement gate. Across standard benchmarks, GBT-RAG consistently outperforms the strongest iterative and structural baselines, with the largest gains on the long-tailed regime that motivated the design.",
   "url": "https://neurips.cc/virtual/2026/poster/153272",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=MTrGnuhOll",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1172,9 +1172,9 @@
   "authors": "Chen Wang",
   "abstract": "Retrieval-augmented in-context learning faces a budget problem under distribution shift: increasing top-$k$ can improve evidence coverage, but it can also add off-direction, conflicting, or overly long context that a finite reader cannot use. We introduce a theory-guided diagnostic framework based on \\emph{effective evidence coverage}: retrieval is useful only while aligned evidence grows faster than reader-facing ambiguity. In a local linear-ICL model, coupled covariate and task-prior shifts create a mixed risk term that aligned retrieval can reduce up to a residual ambiguity term; a conditional transfer result extends the same budget boundary to frozen readers satisfying a prompt-level stability condition. This yields a falsifiable prediction: recall can keep rising after answer accuracy has saturated or declined. Across QA, verification, and NLI tasks, dense top-$k$ sweeps together with oracle and shuffled-context controls expose this recall--accuracy decoupling. The resulting framework separates coverage- and saturation-limited QA from interference-limited verification/NLI, while calibrated selected-context controllers are reported only as operational probes of the diagnosis.",
   "url": "https://neurips.cc/virtual/2026/poster/149872",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=mZD68mJapq",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1217,9 +1217,9 @@
   "authors": "mingchen li (Umass Amherst), Jiatan Huang (University of Connecticut), Chuxu Zhang (University of Connecticut), Liang Zhao (Emory University), Hong Yu (UMass Lowell)",
   "abstract": "In-context learning has recently been linked to implicit gradient descent in linear self-attention models, suggesting that context can induce a forward-pass update. Retrieval-augmented generation (RAG) also relies on context, but retrieved documents are usually treated as static evidence rather than signals for adaptation. We study RAG as an in-context optimization process. First, we show that one linear self-attention layer can implement one gradient-descent step on a unified linearized RAG objective covering both projection-based and dot-product retrieval interfaces. This gives an exact regime where retrieval-augmented prediction and in-context optimization coincide. We use this result not as a literal model of LLM computation, but as a guide for adapting the interaction between queries and retrieved evidence. We then test the boundary of this correspondence: it remains stable under controlled linear extensions, but becomes feature-distribution dependent under nonlinear architectures. Finally, we turn this view into a lightweight method for frozen RAG LLMs. The method keeps the retriever and backbone fixed, and predicts a context-conditioned update to a generator-side evidence-use interface. Across seven QA benchmarks, two retrievers, and two frozen LLM backbones, this forward-only update improves a shared-interface baseline, transfers to held-out tasks, and approaches test-time gradient adaptation at much lower per-query cost",
   "url": "https://neurips.cc/virtual/2026/poster/150330",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=iuTd9AXKQN",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1232,9 +1232,9 @@
   "authors": "Jie Lin (Xiamen University), Xiang Liu (Xiamen University), Lihao Liu (Amazon), Liansheng Wang (Xiamen University)",
   "abstract": "Clinical case search aims to retrieve disease-consistent prior cases from electronic health record databases for a natural-language patient query under a retrospective retrieval objective.  The task is challenging because patient queries contain heterogeneous evidence, including symptoms, diagnoses, laboratory results, treatments, and timelines. These fields are often only partially specified, and fixed retrieval pipelines cannot adapt from prior search trajectories. Existing clinical retrieval methods typically flatten the query into a single representation, use static retrieval pipelines, or lack an explicit mechanism for cross-case adaptation.  \\textbf{PatientSearch-SE} addresses retrospective disease-centric clinical case search with three components: a \\emph{sufficiency-aware planner} that separates dimensions suitable for direct matching from those requiring hypothesis completion, a \\emph{hierarchical tool orchestration} module that maps these states to retrieval and re-ranking actions, and a \\emph{trajectory-guided memory consolidation} mechanism that writes reusable disease cards and strategy templates without parameter updates.  We also propose an evaluation framework that combines disease-centric retrieval outcomes with trajectory-level process probes for retrieval behavior analysis. Experiments on PMC-Patients and MIMIC-IV show higher disease-centric retrieval metrics for PatientSearch-SE than for the compared same-interface sparse, dense, and reasoning-based baselines, with larger gains on PMC-Patients and more modest gains on MIMIC-IV. Its memory-accumulation results are consistent with controlled external-memory adaptation, and its retrieved cases provide additional evidence for diagnosis-masked downstream few-shot RAG prediction under this retrospective protocol.",
   "url": "https://neurips.cc/virtual/2026/poster/149120",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=sjtN3Mjrl6",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_rag",
    "rag"
@@ -1263,9 +1263,9 @@
   "authors": "Bohan Hou (Shandong University), Jiuning Gu (Shandong University), Jiayan Guo (Tencent), Ronghao Dang (Alibaba Group), Sicong Leng (Nanyang Technological University), Xin Li (Alibaba DAMO Academy), Xuemeng Song (City University of Hong Kong), Jianfei Yang (Nanyang Technological University)",
   "abstract": "Existing benchmarks for multimodal agentic search evaluate multimodal search and visual browsing, but visual evidence is either confined to the input or treated as an answer endpoint rather than part of an interleaved search trajectory. We introduce \\textbf{InterLV-Search}, a benchmark for Interleaved Language-Vision Agentic Search, in which textual and visual evidence is repeatedly used to condition later search. It contains 2,061 examples across three levels:  active visual evidence seeking, controlled offline interleaved multimodal search, and open-web interleaved multimodal search. Beyond existing benchmarks, it also includes multimodal multi-branch samples that involve comparison between multiple entities during the evidence search. We construct Level 1 and Level 2 with automated pipelines and Level 3 with a machine-led, human-supervised open-web pipeline. We further provide InterLV-Agent for standardized tool use, trajectory logging, and evaluation. Experiments on proprietary and open-source multimodal agents show that current systems remain far from solving interleaved multimodal search, with the best model below 50% overall accuracy, highlighting challenges in visual evidence seeking, search control, and multimodal evidence integration. We release the benchmark data and evaluation code at \\url{https://anonymous.4open.science/r/InterLV-Search-F423}",
   "url": "https://neurips.cc/virtual/2026/poster/139197",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=f8reCCiMzH",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "rag"
   ],
@@ -1324,9 +1324,9 @@
   "authors": "Huyu Wu (Institute of Computing Technology, Chinese Academy of Sciences), Jun Liu (Institute of Computing Technology, Chinese Academy of Sciences), Xiaochi Wei (Baidu), Yan Gao (, Chinese Academy of Sciences), YIWU (Xiaohongshu), Yao Hu (Alibaba)",
   "abstract": "Self-evolving search agents reduce reliance on human-written training questions by generating and solving their own search tasks. We build on Search Self-Play (SSP), a representative Proposer and Solver framework in which questions are generated and answered via multi-step search and reasoning. In practice, however, SSP faces two bottlenecks: the Proposer constructs questions from isolated answer entities without relational context, yielding many invalid or unverifiable questions in early self-play training, while the Solver receives only a binary outcome reward that discards useful signal from partially on-track search trajectories. We address both bottlenecks by reusing knowledge-graph paths as construction-derived intermediate supervision for both question construction and reward shaping. First, we ground question construction in LLM-guided knowledge-graph subgraphs, providing relational context for the Proposer. Second, we observe that constructing and solving a multi-hop question can involve overlapping intermediate entities: the factual bridges used to formulate the question may provide approximate waypoints for answering it. Exploiting this overlap, we introduce Waypoint Coverage Reward (WCR), which grants graded partial credit to incorrect Solver trajectories according to their coverage of entities on the construction path, while preserving full reward for correct answers. Across seven QA benchmarks and nine model configurations, our approach improves the average score over standard SSP in all configurations, including notable gains on multi-hop QA tasks. These results suggest that knowledge-graph paths can be reused as lightweight intermediate supervision, providing both relational guidance and process feedback without additional task-specific human annotations or manually labeled process steps.",
   "url": "https://neurips.cc/virtual/2026/poster/156148",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=01OVW1WOXn",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1339,9 +1339,9 @@
   "authors": "Shizhuo Zhang (Shanghai Jiao Tong University), Nuowen Kan (East China Normal University), Chenglin Li (Shanghai Jiao Tong University), Rui-Xiao Zhang (ByteDance Inc.), Yifan Zhao (Shanghai Jiaotong University), Yuanpeng He (Peking University), Huixin Zhang (Huawei Technologies Ltd.), Fan He (Huawei Technologies Ltd.), Hang Xu (Huawei Noah’s Ark Lab), Hao Zhang (East China Normal University), Wenrui Dai (Shanghai Jiao Tong University), Junni Zou (Shanghai Jiao Tong University), Hongkai Xiong (Shanghai Jiao Tong University)",
   "abstract": "In retrieval-augmented generation (RAG) scenarios, the prefill delay of the large language model (LLM) long inputs is the dominant component of time-to-first-token (TTFT). Reusing KV caches across different LLM inputs reduces this cost, but the resulting cross-context mismatch on reused segments has a significant degradation on answer quality via propagating through prefill attention into decode-time logits. Existing selective-recomputation methods mitigate this issue by recomputing tokens chosen by empirical importance heuristics, which overlook the propagation of cache mismatches into answer-side errors, thereby failing to effectively strike the quality-TTFT tradeoff. To address this issue, we propose a perturbation-theoretic KV cache reuse framework, KVFocus, which selects reused KV caches through a perturbation-theoretic token-risk score during the prefill process. Specifically, we first develop a first-order analysis that traces reuse error in three stages: source mismatch on the reused segment, suffix contamination during prefill, and decode-time logit stability. This analysis reveals that the leading-order answer-side error decomposes into a product of source-side V-drift and downstream suffix-to-segment attention concentration. Guided by this multiplicative structure, we define a token-risk score that operationalizes the bound during the inference. A plug-and-play selector for KV cache reuse in existing RAG-based LLM serving is then designed by recomputing the top-$r\\%$ tokens directly suppresses the predicted leading-order answer-side error, covering both sides of the pathway that prior one-sided heuristics miss. Empirical results across three 7-8B instruction-tuned LLMs (Mistral, Qwen2.5, Qwen3) and four multi-hop QA benchmarks demonstrate that the proposed KVFocus achieves a superior trade-off between the ansewer quality and the TTFT in comparison to state-of-the-art baselines, with up to $3\\times$ TTFT speedup over full prefill at matched answer quality.",
   "url": "https://neurips.cc/virtual/2026/poster/149014",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=tTROr3ucO0",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1354,9 +1354,9 @@
   "authors": "Thi Ha Lan Nguyen (VinUniversity), Nguyen Minh-Anh (Nanyang Technological University), Dung Le (VinUniversity)",
   "abstract": "Retrieval-Augmented Generation (RAG) has become a standard approach for enhancing large language models (LLMs) with external knowledge, mitigating hallucinations, and improving factuality. However, existing systems rely on generating natural language queries at each hop and maintaining a strict architectural separation between retriever and generator, preventing them from leveraging the full representational capacity of the LLM. We propose LAnR (Latent Abstraction for RAG), a unified framework in which a single LLM jointly performs encoding, retrieval, and generation entirely within its own latent space. Rather than generating textual queries, LAnR produces dense retrieval vectors from the hidden states of a designated [PRED] token and uses them to match against encoded document representations from the same model. Furthermore, LAnR adaptively decides when sufficient evidence has been retrieved using a lightweight MLP control head over those same hidden states, eliminating explicit token-level stopping reasoning. Extensive experiments on five QA benchmarks spanning single-hop and multi-hop settings demonstrate that LAnR outperforms existing RAG methods, while achieving improved inference efficiency through reduced number of retrieval calls and tighter model integration.",
   "url": "https://neurips.cc/virtual/2026/poster/155353",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=6Gb0gkrUgv",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1462,9 +1462,9 @@
   "authors": "Ilker Demirel (MIT), Lawrence Shi (Massachusetts Institute of Technology), Zeshan Hussain (Massachusetts Institute of Technology), David Sontag (MIT)",
   "abstract": "As real-world datasets become more complex and heterogeneous, supervised learning is often bottlenecked by input representation design. Modeling multimodal data, such as time-series, free text, and structured records, often requires non-trivial domain expertise. We propose an agentic pipeline to streamline this process. First, an LLM analyzes a small but diverse subset of text-serialized input examples *in-context* to synthesize a *global rubric*, which acts as a programmatic specification for extracting and organizing evidence. This rubric is then used to transform *naive* text-serializations of inputs into a more standardized format for downstream models. We also describe *local rubrics*, which are task-conditioned summaries generated by an LLM. Across 15 clinical tasks from the EHRSHOT benchmark, our rubric-based approaches significantly outperform traditional count-feature models, naive LLM baselines, and a clinical foundation model pretrained on orders of magnitude more data. Beyond performance, rubrics offer operational advantages such as being easy to audit, cost-effectiveness at scale, and facilitating tabular representations.",
   "url": "https://neurips.cc/virtual/2026/poster/153045",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=OQzUaEnhcP",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -1552,9 +1552,9 @@
   "authors": "Anastasia Orlova (ITMO University), Nina Gubina (ITMO University), Aleksei Dmitrenko (ITMO University), Arsen Sarkisyan (ITMO University), Nikita Vetoshkin (ITMO University), Anastasiia Gorbunova (ITMO University), Ivan Dubrovsky (ITMO University), Julia Razlivina (ITMO University), Bogdan Neterebskii (ITMO University), Andrei Dmitrenko (D ONE / ITMO University)",
   "abstract": "Retrieval-Augmented Generation (RAG) has become a standard approach for grounding large language models in external knowledge, yet its performance depends critically on a large number of interacting design choices. Systematic optimization of these choices remains costly, as each configuration must be evaluated through full pipeline execution. In this work, we propose to treat RAG optimization as a prediction problem, using surrogate models to approximate the functional dependencies between configuration parameters and performance metrics. Using a stage-wise configurable RAG framework, we conduct large-scale experiments across three chemistry QA domains, systematically evaluating 648 configurations per domain and publicly releasing the resulting datasets of configurations and evaluation metrics. Surrogate models trained on this data achieve strong predictive accuracy ($R^2 \\geq 0.84$ across all metrics and domains), and SHAP-IQ-based analysis of the learned models reveals consistent parameter interaction patterns across domains — despite substantial differences in corpus characteristics. We exploit this cross-domain regularity in transfer experiments: surrogate predictions generalize to unseen domains without target-domain training data on two transfer-robust metrics, and achieve full transfer across all six metrics with as little as 10\\% of target-domain data. Finally, we apply surrogate models to optimize RAG configurations over an expanded search space of 61,152 candidates, recovering top-performing configurations in seconds rather than days, with gains of up to +0.09 in key retrieval and generation evaluation metrics. Together, these results demonstrate that RAG design spaces are structured, transferable, and efficiently optimizable via surrogate modeling.",
   "url": "https://neurips.cc/virtual/2026/poster/155514",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=51rDXl78uf",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1613,9 +1613,9 @@
   "authors": "Hui Zhang (Beijing Institute of Technology)",
   "abstract": "Doctor agents are moving beyond single-turn answer generation toward evolving clinical decision systems. Within an outpatient episode, they acquire evidence, use examination and consultation resources, and decide when to finalize a diagnosis and management plan. Across episodes, their behavior may change through memory, retrieval, reflection, or other update mechanisms. Current evaluations only partially cover this setting. Fixed-input medical QA benchmarks score final answers from complete inputs, whereas many interactive benchmarks still focus on individual encounters or fixed runs, providing limited support for evaluating how episode-level decisions interact with cross-episode experience. We introduce MedEvoEval, an executable longitudinal evaluation framework based on action-gated simulated outpatient episodes. Each source case is converted into role-specific patient, examination, and manager views; evidence is revealed only through valid actions; and each episode records a structured trace that links observations, actions, final outputs, manager scores, and optional experience write-back. We release a runnable E\\&D artifact with 700 processed episodes, provenance notes, schemas, an episode runner, scoring scripts, configurations, example logs, analysis code, and trajectory- and step-level derivatives. Experiments show that episode traces expose process costs hidden by final-answer scoring, show how MDT-style consultation reallocates resources, and support longitudinal analyses of memory maturation, held-out transfer, update-stage response, and backward retention. Together, these results show that MedEvoEval provides a concrete basis for evaluating whether doctor agents improve through experience, transfer useful behavior, and retain earlier capabilities over time.",
   "url": "https://neurips.cc/virtual/2026/poster/139548",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=Ja5320z9Vi",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_agent"
   ],
@@ -1658,9 +1658,9 @@
   "authors": "Bodong Du (The Hong Kong University of Science and Techonology), Bowen Liu (The Hong Kong University of Science and Technology), Yang YU (Hong Kong University of Science and Technology), Xinpeng Ding (Xidian University), Zhiheng Wu (Baidu), Shuning Wang (Zhejiang University), Shuo Nie (Harbin Institute of Technology Shen Zhen), Naiming Liu (Harbin Institute of Technology), Qifeng Chen (Hong Kong University of Science and Technology), Yangqiu Song (Hong Kong University of Science and Technology), Xiaomeng Li (The Hong Kong University of Science and Technology)",
   "abstract": "Medical multimodal large language models (MLLMs) have advanced image understanding and short-video analysis, but real clinical review often requires full-procedure video understanding. Unlike general long videos, medical procedures contain highly redundant anatomical views, while decisive evidence is temporally sparse, spatially subtle, and context dependent. Existing benchmarks often assume this evidence has already been localized through images, short clips, or pre-segmented videos, leaving the retrieval-before-reasoning problem under-tested. We introduce MedHorizon, an in-the-wild benchmark for long-context medical video understanding. MedHorizon preserves 759 hours of full-length clinical procedures and provides 1,253 evidence-grounded multiple-choice questions that jointly evaluate sparse evidence understanding and multi-hop clinical reasoning. Its evidence is extremely sparse, with only 0.166% evidence frames on average, requiring models to search noisy procedural streams before interpreting and aggregating findings. We evaluate representative general-domain, medical-domain, and long-video MLLMs. The best model reaches only 41.1% accuracy, showing that current systems remain far from robust full-procedure understanding. Further analysis yields four key findings: performance does not scale reliably with more frames, evidence retrieval and clinical interpretation remain primary bottlenecks; these bottlenecks are rooted in weak procedural reasoning and attention drift under redundancy, and generic sampling methods only partially balances local detail with global coverage. MedHorizon provides a rigorous testbed for MLLMs that retrieve sparse evidence and reason over complete clinical workflows.",
   "url": "https://neurips.cc/virtual/2026/poster/139391",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=TJgyeENlQ5",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_llm"
   ],
@@ -1673,9 +1673,9 @@
   "authors": "Yucheng Zhou (University of Macau), Peng Luo (University of Macau), Jianbing Shen (University of Macau)",
   "abstract": "Clinical decision-making is intrinsically sequential: a clinician must propose a diagnosis and treatment plan from the pre-treatment state and anticipate the post-treatment outcome in order to revise the plan. Existing medical world models address this loop only partially, through image-to-image dynamics with separate diagnostic and scoring modules, text-only trajectory models without multimodal input, or reflection agents without a world model. We propose \\textbf{MedWM}, a unified multimodal LLM in which policy and dynamics are two modes of a single autoregressive backbone with fully shared parameters; the dynamics mode emits a text-only \\emph{structured} post-treatment state, free-text clinical description plus standardized key-value outcomes (pCR, RECIST, labs, survival), that admits objective evaluation without perceptual metrics. We post-train this backbone with joint policy-dynamics supervision and dynamics-grounded reinforcement learning, then wrap it in an inference-time agent harness that combines breadth-depth ($N \\times K$) search using the model's own dynamics as an internal verifier with a self-evolving case memory. On MIMIC-IV, BreastDCEDL-ISPY2 and HCC-TACE-SEG, MedWM consistently improves over same-backbone controls, matches or surpasses a specialized three-module image-based world model, and outperforms reflection-only, multi-agent, and larger closed-source LLM baselines; a blinded clinician study corroborates the quantitative gains.",
   "url": "https://neurips.cc/virtual/2026/poster/148462",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=xdOHRMB63r",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -1688,9 +1688,9 @@
   "authors": "Lukas Thede (University of Tübingen Helmholtz Munich), Yash Kumar (University of Virginia), David Chen (University of Toronto), Danielle Bitterman (Harvard University), Matthias Bethge (University of Tübingen), Tom Hartvigsen (University of Virginia), Zeynep Akata (Technische Universität München)",
   "abstract": "Constantly evolving real-world knowledge necessitates models to be updated continuously. Especially in medicine, as clinical evidence changes over time, outdated knowledge can pose safety risks. Existing evaluations of knowledge integration focus on factual recall, offering limited insight into whether newly integrated knowledge is actually usable. Our benchmark __MedKIT__ (Medical Knowledge Integration and Transfer) provides a granular evaluation of how models integrate and apply knowledge under realistic sequences of clinical updates. Each instance corresponds to a factual update derived from clinical evidence, paired with targeted probes that assess transfer across lexical variation, relational transformations, compositional reasoning, and open-ended operationalization, as well as locality tests for knowledge preservation. Using MedKIT, we conduct a large-scale empirical study of 12 knowledge integration strategies across 5 diverse models, including both general-purpose and medical LLMs. Our results reveal a consistent gap between recall and usable knowledge: while most methods achieve strong gains on the original update task and under lexical variation, relational generalization is limited, and no method yields meaningful improvements on compositional or operational tasks.  These findings highlight a fundamental challenge in knowledge integration and position MedKIT as a testbed for developing methods that make newly integrated knowledge more consistently usable across tasks and contexts.",
   "url": "https://neurips.cc/virtual/2026/poster/138975",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=t0c7EwHK0i",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_llm"
   ],
@@ -1858,9 +1858,9 @@
   "authors": "Nathan Ordonez (IBM Research), Thomas Parnell (IBM Research)",
   "abstract": "Retrieval-augmented and agentic workloads repeatedly prefill recurring predictable structured inputs (which we call 'spans') such as documents and code files. Yet, prefix caching in engines such as vLLM cannot reuse their KV entries unless they share identical prefixes with another request, while Position-Independent Caching (PIC) implementations within production-grade inference servers typically either require substantial server code changes or keep KV state outside the server, incurring host-to-device transfer overhead. We present Minimalistic PIC (MiniPIC): a minimal, flexible and fast vLLM design built from two ingredients: positional-encoding-free KV cache and user-controlled cache-reuse primitives. MiniPIC stores unrotated K vectors in the KV cache, applies RoPE to K tiles inside attention using per-request logical positions, and exposes three user-facing and token-level primitives: block-aligned padding, \\ssep{}, and \\pdep{}, that modify hashing behavior and effective block-level causal attention structure. With fewer than 100 lines of core-engine changes plus a custom attention backend, these primitives are sufficient to realize multiple PIC methods, including Block-Attention, EPIC, and Prompt Cache, within the same running vLLM instance, while natively integrating with KV cache CPU offload implementations. On 2WikiMultihopQA, MiniPIC with interleaved scheduling improves prefill throughput by 49\\% over baseline vLLM, reduces cached-span time-to-first-token by up to two orders of magnitude, preserves the linear prefill scaling of uncached spans, and incurs only 5.7\\% worst-case overhead.",
   "url": "https://neurips.cc/virtual/2026/poster/151329",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=bLPv1lSYrI",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1873,9 +1873,9 @@
   "authors": "Fangda Ye (National University of Singapore), Yuxin Hu, Pengxiang Zhu (National University of Singapore), Yibo Li (National University of Singapore (NUS)), Ziqi Jin (Nanyang Technological University), Yao Xiao (Singapore University of Technology and Design), Yibo Wang (Nanyang Technological University), Lei Wang (SMU), Zhen Zhang (Alibaba Group), Lu Wang (MiroMind Inc.), Yue Deng (Apodex), Bin Wang (Apodex), Yifan Zhang (National University of Singapore), Liangcai Su (University of Hong Kong), Xinyu Wang (Alibaba Group), He ZHAO (Miromind AI), CHEN WEI (MiroMind. Inc), Qiang Ren (Tongji University), Bryan Hooi (National University of Singapore), Bo An (Nanyang Technological University), Shuicheng Yan (National University of Singapore, Department of Electrical and Computer Engineering), Lidong Bing (Alibaba DAMO)",
   "abstract": "Recent progress in deep research systems has been impressive, yet their evaluation remains limited not only by benchmark coverage but also by methodology. Existing benchmarks predominantly assess final reports using fixed rubrics, failing to evaluate the underlying research process. Most also offer limited multimodal coverage, rely on synthetic tasks that do not reflect real-world query complexity, and cannot be refreshed as knowledge evolves. To address these gaps, we introduce **MiroEval**, an evaluation framework for deep research systems, accompanied by a 100-task benchmark (70 text-only, 30 multimodal) constructed via a dual-path pipeline that supports periodic updates, enabling a live and evolving setting. The proposed evaluation suite assesses deep research systems along three complementary dimensions: adaptive synthesis quality evaluation with task-specific rubrics, agentic factuality evaluation via active retrieval and reasoning over both web sources and multimodal attachments, and process-centric evaluation audits how the system searches, reasons, and refines throughout its investigation. Evaluation across 11 systems yields three principal findings: the three evaluation dimensions capture complementary aspects of system capability, with each revealing distinct strengths and weaknesses across systems; process quality serves as a reliable predictor of overall outcome while revealing weaknesses invisible to output-level metrics; and multimodal tasks pose substantially greater challenges, with declines concentrated in synthesis and process rather than factuality. Robustness experiments, a human ranking study, and three-annotator verification confirm the reliability of both the evaluation framework and the benchmark. MiroEval provides a holistic diagnostic tool for the next generation of deep research agents.",
   "url": "https://neurips.cc/virtual/2026/poster/139149",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=iGWauw47NW",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "rag"
   ],
@@ -1903,9 +1903,9 @@
   "authors": "Haoran Luo (Nanyang Technological University), Ziyue Zhu (Beijing University of Post and Telecommunications), Shangyang Wu (Beijing University of Post and Telecommunications), LINHAO LUO (Monash University), Yikai Guo (Beijing Institute of Computer Technology and Application), Qika Lin (National University of Singapore), Fangzhi Xu (Xi&#x27;an Jiaotong University), Jiapu Wang (Beijing University of Technology), Xiaobao Wu (Shanghai Jiao Tong University), Yifan Zhu (Beijing University of Posts and Telecommunications), Anh Tuan Luu (Nanyang Technological University, Singapore)",
   "abstract": "Driven by increasingly complex real-world applications, Retrieval-Augmented Generation (RAG) has evolved from textual pipelines to multimodal settings, comprising two complementary dimensions: knowledge organization and retrieval enhancement. However, existing methods still face challenges in high construction cost, context window limitations, and the lack of unified training across offline and online knowledge sources. To address these challenges, we propose MMGraph-Agent, a unified multimodal RAG framework based on cache-inspired multimodal knowledge hypergraphs. MMGraph-Agent enables extremely lightweight hypergraph construction with zero API overhead and dynamic memory-based retrieval that alleviates long-context issues. Experiments across offline, online, and joint retrieval settings demonstrate consistent improvements in performance, efficiency, and architectural unification. Our software and data are publicly available.",
   "url": "https://neurips.cc/virtual/2026/poster/156108",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=0Lgq7QzSCm",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -1948,9 +1948,9 @@
   "authors": "Yishu Zhang (University of North Carolina at Chapel Hill), Yun Li (University of North Carolina at Chapel Hill), David Zhang (University of North Carolina at Chapel Hill)",
   "abstract": "State-of-the-art pathology foundation models, trained on millions of histology tiles, can fail to preserve tissue similarity when comparisons cross slide or institution boundaries. We show that general-purpose multimodal LLMs, without being trained as pathology foundation models, consistently outperform these specialized models in cross-domain histological similarity judgments. Using a relative similarity framework that we release as the MOSAIC (Model Similarity Assessment across Institutions and Cohorts) benchmark, we evaluate 17 models across 6 datasets and find that pathology encoders often rank same-institution, different-disease tiles as more similar than same-disease, different-institution tiles, a clinically dangerous failure mode invisible to standard within-domain evaluations. LLMs appear less susceptible to this failure, likely because they perform semantic visual comparison of morphology and tissue architecture rather than relying on shortcut features tied to acquisition context. Scaling training data does not resolve the problem for pathology encoders, implicating the learning objective rather than data coverage. Our results expose a fundamental robustness gap in current pathology foundation models and establish multimodal LLMs as a viable alternative for cross-institutional retrieval, dataset harmonization, and multi-site quality control. Code and data will be released upon acceptance.",
   "url": "https://neurips.cc/virtual/2026/poster/152201",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=UoTlhoFibt",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -1978,9 +1978,9 @@
   "authors": "Jathurshan Pradeepkumar (University of Illinois at Urbana-Champaign), Zheng Chen (ISIR, Osaka University, Japan), Jimeng Sun (University of Illinois, Urbana Champaign)",
   "abstract": "Generating clinical reports that summarize abnormal patterns, diagnostic findings, and clinical interpretations from long-term EEG recordings remains labor-intensive. We present CELM, the first clinical EEG-to-Language foundation model capable of summarizing long-duration, variable-length EEG recordings and performing end-to-end clinical report generation at multiple scales. CELM integrates pretrained EEG foundation models with language models to enable scalable multimodal learning. We curate a large-scale clinical EEG dataset containing 9,922 reports paired with approximately 11,000 hours of EEG recordings from 9,048 patients to train CELM, and release the benchmark with an automated report-structuring pipeline to facilitate future research.  Experimental results show that CELM consistently outperforms existing methods across all evaluation settings.  Importantly, we further conduct human evaluation with clinical experts, demonstrating that CELM generates reports that are more clinically coherent, diagnostically reliable, and better aligned with expert interpretation. We release our model and benchmark construction pipeline at https://anonymous.4open.science/r/CELM-3AF4.",
   "url": "https://neurips.cc/virtual/2026/poster/155381",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=63dsa3ZmMH",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -1993,9 +1993,9 @@
   "authors": "Dingzirui Wang (Harbin Institute of Technology), Xuanliang Zhang (Harbin Institute of Technology), Keyan Xu (Harbin Institute of Technology), Qingfu Zhu (Harbin Institute of Technology), Wanxiang Che (Harbin Institute of Technology), Yang Deng (Singapore Management University)",
   "abstract": "Providing external information beyond the query is a common way to improve large language model (LLM) inference, as seen in in-context learning (ICL), retrieval-augmented generation (RAG), and memory-based methods (Mem).          Existing work increasingly suggests that useful external information should compensate for the gap between LLMs and user queries, implicitly assuming that stronger gap-correction can lead to better performance.          In this paper, we challenge this assumption and show that more gap-corrective external information can instead harm performance.          We analyze this phenomenon in Transformers through the lens of reasoning error, defined as the difference between the predicted answer vector and the ground-truth answer vector.          Our analysis reveals that external information can be not only under-corrective but also over-corrective, where excessively strong correction increases reasoning error.          We further show that the induced correction vector is jointly determined by attention and the complementarity between the external information and the query, and derive conditions under which information is properly corrective in both direction and magnitude.          Experiments on four mainstream LLMs and seven reasoning benchmarks across ICL, RAG, and Mem validate our theory and support a theory-guided information selection method.",
   "url": "https://neurips.cc/virtual/2026/poster/153389",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=LkdvmbQDdL",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2085,9 +2085,9 @@
   "authors": "Shuang Chen (Tencent), Kaituo Feng (The Chinese University of Hong Kong), Hangting Chen (Tencent AI Lab), Wenxuan Huang (East China Normal University), Dasen Dai (The Chinese University of Hong Kong), Quanxin Shou (The Hong Kong University of Science and Technology (HKUST)), Yunlong Lin (Xiamen University), Xiangyu Yue (The Chinese University of Hong Kong), Shenghua Gao (University of Hong Kong), Tianyu Pang (Tencent)",
   "abstract": "Deep search has become a crucial capability for frontier multimodal agents, enabling models to solve complex questions through active search, evidence verification, and multi-step reasoning. Despite rapid progress, top-tier multimodal search agents remain difficult to reproduce, largely due to the absence of open high-quality training data, transparent trajectory synthesis pipelines, or detailed training recipes. To this end, we introduce **OpenSearch-VL**, a fully open-source recipe for training frontier multimodal deep search agents with agentic reinforcement learning. First, we curate a dedicated pipeline to construct high-quality training data through Wikipedia path sampling, fuzzy entity rewriting, and source-anchor visual grounding, which jointly reduce shortcuts and one-step retrieval collapse. Based on this pipeline, we curate two training datasets, *SearchVL-SFT-36k* for SFT and *SearchVL-RL-8k* for RL. Besides, we design a diverse tool environment that unifies text search, image search, OCR, cropping, sharpening, super-resolution, and perspective correction, enabling agents to combine active perception with external knowledge acquisition. Finally, we propose a multi-turn fatal-aware GRPO training algorithm that handles cascading tool failures by masking post-failure tokens while preserving useful pre-failure reasoning through one-sided advantage clamping. Built on this recipe, OpenSearch-VL delivers substantial performance gains, with over 10-point average improvements across seven benchmarks, and achieves results comparable to proprietary commercial models on several tasks. We will release all data, code, and models to support open research on multimodal deep search agents.",
   "url": "https://neurips.cc/virtual/2026/poster/152165",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=V30OG7luk1",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2100,9 +2100,9 @@
   "authors": "Zheng Chu (Harbin Institute of Technology), Xiao Wang (Xiaohongshu), HuiMing Fan (Harbin Institute of Technology), Qianyu Wang (Harbin Institute of Technology), Zhuoyao Wang (Harbin Institute of Technology), Xiang Cheng (Xiaohongshu), Ming Liu (Harbin Institute of Technology), Bing Qin (Harbin Institute of Technology), XingYu Li (Xiaohongshu)",
   "abstract": "Deep search capabilities have become an indispensable competency for frontier large language model (LLM) agents, yet training high-performance deep search agents remains constrained by three key challenges: as synthesized reasoning graphs grow in complexity, verifying answer correctness and uniqueness becomes increasingly difficult to scale; heavy dependence on online search APIs makes data synthesis costly and hard to scale; and the lack of fully open synthesis pipelines severely hinders reproducibility.To bridge this gap, we introduce OpenSearcher, the first deep search agent training pipeline with zero online API dependency throughout the entire data synthesis and model training process, built upon two core technical innovations: (1) \\textit{Distinguishing Set-grounded QA synthesis with programmatic verification}: we compute minimal Distinguishing Sets on Wikidata to uniquely identify target entities, recursively expand them into reasoning DAGs, and transform the structured graphs into natural language questions via progressive generation and fuzzification. Answer uniqueness is deterministically verified through SPARQL conjunctive queries, complemented by lightweight LLM filtering for linguistic quality. (2) \\textit{Fully offline training pipeline}, which builds an offline corpus of tens of millions of documents from publicly downloadable Wikidata, Wikipedia, and Web Crawl Dumps, and completes trajectory synthesis, SFT cold start, and reinforcement learning entirely offline. Experimental results demonstrate that OpenSearcher achieves strong performance across deep search benchmarks, establishing a new state of the art among fully offline methods, for example, achieving 32.3\\% on BrowseComp and 72.8\\% on GAIA. We fully open-source the complete data synthesis pipeline to democratize offline deep search agent research and foster a more transparent, collaborative ecosystem.",
   "url": "https://neurips.cc/virtual/2026/poster/152128",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=VKegdQ1pF8",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2176,9 +2176,9 @@
   "authors": "Zongyi Chen (Xiamen University), Yu Liang (Xiamen University), Jie Lin (Xiamen University), Liansheng Wang (Xiamen University)",
   "abstract": "Multimodal large language models (MLLMs) are increasingly used to analyze pathology images. However, dominant multimodal benchmarks in pathology mainly score final diagnostic answers, captions, or reports. These evaluations provide limited insight into whether a model understands the multiscale visual content needed for pathology reasoning and decision-making. We introduce PathView-Bench, a vision-anchored benchmark for fine-grained and multiscale visual understanding in computational pathology. Built from $23$ public pathology imaging datasets with human-supervised labels and spatial annotations, PathView-Bench evaluates MLLM understanding in two fields of view: Region-FOV for high-resolution local regions and Slide-FOV for macro whole-slide views. By converting raw annotations into deterministic task targets, PathView-Bench enables programmatic scoring of region localization, visual recognition, quantity estimation, spatial reasoning, and insufficient-context judgment. The benchmark contains $14$ VQA-style tasks, $61,673$ images, and $308,070$ samples across $28$ organs and $7,253,526$ annotations. Evaluating $18$ representative general-purpose, medical-domain, and pathology-oriented MLLMs, we observe substantial limitations even in advanced models on fine-grained visual tasks across multiscale pathology images. PathView-Bench provides a reproducible basis for developing and evaluating pathology MLLMs with explicit multiscale visual understanding.",
   "url": "https://neurips.cc/virtual/2026/poster/139172",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=gZJHNK7GHw",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_llm"
   ],
@@ -2206,9 +2206,9 @@
   "authors": "Ruoqi Liu (Stanford University), Imran Mohiuddin (Stanford University), Austin J Schoeffler (Stanford University), Kavita Renduchintala (Stanford University), Ashwin Nayak (Stanford University), Prasantha L Vemu (Stanford University), Shivam Vedak (Stanford University), Kameron C Black (Division of Hospital Medicine Stanford University), John L Havlik (Stanford University), Isaac Ogunmola (Stanford University), Stephen P. (Stanford University), Roopa Dhatt (Stanford University), Jonathan H Chen (Stanford University)",
   "abstract": "We introduce PhysicianBench, a benchmark for evaluating LLM agents on physician tasks grounded in real clinical setting within electronic health record (EHR) environments. Existing medical agent benchmarks primarily focus on static knowledge recall, single-step atomic actions, or action intent without verifiable execution against the environment. As a result, they fail to capture the long-horizon, composite workflows that characterize real clinical systems. PhysicianBench comprises 100 long-horizon tasks adapted from real consultation cases between primary care physicians and specialists, with each task independently reviewed by a separate panel of physicians. Tasks are instantiated in an EHR environment with real patient records and accessed through the same standard APIs used by commercial EHR vendors. Tasks span 21 specialties (e.g., cardiology, endocrinology, oncology, psychiatry) and diverse workflow types (e.g., diagnosis interpretation, medication prescribing, treatment planning), requiring an average of 27 tool calls per task. Solving each task requires retrieving data across encounters, reasoning over heterogeneous clinical information, executing consequential clinical actions, and producing clinical documentation. Each task is decomposed into structured checkpoints (670 in total across the benchmark) capturing distinct stages of completion graded by task-specific scripts with execution-grounded verification. Across 12 proprietary and open-source LLM agents, the best-performing model achieves only 46% success rate (pass@1), while open-source models reach at most 19%, revealing a substantial gap between current agent capabilities and the demands of real-world clinical workflows. PhysicianBench provides a realistic and execution-grounded benchmark for measuring progress toward autonomous clinical agents.",
   "url": "https://neurips.cc/virtual/2026/poster/139788",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=4tHKkW6AK0",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_agent"
   ],
@@ -2236,9 +2236,9 @@
   "authors": "Yuta Kobayashi, Pradyun Ramesh (Columbia University), Muhammad Ahmed Chaudhry (PayPal, Inc.), Vincent Jeanselme (Columbia University), Judy Wawira (Emory Radiology), Sanmi Koyejo (Stanford University / Virtue AI), Kathleen M Capaccione (Columbia University), Shalmali Joshi (Columbia University)",
   "abstract": "Vision-Language Models (VLMs) for radiology report generation are typically trained on retrospective clinical reports, which suffer from omission noise: clinically present findings are left unreported due to the omission of subtle findings. For example, prior studies show that cardiomegaly may be omitted from ICU chest X-ray reports when the imaging request is focused on monitoring support device placement. As a result, models trained with standard approaches inherit these omissions, learning to under-report findings themselves. We propose PU-DPO, a preference optimization framework that constructs contrastive pairs via editing model responses, producing variants that explicitly mention or omit a specific finding. To prevent omission noise from corrupting the preference signal, we reformulate the objective under a positive-unlabeled (PU) learning framework, treating absent mentions as unlabeled rather than truly negative. Across semi-synthetic experiments and preliminary analyses on real-world chest radiograph benchmarks where adjudicated labels are available, PU-DPO yields consistent gains in detection rates across multiple pathologies without compromising specificity or overall report quality, and is more robust to omission noise than prior approaches.",
   "url": "https://neurips.cc/virtual/2026/poster/154826",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=Aecnz8LJjt",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -2341,9 +2341,9 @@
   "authors": "Kavana Venkatesh (Virginia Polytechnic Institute and State University), Yusuf Dalva (Virginia Tech), Ismini Lourentzou (University of Illinois Urbana-Champaign), Pinar Yanardag (Virginia Tech)",
   "abstract": "Despite rapid advances in text-to-image (T2I) generation, current models often struggle with rare, compositional, and culturally grounded concepts where training data is sparse and visual priors are weak or absent. Increasing model capacity or prompt detail alone does not consistently resolve these challenges, particularly in long-tail settings where attribute grounding remains unstable due to attention skew, semantic collapse, and needle-in-a-haystack retrieval dynamics. We introduce RAVEL, a training-free framework that improves rare concept generation, context-driven image editing, and self-correction by integrating graph-based retrieval-augmented generation (RAG) into T2I pipelines. Unlike prior RAG and LLM-enhanced approaches that rely on visual exemplars, static captions, or implicit model knowledge, RAVEL leverages structured knowledge graphs to retrieve targeted compositional, symbolic, and relational context, enabling more precise grounding even in the absence of visual priors. To further refine generation quality, we propose SRD, a self-correction module that iteratively updates prompts using multi-aspect alignment feedback, improving attribute accuracy, narrative coherence, and semantic fidelity. Our framework is model-agnostic and is compatible with leading diffusion and autoregressive models, including Stable Diffusion XL, Flux, DALL-E 3, GLM-Image, and Janus-Pro. We conduct extensive evaluations across three newly proposed benchmarks: MythoBench, Rare-Concept-1K, and NovelBench, and show consistent improvements over SOTA baselines across perceptual, alignment, and LLM-as-a-Judge metrics, while also demonstrating stable and interpretable refinement trajectories for rare concepts across diverse model families. These results position RAVEL as a simple and robust approach for controllable and interpretable T2I generation in long-tail domains. Our code is available at: https://anonymous.4open.science/r/ravel-54E5/",
   "url": "https://neurips.cc/virtual/2026/poster/150127",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=kU5GAMEqa5",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2447,9 +2447,9 @@
   "authors": "Huipeng Ma (Beijing Institute of Technology), Dandan Song (Beijing Institute of Technology), Shaonan Ma (Qiyuan Lab), Changzhi Zhou (Beijing Institute of Technology), Jun Yang (Beijing Institute of Technology), Yuhang Tian (Beijing Institute of Technology), Luan Zhang (Beijing Institute of Technology), Chenhao Li (Beijing Institute of Technology), Xudong Li (Beijing Institute of Technology), Fang Xi (QiYuanLab), Guangyuan Feng (Beijing Institute of Technology)",
   "abstract": "In retrieval-augmented generation (RAG), knowledge conflicts arise when retrieved contexts disagree with each other or with the model's parametric memory. Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a standard approach to address such conflicts. However, existing RLVR-based methods are typically formulated under a single-conflict assumption. As a result, the type with stronger advantage signals dominates policy updates, leaving the other under-optimized and thus yielding imbalanced performance across conflict types. To address this challenge, we propose ReCon, a type-aware RLVR framework for balanced learning across Inter-Context and Context-Memory conflicts. Specifically, ReCon computes a step-level imbalance signal from type-wise cumulative advantages and triggers resampling on the weaker conflict type. Instead of resampling from scratch, ReCon branches from informative failures. It selects an informative failed trajectory using uncertainty and closeness signals, then branches at an entropy-jump point, concentrating additional rollouts on critical reasoning decisions. Experiments show that ReCon yields stronger and more balanced performance across knowledge-conflict and multi-hop QA benchmarks, and also generalizing well under mixed-conflict settings.",
   "url": "https://neurips.cc/virtual/2026/poster/149688",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=oAsMvB15yW",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2477,9 +2477,9 @@
   "authors": "Elad Hoffer (Nvidia), Yochai Blau (NVIDIA), Edan kinderman (NVIDIA), Ron Banner (NVIDIA), Daniel Soudry (Technion), Boris Ginsburg",
   "abstract": "Retrieval-augmented generation (RAG) typically treats retrieval and generation as separate systems. We ask whether an attention-based encoder-decoder can instead retrieve directly from its own internal representations. We introduce INTRA (INTrinsic Retrieval via Attention),  a framework where decoder attention queries score pre-encoded evidence chunks that are then directly reused as context for generation. By construction, INTRA unifies retrieval and generation, eliminating the retriever-generator mismatch typical of RAG pipelines.  This design also amortizes context encoding by reusing precomputed encoder states across queries.  Across question-answering benchmarks, INTRA outperforms strong engineered retrieval pipelines on both evidence recall and end-to-end answer quality.  Our results demonstrate that attention-based models already possess a retrieval mechanism that can be elicited, rather than added as an external module.",
   "url": "https://neurips.cc/virtual/2026/poster/154257",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=F87kwK5CpT",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2507,9 +2507,9 @@
   "authors": "Yong Li (Peking University), Furong Jia (Peking University), Dacheng Yin (Tencent), KANG RONG (Tencent), Fengyun Rao (WeChat, Tencent Inc.), Jing LYU (Wechat Team), Fan Zhang (Peking University)",
   "abstract": "Image geo-localization aims to determine where a photograph was taken, a task that often requires more than recognizing visible landmarks. Human experts typically solve it through an iterative workflow: they inspect informative regions, form location hypotheses, seek external evidence, and revise their judgments as new clues appear. Existing methods only partially capture this process: direct prediction methods bypass evidence acquisition altogether, while retrieval-augmented methods introduce external evidence but usually provide limited supervision on the intermediate decisions of where to search, how to query, and how to filter noisy results. We present REVERSE, a framework that reinforces the interplay between evidence search and verification to enable multi-turn agentic reasoning. REVERSE teaches three intermediate decisions: where to look, what to query, and what evidence to trust. To support this, we construct tool-grounded trajectories with annotated region selections, search observations, and geo-informative evidence labels, and introduce process rewards for visual grounding, query utility, and evidence discrimination. An offline search cache makes retrieval observations stable and reusable during reinforcement learning, enabling dense supervision over noisy search results. With a 4B model, REVERSE outperforms strong retrieval-augmented baselines and rivals substantially larger models on Im2GPS3k and YFCC4k.",
   "url": "https://neurips.cc/virtual/2026/poster/154894",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=A8SzlxVSB9",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2522,9 +2522,9 @@
   "authors": "mingchen li (Umass Amherst), Hansi Zeng (University of Massachusetts at Amherst), Zhuo Qian (Texas Tech University), Jiatan Huang (University of Connecticut), Sunjae Kwon (University of Massachusetts at Amherst), Hamed Zamani (University of Massachusetts, Amherst), Hong Yu (UMass Lowell)",
   "abstract": "Retrieval is increasingly moving from one-shot matching toward interactive reasoning, where language agents iteratively inspect evidence, reformulate queries, and search again.  Training such agents raises a credit-assignment challenge: executable actions such as queries or summaries can be directly evaluated by the retriever, while latent reasoning steps are not directly observable and only affect future executable actions.  This asymmetry makes outcome-level reward assignment unreliable, as the same final reward may credit reasoning steps that did not actually shape retrieval success.  We propose RICE-PO, a critic-free policy optimization framework that converts retrieval interactions into localized learning signals.  RICE-PO selects high-uncertainty executable actions as anchors, evaluates local counterfactual branches using retrieval metrics, and propagates credit to latent reasoning steps only when reasoning-to-action influence is strong and future residual effects are stable.  On BRIGHT and BEIR, RICE-PO consistently outperforms prompt-based agents and group-based RL baselines under the same retriever setting.  These results show that the structure of agent-environment interaction itself can provide useful supervision for training reasoning-based retrieval.",
   "url": "https://neurips.cc/virtual/2026/poster/155818",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=2fIYREq48r",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2613,9 +2613,9 @@
   "authors": "Sahar Almahfouz Nasser, Juan Francisco Pesantez Borja (Georgia Institute of Technology), Jincheng Liu (Georgia Institute of technology), Sandeep Manandhar (Emory University), Shikhar Shiromani (Independent Researcher), Mohammad T Hasan (University of Arkansas - Little Rock), Zenghan Wang (Emory University), Suman Ghosh (Georgia Institute of Technology), Jinchu Li (Georgia Institute of Technology), Xuejian Xu (Georgia Institute of Technology), Aniket R Iyer (Georgia Institute of Technology), Naoto Tokuyama (Emory University), Twisha Shah (Emory University), Tilak Pathak (Emory University), Soundharya Kumaresan (Emory University), Yohei Abe (Emory University), Himanshu Maurya (Emory University), Anant Madabhushi (Emory University)",
   "abstract": "Engineered image-based biomarkers offer a clinically interpretable alternative to black-box AI in computational pathology, yet their discovery remains largely intuition-driven, guided by fragmented literature rather than rigorous biological validation. We introduce SAGE (Structured Agentic system for hypothesis Generation and Evaluation), a multi-agent framework that grounds biomarker discovery in biological evidence through three mechanisms: (i) knowledge-graph-anchored hypothesis generation via multi-path ontological reasoning, (ii) a debate-based multi-agent novelty assessment that stress-tests candidate biomarkers against existing literature, and (iii) an end-to-end automated validation pipeline that translates hypotheses directly into executable analyses on multimodal pathology datasets. Together, these components shift biomarker discovery from an intuition-driven, literature-browsing exercise into a structured, traceable reasoning process that clinicians and researchers can inspect, trust, and build upon.",
   "url": "https://neurips.cc/virtual/2026/poster/155210",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=7S3W9FIQbm",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_agent"
   ],
@@ -2658,9 +2658,9 @@
   "authors": "Wai-Chung Kwan (University of Edinburgh), Aryo Gema (University of Edinburgh, United Kingdom), Joshua O Leang (Mohamed bin Zayed University of Artificial Intelligence), Pasquale Minervini (University College London)",
   "abstract": "Self-play can train language models without external supervision. However, existing methods require rule-checkable answers, leaving open-ended tasks dependent on curated prompts or frontier-model judges. We introduce SCOPE, a data-free self-play framework for open-ended tasks that co-evolves two policies: a Challenger that generates document-grounded tasks, and a Solver that answers them through multi-turn retrieval. A frozen copy of the initial model serves as the self-judge, which writes task-specific rubrics from the source document and grades Solver responses against them. Across three 7-8B instruction-tuned models (Qwen2.5, Qwen3, OLMo-3), SCOPE improves open-ended performance by up to +10.4 points on eight benchmarks and matches or exceeds GRPO_data trained on ~9K curated prompts. Although trained only on open-ended tasks, SCOPE also improves held-out short-form QA by up to +13.8 points on seven held-out benchmarks, surpassing GRPO_data on all three models. Ablations show that co-evolving the Challenger is necessary to keep tasks near the Solver's frontier, that gains arise from improvements in both retrieval and synthesis with the relative contribution varying by task, and that rubric generation quality is the bottleneck for self-judging.",
   "url": "https://neurips.cc/virtual/2026/poster/148234",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=zNtmWDi0vX",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -2734,9 +2734,9 @@
   "authors": "Haydn Jones (University of Pennsylvania, CIS), Yimeng Zeng (University of Pennsylvania), Alden Rose (University of Pennsylvania, University of Pennsylvania), Yifei Li (University of Pennsylvania), Yining Huang (University of Pennsylvania), Kaiwen Wu (University of Pennsylvania), Jiaming Liang (University of Pennsylvania, University of Pennsylvania), Maggie Huan (University of Pennsylvania), Yoseph Barash (University of Pennsylvania), Cesar de la Fuente-Nunez (University of Pennsylvania), Osbert Bastani (University of Pennsylvania), Zachary Ives (University of Pennsylvania), Mark Yatskar (University of Pennsylvania), Jacob Gardner (University of Pennsylvania)",
   "abstract": "Manually curated biomedical repositories---spanning bioactivity, genomics, and chemistry---are expensive to maintain, lag behind primary literature, and often discard experimental context. The absence of contextual information obscures critical nuances, thereby complicating the assessment of data correctness and coverage, necessary criteria for building high-quality models. We show that PubMed itself can be turned into structured datasets---autonomously and cost-effectively---that are larger, more nuanced, and more accurate than the curated databases they would replace. We present three coupled contributions: (1) an LLM-based entity-tagging pipeline, grounded in nine biomedical ontologies, that tags 4.5 billion entities across 19 categories in a 22.5M-paper, 2.5-trillion-token PubMed corpus; (2) hybrid sparse–dense retrieval infrastructure supporting surgical entity-filtered semantic queries over the tagged corpus; and (3) Starling, a multi-agent deep research system that, given only a natural-language task description, autonomously designs precision- and recall-targeted retrieval filters, induces an extraction schema, and emits structured records with nuance-rich fields and supporting passages. Applied to six tasks---blood-brain barrier permeability, oral bioavailability, acute toxicity (LD50), gene-disease associations, protein subcellular localization, and chemical reactions---Starling produces ~7.7M records (per-task scale ranges from 131K to 3M); several of these are, to our knowledge, the largest public datasets for their respective properties. Frontier-model rejection of our kept extractions is 0.6–7.7% across tasks, surprisingly far below the error rates we measure on the widely used, manually curated counterparts (e.g., 16.5% on BBB_Martins, 7.3% on Bioavailability_Ma). Beyond scale and accuracy, the attached supporting passages carry nuance that tabular databases discard: for example, oral bioavailability of a molecule might depend on whether the patient is fed or fasted. Together, the corpus, retrieval layer, and agent establish a foundation for multimodal predictive and generative models in AI-driven therapeutic design. We release code and links to our datasets at https://anonymous.4open.science/r/starling-B026/.",
   "url": "https://neurips.cc/virtual/2026/poster/139739",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=7HQtc15Sfm",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "rag"
   ],
@@ -2779,9 +2779,9 @@
   "authors": "Yuanhe Tian (Zhongguancun Academy), Yan Song (University of Science and Technology of China)",
   "abstract": "CT report generation (CTRG) requires models to summarize three-dimensional anatomical context and pathological findings from hundreds of axial slices. Existing methods typically learn a direct image-to-text mapping, providing limited mechanisms for modeling how CT evidence evolves across slices or how reports respond to controlled changes in latent lesion-related factors. We propose SliceWorld, a CT-specific world-state framework that treats an axial CT scan as an ordered sequence along the z-axis. SliceWorld encodes prefix CT evidence into factor-aware latent states containing anatomy, lesion, and uncertainty components, and projects these states into world tokens used for multi-step future-slice feature prediction, lesion-factor intervention, and LLM-based report generation. The model is first pretrained on CT slice sequences with predictive, factor-aware, and counterfactual objectives, and is then fine-tuned on paired CT-report data. Experiments on M3D-Cap and CT-RATE show that SliceWorld improves natural language generation metrics and clinically oriented automatic evaluation. Further analyses demonstrate multi-horizon future-slice prediction, measurable factor alignment, reduced-slice robustness, and selective lesion-sensitive report modulation.",
   "url": "https://neurips.cc/virtual/2026/poster/150217",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=jsUEiC09mt",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -2809,9 +2809,9 @@
   "authors": "Huidong Xie (Yale University), Wei Ji (Yale University), Sunan He (Hong Kong University of Science and Technology), Zhihao Tang (Beijing University of Posts and Telecommunications), Wen Tang (JD.com), Jun Zhao (JD.com), Hongming Shan",
   "abstract": "Vision-language pretraining has advanced multimodal medical AI, but its direct application to 3D computed tomography (CT) remains limited by a fundamental mismatch between dense volumetric anatomy and sparse diagnostic reports. Existing 3D CT vision-language methods typically rely on global image-report alignment or align anatomical regions with decomposed report descriptions. However, a CT scan captures rich, spatially distributed information across many organs, whereas a report summarizes only a small subset of clinically relevant findings. As a result, report-based alignment provides incomplete or weak supervision, leaving many local anatomical structures underrepresented. Motivated by this limitation, we introduce SOAR, a semantic organ-aware pretraining framework for 3D CT image understanding. The key innovation of SOAR lies in its integration of fine-grained, organ-level structural priors, enabling report-free organ-aware supervision for visual pretraining without relying on radiologist annotations or coarse global image-report matching. SOAR combines three complementary objectives: (i) organ-level masked reconstruction to learn localized anatomical context, (ii) organ-level vision-language alignment to associate organ-specific visual features with organ-name text embeddings, and (iii) organ-level supervision to preserve voxel-level structural detail. SOAR integrates easily with existing LLMs and is evaluated on five public/in-house benchmarks, improving multiple-choice VQA accuracy by 3.53% and disease screening/abnormality detection AUC by 4.25 points on average over all benchmarks/baseline methods. Code will be available.",
   "url": "https://neurips.cc/virtual/2026/poster/148421",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=xwakWJUI55",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -3020,9 +3020,9 @@
   "authors": "Shijue Huang (The Hong Kong University of Science and Technology), Hangyu Guo (Alibaba Group), Guanting Dong (Renmin University of China), Chenxin Li (The Chinese University of Hong Kong), Junting Lu (Peking University), Xinyu Geng (The Hong Kong University of Science and Technology), Zhaochen Su (Soochow University), Zhenyu Li (Tsinghua University, Tsinghua University), Shuang Chen (Tencent), Hongru WANG (University of Edinburgh), Yi R. (May) Fung (Hong Kong University of Science and Technology)",
   "abstract": "Multimodal deep search requires an agent to solve open-world problems by chaining search, tool use, and visual reasoning over evolving textual and visual context. Two bottlenecks limit current systems. First, existing tool-use harnesses treat images returned by search, browsing, or transformation as transient outputs, so intermediate visual evidence cannot be re-consumed by later tools. Second, training data is usually built by fixed curation recipes that cannot track the target agent's evolving capability. To address these challenges, we first introduce a visual-native agent harness centered on an image bank reference protocol, which registers every tool-returned image as an addressable  reference and makes intermediate visual evidence reusable by later tools. On top of this harness, On-policy Data Evolution (ODE) runs a closed-loop data generator that refines itself across rounds from rollouts of the policy being trained. This per-round refinement makes each round's data target what the current policy still needs to learn. The same framework supports both diverse supervised fine-tuning data and policy-aware reinforcement learning data curation, covering the full training lifecycle of the target agent.  Across 8 multimodal deep search benchmarks, ODE improves the Qwen3-VL-8B agent from 24.9% to 39.0% on average, surpassing Gemini-2.5 Pro in standard agent-workflow setting (37.9%). At 30B, ODE raises the average score from 30.6% to 41.5%. Further analyses validate the effectiveness of image-bank reuse, especially on complex tasks requiring iterative visual refinement, while rollout-feedback evolution yields more grounded SFT traces and better policy-matched RL tasks than static synthesis.",
   "url": "https://neurips.cc/virtual/2026/poster/148687",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=vnIJBAvcbS",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "rag"
   ],
@@ -3111,9 +3111,9 @@
   "authors": "Qian Wu (Tongji University), Kai Chen (The Chinese University of Hong Kong), Zelong Tan (The Chinese University of Hong Kong), Simin Li (Beihang University), DOU QI (The Chinese University of Hong Kong)",
   "abstract": "The sequential nature of autoregressive decoding in large vision-language models creates a fundamental trade-off between latency and clinical responsiveness when managing asynchronous signals. When unexpected healthcare occurrences arise during an ongoing VLM response, integrating unanticipated events---such as sudden device alerts or urgent caregiver messages---conventionally requires either injecting the new data directly into the active response stream or deferring it until generation ends. Neither approach is ideal in dynamic environments that demand urgent intervention without repeatedly disrupting routine continuations. We present ReflexMind, a training-free framework for online, urgency-aware occurrence handling that runs an Urgency Evaluator (UE) concurrently with the Primary Generator (PG). By leveraging the rotational invariance of Rotary Position Embedding (RoPE), ReflexMind enables a dual-view decoding process that shares a single KV cache, allowing it to assess incoming multimodal occurrences while preserving the state of the ongoing response. This design supports structured decisions, enabling ReflexMind to escalate critical alerts immediately while handling non-urgent occurrences without interrupting the ongoing response. Across three benchmarks spanning multimodal occurrences, our method generally improves occurrence triage, urgency recognition, and intervention selection for VLM backbones at different scales, while using fewer post-occurrence tokens in most settings and adding modest runtime and memory overhead under concurrent occurrences.",
   "url": "https://neurips.cc/virtual/2026/poster/149641",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=oZu1lEHGvj",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -3126,9 +3126,9 @@
   "authors": "Haotian Gan, Yudong Li (Tsinghua University, Tsinghua University), Xintian Li (Tsinghua University), Jiarui Han (Beijing University of Post and Telecommunications), Weidong Tang (China Agricultural University)",
   "abstract": "Medical vision-language models often exhibit hidden stratification, where high overall performance masks failures on subtle visual findings and overlapping clinical conditions. We trace this failure mode to modality imbalance during fine-tuning, where strong linguistic priors can suppress visually grounded learning and induce plausible but weakly grounded rationales. Existing data selection methods usually score image-text pairs as holistic units, without separating visually necessary samples from shortcut-solvable ones. To address this problem, we propose ViCoR, a counterfactual-residual-based data selection method for Med-VLM fine-tuning. ViCoR estimates visual necessity through image-dependent optimization residuals, calibrates the resulting scores with medical supervision compatibility, and constructs a diversity-aware fine-tuning subset. Across two backbones, four external generalization benchmarks, and one multi-disease robustness benchmark, ViCoR-selected 20\\% subsets achieve the strongest average performance compared with full-data fine-tuning and selection baselines. Gradient-level analysis and perturbation audits further show that ViCoR enriches image-dependent training signals and strengthens image-level and evidence-region dependence. The code will be released to support future research.",
   "url": "https://neurips.cc/virtual/2026/poster/154516",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=D0DvVACDW0",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -3172,9 +3172,9 @@
   "authors": "Yequan Bie (Department of Computer Science and Engineering, Hong Kong University of Science and Technology), Peng Xie (The Hong Kong University of Science and Technology), Zhixuan CHEN (The Hong Kong University of Science and Technology), Yihui Wang (Hong Kong University of Science and Technology), Andong Tan (Hong Kong University of Science and Technology), Linshan Wu, Sunan He (Hong Kong University of Science and Technology), Jianda Mao (Hong Kong University of Science and Technology), Yangqiu Song (Hong Kong University of Science and Technology), Kani Chen (Hong Kong University of Science and Technology), Hao CHEN (The Hong Kong Univeristy of Science and Technology)",
   "abstract": "Multimodal large language models (MLLMs) have made significant strides in natural vision-language understanding, yet their potential in specific domains, such as healthcare, remains largely untapped. Since existing medical models often lack the reasoning capabilities needed for complex decision-making, adapting general MLLMs for medical reasoning has attracted increasing interest, with reinforcement fine-tuning (RFT) emerging as a promising approach. However, medical reasoning tasks require both precise thinking processes and generalization of well-justified answers, presenting unique challenges due to the inherent scarcity of annotated data and nuanced visual complexity of medical images. Current visual RFT methods prioritize answer correctness through verifiable rewards while neglecting the reasoning process, leading to limited reasoning capabilities and sub-optimal performance, which are essential in high-stakes scenarios like healthcare. To address these issues, we propose MedR2FT, a Medical Reasoning Reinforcement Fine-Tuning framework that enhances medical reasoning through rationale bootstrapping and reasoning rewarding. Specifically, MedR2FT leverages distilled rationales from fundamental training phases to supervise subsequent reasoning processes with semantic rewards, alleviating the challenge of scarce reasoning data and enhancing model reasoning. Extensive experiments demonstrate that our method consistently outperforms baselines on visual question answering and lesion detection with a significant margin. MedR2FT explicitly attends to the reasoning process, significantly enhancing MLLM adaptability for medical reasoning. The code will be available.",
   "url": "https://neurips.cc/virtual/2026/poster/150417",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=iC1jjf8cHM",
+  "decision": "Poster",
+  "track": "Main",
   "cats": [
    "medical_llm"
   ],
@@ -3232,9 +3232,9 @@
   "authors": "Ahsan H Akash (West Virginia University), Alina Devkota (West Virginia University), Donald A Adjeroh (West Virginia University), Binod Bhattarai (University of Aberdeen), Prashnna K Gyawali (West Virginia University)",
   "abstract": "Medical vision--language models (VLMs) are attracting growing interest as a foundation for clinical image interpretation, retrieval, and decision support.  However, current evaluations largely emphasize aggregate accuracy, retrieval, or classification performance, offering limited insight into whether these models possess the fine-grained semantic understanding required for safe and reliable use in high-stakes clinical settings.  In this work, we introduce \\textbf{MedTEC-Bench}, a diagnostic benchmark for probing semantic understanding in medical VLMs across five levels of increasing specificity, from broad modality recognition to fine-grained findings, and negation.  MedTEC-Bench spans five medical imaging modalities: chest radiography, brain MRI, retinal fundus photography,  dermoscopy, and histopathology. It combines controlled semantic probes with a suite of metrics designed to reveal failures hidden by aggregate benchmarks.  Evaluating a diverse set of VLMs, from broad biomedical models to clinical-specialist models, we find that existing systems often fail on basic yet clinically meaningful semantic distinctions, despite strong reported performance on standard tasks.  Our results suggest that current medical VLM evaluations may overestimate vision-grounded clinical understanding and highlight the need for targeted semantic benchmarks before such models are deployed in high-stakes medical workflows.",
   "url": "https://neurips.cc/virtual/2026/poster/139493",
-  "openreview": null,
-  "decision": null,
-  "track": null,
+  "openreview": "https://openreview.net/forum?id=MOBI3rF3Rq",
+  "decision": "Poster",
+  "track": "Evaluations & Datasets",
   "cats": [
    "medical_llm"
   ],
