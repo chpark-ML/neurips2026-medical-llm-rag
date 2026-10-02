@@ -1,6 +1,6 @@
 """Render README.md, HIGHLIGHTS.md, data/papers.csv and interests.html from data/*.json and scripts/insights.py.
 Usage (from repo root): python3 scripts/build.py"""
-import json, re, sys, html, collections, pathlib
+import json, re, os, sys, html, collections, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from insights import TREND_NOTES, NEXT_TOPICS, MEDQA_IDEAS, HIGHLIGHT_NOTES, MED_HIGHLIGHTS
 
@@ -145,6 +145,33 @@ for key in ['rag', 'agent', 'llm', 'medical_qa', 'medical_llm', 'medical_agent']
     if rest > 0:
         w(f"- 나머지 약 {rest}편은 위 흐름 어디에도 주로 속하지 않는 작은 주제들이다.")
     w('')
+MB_PATH = 'data/medqa_benchmark_papers.json'
+MB = json.load(open(MB_PATH)) if os.path.exists(MB_PATH) else None
+if MB:
+    cov = MB['coverage']; used = [p for p in MB['papers'] if p['used_in_experiments']]; cited = [p for p in MB['papers'] if not p['used_in_experiments']]
+    esc_md = lambda t: (t or '').replace('|', '/')
+    w(f"## Medical QA 벤치마크로 실험한 논문 ({len(used)}편)\n")
+    w(f"MedQA·MedMCQA·MedXpertQA·PubMedQA·VQA-RAD·SLAKE 같은 **기존 공개 의료 QA 벤치마크로 직접 실험한** NeurIPS 2026 논문이다. 논문이 새로 만든 벤치마크만 쓴 경우는 넣지 않았다(아래 표의 '자체 벤치마크'에 따로 적었다).\n")
+    w(f"**찾은 방법과 범위**: LLM·VLM을 다루는 논문 등 후보 {cov['pool']:,}편의 arXiv 판을 찾아 본문에서 벤치마크 이름 {len(MB['benchmarks_searched'])}종을 검색했다. 본문을 읽은 것은 {cov['fulltext']:,}편이고, **{cov['not_found']:,}편은 arXiv 판을 찾지 못해 확인하지 못했다**(OpenReview는 자동 다운로드를 막는다). 본문에 이름이 나온 {cov['fulltext_with_mention']}편을 LLM이 읽어 실험에 썼는지 판정했고, 성능 수치는 본문에 그대로 있는 값만 남겼다(검증된 수치 {cov['results_verified']}개). 그래서 이 목록은 '전부'가 아니라 **본문을 확인할 수 있었던 논문 중 전부**다. 파이프라인은 `scripts/medqa_bench/`에 있다.\n")
+    w('### 전체 목록\n')
+    w('| # | 논문 | 벤치마크 | 모델 | 학습 | 문제 정의 | 제안 방법 |\n|---:|---|---|---|---|---|---|')
+    for k, p in enumerate(used, 1):
+        w(f"| {k} | [{esc_md(p['title'])}]({p['url']}) | {', '.join(p['benchmarks_norm'])} | {esc_md(', '.join(p['models'][:4]))} | {p['training']} | {esc_md(p['problem_ko'])} | {esc_md(p['method_ko'])} |")
+    w('')
+    w('### 성능 비교\n')
+    w('각 논문이 보고한 대표 수치다. **논문마다 모델·프롬프트·평가 분할·지표가 달라 논문끼리 숫자를 직접 비교하면 안 된다.** 같은 행의 "비교 대상"과의 차이만 그 논문 안에서 의미가 있다.\n')
+    w('| 벤치마크 | 논문 | 모델 | 설정 | 지표 | 값 | 비교 대상 | 비교 값 |\n|---|---|---|---|---|---:|---|---:|')
+    rows = sorted(((r['benchmark'], p, r) for p in used for r in p['results']), key=lambda t: (t[0].lower(), t[1]['title'].lower()))
+    for b, p, r in rows:
+        w(f"| {esc_md(b)} | [{esc_md(p['title'].split(':')[0])}]({p['url']}) | {esc_md(r.get('model'))} | {esc_md(r.get('setting'))} | {esc_md(r.get('metric'))} | {esc_md(r.get('value'))} | {esc_md(r.get('compared_to'))} | {esc_md(r.get('compared_value'))} |")
+    w('')
+    w(f"<details><summary>본문에 벤치마크 이름은 나오지만 실험에는 쓰지 않은 논문 {len(cited)}편</summary>\n")
+    w('| 논문 | 자체 벤치마크 | 비고 |\n|---|---|---|')
+    for p in cited:
+        w(f"| [{esc_md(p['title'])}]({p['url']}) | {esc_md(p['own_benchmark'])} | {esc_md(p['override'] or p['method_ko'])} |")
+    w('\n</details>\n')
+    if MB['abstract_only']:
+        w(f"초록에는 벤치마크 이름이 나오지만 arXiv 판을 찾지 못해 본문을 확인하지 못한 논문 {len(MB['abstract_only'])}편: " + ', '.join(f"[{esc_md(x['title'].split(':')[0])}]({x['url']}) ({', '.join(x['benchmarks_in_abstract'])})" for x in MB['abstract_only']) + '\n')
 w('## 논문 목록\n')
 for k, n, desc in CATS[:4]:
     w(f'### {n} ({counts[k]}편)\n')
@@ -231,6 +258,7 @@ w('| `HIGHLIGHTS.md` | NeurIPS 2026 전체 Oral·Spotlight 논문, 분야별 |')
 w('| `data/highlights.json` | 하이라이트 논문: 제목, 저자, URL, 형식, 트랙, 분야, 한 줄 요약, 이 저장소 분류(해당 시) |')
 w('| `data/highlight_topics.json` | 주제별·분류별 하이라이트 비율 |')
 w('| `data/decisions.json` | 포스터 id별 발표 형식·트랙·OpenReview URL (7,882편) |')
+w('| `data/medqa_benchmark_papers.json` | 의료 QA 벤치마크 본문 검색·판정 결과: 논문별 벤치마크, 모델, 학습 여부, 문제·방법, 검증된 성능 수치, 검색 범위 |')
 w('| `data/opd_papers.json` | on-policy·self-distillation 논문(유형, 설정, 한 줄 요약, 발표 형식), 연구 흐름, 집계 |')
 w('| `data/research_flows.json` | 관심 분야별 연구 흐름 한 줄 요약, 흐름별 어림 편수, 대표 논문(제목·URL) |')
 w('| `data/area_labels.json` | 2025·2026 전체 논문의 분야 코드(14개)와 배정 묶음 번호 |')
@@ -312,7 +340,7 @@ IDX_CSS = """
 .stat .num { display: block; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .stat .lbl { color: var(--ink-2); font-size: 13px; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-#q, #hq, #oq { flex: 1 1 260px; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+#q, #hq, #oq, #bq { flex: 1 1 260px; min-width: 0; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
 .controls select { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; max-width: 100%; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 5px 12px; cursor: pointer; font: inherit; font-size: 13px; }
@@ -413,6 +441,45 @@ render();
 })();
 </script>"""
 OP_JS = OP_JS.replace('__O__', json.dumps(OP['papers'], ensure_ascii=False)).replace('__TY__', json.dumps(op_types, ensure_ascii=False))
+sec_mb, MB_JS = '', ''
+if MB:
+    cov = MB['coverage']; mb_used = [p for p in MB['papers'] if p['used_in_experiments']]
+    bcount = collections.Counter(b for p in mb_used for b in p['benchmarks_norm'])
+    mb_chips = ''.join(f'<button class="chip bchip" data-k="{html.escape(b)}" aria-pressed="false">{html.escape(b)} <span>{n}</span></button>' for b, n in bcount.most_common())
+    tr_opts = ''.join(f'<option>{html.escape(t)}</option>' for t, _ in collections.Counter(p['training'] for p in mb_used).most_common())
+    sec_mb = lvl('QA', 'medqa-bench', f'Medical QA 벤치마크로 실험한 논문 ({len(mb_used)}편)',
+        f"MedQA·MedMCQA·MedXpertQA·VQA-RAD 같은 기존 공개 의료 QA 벤치마크로 직접 실험한 논문이다. 논문이 새로 만든 벤치마크만 쓴 경우는 뺐다. 후보 {cov['pool']:,}편 중 arXiv 판으로 본문을 읽은 {cov['fulltext']:,}편에서 찾았고, {cov['not_found']:,}편은 arXiv 판이 없어 확인하지 못했다. 그래서 이 목록은 본문을 확인할 수 있었던 논문 중 전부다.",
+        f'<div class="big"><div><b>{len(mb_used)}편</b><span>기존 의료 QA 벤치마크로 실험</span></div><div><b>{cov["fulltext_with_mention"]}편</b><span>본문에 벤치마크 이름이 나옴 (LLM이 실험 여부 판정)</span></div>'
+        f'<div><b>{cov["fulltext"]:,} / {cov["pool"]:,}</b><span>본문을 읽은 후보 / 전체 후보</span></div><div><b>{cov["results_verified"]}개</b><span>본문에서 그대로 확인된 성능 수치</span></div></div>'
+        f'<div class="controls"><input id="bq" type="search" placeholder="검색: 제목·모델·방법" aria-label="벤치마크 논문 검색"><select id="btr" aria-label="학습 여부"><option value="">학습 여부 전체</option>{tr_opts}</select></div>'
+        f'<div class="chips">{mb_chips}</div><div class="count" id="bcount"></div><div class="plist" id="blist"></div>'
+        f'<div class="sub"><h3>성능 비교</h3><p class="muted">각 논문이 보고한 대표 수치다. 논문마다 모델·프롬프트·평가 분할·지표가 달라 논문끼리 직접 비교하면 안 되고, 같은 행의 비교 대상과의 차이만 그 논문 안에서 의미가 있다. 위에서 벤치마크를 고르면 이 표도 걸러진다.</p>'
+        f'<div class="tablebox"><table><thead><tr><th>벤치마크</th><th>논문</th><th>모델</th><th>설정</th><th>값</th><th>비교 대상</th><th>비교 값</th></tr></thead><tbody id="bres"></tbody></table></div></div>')
+    MB_JS = """<script>
+(() => {
+const B = __B__;
+const $ = s => document.querySelector(s);
+const esc = s => (s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const sel = new Set();
+function render() {
+  const q = $('#bq').value.trim().toLowerCase(), tr = $('#btr').value;
+  const L = B.filter(p => (!sel.size || p.benchmarks_norm.some(b => sel.has(b))) && (!tr || p.training === tr)
+    && (!q || (p.title + ' ' + p.models.join(' ') + ' ' + p.method_ko + ' ' + p.problem_ko).toLowerCase().includes(q)));
+  $('#bcount').textContent = L.length + '편 표시 중 (전체 ' + B.length + '편)';
+  $('#blist').innerHTML = L.map(p => `<article class="paper"><a class="ttl" href="${p.url}" target="_blank" rel="noopener">${esc(p.title)}</a>
+    <div class="sum"><b>문제</b> ${esc(p.problem_ko)}<br><b>방법</b> ${esc(p.method_ko)}</div>
+    <div class="meta">${p.benchmarks_norm.map(b => `<span class="tag m">${esc(b)}</span>`).join('')}<span class="tag dec">${esc(p.training)}</span>
+    ${p.decision && p.decision !== 'Poster' ? `<span class="tag dec">${p.decision}</span>` : ''}</div>
+    <details><summary>모델 · 다른 데이터셋</summary><div class="auth">모델: ${esc(p.models.join(', ') || '—')}<br>다른 데이터셋: ${esc(p.other_datasets.join(', ') || '—')}</div></details></article>`).join('');
+  const rows = L.flatMap(p => p.results.filter(r => !sel.size || [...sel].some(b => (r.benchmark || '').toLowerCase().includes(b.toLowerCase().split(' ')[0]))).map(r => [r, p]))
+    .sort((a, b) => (a[0].benchmark || '').localeCompare(b[0].benchmark || ''));
+  $('#bres').innerHTML = rows.map(([r, p]) => `<tr><td>${esc(r.benchmark)}</td><td><a href="${p.url}" target="_blank" rel="noopener">${esc(p.title.split(':')[0])}</a></td><td>${esc(r.model)}</td><td>${esc(r.setting)}${r.metric ? ' · ' + esc(r.metric) : ''}</td><td>${esc(r.value)}</td><td>${esc(r.compared_to)}</td><td>${esc(r.compared_value)}</td></tr>`).join('') || '<tr><td colspan="7">해당 수치 없음</td></tr>';
+}
+document.querySelectorAll('.bchip').forEach(b => b.onclick = () => { sel.has(b.dataset.k) ? sel.delete(b.dataset.k) : sel.add(b.dataset.k); b.setAttribute('aria-pressed', sel.has(b.dataset.k)); render(); });
+['#bq', '#btr'].forEach(s => $(s).addEventListener('input', render));
+render();
+})();
+</script>""".replace('__B__', json.dumps(mb_used, ensure_ascii=False))
 hl_more = (f'<div class="sub"><h3>NeurIPS 2026 전체 하이라이트 {HT["n_highlight"]}편</h3>'
     f'<p class="muted">발표 형식을 아는 {HT["n_known"]:,}편 중 Oral {HT["n_oral"]}편, Spotlight {HT["n_highlight"] - HT["n_oral"]}편(기준선 {HT["base_rate"]}%). {T["N2026"] - HT["n_known"]:,}편은 형식 정보가 없어 빠졌으므로 실제 하이라이트는 더 많을 수 있다. 분야·요약은 초록을 읽고 LLM이 붙였다.</p>'
     f'<ul class="notes">{hl_notes}</ul>'
@@ -485,8 +552,8 @@ render(); hrender();
 for k, v in {'__P__': papers_js, '__H__': hl_js, '__AREA__': AREA_KO, '__CAT__': CAT_NAME, '__SUB__': SUB_NAME}.items():
     IDX_JS = IDX_JS.replace(k, json.dumps(v, ensure_ascii=False))
 page = open('scripts/interests_template.html').read()
-for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers + sec_opd, '<!--HL_MORE-->': hl_more,
-             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS}.items():
+for k, v in {'/*INDEX_CSS*/': IDX_CSS, '<!--TRENDS-->': sec_trends, '<!--PAPERS-->': sec_papers + sec_opd + sec_mb, '<!--HL_MORE-->': hl_more,
+             '<!--IDEAS-->': sec_ideas, '<!--METHOD-->': sec_method, '<!--INDEX_JS-->': IDX_JS + OP_JS + MB_JS}.items():
     assert page.count(k) == 1, k
     page = page.replace(k, v)
 page = page.replace('/*DATA*/null', json.dumps(atlas_data(), ensure_ascii=False))

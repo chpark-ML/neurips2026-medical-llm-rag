@@ -1,2 +1,7 @@
 data/raw/
 __pycache__/
+scripts/medqa_bench/text/
+scripts/medqa_bench/*.jsonl
+scripts/medqa_bench/dossiers/
+scripts/medqa_bench/extract/
+scripts/medqa_bench/venv/
